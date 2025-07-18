@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import com.canalprep.staticVAr.DBConst;
+import com.canalprep.staticVariables.DBConst;
 
 public class DBConnection {
     private static final String JDBC_URL = DBConst.DB_URL;

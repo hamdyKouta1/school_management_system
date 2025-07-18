@@ -149,6 +149,20 @@ private List<Notes> studentNotes;
     public void setNationalityName(String nationalityName) { this.nationalityName = nationalityName; }
     public String getReligionName() { return religionName; }
     public void setReligionName(String religionName) { this.religionName = religionName; }
+
+
+
+
+
+    private List<AdditionalQualification> additionalQualifications;
+
+public List<AdditionalQualification> getAdditionalQualifications() {
+    return additionalQualifications;
+}
+
+public void setAdditionalQualifications(List<AdditionalQualification> additionalQualifications) {
+    this.additionalQualifications = additionalQualifications;
+}
 }
 
 /*

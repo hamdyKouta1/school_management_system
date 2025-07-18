@@ -16,6 +16,6 @@ Notes:
 
 5.delete user --> admin
 
-6. count students
+6. count students Done
 
 ***End v1***

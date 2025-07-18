@@ -3,7 +3,7 @@ package com.canalprep.auth.dao;
 import com.canalprep.auth.model.User;
 import com.canalprep.auth.utilities.PasswordUtils;
 import com.canalprep.dao.DBConnection;
-import com.canalprep.staticVAr.DBConst;
+import com.canalprep.staticVariables.DBConst;
 
 import java.sql.*;
 

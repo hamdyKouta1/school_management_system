@@ -1,12 +1,12 @@
 package com.canalprep.dao;
 
+import com.canalprep.model.AdditionalQualification;
 import com.canalprep.model.Notes;
 import com.canalprep.model.ParentDetails;
 import com.canalprep.model.Student;
-import com.canalprep.staticVAr.DBConst;
+import com.canalprep.staticVariables.DBConst;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,84 +36,100 @@ public class StudentDAO {
     private static final String DELETE_STUDENT_MEDICAL = DBConst.DB_DELETE_STUDENT_MEDICAL;
     private static final String SELECT_BY_STUDENT_NAME = DBConst.DB_SELECT_STUDENT_BY_NAME;
     private static final String UPDATE_STUDENT_MEDICAL_STATUS = DBConst.DB_UPDATE_MEDICAL_STATUS;
+    private static final String INSERT_STUDENT_QUALIFICATIONS = DBConst.DB_INSERT_STUDENT_QUALIFICATION;
+    private static final String DELETE_STUDENT_QUALIFICATIONS = DBConst.DB_DELETE_STUDENT_QUALIFICATION;
 
+    public List<AdditionalQualification> getAllAdditionalQualifications() {
+        List<AdditionalQualification> qualifications = new ArrayList<>();
+        String sql = "SELECT qualification_id, student_id, description FROM public.additional_qualifications";
 
+        try (Connection conn = DBConnection.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(sql);
+                ResultSet rs = stmt.executeQuery()) {
 
+            while (rs.next()) {
+                AdditionalQualification q = new AdditionalQualification();
+                q.setQualification_id(rs.getInt("qualification_id"));
+                q.setStudent_id(rs.getInt("student_id"));
+                q.setDescription(rs.getString("description"));
+                qualifications.add(q);
+            }
 
-public int countAllStudents() {
-    String sql = "SELECT COUNT(*) FROM students";
-    try (Connection conn = DBConnection.getConnection();
-         PreparedStatement pstmt = conn.prepareStatement(sql);
-         ResultSet rs = pstmt.executeQuery()) {
-        if (rs.next()) return rs.getInt(1);
-    } catch (SQLException e) {
-        e.printStackTrace();
-    }
-    return 0;
-}
-
-public int countStudentsByGrade(int gradeId) {
-    String sql = "SELECT COUNT(*) FROM students WHERE grade_id = ?";
-    try (Connection conn = DBConnection.getConnection();
-         PreparedStatement pstmt = conn.prepareStatement(sql)) {
-        pstmt.setInt(1, gradeId);
-        try (ResultSet rs = pstmt.executeQuery()) {
-            if (rs.next()) return rs.getInt(1);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-    } catch (SQLException e) {
-        e.printStackTrace();
-    }
-    return 0;
-}
 
-public int countStudentsByClass(int classId) {
-    String sql = "SELECT COUNT(*) FROM students WHERE class_id = ?";
-    try (Connection conn = DBConnection.getConnection();
-         PreparedStatement pstmt = conn.prepareStatement(sql)) {
-        pstmt.setInt(1, classId);
-        try (ResultSet rs = pstmt.executeQuery()) {
-            if (rs.next()) return rs.getInt(1);
+        return qualifications;
+    }
+
+    public int countAllStudents() {
+        String sql = "SELECT COUNT(*) FROM students";
+        try (Connection conn = DBConnection.getConnection();
+                PreparedStatement pstmt = conn.prepareStatement(sql);
+                ResultSet rs = pstmt.executeQuery()) {
+            if (rs.next())
+                return rs.getInt(1);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-    } catch (SQLException e) {
-        e.printStackTrace();
+        return 0;
     }
-    return 0;
-}
 
+    public int countStudentsByGrade(int gradeId) {
+        String sql = "SELECT COUNT(*) FROM students WHERE grade_id = ?";
+        try (Connection conn = DBConnection.getConnection();
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, gradeId);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next())
+                    return rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
 
-
+    public int countStudentsByClass(int classId) {
+        String sql = "SELECT COUNT(*) FROM students WHERE class_id = ?";
+        try (Connection conn = DBConnection.getConnection();
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, classId);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next())
+                    return rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
 
     public List<Integer> getStudentsByName(String name) {
-    List<Integer> ids = new ArrayList<>();
-    
-    // Validate input
-    if (name == null || name.trim().isEmpty()) {
-        return ids;  // Return empty list for invalid input
-    }
-    
-    try (Connection conn = DBConnection.getConnection();
-         PreparedStatement pstmt = conn.prepareStatement(SELECT_BY_STUDENT_NAME)) {
-        
-        // Correct parameter setting (no manual quoting)
-        pstmt.setString(1, "%" + name + "%");
-        
-        try (ResultSet rs = pstmt.executeQuery()) {
-            while (rs.next()) {
-                ids.add(rs.getInt("s_id"));
-            }
+        List<Integer> ids = new ArrayList<>();
+
+        // Validate input
+        if (name == null || name.trim().isEmpty()) {
+            return ids; // Return empty list for invalid input
         }
-    } catch (SQLException e) {
-        handleSQLException("Error getting students by name", e);
+
+        try (Connection conn = DBConnection.getConnection();
+                PreparedStatement pstmt = conn.prepareStatement(SELECT_BY_STUDENT_NAME)) {
+
+            // Correct parameter setting (no manual quoting)
+            pstmt.setString(1, "%" + name + "%");
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    ids.add(rs.getInt("s_id"));
+                }
+            }
+        } catch (SQLException e) {
+            handleSQLException("Error getting students by name", e);
+        }
+        return ids;
     }
-    return ids;
-}
 
-   
-
-
-
-
-   
     public List<Student> getAllStudents() {
         List<Student> students = new ArrayList<>();
 
@@ -146,21 +162,19 @@ public int countStudentsByClass(int classId) {
         return null;
     }
 
-
-
-        public List<Student> getStudentByRangeOfId(List<Integer> ListOfID) {
-            List <Student> students = new ArrayList<>();
+    public List<Student> getStudentByRangeOfId(List<Integer> ListOfID) {
+        List<Student> students = new ArrayList<>();
         try (Connection conn = DBConnection.getConnection();
                 PreparedStatement pstmt = conn.prepareStatement(SELECT_BY_RANGE_OF_ID)) {
-                   Array IDs = conn.createArrayOf("integer", ListOfID.toArray());
-                  // System.out.println(IDs);
-/*
-Student s1 = new Student();
-students.add(s1);
- * 
- */
-            pstmt.setArray(1,IDs);
-            //System.out.println(pstmt);
+            Array IDs = conn.createArrayOf("integer", ListOfID.toArray());
+            // System.out.println(IDs);
+            /*
+             * Student s1 = new Student();
+             * students.add(s1);
+             * 
+             */
+            pstmt.setArray(1, IDs);
+            // System.out.println(pstmt);
             try (ResultSet rs = pstmt.executeQuery()) {
                 while (rs.next()) {
                     students.add(extractStudentFromResultSet(rs));
@@ -283,6 +297,22 @@ students.add(s1);
                 logger.log(Level.SEVERE, "Error parsing notes JSON", e);
             }
         }
+
+
+        String qualificationJson = rs.getString("qualifications"); // This must match SQL alias
+            if (qualificationJson != null) {
+                try {
+                    List<AdditionalQualification> qualifications = objectMapper.readValue(
+                            qualificationJson,
+                            new TypeReference<List<AdditionalQualification>>() {
+                            });
+                    student.setAdditionalQualifications(qualifications);
+                } catch (Exception e) {
+                    logger.log(Level.SEVERE, "Error parsing additional qualifications JSON", e);
+                }
+            }
+
+
 
         return student;
     }
@@ -529,38 +559,37 @@ students.add(s1);
     }
 
     // Add medical history
-   public boolean addMedicalHistory(Student student) throws SQLException {
-    String sql = INSERT_STUDENT_MEDICAL;
-    String sql_update_status = UPDATE_STUDENT_MEDICAL_STATUS;
-    boolean result = false;
+    public boolean addMedicalHistory(Student student) throws SQLException {
+        String sql = INSERT_STUDENT_MEDICAL;
+        String sql_update_status = UPDATE_STUDENT_MEDICAL_STATUS;
+        boolean result = false;
 
-    try (Connection conn = DBConnection.getConnection();
-         PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        try (Connection conn = DBConnection.getConnection();
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-        pstmt.setInt(1, student.getStudentId());
-        pstmt.setString(2, student.getMedicalDescriptions());
-        result = pstmt.executeUpdate() > 0;
+            pstmt.setInt(1, student.getStudentId());
+            pstmt.setString(2, student.getMedicalDescriptions());
+            result = pstmt.executeUpdate() > 0;
 
-        // If insert successful, update medical status
-        if (result) {
-            try (Connection conn2 = DBConnection.getConnection();
-                 PreparedStatement pstmt2 = conn2.prepareStatement(sql_update_status)) {
+            // If insert successful, update medical status
+            if (result) {
+                try (Connection conn2 = DBConnection.getConnection();
+                        PreparedStatement pstmt2 = conn2.prepareStatement(sql_update_status)) {
 
-                pstmt2.setInt(2, student.getStudentId());
-                pstmt2.setBoolean(1, true);
-                pstmt2.executeUpdate();
+                    pstmt2.setInt(2, student.getStudentId());
+                    pstmt2.setBoolean(1, true);
+                    pstmt2.executeUpdate();
+                }
             }
         }
+
+        return result;
     }
 
-    return result;
-}
-
-    
     public boolean deleteStudentPhone(Student student) throws SQLException {
         String sql = DELETE_STUDENT_PHONE;
         try (Connection conn = DBConnection.getConnection();
-            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, student.getStudentPhones().get(0));
             pstmt.setInt(2, student.getStudentId());
             return pstmt.executeUpdate() > 0;
@@ -578,52 +607,51 @@ students.add(s1);
     }
 
     // Add medical history
-   public boolean deleteMedicalHistory(Student student) throws SQLException {
-    String sqlDelete = DELETE_STUDENT_MEDICAL;
-    String sqlCheckRemaining = "SELECT 1 FROM medical_history WHERE student_id = ?";
-    String sqlUpdateStatus = UPDATE_STUDENT_MEDICAL_STATUS;
-    boolean result = false;
+    public boolean deleteMedicalHistory(Student student) throws SQLException {
+        String sqlDelete = DELETE_STUDENT_MEDICAL;
+        String sqlCheckRemaining = "SELECT 1 FROM medical_history WHERE student_id = ?";
+        String sqlUpdateStatus = UPDATE_STUDENT_MEDICAL_STATUS;
+        boolean result = false;
 
-    try (Connection conn = DBConnection.getConnection()) {
-        conn.setAutoCommit(false); // Begin transaction
+        try (Connection conn = DBConnection.getConnection()) {
+            conn.setAutoCommit(false); // Begin transaction
 
-        // 1. Delete specific medical history entry
-        try (PreparedStatement pstmtDelete = conn.prepareStatement(sqlDelete)) {
-            pstmtDelete.setString(1, student.getMedicalDescriptions());
-            pstmtDelete.setInt(2, student.getStudentId());
-            result = pstmtDelete.executeUpdate() > 0;
-        }
+            // 1. Delete specific medical history entry
+            try (PreparedStatement pstmtDelete = conn.prepareStatement(sqlDelete)) {
+                pstmtDelete.setString(1, student.getMedicalDescriptions());
+                pstmtDelete.setInt(2, student.getStudentId());
+                result = pstmtDelete.executeUpdate() > 0;
+            }
 
-        // 2. If deletion succeeded, check for remaining records
-        if (result) {
-            boolean hasRemaining = false;
+            // 2. If deletion succeeded, check for remaining records
+            if (result) {
+                boolean hasRemaining = false;
 
-            try (PreparedStatement pstmtCheck = conn.prepareStatement(sqlCheckRemaining)) {
-                pstmtCheck.setInt(1, student.getStudentId());
-                try (ResultSet rs = pstmtCheck.executeQuery()) {
-                    hasRemaining = rs.next(); // true if there’s at least one record
+                try (PreparedStatement pstmtCheck = conn.prepareStatement(sqlCheckRemaining)) {
+                    pstmtCheck.setInt(1, student.getStudentId());
+                    try (ResultSet rs = pstmtCheck.executeQuery()) {
+                        hasRemaining = rs.next(); // true if there’s at least one record
+                    }
+                }
+
+                // 3. If no remaining records, update medical status
+                if (!hasRemaining) {
+                    try (PreparedStatement pstmtUpdate = conn.prepareStatement(sqlUpdateStatus)) {
+                        pstmtUpdate.setBoolean(1, false); // SET medical_status = ?
+                        pstmtUpdate.setInt(2, student.getStudentId()); // WHERE student_id = ?
+                        pstmtUpdate.executeUpdate();
+                    }
                 }
             }
 
-            // 3. If no remaining records, update medical status
-            if (!hasRemaining) {
-                try (PreparedStatement pstmtUpdate = conn.prepareStatement(sqlUpdateStatus)) {
-                    pstmtUpdate.setBoolean(1, false); // SET medical_status = ?
-                    pstmtUpdate.setInt(2, student.getStudentId()); // WHERE student_id = ?
-                    pstmtUpdate.executeUpdate();
-                }
-            }
+            conn.commit(); // Commit the transaction
+        } catch (SQLException e) {
+            e.printStackTrace(); // Log the exception
+            throw e; // Rethrow after rollback
         }
 
-        conn.commit(); // Commit the transaction
-    } catch (SQLException e) {
-        e.printStackTrace(); // Log the exception
-        throw e; // Rethrow after rollback
+        return result;
     }
-
-    return result;
-}
-
 
     /****************************************************************************************** */
 
@@ -701,4 +729,29 @@ students.add(s1);
         return student;
     }
 
+
+
+
+
+
+    public boolean addStudentAdditionalQualification(Student student) throws SQLException {
+        String sql = INSERT_STUDENT_QUALIFICATIONS;
+        try (Connection conn = DBConnection.getConnection();
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, student.getStudentId());
+            pstmt.setString(2, student.getAdditionalQualifications().get(0).getDescription());
+          //  pstmt.setString(3, student.getStudentNotes().get(0).getCreatedBy());
+            return pstmt.executeUpdate() > 0;
+        }
+    }
+
+    public boolean deleteStudentQualification(Student student) throws SQLException {
+        String sql = DELETE_STUDENT_QUALIFICATIONS;
+
+    try (Connection conn = DBConnection.getConnection();
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, student.getAdditionalQualifications().get(0).getQualification_id());
+            return pstmt.executeUpdate() > 0;
+        }
+    }
 }

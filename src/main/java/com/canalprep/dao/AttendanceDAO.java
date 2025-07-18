@@ -1,6 +1,7 @@
 package com.canalprep.dao;
 
 import com.canalprep.model.Attendance;
+import com.canalprep.staticVariables.DBConst;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -13,13 +14,13 @@ public class AttendanceDAO {
     private static final Logger logger = Logger.getLogger(AttendanceDAO.class.getName());
     
     // SQL Queries
-    private static final String SELECT_ALL = "SELECT * FROM attendance";
-    private static final String SELECT_BY_ID = "SELECT * FROM attendance WHERE student_id = ?";
-    private static final String INSERT_ATTENDANCE = "INSERT INTO attendance (student_id, attendance_date, status_id,class_id,grade_id,today_date) VALUES (?, ?, ?, ?, ?, ?)";
-    private static final String UPDATE = "UPDATE attendance SET student_id = ?, attendance_date = ?, status_id = ? WHERE attendance_id = ?";
-    private static final String DELETE = "DELETE FROM attendance WHERE attendance_id = ?";
-    private static final String SELECT_BY_STUDENT_AND_DATE = "SELECT * FROM attendance WHERE student_id = ? AND attendance_date = ?";
-    private static final String SELECT_BY_DATE_STRING = "SELECT * FROM attendance WHERE today_date = ?";
+    private static final String SELECT_ALL = DBConst.DB_ATTENDANCE_SELECT_ALL;//"SELECT * FROM attendance";
+    private static final String SELECT_BY_ID = DBConst.DB_ATTENDANCE_SELECT_BY_ID;//"SELECT * FROM attendance WHERE student_id = ?";
+    private static final String INSERT_ATTENDANCE = DBConst.DB_ATTENDANCE_INSERT_ATTENDANCE;//"INSERT INTO attendance (student_id, attendance_date, status_id,class_id,grade_id,today_date) VALUES (?, ?, ?, ?, ?, ?)";
+    private static final String UPDATE = DBConst.DB_ATTENDANCE_UPDATE;//"UPDATE attendance SET student_id = ?, attendance_date = ?, status_id = ? WHERE attendance_id = ?";
+    private static final String DELETE = DBConst.DB_ATTENDANCE_DELETE;//"DELETE FROM attendance WHERE attendance_id = ?";
+    private static final String SELECT_BY_STUDENT_AND_DATE = DBConst.DB_ATTENDANCE_SELECT_BY_STUDENT_AND_DATE;//"SELECT * FROM attendance WHERE student_id = ? AND attendance_date = ?";
+    private static final String SELECT_BY_DATE_STRING = DBConst.DB_ATTENDANCE_SELECT_BY_DATE_STRING;//"SELECT * FROM attendance WHERE today_date = ?";
 
     public List<Attendance> getTodayAttendances(Date dayDate){
         List<Attendance> attendanceList = new ArrayList<>();
