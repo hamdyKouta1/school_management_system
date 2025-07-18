@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسة القناه الاعدادية بنات</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --main-blue: #0d6efd;
+            --hover-blue: #0b5ed7;
+        }
+        .nav-tabs { border-bottom: 2px solid var(--main-blue); }
+        .table-hover tbody tr:hover { background-color: #f8f9fa; }
+        .section-title { 
+            color: var(--main-blue);
+            border-bottom: 2px solid var(--main-blue);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .modal-content { border: 2px solid var(--main-blue); }
+        .btn-primary { background-color: var(--main-blue); border-color: var(--main-blue); }
+        .btn-primary:hover { background-color: var(--hover-blue); border-color: var(--hover-blue); }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-5">نظام إدارة مدرسة القناه الاعدادية بنات</h1>
+
+        <!-- Navigation -->
+        <ul class="nav nav-tabs mb-4">
+            <li class="nav-item">
+                <button class="nav-link active" onclick="showSection('students')">الطلاب</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" onclick="showSection('attendance')">الحضور</button>
+            </li>
+        </ul>
+
+        <!-- Students Section -->
+        <div id="studentsSection">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="section-title">قائمة الطلاب</h2>
+                <button class="btn btn-primary" onclick="showStudentForm()">إضافة طالب جديد</button>
+            </div>
+            
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>الرقم</th>
+                        <th>الاسم</th>
+                        <th>الرقم القومي</th>
+                        <th>العنوان</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="studentsTable"></tbody>
+            </table>
+        </div>
+
+        <!-- Attendance Section -->
+        <div id="attendanceSection" style="display: none;">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="section-title">سجل الحضور</h2>
+                <button class="btn btn-primary" onclick="showAttendanceForm()">تسجيل حضور جديد</button>
+            </div>
+
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>التاريخ</th>
+                        <th>اسم الطالب</th>
+                        <th>الحالة</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceTable"></tbody>
+            </table>
+        </div>
+
+        <!-- Student Modal -->
+        <div id="studentFormModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">نموذج الطالب</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="studentForm" onsubmit="handleStudentSubmit(event)">
+                            <input type="hidden" id="studentId">
+                            <div class="mb-3">
+                                <label class="form-label">اسم الطالب</label>
+                                <input type="text" class="form-control" id="studentName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">الرقم القومي</label>
+                                <input type="text" class="form-control" id="nid" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">العنوان</label>
+                                <input type="text" class="form-control" id="currentAddress" required>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                                <button type="submit" class="btn btn-primary">حفظ</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Attendance Modal -->
+        <div id="attendanceFormModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">نموذج الحضور</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="attendanceForm" onsubmit="handleAttendanceSubmit(event)">
+                            <input type="hidden" id="attendanceId">
+                            <div class="mb-3">
+                                <label class="form-label">الطالب</label>
+                                <select class="form-select" id="attendanceStudent" required></select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">التاريخ</label>
+                                <input type="date" class="form-control" id="attendanceDate" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">الحالة</label>
+                                <select class="form-select" id="attendanceStatus" required>
+                                    <option value="1">حاضر</option>
+                                    <option value="0">غائب</option>
+                                    <option value="2">متأخر</option>
+                                </select>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                                <button type="submit" class="btn btn-primary">حفظ</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // API Configuration [source_id:1][source_id:2][source_id:3][source_id:4]
+        const API = {
+            students: '/api/students/',
+            attendance: '/api/attendance/'
+        };
+
+        // Initialization
+        window.onload = async () => {
+            await Promise.all([loadStudents(), loadAttendance()]);
+            populateStudentDropdown();
+        };
+
+        // Data Loading Functions
+        async function loadStudents() {
+            try {
+                const response = await fetch(API.students);
+                const students = await response.json();
+                renderStudents(students);
+            } catch (error) {
+                showError('فشل في تحميل بيانات الطلاب');
+            }
+        }
+
+        async function loadAttendance() {
+            try {
+                const response = await fetch(API.attendance);
+                const attendance = await response.json();
+                renderAttendance(attendance);
+            } catch (error) {
+                showError('فشل في تحميل بيانات الحضور');
+            }
+        }
+
+        // Rendering Functions
+        function renderStudents(students) {
+            const tbody = document.getElementById('studentsTable');
+            tbody.innerHTML = students.map(student => `
+                <tr>
+                    <td>${student.studentId}</td>
+                    <td>${student.studentName}</td>
+                    <td>${student.nid}</td>
+                    <td>${student.currentAddress}</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning" onclick="editStudent(${student.studentId})">تعديل</button>
+                        <button class="btn btn-sm btn-danger" onclick="deleteStudent(${student.studentId})">حذف</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function renderAttendance(attendance) {
+            const tbody = document.getElementById('attendanceTable');
+            tbody.innerHTML = attendance.map(record => `
+                <tr>
+                    <td>${new Date(record.attendanceDate).toLocaleDateString('ar-EG')}</td>
+                    <td>${getStudentName(record.studentId)}</td>
+                    <td>${getStatusText(record.statusId)}</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning" onclick="editAttendance(${record.attendanceId})">تعديل</button>
+                        <button class="btn btn-sm btn-danger" onclick="deleteAttendance(${record.attendanceId})">حذف</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        // CRUD Operations for Students [source_id:1][source_id:4]
+        async function deleteStudent(studentId) {
+            if (confirm('هل أنت متأكد من حذف هذا الطالب؟')) {
+                try {
+                    const response = await fetch(`${API.students}${studentId}`, {
+                        method: 'DELETE'
+                    });
+                    if (response.ok) {
+                        await loadStudents();
+                        populateStudentDropdown();
+                    }
+                } catch (error) {
+                    showError('فشل في حذف الطالب');
+                }
+            }
+        }
+
+        async function editStudent(studentId) {
+            try {
+                const response = await fetch(`${API.students}${studentId}`);
+                const student = await response.json();
+                
+                document.getElementById('studentId').value = student.studentId;
+                document.getElementById('studentName').value = student.studentName;
+                document.getElementById('nid').value = student.nid;
+                document.getElementById('currentAddress').value = student.currentAddress;
+                
+                new bootstrap.Modal(document.getElementById('studentFormModal')).show();
+            } catch (error) {
+                showError('فشل في تحميل بيانات الطالب');
+            }
+        }
+
+        async function handleStudentSubmit(event) {
+            event.preventDefault();
+            const formData = {
+                studentId: document.getElementById('studentId').value,
+                studentName: document.getElementById('studentName').value,
+                nid: document.getElementById('nid').value,
+                currentAddress: document.getElementById('currentAddress').value,
+                nationalityId: 1, // Default value
+                religionId: 1,    // Default value
+                medicalStatus: false // Default value
+            };
+
+            const method = formData.studentId ? 'PUT' : 'POST';
+            const url = formData.studentId ? `${API.students}${formData.studentId}` : API.students;
+
+            try {
+                const response = await fetch(url, {
+                    method: method,
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                
+                if (response.ok) {
+                    await loadStudents();
+                    populateStudentDropdown();
+                    bootstrap.Modal.getInstance(document.getElementById('studentFormModal')).hide();
+                }
+            } catch (error) {
+                showError('فشل في حفظ البيانات');
+            }
+        }
+
+        // CRUD Operations for Attendance [source_id:2][source_id:3]
+        async function deleteAttendance(attendanceId) {
+            if (confirm('هل أنت متأكد من حذف سجل الحضور؟')) {
+                try {
+                    const response = await fetch(`${API.attendance}${attendanceId}`, {
+                        method: 'DELETE'
+                    });
+                    if (response.ok) await loadAttendance();
+                } catch (error) {
+                    showError('فشل في حذف سجل الحضور');
+                }
+            }
+        }
+
+        async function editAttendance(attendanceId) {
+            try {
+                const response = await fetch(`${API.attendance}${attendanceId}`);
+                const record = await response.json();
+                
+                document.getElementById('attendanceId').value = record.attendanceId;
+                document.getElementById('attendanceStudent').value = record.studentId;
+                document.getElementById('attendanceDate').value = record.attendanceDate.split('T')[0];
+                document.getElementById('attendanceStatus').value = record.statusId;
+                
+                new bootstrap.Modal(document.getElementById('attendanceFormModal')).show();
+            } catch (error) {
+                showError('فشل في تحميل بيانات الحضور');
+            }
+        }
+
+        async function handleAttendanceSubmit(event) {
+            event.preventDefault();
+            const formData = {
+                studentId: document.getElementById('attendanceStudent').value,
+                attendanceDate: document.getElementById('attendanceDate').value,
+                statusId: document.getElementById('attendanceStatus').value
+            };
+
+            const attendanceId = document.getElementById('attendanceId').value;
+            const method = attendanceId ? 'PUT' : 'POST';
+            const url = attendanceId ? `${API.attendance}${attendanceId}` : API.attendance;
+
+            try {
+                const response = await fetch(url, {
+                    method: method,
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                
+                if (response.ok) {
+                    await loadAttendance();
+                    bootstrap.Modal.getInstance(document.getElementById('attendanceFormModal')).hide();
+                }
+            } catch (error) {
+                showError('فشل في حفظ بيانات الحضور');
+            }
+        }
+
+        // Helper Functions
+        function showSection(section) {
+            document.getElementById('studentsSection').style.display = 
+                section === 'students' ? 'block' : 'none';
+            document.getElementById('attendanceSection').style.display = 
+                section === 'attendance' ? 'block' : 'none';
+        }
+
+        function showStudentForm() {
+            document.getElementById('studentForm').reset();
+            document.getElementById('studentId').value = '';
+            new bootstrap.Modal(document.getElementById('studentFormModal')).show();
+        }
+
+        function showAttendanceForm() {
+            document.getElementById('attendanceForm').reset();
+            document.getElementById('attendanceId').value = '';
+            new bootstrap.Modal(document.getElementById('attendanceFormModal')).show();
+        }
+
+        async function populateStudentDropdown() {
+            const select = document.getElementById('attendanceStudent');
+            try {
+                const response = await fetch(API.students);
+                const students = await response.json();
+                select.innerHTML = students.map(student => 
+                    `<option value="${student.studentId}">${student.studentName}</option>`
+                ).join('');
+            } catch (error) {
+                showError('فشل في تحميل قائمة الطلاب');
+            }
+        }
+
+        function getStatusText(statusId) {
+            return ['غائب', 'حاضر', 'متأخر'][statusId] || 'غير معروف';
+        }
+
+        function getStudentName(studentId) {
+            const student = document.querySelector(`#studentsTable tr td:first-child:contains('${studentId}')`)?.closest('tr');
+            return student?.querySelector('td:nth-child(2)')?.textContent || 'غير معروف';
+        }
+
+        function showError(message) {
+            alert(`خطأ: ${message}`);
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

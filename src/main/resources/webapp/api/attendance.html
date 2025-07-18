@@ -1,0 +1,108 @@
+<div class="attendance-management">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="page-title"><i class="fas fa-calendar-check me-2"></i>إدارة الحضور والغياب</h2>
+        <button class="btn btn-success" id="addAttendanceBtn">
+            <i class="fas fa-plus me-1"></i>تسجيل حضور جديد
+        </button>
+    </div>
+    
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label for="filterDate" class="form-label">التاريخ</label>
+                    <input type="date" class="form-control" id="filterDate">
+                </div>
+                <div class="col-md-4">
+                    <label for="filterStudent" class="form-label">اسم الطالبة</label>
+                    <select class="form-select" id="filterStudent">
+                        <option value="">جميع الطالبات</option>
+                        <!-- Student options will be populated by JavaScript -->
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="filterStatus" class="form-label">حالة الحضور</label>
+                    <select class="form-select" id="filterStatus">
+                        <option value="">جميع الحالات</option>
+                        <option value="1">حاضر</option>
+                        <option value="2">غائب</option>
+                        <option value="3">متأخر</option>
+                        <option value="4">حاصل على عذر</option>
+                    </select>
+                </div>
+                <div class="col-md-12 d-flex justify-content-end">
+                    <button class="btn btn-primary me-2" id="filterBtn">
+                        <i class="fas fa-filter me-1"></i>تصفية
+                    </button>
+                    <button class="btn btn-secondary" id="resetFilterBtn">
+                        <i class="fas fa-redo me-1"></i>إعادة تعيين
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover" id="attendanceTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>اسم الطالبة</th>
+                            <th>التاريخ</th>
+                            <th>الحالة</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendanceTableBody">
+                        <tr>
+                            <td colspan="5" class="text-center">جاري تحميل البيانات...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Attendance Form Modal -->
+    <div class="modal fade" id="attendanceModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="attendanceModalTitle">تسجيل حضور جديد</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="attendanceForm">
+                        <input type="hidden" id="attendanceId">
+                        <div class="mb-3">
+                            <label class="form-label">الطالبة</label>
+                            <select class="form-select" id="attendanceStudent" required>
+                                <option value="">اختر الطالبة</option>
+                                <!-- Student options will be populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">التاريخ</label>
+                            <input type="date" class="form-control" id="attendanceDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">حالة الحضور</label>
+                            <select class="form-select" id="attendanceStatus" required>
+                                <option value="1">حاضر</option>
+                                <option value="2">غائب</option>
+                                <option value="3">متأخر</option>
+                                <option value="4">حاصل على عذر</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-primary" id="saveAttendanceBtn">حفظ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

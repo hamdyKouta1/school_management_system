@@ -1,0 +1,21 @@
+Notes:
+
+1. validated on number must be unique for each student : Done
+
+2. validated on number must be unique for each parent : Done
+
+3. if student does not have a medical status then he has so must update the flag from false to true... : Done
+
+4. enhance attendance
+-get current day : done
+-add class and grade column : done
+
+4. parents
+- update parent
+-add new phone number
+
+5.delete user --> admin
+
+6. count students
+
+***End v1***
