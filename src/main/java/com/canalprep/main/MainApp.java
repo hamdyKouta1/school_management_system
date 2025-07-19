@@ -4,6 +4,7 @@ import com.canalprep.auth.filter.AuthenticationFilter;
 import com.canalprep.auth.servlets.AuthServlet;
 import com.canalprep.dao.DBConnection;
 import com.canalprep.servlet.AddMedicalHistoryServlet;
+import com.canalprep.servlet.AddQualificationsServlet;
 import com.canalprep.servlet.AddStudentNoteServlet;
 import com.canalprep.servlet.AddStudentPhoneServlet;
 import com.canalprep.servlet.AttendanceServlet;
@@ -73,6 +74,7 @@ public class MainApp {
         context.addServlet(new ServletHolder(new AddMedicalHistoryServlet()), "/api/protected/student/medical/*");
         context.addServlet(new ServletHolder(new InsertFullStudentServlet()), "/api/protected/insertStudent/*");
         context.addServlet(new ServletHolder(new DashboardServlet()), "/api/protected/dashboard/*");
+        context.addServlet(new ServletHolder(new AddQualificationsServlet()), "/api/protected/addQ/*");
         
         // Add default servlet for static content
         context.addServlet("org.eclipse.jetty.servlet.DefaultServlet", "/");
