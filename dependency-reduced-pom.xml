@@ -17,10 +17,20 @@
               <goal>shade</goal>
             </goals>
             <configuration>
+              <filters>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+                  </excludes>
+                </filter>
+              </filters>
               <transformers>
                 <transformer>
                   <manifestEntries>
-                    <Main-Class>com.canalprep.MainApp</Main-Class>
+                    <Main-Class>com.canalprep.main.MainApp</Main-Class>
                   </manifestEntries>
                 </transformer>
               </transformers>

@@ -27,7 +27,13 @@ import java.util.EnumSet;
 public class MainApp {
     public static void main(String[] args) throws Exception {
         // Test database connection
-     testDatabaseConnection();
+     // testDatabaseConnection();
+
+        // Validate license
+        if (!com.canalprep.utilities.LicenseManager.isLicenseValid()) {
+            System.err.println("License is not valid. Exiting application.");
+            System.exit(1);
+        }
         
         int port = 8080;
         if (args.length > 0) {
