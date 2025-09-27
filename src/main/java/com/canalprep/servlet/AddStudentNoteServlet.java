@@ -1,6 +1,6 @@
 package com.canalprep.servlet;
 
-import com.canalprep.dao.StudentDAO;
+import com.canalprep.dao.StudentNotesDAO;
 import com.canalprep.model.Notes;
 import com.canalprep.model.Student;
 import jakarta.servlet.ServletException;
@@ -45,7 +45,16 @@ public class AddStudentNoteServlet extends HttpServlet {
             System.out.println(notesList);
             student.setStudentNotes(notesList);
 
-            boolean success = new StudentDAO().addStudentNote(student);
+            boolean success = false;
+            StudentNotesDAO studentNotesDAO = new StudentNotesDAO();
+            for (Notes note : notesList) {
+                if (studentNotesDAO.addStudentNote(student.getStudentId(), note.getNoteText(), note.getCreatedBy())) {
+                    success = true;
+                } else {
+                    success = false;
+                    break;
+                }
+            }
 
             if (success) {
                 resp.getWriter().write("{\"message\": \"Note added successfully\"}");
@@ -79,7 +88,7 @@ public class AddStudentNoteServlet extends HttpServlet {
 
             student.setStudentNotes(notesList);
 
-            boolean success = new StudentDAO().deleteStudentNote(student);
+            boolean success = new StudentNotesDAO().deleteStudentNote(newNote.getNoteId());
 
             if (success) {
                 resp.getWriter().write("{\"message\": \"Note Deleted successfully\"}");

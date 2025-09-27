@@ -6,8 +6,12 @@ import com.canalprep.dao.DBConnection;
 import com.canalprep.staticVariables.DBConst;
 
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import com.canalprep.exception.DataAccessException;
 
 public class UserDAO {
+    private static final Logger logger = Logger.getLogger(UserDAO.class.getName());
     private static final String INSERT_USER_SQL = DBConst.DB_INSERT_USER_SQL;
     private static final String SELECT_USER_BY_USERNAME = DBConst.DB_SELECT_USER_BY_USERNAME;
     private static final String UPDATE_LAST_LOGIN = DBConst.DB_UPDATE_LAST_LOGIN;
@@ -28,7 +32,8 @@ public class UserDAO {
             int affectedRows = statement.executeUpdate();
             
             if (affectedRows == 0) {
-                throw new SQLException("Creating user failed, no rows affected.");
+                logger.log(Level.SEVERE, "Creating user failed, no rows affected.");
+                throw new DataAccessException("Creating user failed, no rows affected.", null);
             }
             
             try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
@@ -43,7 +48,8 @@ public class UserDAO {
 
                     return user;
                 } else {
-                    throw new SQLException("Creating user failed, no ID obtained.");
+                    logger.log(Level.SEVERE, "Creating user failed, no ID obtained.");
+                    throw new DataAccessException("Creating user failed, no ID obtained.", null);
                 }
             }
         }
@@ -69,6 +75,9 @@ public class UserDAO {
                     return user;
                 }
             }
+        } catch (SQLException e) {
+            logger.log(Level.SEVERE, "Error getting user by username: " + username, e);
+            throw new DataAccessException("Error getting user by username: " + username, e);
         }
         return null;
     }

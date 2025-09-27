@@ -1,6 +1,6 @@
 package com.canalprep.servlet;
 
-import com.canalprep.dao.StudentDAO;
+import com.canalprep.dao.StudentPhoneDAO;
 
 import com.canalprep.model.Student;
 import jakarta.servlet.ServletException;
@@ -38,7 +38,16 @@ public class AddStudentPhoneServlet extends HttpServlet {
             }
             student.setStudentPhones(phones);
             
-            boolean success = new StudentDAO().addStudentPhone(student);
+            boolean success = false;
+            StudentPhoneDAO studentPhoneDAO = new StudentPhoneDAO();
+            for (String phone : phones) {
+                if (studentPhoneDAO.addStudentPhone(student.getStudentId(), phone)) {
+                    success = true;
+                } else {
+                    success = false;
+                    break;
+                }
+            }
             
             if (success) {
                 resp.getWriter().write("{\"message\": \"Phone added successfully\"}");
@@ -69,7 +78,7 @@ public class AddStudentPhoneServlet extends HttpServlet {
             student.setStudentPhones(phones);
             student.setStudentId(json.getInt("student_id"));
                         
-            boolean success = new StudentDAO().deleteStudentPhone(student);
+            boolean success = new StudentPhoneDAO().deleteStudentPhone(student.getStudentId(), phones.get(0));
             
             if (success) {
                 resp.getWriter().write("{\"message\": \"Phone deleted successfully\"}");

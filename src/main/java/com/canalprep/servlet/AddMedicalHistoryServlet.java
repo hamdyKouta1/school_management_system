@@ -1,6 +1,6 @@
 package com.canalprep.servlet;
 
-import com.canalprep.dao.StudentDAO;
+import com.canalprep.dao.MedicalHistoryDAO;
 import com.canalprep.model.Student;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -28,7 +28,7 @@ public class AddMedicalHistoryServlet extends HttpServlet {
             student.setMedicalDescriptions(json.getString("description"));
             System.out.println(json.getString("description"));
             
-            boolean success = new StudentDAO().addMedicalHistory(student);
+            boolean success = new MedicalHistoryDAO().addMedicalHistory(student.getStudentId(), student.getMedicalDescriptions());
             
             if (success) {
                 resp.getWriter().write("{\"message\": \"Medical history added successfully\"}");
@@ -57,7 +57,7 @@ public class AddMedicalHistoryServlet extends HttpServlet {
                 student.setMedicalDescriptions(json.getString("description"));
                 
                 
-                boolean success = new StudentDAO().deleteMedicalHistory(student);
+                boolean success = new MedicalHistoryDAO().deleteMedicalHistory(student.getStudentId(), student.getMedicalDescriptions());
                 
                 if (success) {
                     resp.getWriter().write("{\"message\": \"Medical history deleted successfully\"}");

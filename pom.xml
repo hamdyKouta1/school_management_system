@@ -49,17 +49,7 @@
 				provided
 			</scope>
 		</dependency>
-		<dependency>
-			<groupId>
-				com.fasterxml.jackson.core
-			</groupId>
-			<artifactId>
-				jackson-databind
-			</artifactId>
-			<version>
-				2.13.1
-			</version>
-		</dependency>
+
 		<!-- Password Hashing -->
 		<dependency>
 			<groupId>
@@ -151,17 +141,15 @@
     <version>0.11.5</version>
     <scope>runtime</scope>
 </dependency>
+
+<!-- JUnit for testing -->
 <dependency>
-    <groupId>io.jsonwebtoken</groupId>
-    <artifactId>jjwt-api</artifactId>
-    <version>0.11.5</version> <!-- Check for the latest version -->
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
 </dependency>
-<dependency>
-    <groupId>io.jsonwebtoken</groupId>
-    <artifactId>jjwt-impl</artifactId>
-    <version>0.11.5</version>
-    <scope>runtime</scope>
-</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>
@@ -236,48 +224,7 @@
 					</encoding>
 				</configuration>
 			</plugin>
-			<!-- Copy web resources -->
-			<plugin>
-				<groupId>
-					org.apache.maven.plugins
-				</groupId>
-				<artifactId>
-					maven-resources-plugin
-				</artifactId>
-				<version>
-					3.3.0
-				</version>
-				<executions>
-					<execution>
-						<id>
-							copy-resources
-						</id>
-						<phase>
-							process-classes
-						</phase>
-						<goals>
-							<goal>
-								copy-resources
-							</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>
-								${project.build.outputDirectory}/webapp
-							</outputDirectory>
-							<resources>
-								<resource>
-									<directory>
-										src/main/resources/webapp
-									</directory>
-									<filtering>
-										true
-									</filtering>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+			<!-- Web resources plugin removed - pure backend API -->
 		</plugins>
 	</build>
 </project>

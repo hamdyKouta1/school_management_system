@@ -4,11 +4,12 @@ import java.sql.Date;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonAlias;
 
 public class Student {
   //  @JsonAlias("student_id")
     private int studentId;
-  //  @JsonAlias
+      @JsonAlias({"firstName", "student_name"})
     private String studentName;
     private String nid;
 //    @JsonAlias("nationality_id")
@@ -16,6 +17,7 @@ public class Student {
  //   @JsonAlias("nationality")
     private String nationalityName;
  //   @JsonAlias("current_address")
+    @JsonAlias({"address", "current_address"})
     private String currentAddress;
    // @JsonAlias("religion_id")
     private int religionId;
@@ -29,11 +31,13 @@ public class Student {
     private List<String> studentPhones;
     
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonAlias({"dateOfBirth", "date_of_birth"})
     private Date dateOfBirth;
     private String placeOfBirth;
     private int gradeId;
     private String gradeName;
     private int classId;
+    @JsonAlias({"className", "class"})
     private String className;
   
 private List<Notes> studentNotes;

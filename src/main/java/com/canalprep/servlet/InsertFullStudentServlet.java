@@ -1,6 +1,7 @@
 package com.canalprep.servlet;
 
 import com.canalprep.dao.StudentDAO;
+import com.canalprep.util.StudentJsonBuilder;
 import com.canalprep.model.Student;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -21,7 +22,7 @@ public class InsertFullStudentServlet extends HttpServlet {
             // Efficiently read entire request body
             String requestBody = reader.lines().collect(Collectors.joining());
             JSONObject json = new JSONObject(requestBody); // Parse JSON
-            Student student2 = new StudentDAO().buildStudentFromJson(json);
+            Student student2 = StudentJsonBuilder.buildStudentFromJson(json);
             // Create StudentDetails object from JSON
             
             int studentId = new StudentDAO().insertFullStudent(student2);
@@ -66,7 +67,7 @@ public class InsertFullStudentServlet extends HttpServlet {
             JSONObject json = new JSONObject(sb.toString());
 
             // Build Student object from JSON (same as insert)
-            Student student = new StudentDAO().buildStudentFromJson(json);
+            Student student = StudentJsonBuilder.buildStudentFromJson(json);
             student.setStudentId(studentId); // Set ID for update
 
             // Perform update

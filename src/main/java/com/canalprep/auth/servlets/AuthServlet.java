@@ -12,12 +12,15 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import com.canalprep.exception.DataAccessException;
 
 @WebServlet("/api/auth/*")
 public class AuthServlet extends HttpServlet {
+    private static final Logger logger = Logger.getLogger(AuthServlet.class.getName());
     private final UserDAO userDao = new UserDAO();
     private final ObjectMapper objectMapper = new ObjectMapper();
     
@@ -92,8 +95,12 @@ public class AuthServlet extends HttpServlet {
             resp.setStatus(HttpServletResponse.SC_OK);
             objectMapper.writeValue(resp.getWriter(), responseData);
             
+        } catch (DataAccessException e) {
+            logger.log(Level.WARNING, "Login failed due to data access issue: " + e.getMessage(), e);
+            sendErrorResponse(resp, "Login failed: Invalid username or password", HttpServletResponse.SC_UNAUTHORIZED);
         } catch (Exception e) {
-            sendErrorResponse(resp, "Login failed: " + e.getMessage(), HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            logger.log(Level.SEVERE, "An unexpected error occurred during login: " + e.getMessage(), e);
+            sendErrorResponse(resp, "Login failed: An unexpected error occurred", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
     }
     
@@ -116,7 +123,8 @@ public class AuthServlet extends HttpServlet {
             }
             
             String secretCode = requestData.get("secretCode");
-            if ("ADMIN_SECRET_123".equals(secretCode)) {
+            String adminSecret = "123456";//System.getenv("ADMIN_SECRET");
+            if (adminSecret != null && adminSecret.equals(secretCode)) {
                 role = "ADMIN";
             }
             
@@ -136,8 +144,12 @@ public class AuthServlet extends HttpServlet {
             resp.setStatus(HttpServletResponse.SC_CREATED);
             objectMapper.writeValue(resp.getWriter(), responseData);
             
-        } catch (SQLException e) {
-            sendErrorResponse(resp, "Registration failed: " + e.getMessage(), HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        } catch (DataAccessException e) {
+            logger.log(Level.WARNING, "Registration failed due to data access issue: " + e.getMessage(), e);
+            sendErrorResponse(resp, "Registration failed: Database error", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, "An unexpected error occurred during registration: " + e.getMessage(), e);
+            sendErrorResponse(resp, "Registration failed: An unexpected error occurred", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
     }
     

@@ -8,6 +8,7 @@ import com.canalprep.staticVariables.DBConst;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.sql.*;
+import com.canalprep.exception.DataAccessException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -28,49 +29,20 @@ public class StudentDAO {
     private static final String UPDATE = DBConst.DB_UPDATE;
     private static final String DELETE_STUDENT_FUNCTION = DBConst.DB_DELETE_BY_ID;
     private static final String UPDATE_STUDENT_DATA = DBConst.DB_UPDATE_STUDENT;
-    private static final String INSERT_STUDENT_PHONE = DBConst.DB_INSERT_STUDENT_PHONE;
-    private static final String INSERT_STUDENT_NOTE = DBConst.DB_INSERT_STUDENT_NOTE;
-    private static final String INSERT_STUDENT_MEDICAL = DBConst.DB_INSERT_STUDENT_MEDICAL;
-    private static final String DELETE_STUDENT_PHONE = DBConst.DB_DELETE_STUDENT_PHONE;
-    private static final String DELETE_STUDENT_NOTE = DBConst.DB_DELETE_STUDENT_NOTE;
-    private static final String DELETE_STUDENT_MEDICAL = DBConst.DB_DELETE_STUDENT_MEDICAL;
     private static final String SELECT_BY_STUDENT_NAME = DBConst.DB_SELECT_STUDENT_BY_NAME;
-    private static final String UPDATE_STUDENT_MEDICAL_STATUS = DBConst.DB_UPDATE_MEDICAL_STATUS;
-    private static final String INSERT_STUDENT_QUALIFICATIONS = DBConst.DB_INSERT_STUDENT_QUALIFICATION;
-    private static final String DELETE_STUDENT_QUALIFICATIONS = DBConst.DB_DELETE_STUDENT_QUALIFICATION;
 
-    public List<AdditionalQualification> getAllAdditionalQualifications() {
-        List<AdditionalQualification> qualifications = new ArrayList<>();
-        String sql = "SELECT qualification_id, student_id, description FROM public.additional_qualifications";
 
-        try (Connection conn = DBConnection.getConnection();
-                PreparedStatement stmt = conn.prepareStatement(sql);
-                ResultSet rs = stmt.executeQuery()) {
-
-            while (rs.next()) {
-                AdditionalQualification q = new AdditionalQualification();
-                q.setQualification_id(rs.getInt("qualification_id"));
-                q.setStudent_id(rs.getInt("student_id"));
-                q.setDescription(rs.getString("description"));
-                qualifications.add(q);
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return qualifications;
-    }
 
     public int countAllStudents() {
         String sql = "SELECT COUNT(*) FROM students";
         try (Connection conn = DBConnection.getConnection();
-                PreparedStatement pstmt = conn.prepareStatement(sql);
-                ResultSet rs = pstmt.executeQuery()) {
-            if (rs.next())
+             PreparedStatement pstmt = conn.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery()) {
+            if (rs.next()) {
                 return rs.getInt(1);
+            }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new DataAccessException("Error counting all students", e);
         }
         return 0;
     }
@@ -85,7 +57,7 @@ public class StudentDAO {
                     return rs.getInt(1);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new DataAccessException("Error counting students by grade", e);
         }
         return 0;
     }
@@ -100,7 +72,7 @@ public class StudentDAO {
                     return rs.getInt(1);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new DataAccessException("Error counting students by class", e);
         }
         return 0;
     }
@@ -125,7 +97,7 @@ public class StudentDAO {
                 }
             }
         } catch (SQLException e) {
-            handleSQLException("Error getting students by name", e);
+            throw new DataAccessException("Error getting students by name", e);
         }
         return ids;
     }
@@ -134,14 +106,14 @@ public class StudentDAO {
         List<Student> students = new ArrayList<>();
 
         try (Connection conn = DBConnection.getConnection();
-                Statement stmt = conn.createStatement();
-                ResultSet rs = stmt.executeQuery(SELECT_ALL)) {
+                PreparedStatement pstmt = conn.prepareStatement(SELECT_ALL);
+                ResultSet rs = pstmt.executeQuery()) {
 
             while (rs.next()) {
                 students.add(extractStudentFromResultSet(rs));
             }
         } catch (SQLException e) {
-            handleSQLException("Error getting all students", e);
+            throw new DataAccessException("Error getting all students", e);
         }
         return students;
     }
@@ -157,7 +129,7 @@ public class StudentDAO {
                 }
             }
         } catch (SQLException e) {
-            handleSQLException("Error getting student by ID: " + studentId, e);
+            throw new DataAccessException("Error getting student by ID: " + studentId, e);
         }
         return null;
     }
@@ -181,7 +153,7 @@ public class StudentDAO {
                 }
             }
         } catch (SQLException e) {
-            handleSQLException("Error getting student by ID: " + ListOfID, e);
+            throw new DataAccessException("Error getting student by ID: " + ListOfID, e);
         }
         return students;
     }
@@ -202,7 +174,7 @@ public class StudentDAO {
                 }
             }
         } catch (SQLException e) {
-            handleSQLException("Error adding student", e);
+            throw new DataAccessException("Error adding student", e);
         }
         return false;
     }
@@ -217,9 +189,8 @@ public class StudentDAO {
             int affectedRows = pstmt.executeUpdate();
             return affectedRows > 0;
         } catch (SQLException e) {
-            handleSQLException("Error updating student: " + student.getStudentId(), e);
+            throw new DataAccessException("Error updating student: " + student.getStudentId(), e);
         }
-        return false;
     }
 
     public boolean deleteStudent(int studentId) {
@@ -235,8 +206,7 @@ public class StudentDAO {
             return cstmt.getBoolean(1);
 
         } catch (SQLException e) {
-            handleSQLException("Error deleting student: " + studentId, e);
-            return false;
+            throw new DataAccessException("Error deleting student: " + studentId, e);
         }
     }
 
@@ -328,8 +298,7 @@ public class StudentDAO {
 
     private void handleSQLException(String message, SQLException e) {
         logger.log(Level.SEVERE, message, e);
-        // You could throw a custom application exception here
-        // throw new DataAccessException(message, e);
+        throw new com.canalprep.exception.DataAccessException(message, e);
     }
 
     public int insertFullStudent(Student student) throws SQLException {
@@ -447,11 +416,11 @@ public class StudentDAO {
             return studentId;
         } catch (SQLException e) {
             System.err.println("SQL Error: " + e.getMessage());
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "Error counting all students", e);
             throw e;
         } catch (Exception e) {
             System.err.println("General Error: " + e.getMessage());
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "Error counting all students", e);
             throw new SQLException("Failed to insert student", e);
         }
     }
@@ -536,222 +505,9 @@ public class StudentDAO {
         return value != null ? value : "";
     }
 
-    public boolean addStudentPhone(Student student) throws SQLException {
-        String sql = INSERT_STUDENT_PHONE;
-        try (Connection conn = DBConnection.getConnection();
-                PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setInt(1, student.getStudentId());
-            pstmt.setString(2, student.getStudentPhones().get(0));
-            return pstmt.executeUpdate() > 0;
-        }
-    }
 
-    // Add student note
-    public boolean addStudentNote(Student student) throws SQLException {
-        String sql = INSERT_STUDENT_NOTE;
-        try (Connection conn = DBConnection.getConnection();
-                PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setInt(1, student.getStudentId());
-            pstmt.setString(2, student.getStudentNotes().get(0).getNoteText());
-            pstmt.setString(3, student.getStudentNotes().get(0).getCreatedBy());
-            return pstmt.executeUpdate() > 0;
-        }
-    }
-
-    // Add medical history
-    public boolean addMedicalHistory(Student student) throws SQLException {
-        String sql = INSERT_STUDENT_MEDICAL;
-        String sql_update_status = UPDATE_STUDENT_MEDICAL_STATUS;
-        boolean result = false;
-
-        try (Connection conn = DBConnection.getConnection();
-                PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setInt(1, student.getStudentId());
-            pstmt.setString(2, student.getMedicalDescriptions());
-            result = pstmt.executeUpdate() > 0;
-
-            // If insert successful, update medical status
-            if (result) {
-                try (Connection conn2 = DBConnection.getConnection();
-                        PreparedStatement pstmt2 = conn2.prepareStatement(sql_update_status)) {
-
-                    pstmt2.setInt(2, student.getStudentId());
-                    pstmt2.setBoolean(1, true);
-                    pstmt2.executeUpdate();
-                }
-            }
-        }
-
-        return result;
-    }
-
-    public boolean deleteStudentPhone(Student student) throws SQLException {
-        String sql = DELETE_STUDENT_PHONE;
-        try (Connection conn = DBConnection.getConnection();
-                PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, student.getStudentPhones().get(0));
-            pstmt.setInt(2, student.getStudentId());
-            return pstmt.executeUpdate() > 0;
-        }
-    }
-
-    // Add student note
-    public boolean deleteStudentNote(Student student) throws SQLException {
-        String sql = DELETE_STUDENT_NOTE;
-        try (Connection conn = DBConnection.getConnection();
-                PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setInt(1, student.getStudentNotes().get(0).getNoteId());
-            return pstmt.executeUpdate() > 0;
-        }
-    }
-
-    // Add medical history
-    public boolean deleteMedicalHistory(Student student) throws SQLException {
-        String sqlDelete = DELETE_STUDENT_MEDICAL;
-        String sqlCheckRemaining = "SELECT 1 FROM medical_history WHERE student_id = ?";
-        String sqlUpdateStatus = UPDATE_STUDENT_MEDICAL_STATUS;
-        boolean result = false;
-
-        try (Connection conn = DBConnection.getConnection()) {
-            conn.setAutoCommit(false); // Begin transaction
-
-            // 1. Delete specific medical history entry
-            try (PreparedStatement pstmtDelete = conn.prepareStatement(sqlDelete)) {
-                pstmtDelete.setString(1, student.getMedicalDescriptions());
-                pstmtDelete.setInt(2, student.getStudentId());
-                result = pstmtDelete.executeUpdate() > 0;
-            }
-
-            // 2. If deletion succeeded, check for remaining records
-            if (result) {
-                boolean hasRemaining = false;
-
-                try (PreparedStatement pstmtCheck = conn.prepareStatement(sqlCheckRemaining)) {
-                    pstmtCheck.setInt(1, student.getStudentId());
-                    try (ResultSet rs = pstmtCheck.executeQuery()) {
-                        hasRemaining = rs.next(); // true if there’s at least one record
-                    }
-                }
-
-                // 3. If no remaining records, update medical status
-                if (!hasRemaining) {
-                    try (PreparedStatement pstmtUpdate = conn.prepareStatement(sqlUpdateStatus)) {
-                        pstmtUpdate.setBoolean(1, false); // SET medical_status = ?
-                        pstmtUpdate.setInt(2, student.getStudentId()); // WHERE student_id = ?
-                        pstmtUpdate.executeUpdate();
-                    }
-                }
-            }
-
-            conn.commit(); // Commit the transaction
-        } catch (SQLException e) {
-            e.printStackTrace(); // Log the exception
-            throw e; // Rethrow after rollback
-        }
-
-        return result;
-    }
-
-    /****************************************************************************************** */
-
-    public Student buildStudentFromJson(JSONObject json) throws JSONException {
-        Student student = new Student();
-        student.setStudentName(json.getString("student_name"));
-        student.setNid(json.getString("nid"));
-        student.setNationalityName(json.getString("nationality"));
-        student.setReligionName(json.getString("religion"));
-        student.setCurrentAddress(json.getString("current_address"));
-        student.setMedicalStatus(json.getBoolean("medical_status"));
-
-        // Parse date
-        String dobString = json.getString("date_of_birth");
-        if (dobString != null && !dobString.isEmpty()) {
-            student.setDateOfBirth(Date.valueOf(dobString));
-        }
-
-        student.setPlaceOfBirth(json.getString("place_of_birth"));
-        student.setGradeName(json.getString("grade"));
-        student.setClassName(json.getString("class"));
-
-        // Medical descriptions
-        if (json.has("medical_descriptions")) {
-            student.setMedicalDescriptions(json.getString("medical_descriptions"));
-        }
-
-        // Student phones
-        JSONArray phoneArray = json.getJSONArray("student_phones");
-        List<String> phones = new ArrayList<>();
-        for (int i = 0; i < phoneArray.length(); i++) {
-            phones.add(phoneArray.getString(i));
-        }
-        student.setStudentPhones(phones);
-
-        // Student notes
-        if (json.has("student_notes")) {
-            JSONArray notesArray = json.getJSONArray("student_notes");
-            List<Notes> notesList = new ArrayList<>();
-            for (int i = 0; i < notesArray.length(); i++) {
-                JSONObject noteObj = notesArray.getJSONObject(i);
-                Notes note = new Notes();
-                note.setNoteText(noteObj.getString("note_text"));
-                note.setCreatedBy(noteObj.getString("created_by"));
-                notesList.add(note);
-            }
-            student.setStudentNotes(notesList);
-        }
-
-        // Parents info
-        JSONArray parentsArray = json.getJSONArray("parents_info");
-        List<ParentDetails> parents = new ArrayList<>();
-        for (int i = 0; i < parentsArray.length(); i++) {
-            JSONObject parentObj = parentsArray.getJSONObject(i);
-            ParentDetails parent = new ParentDetails();
-            parent.setParentName(parentObj.getString("parent_name"));
-            parent.setRelationship(parentObj.getString("relationship"));
-            parent.setParentNid(parentObj.getString("parent_nid"));
-            parent.setParentNationality(parentObj.getString("parent_nationality"));
-            parent.setParentJob(parentObj.getString("parent_job"));
-            parent.setParentAddress(parentObj.getString("parent_address"));
-            parent.setParentSocialStatus(parentObj.getString("parent_social_status"));
-
-            JSONArray parentPhones = parentObj.getJSONArray("parent_phones");
-            List<String> parentPhoneList = new ArrayList<>();
-            for (int j = 0; j < parentPhones.length(); j++) {
-                parentPhoneList.add(parentPhones.getString(j));
-            }
-            parent.setParentPhones(parentPhoneList);
-
-            parents.add(parent);
-        }
-        student.setParentsInfo(parents);
-
-        return student;
-    }
+// End of StudentDAO.java
 
 
-
-
-
-
-    public boolean addStudentAdditionalQualification(Student student) throws SQLException {
-        String sql = INSERT_STUDENT_QUALIFICATIONS;
-        try (Connection conn = DBConnection.getConnection();
-                PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setInt(1, student.getStudentId());
-            pstmt.setString(2, student.getAdditionalQualifications().get(0).getDescription());
-          //  pstmt.setString(3, student.getStudentNotes().get(0).getCreatedBy());
-            return pstmt.executeUpdate() > 0;
-        }
-    }
-
-    public boolean deleteStudentQualification(Student student) throws SQLException {
-        String sql = DELETE_STUDENT_QUALIFICATIONS;
-
-    try (Connection conn = DBConnection.getConnection();
-                PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setInt(1, student.getAdditionalQualifications().get(0).getQualification_id());
-            return pstmt.executeUpdate() > 0;
-        }
-    }
 }
+

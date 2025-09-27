@@ -10,6 +10,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class JwtUtil {
+    // private static final SecretKey SECRET_KEY = getSecretKey();
+
+    // private static SecretKey getSecretKey() {
+    //     String secret = System.getenv("JWT_SECRET");
+    //     if (secret == null || secret.isEmpty()) {
+    //         // For development/testing, generate a key if not provided
+    //         // In production, this should be a critical error or a pre-configured key
+    //         System.err.println("WARNING: JWT_SECRET environment variable not set. Generating a temporary key. THIS IS INSECURE FOR PRODUCTION.");
+    //         return Keys.secretKeyFor(SignatureAlgorithm.HS256);
+    //     }
+    //     // Use a fixed key derived from the environment variable
+    //     return Keys.hmacShaKeyFor(secret.getBytes());
+    // }
     private static final SecretKey SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS256);
     private static final long EXPIRATION_TIME = 30 * 60 * 1000; // 30 minutes
 

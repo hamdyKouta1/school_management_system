@@ -19,3 +19,263 @@ Notes:
 6. count students Done
 
 ***End v1***
+
+# School Management System API Documentation
+
+## Postman Environment Setup
+
+1. Create a new environment in Postman named "School Management System"
+2. Add the following variables:
+   - `base_url`: http://localhost:8080 (or your server port)
+   - `token`: (leave empty initially, will be set after login)
+
+## API Endpoints
+
+### Authentication
+
+#### Login
+- **URL**: {{base_url}}/api/auth/login
+- **Method**: POST
+- **Body** (JSON):
+```json
+{
+    "username": "admin",
+    "password": "password123"
+}
+```
+- **Response**: Contains JWT token that should be saved to the `token` environment variable
+
+#### Register
+- **URL**: {{base_url}}/api/auth/register
+- **Method**: POST
+- **Body** (JSON):
+```json
+{
+    "username": "newuser",
+    "password": "password123",
+    "email": "user@example.com",
+    "role": "USER"
+}
+```
+
+#### Logout
+- **URL**: {{base_url}}/api/auth/logout
+- **Method**: POST
+- **Headers**: Authorization: Bearer {{token}}
+
+### Students
+
+#### Get All Students
+- **URL**: {{base_url}}/api/protected/students
+- **Method**: GET
+- **Headers**: Authorization: Bearer {{token}}
+
+#### Get Student by ID
+- **URL**: {{base_url}}/api/protected/students/{id}
+- **Method**: GET
+- **Headers**: Authorization: Bearer {{token}}
+
+#### Count Students
+- **URL**: {{base_url}}/api/protected/students/count
+- **Method**: GET
+- **Headers**: Authorization: Bearer {{token}}
+
+#### Count Students by Grade
+- **URL**: {{base_url}}/api/protected/students/count/grade/{gradeId}
+- **Method**: GET
+- **Headers**: Authorization: Bearer {{token}}
+
+#### Count Students by Class
+- **URL**: {{base_url}}/api/protected/students/count/class/{classId}
+- **Method**: GET
+- **Headers**: Authorization: Bearer {{token}}
+
+#### Create Student
+- **URL**: {{base_url}}/api/protected/students
+- **Method**: POST
+- **Headers**: Authorization: Bearer {{token}}
+- **Body** (JSON):
+```json
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "dateOfBirth": "2010-01-01",
+    "gender": "Male",
+    "address": "123 Main St",
+    "gradeId": 1,
+    "className": "Class A"
+}
+```
+
+#### Update Student
+- **URL**: {{base_url}}/api/protected/students/{id}
+- **Method**: PUT
+- **Headers**: Authorization: Bearer {{token}}
+- **Body** (JSON):
+```json
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "dateOfBirth": "2010-01-01",
+    "gender": "Male",
+    "address": "123 Main St",
+    "gradeId": 1,
+    "className": "Class A"
+}
+```
+
+#### Delete Student
+- **URL**: {{base_url}}/api/protected/students/{id}
+- **Method**: DELETE
+- **Headers**: Authorization: Bearer {{token}}
+
+### Student Notes
+
+#### Add Student Note
+- **URL**: {{base_url}}/api/protected/student/note
+- **Method**: POST
+- **Headers**: Authorization: Bearer {{token}}
+- **Body** (JSON):
+```json
+{
+    "student_id": 1,
+    "notes": [
+        {
+            "note": "Student performs well in mathematics"
+        },
+        {
+            "note": "Needs improvement in language skills"
+        }
+    ]
+}
+```
+
+### Student Phone
+
+#### Add Student Phone
+- **URL**: {{base_url}}/api/protected/student/phone
+- **Method**: POST
+- **Headers**: Authorization: Bearer {{token}}
+- **Body** (JSON):
+```json
+{
+    "student_id": 1,
+    "phones": [
+        {
+            "phone": "123-456-7890"
+        },
+        {
+            "phone": "098-765-4321"
+        }
+    ]
+}
+```
+
+### Medical History
+
+#### Add Medical History
+- **URL**: {{base_url}}/api/protected/student/medical
+- **Method**: POST
+- **Headers**: Authorization: Bearer {{token}}
+- **Body** (JSON):
+```json
+{
+    "student_id": 1,
+    "medical_condition": "Asthma",
+    "medications": "Inhaler as needed",
+    "allergies": "Peanuts",
+    "special_needs": "None"
+}
+```
+
+### Attendance
+
+#### Get All Attendance Records
+- **URL**: {{base_url}}/api/protected/attendance
+- **Method**: GET
+- **Headers**: Authorization: Bearer {{token}}
+
+#### Get Attendance by ID
+- **URL**: {{base_url}}/api/protected/attendance/id/{id}
+- **Method**: GET
+- **Headers**: Authorization: Bearer {{token}}
+
+#### Get Attendance by Date
+- **URL**: {{base_url}}/api/protected/attendance/getByDate/{date}
+- **Method**: GET
+- **Headers**: Authorization: Bearer {{token}}
+- **Note**: Date format should be YYYY-MM-DD
+
+#### Create Attendance Record
+- **URL**: {{base_url}}/api/protected/attendance
+- **Method**: POST
+- **Headers**: Authorization: Bearer {{token}}
+- **Body** (JSON):
+```json
+{
+    "studentId": 1,
+    "attendanceDate": "2023-09-25",
+    "status": "Present",
+    "remarks": "Arrived on time"
+}
+```
+
+#### Update Attendance Record
+- **URL**: {{base_url}}/api/protected/attendance/{id}
+- **Method**: PUT
+- **Headers**: Authorization: Bearer {{token}}
+- **Body** (JSON):
+```json
+{
+    "studentId": 1,
+    "attendanceDate": "2023-09-25",
+    "status": "Late",
+    "remarks": "Arrived 15 minutes late"
+}
+```
+
+### Qualifications
+
+#### Add Qualifications
+- **URL**: {{base_url}}/api/protected/addQ
+- **Method**: POST
+- **Headers**: Authorization: Bearer {{token}}
+- **Body** (JSON):
+```json
+{
+    "student_id": 1,
+    "qualifications": [
+        {
+            "description": "Math Olympiad Winner"
+        },
+        {
+            "description": "Science Fair Participant"
+        }
+    ]
+}
+```
+
+### Dashboard
+
+#### Get Dashboard Data
+- **URL**: {{base_url}}/api/protected/dashboard/countStudents
+- **Method**: GET
+- **Headers**: Authorization: Bearer {{token}}
+
+## Testing Workflow
+
+1. Register a new user or login with existing credentials
+2. Save the returned token to the Postman environment
+3. Use the token for subsequent API calls
+4. Test each endpoint with valid and invalid data
+5. Verify response status codes and data
+
+## Common HTTP Status Codes
+
+- 200 OK: Request successful
+- 201 Created: Resource created successfully
+- 400 Bad Request: Invalid input
+- 401 Unauthorized: Missing or invalid authentication
+- 403 Forbidden: Not enough permissions
+- 404 Not Found: Resource not found
+- 500 Internal Server Error: Server-side error

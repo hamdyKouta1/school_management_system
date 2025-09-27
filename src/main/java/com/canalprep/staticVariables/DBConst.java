@@ -4,9 +4,7 @@ package com.canalprep.staticVariables;
 public abstract class DBConst {
 
     public static final String DB_DRIVER = "org.postgresql.Driver";
-    public static final String DB_URL = "jdbc:postgresql://localhost:5432/Canal_Prep_School";
-    public static final String DB_USER = "postgres";
-    public static final String DB_PASSWORD = "123";
+
     public static final String DB_INSERT = "INSERT INTO students (student_name, nid, nationality_id, current_address, religion_id, medical_status) VALUES (?, ?, ?, ?, ?, ?)";
     public static final String DB_UPDATE = "UPDATE students SET student_name = ?, nid = ?, nationality_id = ?, current_address = ?, religion_id = ?, medical_status = ? WHERE student_id = ?";
     public static final String DB_UPDATE_STUDENT = "{ ? = call update_full_student(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) }";

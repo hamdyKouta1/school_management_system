@@ -11,23 +11,20 @@ import com.canalprep.servlet.AttendanceServlet;
 import com.canalprep.servlet.DashboardServlet;
 import com.canalprep.servlet.InsertFullStudentServlet;
 import com.canalprep.servlet.StudentServlet;
-
 import jakarta.servlet.DispatcherType;
-
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.servlet.FilterHolder;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.servlets.CrossOriginFilter;
-import java.net.URL;
 import java.sql.Connection;
 import java.util.EnumSet;
 
 public class MainApp {
     public static void main(String[] args) throws Exception {
         // Test database connection
-     // testDatabaseConnection();
+     
 
         // Validate license
         if (!com.canalprep.utilities.LicenseManager.isLicenseValid()) {
@@ -35,11 +32,11 @@ public class MainApp {
             System.exit(1);
         }
         
-        int port = 8080;
+        int port = 8081;
         if (args.length > 0) {
             port = Integer.parseInt(args[0]);
         }
-
+ testDatabaseConnection();
         Server server = new Server();
         ServerConnector connector = new ServerConnector(server);
         connector.setPort(port);
@@ -49,19 +46,13 @@ public class MainApp {
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.setContextPath("/");
         
-        // Get the location of the class files
-        URL location = MainApp.class.getProtectionDomain().getCodeSource().getLocation();
-        String basePath = location.toExternalForm();
-        
-        // Configure static resources
-        context.setResourceBase(basePath + "webapp");
-        context.setWelcomeFiles(new String[]{"index.html"});
+        // Pure backend API server - no static resources
         
         // Add CORS filter for frontend access
         FilterHolder corsFilter = new FilterHolder(CrossOriginFilter.class);
         corsFilter.setInitParameter(CrossOriginFilter.ALLOWED_ORIGINS_PARAM, "*");
         corsFilter.setInitParameter(CrossOriginFilter.ALLOWED_METHODS_PARAM, "GET,POST,PUT,DELETE,OPTIONS");
-        corsFilter.setInitParameter(CrossOriginFilter.ALLOWED_HEADERS_PARAM, "Content-Type,Authorization,X-Requested-With,Content-Length,Accept,Origin");
+        corsFilter.setInitParameter(CrossOriginFilter.ALLOWED_HEADERS_PARAM, "Content-Type,Authorization,X-Requested-With,Content-Length,Accept,Origin,ngrok-skip-browser-warning");
         corsFilter.setInitParameter(CrossOriginFilter.ALLOW_CREDENTIALS_PARAM, "true");
         context.addFilter(corsFilter, "/*", EnumSet.of(DispatcherType.REQUEST));
         
@@ -82,16 +73,15 @@ public class MainApp {
         context.addServlet(new ServletHolder(new DashboardServlet()), "/api/protected/dashboard/*");
         context.addServlet(new ServletHolder(new AddQualificationsServlet()), "/api/protected/addQ/*");
         
-        // Add default servlet for static content
-        context.addServlet("org.eclipse.jetty.servlet.DefaultServlet", "/");
+        // Pure backend API - no default servlet needed
         
         server.setHandler(context);
         
         // Start the server
         server.start();
-        System.out.println("Server started on port " + port);
-        System.out.println("Static resource base: " + basePath + "webapp");
-        System.out.println("Open http://localhost:" + port + " in your browser");
+        System.out.println("Backend API Server started on port " + port);
+        System.out.println("API Base URL: http://localhost:" + port + "/api");
+       
         server.join();
     }
     

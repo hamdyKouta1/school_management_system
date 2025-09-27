@@ -9,9 +9,12 @@ import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @WebFilter({"/api/protected/*", "/api/admin/*"})
 public class AuthenticationFilter implements Filter {
+    private static final Logger logger = Logger.getLogger(AuthenticationFilter.class.getName());
     
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -63,10 +66,13 @@ public class AuthenticationFilter implements Filter {
             chain.doFilter(request, response);
             
         } catch (ExpiredJwtException e) {
+            logger.log(Level.WARNING, "Token expired for user: " + e.getClaims().getSubject());
             sendErrorResponse(httpResponse, "Token expired", HttpServletResponse.SC_UNAUTHORIZED);
         } catch (SignatureException e) {
+            logger.log(Level.WARNING, "Invalid JWT signature: " + e.getMessage());
             sendErrorResponse(httpResponse, "Invalid token", HttpServletResponse.SC_UNAUTHORIZED);
         } catch (Exception e) {
+            logger.log(Level.SEVERE, "Authentication failed: " + e.getMessage(), e);
             sendErrorResponse(httpResponse, "Authentication failed", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
     }
@@ -83,6 +89,7 @@ public class AuthenticationFilter implements Filter {
         response.setHeader("X-XSS-Protection", "1; mode=block");
         response.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
         response.setHeader("Content-Security-Policy", "default-src 'self'");
+        
     }
     
     @Override

@@ -1,6 +1,6 @@
 package com.canalprep.servlet;
 
-import com.canalprep.dao.StudentDAO;
+import com.canalprep.dao.AdditionalQualificationDAO;
 import com.canalprep.model.AdditionalQualification;
 import com.canalprep.model.Student;
 import jakarta.servlet.ServletException;
@@ -45,7 +45,16 @@ public class AddQualificationsServlet extends HttpServlet {
 
             student.setAdditionalQualifications(qualificationList);
 
-            boolean success = new StudentDAO().addStudentAdditionalQualification(student);
+            boolean success = false;
+            AdditionalQualificationDAO qualificationDAO = new AdditionalQualificationDAO();
+            for (AdditionalQualification qualification : qualificationList) {
+                if (qualificationDAO.addAdditionalQualification(student.getStudentId(), qualification.getDescription())) {
+                    success = true;
+                } else {
+                    success = false;
+                    break;
+                }
+            }
 
             if (success) {
                 resp.getWriter().write("{\"message\": \"Qualification(s) added successfully\"}");
@@ -79,7 +88,7 @@ public class AddQualificationsServlet extends HttpServlet {
 
             student.setAdditionalQualifications(qualificationList);
 
-            boolean success = new StudentDAO().deleteStudentQualification(student);
+            boolean success = new AdditionalQualificationDAO().deleteAdditionalQualification(qualification.getQualification_id());
 
             if (success) {
                 resp.getWriter().write("{\"message\": \"Qualification deleted successfully\"}");
