@@ -2,6 +2,7 @@ package com.canalprep.servlet;
 
 import com.canalprep.dao.StudentDAO;
 import com.canalprep.model.Student;
+import com.canalprep.utilities.LoggerUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import jakarta.servlet.ServletException;
@@ -38,6 +39,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 
         // Case 1: /students or /students/
         if (pathParts.isEmpty()) {
+            LoggerUtil.logInfo("StudentServlet", "Fetching all students from IP: " + req.getRemoteAddr().toString());
             List<Student> students = studentDAO.getAllStudents();
             out.print(objectMapper.writeValueAsString(students));
             return;
@@ -103,8 +105,10 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp)
                 int studentId = Integer.parseInt(pathParts.get(0));
                 Student student = studentDAO.getStudentById(studentId);
                 if (student != null) {
+                    LoggerUtil.logInfo("StudentServlet", "Student retrieved: ID " + studentId + " from IP: " + req.getRemoteAddr());
                     out.print(objectMapper.writeValueAsString(student));
                 } else {
+                    LoggerUtil.logInfo("StudentServlet", "Student not found: ID " + studentId + " from IP: " + req.getRemoteAddr());
                     resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
                     out.print("{\"error\": \"Student not found\"}");
                 }
@@ -120,6 +124,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp)
         out.print("{\"error\": \"Invalid request path\"}");
 
     } catch (Exception e) {
+        LoggerUtil.logError("StudentServlet", "Error in doGet: " + e.getMessage(), e);
         resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         resp.getWriter().print("{\"error\": \"" + e.getMessage() + "\"}");
     }
@@ -139,13 +144,16 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 
             // Save student
             if (studentDAO.addStudent(student)) {
+                LoggerUtil.logInfo("StudentServlet", "New student created: " + student.getStudentName() + " from IP: " + req.getRemoteAddr());
                 resp.setStatus(HttpServletResponse.SC_CREATED);
                 resp.getWriter().print(objectMapper.writeValueAsString(student));
             } else {
+                LoggerUtil.logError("StudentServlet", "Failed to create student: " + student.getStudentName() + " from IP: " + req.getRemoteAddr(), null);
                 resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
                 resp.getWriter().print("{\"error\": \"Failed to create student\"}");
             }
         } catch (Exception e) {
+            LoggerUtil.logError("StudentServlet", "Error in doPost: " + e.getMessage(), e);
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             resp.getWriter().print("{\"error\": \"" + e.getMessage() + "\"}");
         }
@@ -170,8 +178,10 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 
                 // Update student
                 if (studentDAO.updateStudent(student)) {
+                    LoggerUtil.logInfo("StudentServlet", "Student updated: ID " + studentId + " (" + student.getStudentName() + ") from IP: " + req.getRemoteAddr());
                     resp.getWriter().print(objectMapper.writeValueAsString(student));
                 } else {
+                    LoggerUtil.logInfo("StudentServlet", "Student update failed - not found: ID " + studentId + " from IP: " + req.getRemoteAddr());
                     resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
                     resp.getWriter().print("{\"error\": \"Student not found\"}");
                 }
@@ -180,6 +190,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp)
                 resp.getWriter().print("{\"error\": \"Invalid request\"}");
             }
         } catch (Exception e) {
+            LoggerUtil.logError("StudentServlet", "Error in doPut: " + e.getMessage(), e);
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             resp.getWriter().print("{\"error\": \"" + e.getMessage() + "\"}");
         }
@@ -198,6 +209,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 
             // Check for admin role
             if (!"ADMIN".equals(role)) {
+                LoggerUtil.logSecurity("UNAUTHORIZED_DELETE", "UNKNOWN", "Non-admin user attempted to delete student from IP: " + req.getRemoteAddr());
                 resp.setStatus(HttpServletResponse.SC_FORBIDDEN);
                 resp.getWriter().write("{\"error\":\"Admin privileges required\"}");
                 return;
@@ -210,8 +222,10 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp)
                     int studentId = Integer.parseInt(parts[1]);
 
                     if (studentDAO.deleteStudent(studentId)) {
+                        LoggerUtil.logSecurity("STUDENT_DELETED", "ADMIN", "Student ID " + studentId + " deleted by admin from IP: " + req.getRemoteAddr());
                         resp.getWriter().print("{\"message\": \"Student and related data deleted successfully\"}");
                     } else {
+                        LoggerUtil.logInfo("StudentServlet", "Student delete failed - not found: ID " + studentId + " from IP: " + req.getRemoteAddr());
                         resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
                         resp.getWriter().print("{\"error\": \"Student not found\"}");
                     }
@@ -222,10 +236,12 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             resp.getWriter().print("{\"error\": \"Invalid request format. Use /students/{id}\"}");
 
         } catch (NumberFormatException e) {
+            LoggerUtil.logError("StudentServlet", "Invalid student ID format in delete request from IP: " + req.getRemoteAddr(), e);
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             resp.getWriter().print("{\"error\": \"Invalid student ID format\"}");
 
         } catch (Exception e) {
+            LoggerUtil.logError("StudentServlet", "Error in doDelete: " + e.getMessage(), e);
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             resp.getWriter().print("{\"error\": \"Server error: " + e.getMessage() + "\"}");
         }

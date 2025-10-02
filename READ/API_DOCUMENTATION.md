@@ -9,7 +9,7 @@ This document provides detailed information about the RESTful API endpoints avai
 All API endpoints are relative to the base URL of your server:
 
 ```
-http://localhost:8080/api
+http://localhost:8081/api
 ```
 
 ## Authentication

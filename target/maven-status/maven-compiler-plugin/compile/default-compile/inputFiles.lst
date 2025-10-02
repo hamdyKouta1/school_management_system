@@ -7,6 +7,8 @@ E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\sr
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\servlet\StudentServlet.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\servlet\AddStudentPhoneServlet.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\servlet\InsertFullStudentServlet.java
+E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\utilities\LogRotationManager.java
+E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\utilities\LoggerUtil.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\dao\MedicalHistoryDAO.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\auth\utilities\JwtUtil.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\dao\AdditionalQualificationDAO.java

@@ -11,6 +11,7 @@ import com.canalprep.servlet.AttendanceServlet;
 import com.canalprep.servlet.DashboardServlet;
 import com.canalprep.servlet.InsertFullStudentServlet;
 import com.canalprep.servlet.StudentServlet;
+import com.canalprep.utilities.LoggerUtil;
 import jakarta.servlet.DispatcherType;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
@@ -20,17 +21,24 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.servlets.CrossOriginFilter;
 import java.sql.Connection;
 import java.util.EnumSet;
+import java.util.logging.LogManager;
+import java.io.InputStream;
 
 public class MainApp {
     public static void main(String[] args) throws Exception {
+        // Initialize logging system first
+        initializeLogging();
+        LoggerUtil.logInfo("MainApp", "Starting School Management System...");
+        
         // Test database connection
-     
+        testDatabaseConnection();
 
         // Validate license
         if (!com.canalprep.utilities.LicenseManager.isLicenseValid()) {
-            System.err.println("License is not valid. Exiting application.");
+            LoggerUtil.logError("MainApp", "License is not valid. Exiting application.", null);
             System.exit(1);
         }
+        LoggerUtil.logInfo("MainApp", "License validation successful");
         
         int port = 8081;
         if (args.length > 0) {
@@ -77,21 +85,66 @@ public class MainApp {
         
         server.setHandler(context);
         
+        // Add shutdown hook for graceful cleanup
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            try {
+                LoggerUtil.logInfo("MainApp", "Server shutdown initiated");
+                LoggerUtil.shutdown();
+                if (server != null) {
+                    server.stop();
+                }
+            } catch (Exception e) {
+                System.err.println("Error during shutdown: " + e.getMessage());
+            }
+        }));
+        
         // Start the server
         server.start();
-        System.out.println("Backend API Server started on port " + port);
-        System.out.println("API Base URL: http://localhost:" + port + "/api");
+        LoggerUtil.logInfo("MainApp", "Backend API Server started on port " + port);
+        LoggerUtil.logInfo("MainApp", "API Base URL: http://localhost:" + port + "/api");
+        LoggerUtil.logInfo("MainApp", "Server endpoints registered successfully");
+        LoggerUtil.logInfo("MainApp", "Log rotation is active - logs will be automatically rotated when they exceed 10MB");
+        
+        // Also log to console for immediate feedback
+        System.out.println("✅ Backend API Server started on port " + port);
+        System.out.println("📁 Logs are being written to: " + LoggerUtil.getLogDirectory());
+        System.out.println("🔄 Log rotation is active - check logs/archive for rotated files");
        
         server.join();
     }
     
     private static void testDatabaseConnection() {
         try (Connection conn = DBConnection.getConnection()) {
+            LoggerUtil.logInfo("MainApp", "Database connection successful!");
+            LoggerUtil.logDatabase("CONNECTION_TEST", "ALL", "Database connectivity verified");
             System.out.println("✅ Database connection successful!");
         } catch (Exception e) {
+            LoggerUtil.logError("MainApp", "Database connection failed!", e);
             System.err.println("❌ Database connection failed!");
             e.printStackTrace();
             System.exit(1);
+        }
+    }
+    
+    /**
+     * Initialize the logging system by loading logging.properties
+     */
+    private static void initializeLogging() {
+        try {
+            // Load logging configuration from resources
+            InputStream configStream = MainApp.class.getClassLoader().getResourceAsStream("logging.properties");
+            if (configStream != null) {
+                LogManager.getLogManager().readConfiguration(configStream);
+                configStream.close();
+            }
+            
+            // Initialize our custom logger utility
+            LoggerUtil.initialize();
+            
+        } catch (Exception e) {
+            System.err.println("Warning: Could not initialize logging configuration: " + e.getMessage());
+            // Continue without custom logging configuration
+            LoggerUtil.initialize();
         }
     }
 }

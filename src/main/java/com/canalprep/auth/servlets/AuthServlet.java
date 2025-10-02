@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.canalprep.auth.dao.UserDAO;
 import com.canalprep.auth.model.User;
 import com.canalprep.auth.utilities.PasswordUtils;
+import com.canalprep.utilities.LoggerUtil;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -14,13 +15,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import com.canalprep.exception.DataAccessException;
 
 @WebServlet("/api/auth/*")
 public class AuthServlet extends HttpServlet {
-    private static final Logger logger = Logger.getLogger(AuthServlet.class.getName());
     private final UserDAO userDao = new UserDAO();
     private final ObjectMapper objectMapper = new ObjectMapper();
     
@@ -55,21 +53,23 @@ public class AuthServlet extends HttpServlet {
             String password = requestData.get("password");
             
             if (username == null || password == null) {
+                LoggerUtil.logSecurity("LOGIN_MISSING_CREDENTIALS", "UNKNOWN", "Login attempt with missing credentials from IP: " + req.getRemoteAddr());
                 sendErrorResponse(resp, "Username and password are required", HttpServletResponse.SC_BAD_REQUEST);
                 return;
             }
             
             User user = userDao.getUserByUsername(username);
-           System.out.println(user.getPasswordHash());
-             System.out.println("at login servlet    "+PasswordUtils.verifyPassword(password, user.getSalt(), user.getPasswordHash()));
-            System.out.println(user.getEmail()+" "+user.getPasswordHash()+" "+user.getSalt()+" "+user.getUsername());
             if (user == null || !PasswordUtils.verifyPassword(password, user.getSalt(), user.getPasswordHash())) {
+                LoggerUtil.logSecurity("LOGIN_FAILED", username, "Failed login attempt from IP: " + req.getRemoteAddr());
                 sendErrorResponse(resp, "Invalid username or password", HttpServletResponse.SC_UNAUTHORIZED);
                 return;
             }
             
             // Update last login
             userDao.updateLastLogin(user.getId());
+            
+            // Log successful login
+            LoggerUtil.logSecurity("LOGIN_SUCCESS", username, "Successful login (ID: " + user.getId() + ") from IP: " + req.getRemoteAddr());
             
             // Generate JWT token instead of using session
             String token = JwtUtil.generateToken(
@@ -96,10 +96,10 @@ public class AuthServlet extends HttpServlet {
             objectMapper.writeValue(resp.getWriter(), responseData);
             
         } catch (DataAccessException e) {
-            logger.log(Level.WARNING, "Login failed due to data access issue: " + e.getMessage(), e);
+            LoggerUtil.logError("AuthServlet", "Login failed due to data access issue: " + e.getMessage(), e);
             sendErrorResponse(resp, "Login failed: Invalid username or password", HttpServletResponse.SC_UNAUTHORIZED);
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "An unexpected error occurred during login: " + e.getMessage(), e);
+            LoggerUtil.logError("AuthServlet", "An unexpected error occurred during login: " + e.getMessage(), e);
             sendErrorResponse(resp, "Login failed: An unexpected error occurred", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
     }
@@ -113,11 +113,13 @@ public class AuthServlet extends HttpServlet {
             String role = "USER";
             
             if (username == null || email == null || password == null) {
+                LoggerUtil.logInfo("AuthServlet", "Registration attempt with missing fields from IP: " + req.getRemoteAddr());
                 sendErrorResponse(resp, "Username, email, and password are required", HttpServletResponse.SC_BAD_REQUEST);
                 return;
             }
             
             if (userDao.getUserByUsername(username) != null) {
+                LoggerUtil.logInfo("AuthServlet", "Registration attempt with existing username: " + username + " from IP: " + req.getRemoteAddr());
                 sendErrorResponse(resp, "Username already exists", HttpServletResponse.SC_CONFLICT);
                 return;
             }
@@ -129,6 +131,9 @@ public class AuthServlet extends HttpServlet {
             }
             
            User newUser = userDao.createUser(username, email, password, role);
+            
+            // Log successful registration
+            LoggerUtil.logInfo("AuthServlet", "New user registered: " + username + " (" + email + ") with role: " + role + " from IP: " + req.getRemoteAddr());
             
             Map<String, Object> responseData = new HashMap<>();
             responseData.put("status", "success");
@@ -145,16 +150,18 @@ public class AuthServlet extends HttpServlet {
             objectMapper.writeValue(resp.getWriter(), responseData);
             
         } catch (DataAccessException e) {
-            logger.log(Level.WARNING, "Registration failed due to data access issue: " + e.getMessage(), e);
+            LoggerUtil.logError("AuthServlet", "Registration failed due to data access issue: " + e.getMessage(), e);
             sendErrorResponse(resp, "Registration failed: Database error", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "An unexpected error occurred during registration: " + e.getMessage(), e);
+            LoggerUtil.logError("AuthServlet", "An unexpected error occurred during registration: " + e.getMessage(), e);
             sendErrorResponse(resp, "Registration failed: An unexpected error occurred", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
     }
     
     private void handleLogout(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         // With JWT, logout is handled client-side by discarding the token
+        LoggerUtil.logInfo("AuthServlet", "User logout from IP: " + req.getRemoteAddr());
+        
         Map<String, String> responseData = new HashMap<>();
         responseData.put("status", "success");
         responseData.put("message", "Logout successful");
