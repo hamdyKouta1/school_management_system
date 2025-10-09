@@ -1,0 +1,241 @@
+2025-10-02 23:06:40 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-02 23:18:03 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-02 23:18:05 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-02 23:18:25 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 01:00:16 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 01:02:44 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 01:06:22 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 01:10:53 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 01:24:19 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 01:24:34 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 01:51:22 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 02:04:30 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 02:11:10 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 14:10:53 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 14:11:10 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 14:12:41 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 14:12:52 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Invalid JWT signature: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-04 14:17:07 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 14:19:42 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 14:19:59 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Invalid JWT signature: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-04 14:23:02 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 14:23:18 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Invalid JWT signature: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-04 14:24:42 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 14:25:04 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Invalid JWT signature: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-04 14:26:46 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 14:31:35 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Invalid JWT signature: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-04 14:38:09 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 14:39:07 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 14:41:20 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 14:43:03 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 18:08:40 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-04 18:08:53 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token expired for user: null
+2025-10-04 18:09:18 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token expired for user: null
+2025-10-04 18:16:25 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-09 14:04:43 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-09 15:09:21 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-09 15:11:42 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-09 15:12:23 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: ENDPOINT_RESTRICTED_LICENSE_EXPIRED - Access to endpoint '/api/protected/login' restricted due to expired license. Client IP: [0:0:0:0:0:0:0:1], User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.100.3 Chrome/132.0.6834.210 Electron/34.5.1 Safari/537.36
+2025-10-09 15:15:08 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-09 15:16:07 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: ENDPOINT_RESTRICTED_LICENSE_EXPIRED - Access to endpoint '/api/protected/students' restricted due to expired license. Client IP: 197.54.49.68, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.100.3 Chrome/132.0.6834.210 Electron/34.5.1 Safari/537.36
+2025-10-09 15:16:09 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: ENDPOINT_RESTRICTED_LICENSE_EXPIRED - Access to endpoint '/api/protected/students' restricted due to expired license. Client IP: 197.54.49.68, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Trae/1.100.3 Chrome/132.0.6834.210 Electron/34.5.1 Safari/537.36
+2025-10-09 15:17:08 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: ENDPOINT_RESTRICTED_LICENSE_EXPIRED - Access to endpoint '/api/protected/students' restricted due to expired license. Client IP: 197.54.49.68, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-10-09 16:16:39 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-09 16:17:38 [SEVERE] com.canalprep.auth.filter.AuthenticationFilter doFilter: Authentication failed: JWT strings must contain exactly 2 period characters. Found: 0
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.canalprep.auth.utilities.JwtUtil.parseToken(JwtUtil.java:47)
+	at com.canalprep.auth.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:85)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:313)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:267)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-10-09 16:46:25 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token expired for user: null
+2025-10-09 17:36:37 [SEVERE] com.canalprep.dao.AttendanceDAO handleSQLException: Error getting today's attendance records
+org.postgresql.util.PSQLException: ERROR: column "today_date" does not exist
+  Position: 32
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.canalprep.dao.AttendanceDAO.getTodayAttendances(AttendanceDAO.java:30)
+	at com.canalprep.servlet.AttendanceServlet.doGet(AttendanceServlet.java:67)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:500)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at com.canalprep.auth.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:124)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:313)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:267)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-10-09 17:42:14 [SEVERE] com.canalprep.dao.AttendanceDAO handleSQLException: Error getting today's attendance records
+org.postgresql.util.PSQLException: ERROR: column "today_date" does not exist
+  Position: 32
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.canalprep.dao.AttendanceDAO.getTodayAttendances(AttendanceDAO.java:30)
+	at com.canalprep.servlet.AttendanceServlet.doGet(AttendanceServlet.java:67)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:500)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at com.canalprep.auth.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:124)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:313)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:267)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-10-09 17:58:47 [SEVERE] com.canalprep.dao.AttendanceDAO handleSQLException: Error getting today's attendance records
+org.postgresql.util.PSQLException: ERROR: column "today_date" does not exist
+  Position: 32
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.canalprep.dao.AttendanceDAO.getTodayAttendances(AttendanceDAO.java:30)
+	at com.canalprep.servlet.AttendanceServlet.doGet(AttendanceServlet.java:67)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:500)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at com.canalprep.auth.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:124)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:313)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:267)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+

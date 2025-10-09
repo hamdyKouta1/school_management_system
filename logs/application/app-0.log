@@ -1,0 +1,704 @@
+2025-10-02 23:06:40 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-02 23:06:40 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-02 23:06:41 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-02 23:06:41 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-02 23:06:41 [INFO] APPLICATION: [MainApp] License validation successful
+2025-10-02 23:06:41 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-02 23:06:41 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-02 23:06:42 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-02 23:06:42 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 3197 seconds
+2025-10-02 23:06:42 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-02 23:06:42 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-02 23:06:42 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-02 23:06:42 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-02 23:06:42 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-02 23:06:42 [SEVERE] APPLICATION: [OTPDAO] Failed to delete expired OTPs
+2025-10-02 23:06:42 [SEVERE] APPLICATION: [OTPService] Failed to cleanup expired OTPs
+2025-10-02 23:06:42 [SEVERE] APPLICATION: [LicenseScheduler] Failed to perform OTP cleanup
+2025-10-02 23:18:03 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-02 23:18:03 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-02 23:18:04 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-02 23:18:04 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-02 23:18:04 [SEVERE] APPLICATION: [LicenseDAO] Failed to get current license
+2025-10-02 23:18:04 [SEVERE] APPLICATION: [LicenseService] Failed to get current license
+2025-10-02 23:18:04 [SEVERE] APPLICATION: [MainApp] Failed to validate license: Failed to get current license
+2025-10-02 23:18:05 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-02 23:18:05 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-02 23:18:06 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-02 23:18:06 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-02 23:18:06 [SEVERE] APPLICATION: [LicenseDAO] Failed to get current license
+2025-10-02 23:18:06 [SEVERE] APPLICATION: [LicenseService] Failed to get current license
+2025-10-02 23:18:06 [SEVERE] APPLICATION: [MainApp] Failed to validate license: Failed to get current license
+2025-10-02 23:18:25 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-02 23:18:25 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-02 23:18:26 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-02 23:18:26 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-02 23:18:26 [SEVERE] APPLICATION: [LicenseDAO] Failed to get current license
+2025-10-02 23:18:26 [SEVERE] APPLICATION: [LicenseService] Failed to get current license
+2025-10-02 23:18:26 [SEVERE] APPLICATION: [MainApp] Failed to validate license: Failed to get current license
+2025-10-04 01:00:16 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 01:00:16 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 01:00:18 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 01:00:18 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 01:00:18 [SEVERE] APPLICATION: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-04 01:02:44 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 01:02:44 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 01:02:45 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 01:02:45 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 01:02:45 [SEVERE] APPLICATION: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-04 01:06:22 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 01:06:22 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 01:06:23 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 01:06:23 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 01:06:46 [SEVERE] APPLICATION: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-04 01:10:53 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 01:10:53 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 01:10:55 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 01:10:55 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 01:11:20 [SEVERE] APPLICATION: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-04 01:18:50 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 01:24:34 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 01:24:34 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 01:24:34 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 01:24:34 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 01:24:34 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-10-05
+2025-10-04 01:24:35 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 01:24:35 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 01:24:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 01:24:35 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 81324 seconds
+2025-10-04 01:24:35 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-04 01:24:35 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-04 01:24:35 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-04 01:24:35 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-04 01:24:35 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-04 01:24:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-04 01:24:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-04 01:51:18 [INFO] APPLICATION: [MainApp] Server shutdown initiated
+2025-10-04 01:51:18 [INFO] APPLICATION: [LicenseScheduler] License scheduler stopped successfully
+2025-10-04 01:51:18 [INFO] APPLICATION: [MainApp] License scheduler stopped
+2025-10-04 01:51:22 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 01:51:22 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 01:51:23 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 01:51:23 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 01:51:23 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-10-05
+2025-10-04 01:51:23 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 01:51:23 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 01:51:24 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 01:51:24 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 79715 seconds
+2025-10-04 01:51:24 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-04 01:51:24 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-04 01:51:24 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-04 01:51:24 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-04 01:51:24 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-04 01:51:24 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-04 01:51:24 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-04 01:53:46 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 1
+2025-10-04 01:53:59 [INFO] APPLICATION: [OTPService] OTP email sent successfully for operation: RENEW
+2025-10-04 01:55:32 [INFO] APPLICATION: [LicenseServlet] License information retrieved successfully
+2025-10-04 02:04:28 [INFO] APPLICATION: [MainApp] Server shutdown initiated
+2025-10-04 02:04:28 [INFO] APPLICATION: [LicenseScheduler] License scheduler stopped successfully
+2025-10-04 02:04:28 [INFO] APPLICATION: [MainApp] License scheduler stopped
+2025-10-04 02:04:28 [INFO] APPLICATION: [LoggerUtil] LoggerUtil shutdown completed
+2025-10-04 02:04:30 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 02:04:30 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 02:04:31 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 02:04:31 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 02:04:31 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-10-05
+2025-10-04 02:04:31 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 02:04:31 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 02:04:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 02:04:32 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 78927 seconds
+2025-10-04 02:04:32 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-04 02:04:32 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-04 02:04:32 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-04 02:04:32 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-04 02:04:32 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-04 02:04:32 [INFO] APPLICATION: [OTPDAO] Deleted 1 expired OTPs
+2025-10-04 02:04:32 [INFO] APPLICATION: [OTPService] Cleaned up 1 expired OTPs
+2025-10-04 02:04:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-04 02:04:52 [INFO] APPLICATION: [LicenseServlet] License information retrieved successfully
+2025-10-04 02:04:56 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 2
+2025-10-04 02:05:07 [INFO] APPLICATION: [OTPService] OTP email sent successfully for operation: RENEW
+2025-10-04 02:11:08 [INFO] APPLICATION: [MainApp] Server shutdown initiated
+2025-10-04 02:11:08 [INFO] APPLICATION: [LicenseScheduler] License scheduler stopped successfully
+2025-10-04 02:11:08 [INFO] APPLICATION: [MainApp] License scheduler stopped
+2025-10-04 02:11:10 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 02:11:10 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 02:11:11 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 02:11:11 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 02:11:11 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-10-05
+2025-10-04 02:11:11 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 02:11:11 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 02:11:12 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 02:11:12 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 78527 seconds
+2025-10-04 02:11:12 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-04 02:11:12 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-04 02:11:12 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-04 02:11:12 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-04 02:11:12 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-04 02:11:12 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-04 02:11:12 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-04 02:11:26 [INFO] APPLICATION: [LicenseServlet] License information retrieved successfully
+2025-10-04 02:11:34 [INFO] APPLICATION: [OTPDAO] OTP marked as used with ID: 2
+2025-10-04 02:11:34 [INFO] APPLICATION: [LicenseDAO] Deactivated 1 licenses
+2025-10-04 02:11:34 [SEVERE] APPLICATION: [LicenseDAO] Failed to create license
+2025-10-04 02:11:34 [SEVERE] APPLICATION: [LicenseService] Failed to renew license
+2025-10-04 02:11:34 [SEVERE] APPLICATION: [LicenseServlet] Failed to renew license
+2025-10-04 02:17:17 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 3
+2025-10-04 02:17:21 [INFO] APPLICATION: [LicenseServlet] License information retrieved successfully
+2025-10-04 02:17:29 [INFO] APPLICATION: [OTPService] OTP email sent successfully for operation: RENEW
+2025-10-04 02:17:51 [INFO] APPLICATION: [OTPDAO] OTP marked as used with ID: 3
+2025-10-04 02:17:52 [INFO] APPLICATION: [LicenseDAO] Deactivated 1 licenses
+2025-10-04 02:17:52 [SEVERE] APPLICATION: [LicenseDAO] Failed to create license
+2025-10-04 02:17:52 [SEVERE] APPLICATION: [LicenseService] Failed to renew license
+2025-10-04 02:17:52 [SEVERE] APPLICATION: [LicenseServlet] Failed to renew license
+2025-10-04 14:10:53 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 14:10:53 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 14:10:54 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:10:54 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:11:10 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 14:11:10 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 14:11:11 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:11:11 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:11:11 [SEVERE] APPLICATION: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-04 14:12:42 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 14:12:42 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 14:12:42 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:12:43 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:12:43 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-10-05
+2025-10-04 14:12:43 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:12:43 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:12:43 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 14:12:44 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 35236 seconds
+2025-10-04 14:12:44 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-04 14:12:44 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-04 14:12:44 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-04 14:12:44 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-04 14:12:44 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-04 14:12:44 [INFO] APPLICATION: [OTPDAO] Deleted 2 expired OTPs
+2025-10-04 14:12:44 [INFO] APPLICATION: [OTPService] Cleaned up 2 expired OTPs
+2025-10-04 14:12:44 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-04 14:13:18 [INFO] APPLICATION: [LicenseServlet] License information retrieved successfully
+2025-10-04 14:13:26 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 4
+2025-10-04 14:13:38 [INFO] APPLICATION: [OTPService] OTP email sent successfully for operation: RENEW
+2025-10-04 14:17:07 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 14:17:07 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 14:17:08 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:17:08 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:17:08 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-10-05
+2025-10-04 14:17:08 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:17:08 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:17:09 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 14:17:09 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 34970 seconds
+2025-10-04 14:17:09 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-04 14:17:09 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-04 14:17:09 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-04 14:17:09 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-04 14:17:09 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-04 14:17:09 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-04 14:17:09 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-04 14:18:00 [INFO] APPLICATION: [AuthServlet] New user registered: developer (developer@example.com) with role: USER from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:19:42 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 14:19:42 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 14:19:43 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:19:43 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:19:43 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-10-05
+2025-10-04 14:19:43 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:19:43 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:19:44 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 14:19:44 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 34815 seconds
+2025-10-04 14:19:44 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-04 14:19:44 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-04 14:19:44 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-04 14:19:44 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-04 14:19:44 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-04 14:19:44 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-04 14:19:44 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-04 14:20:24 [INFO] APPLICATION: [OTPDAO] OTP marked as used with ID: 4
+2025-10-04 14:20:24 [INFO] APPLICATION: [LicenseDAO] Deactivated 1 licenses
+2025-10-04 14:20:24 [SEVERE] APPLICATION: [LicenseDAO] Failed to create license
+2025-10-04 14:20:24 [SEVERE] APPLICATION: [LicenseService] Failed to renew license
+2025-10-04 14:20:24 [SEVERE] APPLICATION: [LicenseServlet] Failed to renew license
+2025-10-04 14:23:02 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 14:23:02 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 14:23:03 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:23:03 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:23:03 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-10-05
+2025-10-04 14:23:03 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:23:03 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:23:04 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 14:23:04 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 34615 seconds
+2025-10-04 14:23:04 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-04 14:23:04 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-04 14:23:04 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-04 14:23:04 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-04 14:23:04 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-04 14:23:04 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-04 14:23:04 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-04 14:23:39 [SEVERE] APPLICATION: [StandaloneOTPServlet] Unexpected error during developer OTP generation
+2025-10-04 14:24:42 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 14:24:42 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 14:24:43 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:24:43 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:24:43 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-10-05
+2025-10-04 14:24:43 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:24:43 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:24:44 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 14:24:44 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 34515 seconds
+2025-10-04 14:24:44 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-04 14:24:44 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-04 14:24:44 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-04 14:24:44 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-04 14:24:44 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-04 14:24:44 [INFO] APPLICATION: [OTPDAO] Deleted 1 expired OTPs
+2025-10-04 14:24:44 [INFO] APPLICATION: [OTPService] Cleaned up 1 expired OTPs
+2025-10-04 14:24:44 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-04 14:26:46 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 14:26:46 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 14:26:47 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:26:47 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:26:47 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-10-05
+2025-10-04 14:26:47 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:26:47 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:26:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 14:26:48 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 34391 seconds
+2025-10-04 14:26:48 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-04 14:26:48 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-04 14:26:48 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-04 14:26:48 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-04 14:26:48 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-04 14:26:48 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-04 14:26:48 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-04 14:28:36 [SEVERE] APPLICATION: [StandaloneOTPServlet] Unexpected error during developer OTP generation
+2025-10-04 14:29:40 [INFO] APPLICATION: [LicenseServlet] License information retrieved successfully
+2025-10-04 14:30:23 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 5
+2025-10-04 14:30:35 [INFO] APPLICATION: [OTPService] OTP email sent successfully for operation: RENEW
+2025-10-04 14:32:34 [INFO] APPLICATION: [OTPDAO] OTP marked as used with ID: 5
+2025-10-04 14:32:35 [INFO] APPLICATION: [LicenseDAO] Deactivated 1 licenses
+2025-10-04 14:32:35 [SEVERE] APPLICATION: [LicenseDAO] Failed to create license
+2025-10-04 14:32:35 [SEVERE] APPLICATION: [LicenseService] Failed to renew license
+2025-10-04 14:32:35 [SEVERE] APPLICATION: [LicenseServlet] Failed to renew license
+2025-10-04 14:32:46 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 6
+2025-10-04 14:32:57 [INFO] APPLICATION: [OTPService] OTP email sent successfully for operation: RENEW
+2025-10-04 14:33:08 [INFO] APPLICATION: [OTPDAO] OTP marked as used with ID: 6
+2025-10-04 14:33:08 [INFO] APPLICATION: [LicenseDAO] Deactivated 0 licenses
+2025-10-04 14:33:08 [SEVERE] APPLICATION: [LicenseDAO] Failed to create license
+2025-10-04 14:33:08 [SEVERE] APPLICATION: [LicenseService] Failed to renew license
+2025-10-04 14:33:08 [SEVERE] APPLICATION: [LicenseServlet] Failed to renew license
+2025-10-04 14:35:37 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 7
+2025-10-04 14:35:49 [INFO] APPLICATION: [OTPService] OTP email sent successfully for operation: RENEW
+2025-10-04 14:36:02 [INFO] APPLICATION: [OTPDAO] OTP marked as used with ID: 7
+2025-10-04 14:36:02 [INFO] APPLICATION: [LicenseDAO] Deactivated 2 licenses
+2025-10-04 14:36:02 [SEVERE] APPLICATION: [LicenseDAO] Failed to create license
+2025-10-04 14:36:02 [SEVERE] APPLICATION: [LicenseService] Failed to renew license
+2025-10-04 14:36:02 [SEVERE] APPLICATION: [LicenseServlet] Failed to renew license
+2025-10-04 14:38:09 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 14:38:09 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 14:38:10 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:38:10 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:38:10 [SEVERE] APPLICATION: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-04 14:39:07 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 14:39:07 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 14:39:07 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:39:07 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:39:08 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-10-07
+2025-10-04 14:39:08 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:39:08 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:39:08 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 14:39:08 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 33651 seconds
+2025-10-04 14:39:08 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-04 14:39:08 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-04 14:39:08 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-04 14:39:08 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-04 14:39:08 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-04 14:39:08 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-04 14:39:08 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-04 14:39:21 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 8
+2025-10-04 14:39:32 [INFO] APPLICATION: [OTPService] OTP email sent successfully for operation: RENEW
+2025-10-04 14:39:55 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 9
+2025-10-04 14:40:06 [INFO] APPLICATION: [OTPService] OTP email sent successfully for operation: RENEW
+2025-10-04 14:40:14 [INFO] APPLICATION: [OTPDAO] OTP marked as used with ID: 9
+2025-10-04 14:40:14 [INFO] APPLICATION: [LicenseDAO] Deactivated 3 licenses
+2025-10-04 14:40:14 [SEVERE] APPLICATION: [LicenseDAO] Failed to create license
+2025-10-04 14:40:14 [SEVERE] APPLICATION: [LicenseService] Failed to renew license
+2025-10-04 14:40:14 [SEVERE] APPLICATION: [LicenseServlet] Failed to renew license
+2025-10-04 14:41:20 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 14:41:20 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 14:41:20 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:41:20 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:41:20 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-10-07
+2025-10-04 14:41:20 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:41:20 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:41:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 14:41:21 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 33518 seconds
+2025-10-04 14:41:21 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-04 14:41:21 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-04 14:41:21 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-04 14:41:21 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-04 14:41:21 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-04 14:41:21 [INFO] APPLICATION: [OTPDAO] Deleted 1 expired OTPs
+2025-10-04 14:41:21 [INFO] APPLICATION: [OTPService] Cleaned up 1 expired OTPs
+2025-10-04 14:41:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-04 14:41:40 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 10
+2025-10-04 14:41:53 [INFO] APPLICATION: [OTPService] OTP email sent successfully for operation: RENEW
+2025-10-04 14:41:53 [INFO] APPLICATION: [OTPDAO] OTP marked as used with ID: 10
+2025-10-04 14:41:53 [INFO] APPLICATION: [LicenseDAO] Deactivated 3 licenses
+2025-10-04 14:41:53 [SEVERE] APPLICATION: [LicenseDAO] Failed to create license: ERROR: null value in column "created_at" of relation "licenses" violates not-null constraint
+  Detail: Failing row contains (12, LIC-324C824718F949CA, 2025-10-04, 2025-11-03, 30, ACTIVE, null, null, hamdy2).
+2025-10-04 14:41:53 [SEVERE] APPLICATION: [LicenseService] Failed to renew license
+2025-10-04 14:41:53 [SEVERE] APPLICATION: [LicenseServlet] Failed to renew license
+2025-10-04 14:43:03 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 14:43:03 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 14:43:04 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 14:43:04 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 14:43:04 [SEVERE] APPLICATION: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-04 18:08:40 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 18:08:40 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 18:08:40 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 18:08:40 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 18:08:40 [INFO] APPLICATION: [MainApp] License validation temporarily disabled for setup.
+2025-10-04 18:08:40 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 18:08:40 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 18:08:41 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 18:08:41 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 21078 seconds
+2025-10-04 18:08:41 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-04 18:08:41 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-04 18:08:41 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-04 18:08:41 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-04 18:08:41 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-04 18:08:41 [INFO] APPLICATION: [OTPDAO] Deleted 5 expired OTPs
+2025-10-04 18:08:41 [INFO] APPLICATION: [OTPService] Cleaned up 5 expired OTPs
+2025-10-04 18:08:41 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-04 18:14:04 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 11
+2025-10-04 18:14:15 [INFO] APPLICATION: [OTPService] OTP email sent successfully for operation: RENEW
+2025-10-04 18:14:32 [INFO] APPLICATION: [OTPDAO] OTP marked as used with ID: 11
+2025-10-04 18:14:32 [INFO] APPLICATION: [LicenseDAO] Deactivated 3 licenses
+2025-10-04 18:14:33 [INFO] APPLICATION: [LicenseDAO] License created successfully with ID: 13
+2025-10-04 18:16:25 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-04 18:16:25 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-04 18:16:26 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 18:16:26 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 18:16:26 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-03
+2025-10-04 18:16:26 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-04 18:16:26 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-04 18:16:27 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 18:16:27 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 20612 seconds
+2025-10-04 18:16:27 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-04 18:16:27 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-04 18:16:27 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-04 18:16:27 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-04 18:16:27 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-04 18:16:27 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-04 18:16:27 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-04 19:16:27 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-04 19:16:27 [INFO] APPLICATION: [OTPDAO] Deleted 1 expired OTPs
+2025-10-04 19:16:27 [INFO] APPLICATION: [OTPService] Cleaned up 1 expired OTPs
+2025-10-04 19:16:27 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:55 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:55 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-10-05 17:09:56 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:56 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:56 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:56 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseDAO] License updated successfully with ID: 13
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseService] Daily license check completed. Remaining days: 29, Status: ACTIVE
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully
+2025-10-05 17:09:56 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:56 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:56 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:56 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:57 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:57 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:57 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:57 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:57 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:57 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:57 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:57 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:57 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:57 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:57 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:58 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:58 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:58 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:58 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:58 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:58 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:58 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:58 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:09:58 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:09:58 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:09:58 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 17:15:53 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 17:15:53 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 17:15:53 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-05 18:15:53 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-05 18:15:53 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-05 18:15:53 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-10-06 23:07:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseDAO] License updated successfully with ID: 13
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseService] Daily license check completed. Remaining days: 28, Status: ACTIVE
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:07:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:07:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:07:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:15:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-06 23:15:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-06 23:15:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-06 23:59:04 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-10-06 23:59:04 [INFO] APPLICATION: [LicenseDAO] License updated successfully with ID: 13
+2025-10-06 23:59:04 [INFO] APPLICATION: [LicenseService] Daily license check completed. Remaining days: 28, Status: ACTIVE
+2025-10-06 23:59:04 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully
+2025-10-07 00:15:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-07 00:15:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-07 00:15:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-07 01:15:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-07 01:15:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-07 01:15:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-09 14:04:43 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-09 14:04:43 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-09 14:04:44 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-09 14:04:44 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-09 14:04:45 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-03
+2025-10-09 14:04:45 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-09 14:04:45 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-09 14:04:45 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-09 14:04:45 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 35714 seconds
+2025-10-09 14:04:45 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-09 14:04:45 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-09 14:04:45 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-09 14:04:45 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-09 14:04:45 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-09 14:04:45 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-09 14:04:45 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-09 14:16:34 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 12
+2025-10-09 14:16:51 [INFO] APPLICATION: [OTPService] OTP email sent successfully for operation: RENEW
+2025-10-09 14:17:36 [INFO] APPLICATION: [LicenseServlet] License information retrieved successfully
+2025-10-09 14:35:36 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 14:35:38 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 14:37:46 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 14:37:47 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 14:38:14 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 14:38:15 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 14:41:47 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 14:41:49 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:09:21 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-09 15:09:21 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-09 15:09:22 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-09 15:09:22 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-09 15:09:22 [SEVERE] APPLICATION: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-09 15:11:42 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-09 15:11:42 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-09 15:11:42 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-09 15:11:42 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-09 15:11:42 [INFO] APPLICATION: [MainApp] System starting in license-restricted mode. Please renew license to access all features.
+2025-10-09 15:11:42 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-09 15:11:42 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-09 15:11:43 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-09 15:11:43 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 31696 seconds
+2025-10-09 15:11:43 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-09 15:11:43 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-09 15:11:43 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-09 15:11:43 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-09 15:11:43 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-09 15:11:43 [INFO] APPLICATION: [OTPDAO] Deleted 1 expired OTPs
+2025-10-09 15:11:43 [INFO] APPLICATION: [OTPService] Cleaned up 1 expired OTPs
+2025-10-09 15:11:43 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-09 15:15:08 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-09 15:15:08 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-09 15:15:08 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-09 15:15:08 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-09 15:15:08 [INFO] APPLICATION: [MainApp] System starting in license-restricted mode. Please renew license to access all features.
+2025-10-09 15:15:08 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-09 15:15:08 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-09 15:15:09 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-09 15:15:09 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 31490 seconds
+2025-10-09 15:15:09 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-09 15:15:09 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-09 15:15:09 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-09 15:15:09 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-09 15:15:09 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-09 15:15:09 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-09 15:15:09 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-09 15:18:29 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 13
+2025-10-09 15:18:45 [SEVERE] APPLICATION: [OTPService] Failed to send OTP email
+2025-10-09 15:18:45 [SEVERE] APPLICATION: [StandaloneOTPServlet] Failed to generate developer OTP
+2025-10-09 15:19:13 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 14
+2025-10-09 15:19:33 [INFO] APPLICATION: [OTPService] OTP email sent successfully for operation: RENEW
+2025-10-09 15:19:44 [INFO] APPLICATION: [OTPDAO] OTP marked as used with ID: 14
+2025-10-09 15:19:44 [INFO] APPLICATION: [LicenseDAO] Deactivated 0 licenses
+2025-10-09 15:19:44 [INFO] APPLICATION: [LicenseDAO] License created successfully with ID: 14
+2025-10-09 15:20:05 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:20:10 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:21:08 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:21:10 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:23:22 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:23:56 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:23:59 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:26:32 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:26:34 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:35:07 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:35:09 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:41:14 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:42:26 [INFO] APPLICATION: [StudentServlet] Student delete failed - not found: ID 1 from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:42:42 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:42:44 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:58:11 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:58:12 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:58:51 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:58:54 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 16:16:39 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-09 16:16:39 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-09 16:16:39 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-09 16:16:39 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-09 16:16:39 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-08
+2025-10-09 16:16:39 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-09 16:16:39 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-09 16:16:40 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-09 16:16:40 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 27799 seconds
+2025-10-09 16:16:40 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-09 16:16:40 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-09 16:16:40 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-09 16:16:40 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-09 16:16:40 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-09 16:16:40 [INFO] APPLICATION: [OTPDAO] Deleted 2 expired OTPs
+2025-10-09 16:16:40 [INFO] APPLICATION: [OTPService] Cleaned up 2 expired OTPs
+2025-10-09 16:16:40 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-09 16:18:43 [INFO] APPLICATION: [AuthServlet] Registration attempt with existing username: testuser from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 16:31:02 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 16:47:07 [INFO] APPLICATION: [SchoolConfigServlet] New class created: 9ق
+2025-10-09 16:54:00 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 16:54:02 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 17:16:40 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-09 17:16:40 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-09 17:16:40 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-09 17:36:55 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 17:36:56 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 17:43:18 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 17:43:20 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 17:49:56 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 17:58:52 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 17:58:53 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 18:48:53 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-09 18:48:53 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-09 18:48:53 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-09 19:16:40 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-09 19:16:40 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-09 19:16:40 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-09 20:16:40 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-09 20:16:40 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-09 20:16:40 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-09 21:16:30 [INFO] APPLICATION: [MainApp] Server shutdown initiated

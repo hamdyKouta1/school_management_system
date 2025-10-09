@@ -1,0 +1,115 @@
+2025-10-04 01:18:50 [SECURITY] EVENT: LICENSE_CHECK | USER: system | DETAILS: License validation result: false, remaining days: 1
+2025-10-04 01:25:56 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 01:36:47 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 01:37:58 [SECURITY] EVENT: OTP_REQUEST_DENIED | USER: unknown | DETAILS: Unauthorized OTP request attempt
+2025-10-04 01:41:01 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 01:41:16 [SECURITY] EVENT: OTP_REQUEST_DENIED | USER: unknown | DETAILS: Unauthorized OTP request attempt
+2025-10-04 01:51:58 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 01:53:59 [SECURITY] EVENT: OTP_GENERATED | USER: system | DETAILS: OTP generated for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 01:53:59 [SECURITY] EVENT: OTP_REQUESTED | USER:  | DETAILS: OTP requested for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 02:04:43 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 02:05:07 [SECURITY] EVENT: OTP_GENERATED | USER: system | DETAILS: OTP generated for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 02:05:07 [SECURITY] EVENT: OTP_REQUESTED | USER:  | DETAILS: OTP requested for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 02:11:23 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 02:11:34 [SECURITY] EVENT: OTP_VALIDATION_SUCCESS | USER: system | DETAILS: OTP validated successfully for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 02:12:37 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 02:14:41 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 02:17:29 [SECURITY] EVENT: OTP_GENERATED | USER: system | DETAILS: OTP generated for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 02:17:29 [SECURITY] EVENT: OTP_REQUESTED | USER:  | DETAILS: OTP requested for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 02:17:51 [SECURITY] EVENT: OTP_VALIDATION_SUCCESS | USER: system | DETAILS: OTP validated successfully for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:13:08 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:13:38 [SECURITY] EVENT: OTP_GENERATED | USER: system | DETAILS: OTP generated for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:13:38 [SECURITY] EVENT: DEVELOPER_OTP_GENERATED | USER: hamdy2 | DETAILS: Developer OTP generated for operation: RENEW
+2025-10-04 14:17:30 [SECURITY] EVENT: LOGIN_FAILED | USER: developer | DETAILS: Failed login attempt from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:17:44 [SECURITY] EVENT: LOGIN_FAILED | USER: developer | DETAILS: Failed login attempt from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:18:08 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:18:35 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:18:44 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:20:13 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:20:24 [SECURITY] EVENT: OTP_VALIDATION_SUCCESS | USER: system | DETAILS: OTP validated successfully for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:23:29 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:23:51 [SECURITY] EVENT: OTP_VALIDATION_FAILED | USER: system | DETAILS: Invalid OTP attempt: 123456 for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:23:51 [SECURITY] EVENT: LICENSE_RENEW_INVALID_OTP | USER: hamdy2 | DETAILS: Invalid OTP provided for license renewal
+2025-10-04 14:25:18 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:25:30 [SECURITY] EVENT: OTP_VALIDATION_FAILED | USER: system | DETAILS: Invalid OTP attempt: 123456 for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:25:30 [SECURITY] EVENT: LICENSE_RENEW_INVALID_OTP | USER: hamdy2 | DETAILS: Invalid OTP provided for license renewal
+2025-10-04 14:26:59 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:27:11 [SECURITY] EVENT: OTP_VALIDATION_FAILED | USER: system | DETAILS: Invalid OTP attempt: 123456 for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:27:11 [SECURITY] EVENT: LICENSE_RENEW_INVALID_OTP | USER: hamdy2 | DETAILS: Invalid OTP provided for license renewal
+2025-10-04 14:29:53 [SECURITY] EVENT: OTP_VALIDATION_FAILED | USER: system | DETAILS: Invalid OTP attempt: 123456 for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:29:53 [SECURITY] EVENT: LICENSE_RENEW_INVALID_OTP | USER: hamdy2 | DETAILS: Invalid OTP provided for license renewal
+2025-10-04 14:30:35 [SECURITY] EVENT: OTP_GENERATED | USER: system | DETAILS: OTP generated for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:30:35 [SECURITY] EVENT: DEVELOPER_OTP_GENERATED | USER: hamdy2 | DETAILS: Developer OTP generated for operation: RENEW
+2025-10-04 14:31:45 [SECURITY] EVENT: LOGIN_FAILED | USER: developer | DETAILS: Failed login attempt from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:32:23 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:32:34 [SECURITY] EVENT: OTP_VALIDATION_SUCCESS | USER: system | DETAILS: OTP validated successfully for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:32:57 [SECURITY] EVENT: OTP_GENERATED | USER: system | DETAILS: OTP generated for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:32:57 [SECURITY] EVENT: DEVELOPER_OTP_GENERATED | USER: hamdy2 | DETAILS: Developer OTP generated for operation: RENEW
+2025-10-04 14:33:08 [SECURITY] EVENT: OTP_VALIDATION_SUCCESS | USER: system | DETAILS: OTP validated successfully for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:35:14 [SECURITY] EVENT: OTP_VALIDATION_FAILED | USER: system | DETAILS: Invalid OTP attempt: 148064 for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:35:14 [SECURITY] EVENT: LICENSE_RENEW_INVALID_OTP | USER: hamdy2 | DETAILS: Invalid OTP provided for license renewal
+2025-10-04 14:35:49 [SECURITY] EVENT: OTP_GENERATED | USER: system | DETAILS: OTP generated for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:35:49 [SECURITY] EVENT: DEVELOPER_OTP_GENERATED | USER: hamdy2 | DETAILS: Developer OTP generated for operation: RENEW
+2025-10-04 14:36:02 [SECURITY] EVENT: OTP_VALIDATION_SUCCESS | USER: system | DETAILS: OTP validated successfully for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:39:21 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:39:32 [SECURITY] EVENT: OTP_GENERATED | USER: system | DETAILS: OTP generated for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:39:32 [SECURITY] EVENT: DEVELOPER_OTP_GENERATED | USER: hamdy2 | DETAILS: Developer OTP generated for operation: RENEW
+2025-10-04 14:39:42 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:40:06 [SECURITY] EVENT: OTP_GENERATED | USER: system | DETAILS: OTP generated for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:40:06 [SECURITY] EVENT: DEVELOPER_OTP_GENERATED | USER: hamdy2 | DETAILS: Developer OTP generated for operation: RENEW
+2025-10-04 14:40:14 [SECURITY] EVENT: OTP_VALIDATION_SUCCESS | USER: system | DETAILS: OTP validated successfully for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:41:40 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:41:53 [SECURITY] EVENT: OTP_GENERATED | USER: system | DETAILS: OTP generated for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 14:41:53 [SECURITY] EVENT: DEVELOPER_OTP_GENERATED | USER: hamdy2 | DETAILS: Developer OTP generated for operation: RENEW
+2025-10-04 14:41:53 [SECURITY] EVENT: OTP_VALIDATION_SUCCESS | USER: system | DETAILS: OTP validated successfully for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 18:08:53 [SECURITY] EVENT: LOGIN_FAILED | USER: hamdy2 | DETAILS: Failed login attempt from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 18:09:04 [SECURITY] EVENT: LOGIN_FAILED | USER: admin | DETAILS: Failed login attempt from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 18:09:32 [SECURITY] EVENT: LOGIN_FAILED | USER: hamdy2 | DETAILS: Failed login attempt from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 18:10:30 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 18:11:03 [SECURITY] EVENT: LICENSE_RENEW_DENIED | USER: developer | DETAILS: Unauthorized license renewal attempt
+2025-10-04 18:13:12 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 18:14:15 [SECURITY] EVENT: OTP_GENERATED | USER: system | DETAILS: OTP generated for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 18:14:15 [SECURITY] EVENT: DEVELOPER_OTP_GENERATED | USER: developer | DETAILS: Developer OTP generated for operation: RENEW
+2025-10-04 18:14:32 [SECURITY] EVENT: OTP_VALIDATION_SUCCESS | USER: system | DETAILS: OTP validated successfully for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-04 18:14:33 [SECURITY] EVENT: LICENSE_RENEWED | USER: developer | DETAILS: License renewed for 30 days, start date: 2025-10-04, end date: 2025-11-03
+2025-10-04 18:14:33 [SECURITY] EVENT: LICENSE_RENEWED | USER: developer | DETAILS: License renewed successfully for 30 days
+2025-10-09 14:13:59 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 14:15:02 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 14:15:17 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 14:16:51 [SECURITY] EVENT: OTP_GENERATED | USER: system | DETAILS: OTP generated for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 14:16:51 [SECURITY] EVENT: DEVELOPER_OTP_GENERATED | USER: hamdy2 | DETAILS: Developer OTP generated for operation: RENEW
+2025-10-09 14:35:27 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 14:37:35 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 14:38:00 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 14:41:44 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:11:42 [SECURITY] EVENT: LICENSE_STARTUP_WARNING | USER: system | DETAILS: Starting system with invalid/expired license. Only license management endpoints will be accessible.
+2025-10-09 15:15:08 [SECURITY] EVENT: LICENSE_STARTUP_WARNING | USER: system | DETAILS: Starting system with invalid/expired license. Only license management endpoints will be accessible.
+2025-10-09 15:15:52 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:17:01 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:18:22 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:19:33 [SECURITY] EVENT: OTP_GENERATED | USER: system | DETAILS: OTP generated for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:19:33 [SECURITY] EVENT: DEVELOPER_OTP_GENERATED | USER: hamdy2 | DETAILS: Developer OTP generated for operation: RENEW
+2025-10-09 15:19:44 [SECURITY] EVENT: OTP_VALIDATION_SUCCESS | USER: system | DETAILS: OTP validated successfully for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:19:44 [SECURITY] EVENT: LICENSE_RENEWED | USER: hamdy2 | DETAILS: License renewed for 30 days, start date: 2025-10-09, end date: 2025-11-08, license key: LIC-E9A17E7858794725
+2025-10-09 15:19:44 [SECURITY] EVENT: ENDPOINTS_REENABLED | USER: hamdy2 | DETAILS: All system endpoints re-enabled after successful license renewal
+2025-10-09 15:19:44 [SECURITY] EVENT: LICENSE_RENEWED | USER: hamdy2 | DETAILS: License renewed successfully for 30 days
+2025-10-09 15:19:57 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:20:59 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:23:15 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:23:52 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:26:28 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:35:03 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:41:08 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:41:59 [SECURITY] EVENT: STUDENT_DELETED | USER: ADMIN | DETAILS: Student ID 1 deleted by admin from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:42:38 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:58:06 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 15:58:49 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 16:18:08 [SECURITY] EVENT: LOGIN_FAILED | USER: admin | DETAILS: Failed login attempt from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 16:18:35 [SECURITY] EVENT: LOGIN_FAILED | USER: admin | DETAILS: Failed login attempt from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 16:30:58 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 16:46:32 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 16:53:56 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 17:12:03 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 17:36:36 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 17:42:13 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-09 17:58:46 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]

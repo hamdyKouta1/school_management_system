@@ -1,0 +1,89 @@
+2025-10-02 23:06:42 [SEVERE] ERROR: [OTPDAO] Failed to delete expired OTPs
+2025-10-02 23:06:42 [SEVERE] ERROR: Exception details:
+2025-10-02 23:06:42 [SEVERE] ERROR: [OTPService] Failed to cleanup expired OTPs
+2025-10-02 23:06:42 [SEVERE] ERROR: Exception details:
+2025-10-02 23:06:42 [SEVERE] ERROR: [LicenseScheduler] Failed to perform OTP cleanup
+2025-10-02 23:06:42 [SEVERE] ERROR: Exception details:
+2025-10-02 23:18:04 [SEVERE] ERROR: [LicenseDAO] Failed to get current license
+2025-10-02 23:18:04 [SEVERE] ERROR: Exception details:
+2025-10-02 23:18:04 [SEVERE] ERROR: [LicenseService] Failed to get current license
+2025-10-02 23:18:04 [SEVERE] ERROR: Exception details:
+2025-10-02 23:18:04 [SEVERE] ERROR: [MainApp] Failed to validate license: Failed to get current license
+2025-10-02 23:18:04 [SEVERE] ERROR: Exception details:
+2025-10-02 23:18:06 [SEVERE] ERROR: [LicenseDAO] Failed to get current license
+2025-10-02 23:18:06 [SEVERE] ERROR: Exception details:
+2025-10-02 23:18:06 [SEVERE] ERROR: [LicenseService] Failed to get current license
+2025-10-02 23:18:06 [SEVERE] ERROR: Exception details:
+2025-10-02 23:18:06 [SEVERE] ERROR: [MainApp] Failed to validate license: Failed to get current license
+2025-10-02 23:18:06 [SEVERE] ERROR: Exception details:
+2025-10-02 23:18:26 [SEVERE] ERROR: [LicenseDAO] Failed to get current license
+2025-10-02 23:18:26 [SEVERE] ERROR: Exception details:
+2025-10-02 23:18:26 [SEVERE] ERROR: [LicenseService] Failed to get current license
+2025-10-02 23:18:26 [SEVERE] ERROR: Exception details:
+2025-10-02 23:18:26 [SEVERE] ERROR: [MainApp] Failed to validate license: Failed to get current license
+2025-10-02 23:18:26 [SEVERE] ERROR: Exception details:
+2025-10-04 01:00:18 [SEVERE] ERROR: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-04 01:02:45 [SEVERE] ERROR: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-04 01:06:46 [SEVERE] ERROR: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-04 01:11:20 [SEVERE] ERROR: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-04 02:11:34 [SEVERE] ERROR: [LicenseDAO] Failed to create license
+2025-10-04 02:11:34 [SEVERE] ERROR: Exception details:
+2025-10-04 02:11:34 [SEVERE] ERROR: [LicenseService] Failed to renew license
+2025-10-04 02:11:34 [SEVERE] ERROR: Exception details:
+2025-10-04 02:11:34 [SEVERE] ERROR: [LicenseServlet] Failed to renew license
+2025-10-04 02:11:34 [SEVERE] ERROR: Exception details:
+2025-10-04 02:17:52 [SEVERE] ERROR: [LicenseDAO] Failed to create license
+2025-10-04 02:17:52 [SEVERE] ERROR: Exception details:
+2025-10-04 02:17:52 [SEVERE] ERROR: [LicenseService] Failed to renew license
+2025-10-04 02:17:52 [SEVERE] ERROR: Exception details:
+2025-10-04 02:17:52 [SEVERE] ERROR: [LicenseServlet] Failed to renew license
+2025-10-04 02:17:52 [SEVERE] ERROR: Exception details:
+2025-10-04 14:11:11 [SEVERE] ERROR: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-04 14:20:24 [SEVERE] ERROR: [LicenseDAO] Failed to create license
+2025-10-04 14:20:24 [SEVERE] ERROR: Exception details:
+2025-10-04 14:20:24 [SEVERE] ERROR: [LicenseService] Failed to renew license
+2025-10-04 14:20:24 [SEVERE] ERROR: Exception details:
+2025-10-04 14:20:24 [SEVERE] ERROR: [LicenseServlet] Failed to renew license
+2025-10-04 14:20:24 [SEVERE] ERROR: Exception details:
+2025-10-04 14:23:39 [SEVERE] ERROR: [StandaloneOTPServlet] Unexpected error during developer OTP generation
+2025-10-04 14:23:39 [SEVERE] ERROR: Exception details:
+2025-10-04 14:28:36 [SEVERE] ERROR: [StandaloneOTPServlet] Unexpected error during developer OTP generation
+2025-10-04 14:28:36 [SEVERE] ERROR: Exception details:
+2025-10-04 14:32:35 [SEVERE] ERROR: [LicenseDAO] Failed to create license
+2025-10-04 14:32:35 [SEVERE] ERROR: Exception details:
+2025-10-04 14:32:35 [SEVERE] ERROR: [LicenseService] Failed to renew license
+2025-10-04 14:32:35 [SEVERE] ERROR: Exception details:
+2025-10-04 14:32:35 [SEVERE] ERROR: [LicenseServlet] Failed to renew license
+2025-10-04 14:32:35 [SEVERE] ERROR: Exception details:
+2025-10-04 14:33:08 [SEVERE] ERROR: [LicenseDAO] Failed to create license
+2025-10-04 14:33:08 [SEVERE] ERROR: Exception details:
+2025-10-04 14:33:08 [SEVERE] ERROR: [LicenseService] Failed to renew license
+2025-10-04 14:33:08 [SEVERE] ERROR: Exception details:
+2025-10-04 14:33:08 [SEVERE] ERROR: [LicenseServlet] Failed to renew license
+2025-10-04 14:33:08 [SEVERE] ERROR: Exception details:
+2025-10-04 14:36:02 [SEVERE] ERROR: [LicenseDAO] Failed to create license
+2025-10-04 14:36:02 [SEVERE] ERROR: Exception details:
+2025-10-04 14:36:02 [SEVERE] ERROR: [LicenseService] Failed to renew license
+2025-10-04 14:36:02 [SEVERE] ERROR: Exception details:
+2025-10-04 14:36:02 [SEVERE] ERROR: [LicenseServlet] Failed to renew license
+2025-10-04 14:36:02 [SEVERE] ERROR: Exception details:
+2025-10-04 14:38:10 [SEVERE] ERROR: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-04 14:40:14 [SEVERE] ERROR: [LicenseDAO] Failed to create license
+2025-10-04 14:40:14 [SEVERE] ERROR: Exception details:
+2025-10-04 14:40:14 [SEVERE] ERROR: [LicenseService] Failed to renew license
+2025-10-04 14:40:14 [SEVERE] ERROR: Exception details:
+2025-10-04 14:40:14 [SEVERE] ERROR: [LicenseServlet] Failed to renew license
+2025-10-04 14:40:14 [SEVERE] ERROR: Exception details:
+2025-10-04 14:41:53 [SEVERE] ERROR: [LicenseDAO] Failed to create license: ERROR: null value in column "created_at" of relation "licenses" violates not-null constraint
+  Detail: Failing row contains (12, LIC-324C824718F949CA, 2025-10-04, 2025-11-03, 30, ACTIVE, null, null, hamdy2).
+2025-10-04 14:41:53 [SEVERE] ERROR: Exception details:
+2025-10-04 14:41:53 [SEVERE] ERROR: [LicenseService] Failed to renew license
+2025-10-04 14:41:53 [SEVERE] ERROR: Exception details:
+2025-10-04 14:41:53 [SEVERE] ERROR: [LicenseServlet] Failed to renew license
+2025-10-04 14:41:53 [SEVERE] ERROR: Exception details:
+2025-10-04 14:43:04 [SEVERE] ERROR: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-09 15:09:22 [SEVERE] ERROR: [MainApp] No valid license found. Please contact administrator to obtain a license.
+2025-10-09 15:18:45 [SEVERE] ERROR: [OTPService] Failed to send OTP email
+2025-10-09 15:18:45 [SEVERE] ERROR: Exception details:
+2025-10-09 15:18:45 [SEVERE] ERROR: [StandaloneOTPServlet] Failed to generate developer OTP
+2025-10-09 15:18:45 [SEVERE] ERROR: Exception details:

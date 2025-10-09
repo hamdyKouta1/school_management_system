@@ -3,6 +3,12 @@ package com.canalprep.main;
 import com.canalprep.auth.filter.AuthenticationFilter;
 import com.canalprep.auth.servlets.AuthServlet;
 import com.canalprep.dao.DBConnection;
+import com.canalprep.license.scheduler.LicenseScheduler;
+import com.canalprep.license.servlet.LicenseServlet;
+import com.canalprep.otp.servlet.StandaloneOTPServlet;
+import com.canalprep.license.service.LicenseService;
+import com.canalprep.license.model.License;
+import com.canalprep.exception.DataAccessException;
 import com.canalprep.servlet.AddMedicalHistoryServlet;
 import com.canalprep.servlet.AddQualificationsServlet;
 import com.canalprep.servlet.AddStudentNoteServlet;
@@ -10,6 +16,7 @@ import com.canalprep.servlet.AddStudentPhoneServlet;
 import com.canalprep.servlet.AttendanceServlet;
 import com.canalprep.servlet.DashboardServlet;
 import com.canalprep.servlet.InsertFullStudentServlet;
+import com.canalprep.servlet.SchoolConfigServlet;
 import com.canalprep.servlet.StudentServlet;
 import com.canalprep.utilities.LoggerUtil;
 import jakarta.servlet.DispatcherType;
@@ -33,12 +40,23 @@ public class MainApp {
         // Test database connection
         testDatabaseConnection();
 
-        // Validate license
-        if (!com.canalprep.utilities.LicenseManager.isLicenseValid()) {
-            LoggerUtil.logError("MainApp", "License is not valid. Exiting application.", null);
-            System.exit(1);
+        // Validate license using new license service
+        try {
+            LicenseService licenseService = new LicenseService();
+            License currentLicense = licenseService.getCurrentLicense();
+            
+            if (currentLicense == null || !currentLicense.isValid()) {
+                LoggerUtil.logSecurity("LICENSE_STARTUP_WARNING", "system", 
+                    "Starting system with invalid/expired license. Only license management endpoints will be accessible.");
+                LoggerUtil.logInfo("MainApp", "System starting in license-restricted mode. Please renew license to access all features.");
+            } else {
+                LoggerUtil.logInfo("MainApp", "License validation successful. License expires on: " + currentLicense.getEndDate());
+            }
+            
+        } catch (DataAccessException e) {
+            LoggerUtil.logError("MainApp", "Failed to validate license during startup: " + e.getMessage(), e);
+            LoggerUtil.logInfo("MainApp", "Continuing startup in license-restricted mode due to validation error.");
         }
-        LoggerUtil.logInfo("MainApp", "License validation successful");
         
         int port = 8081;
         if (args.length > 0) {
@@ -80,6 +98,15 @@ public class MainApp {
         context.addServlet(new ServletHolder(new InsertFullStudentServlet()), "/api/protected/insertStudent/*");
         context.addServlet(new ServletHolder(new DashboardServlet()), "/api/protected/dashboard/*");
         context.addServlet(new ServletHolder(new AddQualificationsServlet()), "/api/protected/addQ/*");
+        context.addServlet(new ServletHolder(new SchoolConfigServlet()), "/api/protected/schoolConfig/*");
+        
+        // License management servlets
+        context.addServlet(new ServletHolder(new LicenseServlet()), "/api/protected/licence");
+        context.addServlet(new ServletHolder(new LicenseServlet()), "/api/protected/licence/renew");
+        context.addServlet(new ServletHolder(new LicenseServlet()), "/api/protected/licence/remove");
+        
+        // Standalone OTP servlets
+        context.addServlet(new ServletHolder(new StandaloneOTPServlet()), "/api/protected/otp/*");
         
         // Pure backend API - no default servlet needed
         
@@ -89,6 +116,15 @@ public class MainApp {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             try {
                 LoggerUtil.logInfo("MainApp", "Server shutdown initiated");
+                
+                // Stop license scheduler
+                try {
+                    LicenseScheduler.getInstance().stop();
+                    LoggerUtil.logInfo("MainApp", "License scheduler stopped");
+                } catch (Exception e) {
+                    LoggerUtil.logError("MainApp", "Error stopping license scheduler", e);
+                }
+                
                 LoggerUtil.shutdown();
                 if (server != null) {
                     server.stop();
@@ -100,6 +136,15 @@ public class MainApp {
         
         // Start the server
         server.start();
+        
+        // Start license scheduler after server is running
+        try {
+            LicenseScheduler.getInstance().start();
+            LoggerUtil.logInfo("MainApp", "License scheduler started successfully");
+        } catch (Exception e) {
+            LoggerUtil.logError("MainApp", "Failed to start license scheduler", e);
+        }
+        
         LoggerUtil.logInfo("MainApp", "Backend API Server started on port " + port);
         LoggerUtil.logInfo("MainApp", "API Base URL: http://localhost:" + port + "/api");
         LoggerUtil.logInfo("MainApp", "Server endpoints registered successfully");
