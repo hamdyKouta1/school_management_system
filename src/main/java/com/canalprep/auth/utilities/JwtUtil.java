@@ -11,6 +11,7 @@ import java.util.Map;
 
 public class JwtUtil {
     private static final SecretKey SECRET_KEY = getSecretKey();
+    //private static final SecretKey SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
     private static SecretKey getSecretKey() {
         String secret = System.getenv("JWT_SECRET");

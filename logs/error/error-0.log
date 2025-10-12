@@ -87,3 +87,98 @@
 2025-10-09 15:18:45 [SEVERE] ERROR: Exception details:
 2025-10-09 15:18:45 [SEVERE] ERROR: [StandaloneOTPServlet] Failed to generate developer OTP
 2025-10-09 15:18:45 [SEVERE] ERROR: Exception details:
+2025-10-09 21:57:35 [SEVERE] ERROR: [OTPDAO] Failed to create OTP
+2025-10-09 21:57:35 [SEVERE] ERROR: Exception details:
+2025-10-09 21:57:35 [SEVERE] ERROR: [AdminOTPService] Failed to generate admin OTP
+2025-10-09 21:57:35 [SEVERE] ERROR: Exception details:
+2025-10-09 21:57:35 [SEVERE] ERROR: [AuthServlet] Token validation failed during admin registration: Failed to generate admin OTP
+2025-10-09 21:57:35 [SEVERE] ERROR: Exception details:
+2025-10-09 21:58:23 [SEVERE] ERROR: [OTPDAO] Failed to create OTP
+2025-10-09 21:58:23 [SEVERE] ERROR: Exception details:
+2025-10-09 21:58:23 [SEVERE] ERROR: [AdminOTPService] Failed to generate admin OTP
+2025-10-09 21:58:23 [SEVERE] ERROR: Exception details:
+2025-10-09 21:58:23 [SEVERE] ERROR: [AuthServlet] Token validation failed during admin registration: Failed to generate admin OTP
+2025-10-09 21:58:23 [SEVERE] ERROR: Exception details:
+2025-10-09 21:58:53 [SEVERE] ERROR: [OTPDAO] Failed to create OTP
+2025-10-09 21:58:53 [SEVERE] ERROR: Exception details:
+2025-10-09 21:58:53 [SEVERE] ERROR: [AdminOTPService] Failed to generate admin OTP
+2025-10-09 21:58:53 [SEVERE] ERROR: Exception details:
+2025-10-09 21:58:53 [SEVERE] ERROR: [AuthServlet] Token validation failed during admin registration: Failed to generate admin OTP
+2025-10-09 21:58:53 [SEVERE] ERROR: Exception details:
+2025-10-09 22:00:35 [SEVERE] ERROR: [OTPDAO] Failed to create OTP
+2025-10-09 22:00:35 [SEVERE] ERROR: Exception details:
+2025-10-09 22:00:35 [SEVERE] ERROR: [AdminOTPService] Failed to generate admin OTP
+2025-10-09 22:00:35 [SEVERE] ERROR: Exception details:
+2025-10-09 22:00:35 [SEVERE] ERROR: [AuthServlet] Token validation failed during admin registration: Failed to generate admin OTP
+2025-10-09 22:00:35 [SEVERE] ERROR: Exception details:
+2025-10-09 22:02:56 [SEVERE] ERROR: [OTPDAO] Failed to create OTP
+2025-10-09 22:02:56 [SEVERE] ERROR: Exception details:
+2025-10-09 22:02:56 [SEVERE] ERROR: [AdminOTPService] Failed to generate admin OTP
+2025-10-09 22:02:56 [SEVERE] ERROR: Exception details:
+2025-10-09 22:02:56 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: Failed to generate admin OTP
+2025-10-09 22:02:56 [SEVERE] ERROR: Exception details:
+2025-10-09 22:05:43 [SEVERE] ERROR: [OTPDAO] Failed to create OTP
+2025-10-09 22:05:43 [SEVERE] ERROR: Exception details:
+2025-10-09 22:05:43 [SEVERE] ERROR: [AdminOTPService] Failed to generate admin OTP
+2025-10-09 22:05:43 [SEVERE] ERROR: Exception details:
+2025-10-09 22:05:43 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: Failed to generate admin OTP
+2025-10-09 22:05:43 [SEVERE] ERROR: Exception details:
+2025-10-10 14:34:56 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-10 14:34:56 [SEVERE] ERROR: Exception details:
+2025-10-10 14:35:09 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-10 14:35:09 [SEVERE] ERROR: Exception details:
+2025-10-10 14:36:37 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-10 14:36:37 [SEVERE] ERROR: Exception details:
+2025-10-10 14:39:43 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-10 14:39:43 [SEVERE] ERROR: Exception details:
+2025-10-10 14:43:23 [SEVERE] ERROR: [AuthServlet] An unexpected error occurred during registration: ERROR: duplicate key value violates unique constraint "users_email_key"
+  Detail: Key (email)=(test@example.com) already exists.
+2025-10-10 14:43:23 [SEVERE] ERROR: Exception details:
+2025-10-10 14:45:16 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-10 14:45:16 [SEVERE] ERROR: Exception details:
+2025-10-10 14:45:20 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-10 14:45:20 [SEVERE] ERROR: Exception details:
+2025-10-10 14:46:53 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-10 14:46:53 [SEVERE] ERROR: Exception details:
+2025-10-10 14:48:42 [SEVERE] ERROR: [OTPDAO] Failed to create OTP
+2025-10-10 14:48:42 [SEVERE] ERROR: Exception details:
+2025-10-10 14:48:42 [SEVERE] ERROR: [AdminOTPService] Failed to generate admin OTP
+2025-10-10 14:48:42 [SEVERE] ERROR: Exception details:
+2025-10-10 14:48:42 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: Failed to generate admin OTP
+2025-10-10 14:48:42 [SEVERE] ERROR: Exception details:
+2025-10-10 14:49:39 [SEVERE] ERROR: [OTPDAO] Failed to create OTP
+2025-10-10 14:49:39 [SEVERE] ERROR: Exception details:
+2025-10-10 14:49:39 [SEVERE] ERROR: [AdminOTPService] Failed to generate admin OTP
+2025-10-10 14:49:39 [SEVERE] ERROR: Exception details:
+2025-10-10 14:49:39 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: Failed to generate admin OTP
+2025-10-10 14:49:39 [SEVERE] ERROR: Exception details:
+2025-10-10 14:51:17 [SEVERE] ERROR: [OTPDAO] Failed to create OTP
+2025-10-10 14:51:17 [SEVERE] ERROR: Exception details:
+2025-10-10 14:51:17 [SEVERE] ERROR: [AdminOTPService] Failed to generate admin OTP
+2025-10-10 14:51:17 [SEVERE] ERROR: Exception details:
+2025-10-10 14:51:17 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: Failed to generate admin OTP
+2025-10-10 14:51:17 [SEVERE] ERROR: Exception details:
+2025-10-10 14:51:33 [SEVERE] ERROR: [OTPDAO] Failed to create OTP
+2025-10-10 14:51:33 [SEVERE] ERROR: Exception details:
+2025-10-10 14:51:33 [SEVERE] ERROR: [AdminOTPService] Failed to generate admin OTP
+2025-10-10 14:51:33 [SEVERE] ERROR: Exception details:
+2025-10-10 14:51:33 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: Failed to generate admin OTP
+2025-10-10 14:51:33 [SEVERE] ERROR: Exception details:
+2025-10-10 15:00:34 [SEVERE] ERROR: [OTPDAO] Failed to create OTP
+2025-10-10 15:00:34 [SEVERE] ERROR: Exception details:
+2025-10-10 15:00:34 [SEVERE] ERROR: [AdminOTPService] Failed to generate admin OTP
+2025-10-10 15:00:34 [SEVERE] ERROR: Exception details:
+2025-10-10 15:00:34 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: Failed to generate admin OTP
+2025-10-10 15:00:34 [SEVERE] ERROR: Exception details:
+2025-10-10 15:08:00 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-10 15:08:00 [SEVERE] ERROR: Exception details:
+2025-10-10 15:09:48 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-10 15:09:48 [SEVERE] ERROR: Exception details:
+2025-10-10 15:11:19 [SEVERE] ERROR: [AuthServlet] An unexpected error occurred during OTP validation: class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
+2025-10-10 15:11:19 [SEVERE] ERROR: Exception details:
+2025-10-12 20:23:10 [SEVERE] ERROR: [AuthServlet] An unexpected error occurred during registration: ERROR: duplicate key value violates unique constraint "users_email_key"
+  Detail: Key (email)=(userhamdy@example.com) already exists.
+2025-10-12 20:23:10 [SEVERE] ERROR: Exception details:
+2025-10-12 20:25:45 [SEVERE] ERROR: [AuthServlet] An unexpected error occurred during registration: ERROR: duplicate key value violates unique constraint "users_email_key"
+  Detail: Key (email)=(userhamdy@example.com) already exists.
+2025-10-12 20:25:45 [SEVERE] ERROR: Exception details:

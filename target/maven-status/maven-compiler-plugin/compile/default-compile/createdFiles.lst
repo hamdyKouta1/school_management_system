@@ -10,6 +10,7 @@ com\canalprep\auth\filter\CsrfFilter.class
 com\canalprep\utilities\LogRotationManager.class
 com\canalprep\dao\SchoolClassDAO.class
 com\canalprep\dao\StudentDAO.class
+com\canalprep\auth\service\AdminOTPService.class
 com\canalprep\license\service\OTPService$1.class
 com\canalprep\servlet\AddStudentPhoneServlet.class
 com\canalprep\model\AdditionalQualification.class
@@ -19,6 +20,7 @@ com\canalprep\servlet\AttendanceServlet.class
 com\canalprep\test\LicenseRoleFilterTest.class
 com\canalprep\license\dao\LicenseDAO.class
 com\canalprep\servlet\InsertFullStudentServlet.class
+com\canalprep\auth\service\AdminOTPService$1.class
 com\canalprep\dao\MedicalHistoryDAO.class
 com\canalprep\license\model\License.class
 com\canalprep\license\service\LicenseService.class
@@ -38,6 +40,7 @@ com\canalprep\license\dao\OTPDAO.class
 com\canalprep\servlet\SchoolConfigServlet.class
 com\canalprep\model\GradeLevel.class
 com\canalprep\test\AuthServletTest.class
+com\canalprep\auth\service\AdminOTPService$PendingAdminRegistration.class
 com\canalprep\auth\filter\AuthenticationFilter.class
 com\canalprep\dao\DBConnection.class
 com\canalprep\dao\ReligionDAO.class

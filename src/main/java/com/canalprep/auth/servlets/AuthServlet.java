@@ -5,7 +5,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.canalprep.auth.dao.UserDAO;
 import com.canalprep.auth.model.User;
 import com.canalprep.auth.utilities.PasswordUtils;
+import com.canalprep.auth.service.AdminOTPService;
 import com.canalprep.utilities.LoggerUtil;
+import io.jsonwebtoken.Claims;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -20,6 +22,7 @@ import com.canalprep.exception.DataAccessException;
 @WebServlet("/api/auth/*")
 public class AuthServlet extends HttpServlet {
     private final UserDAO userDao = new UserDAO();
+    private final AdminOTPService adminOTPService = new AdminOTPService();
     private final ObjectMapper objectMapper = new ObjectMapper();
     
     @Override
@@ -37,6 +40,9 @@ public class AuthServlet extends HttpServlet {
                 break;
             case "/register":
                 handleRegister(req, resp);
+                break;
+            case "/check-otp":
+                handleCheckOTP(req, resp);
                 break;
             case "/logout":
                 handleLogout(req, resp);
@@ -110,7 +116,8 @@ public class AuthServlet extends HttpServlet {
             String username = requestData.get("username");
             String email = requestData.get("email");
             String password = requestData.get("password");
-            String role = "USER";
+            String requestedRole = requestData.get("role");
+            String secretCode = requestData.get("secretCode");
             
             if (username == null || email == null || password == null) {
                 LoggerUtil.logInfo("AuthServlet", "Registration attempt with missing fields from IP: " + req.getRemoteAddr());
@@ -124,13 +131,72 @@ public class AuthServlet extends HttpServlet {
                 return;
             }
             
-            String secretCode = requestData.get("secretCode");
-            String adminSecret = "123456";//System.getenv("ADMIN_SECRET");
+            // Check if this is an ADMIN role request
+            if ("ADMIN".equals(requestedRole)) {
+                // Validate requester has proper authorization
+                String authHeader = req.getHeader("Authorization");
+                if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+                    sendErrorResponse(resp, "Authorization required for admin user creation", HttpServletResponse.SC_UNAUTHORIZED);
+                    return;
+                }
+                
+                String token = authHeader.substring(7);
+                System.out.println("DEBUG: Received token: " + token.substring(0, Math.min(50, token.length())) + "...");
+                try {
+                    Claims claims = JwtUtil.parseToken(token);
+                    String requesterRole = claims.get("role", String.class);
+                    String requesterUsername = claims.get("username", String.class);
+                    System.out.println("DEBUG: Token parsed successfully, role: " + requesterRole);
+                    
+                    // Only ADMIN or DEVELOPER can create admin users
+                    if (!"ADMIN".equals(requesterRole) && !"DEVELOPER".equals(requesterRole)) {
+                        LoggerUtil.logSecurity("UNAUTHORIZED_ADMIN_CREATION", requesterUsername, 
+                            "Unauthorized attempt to create admin user from role: " + requesterRole + " IP: " + req.getRemoteAddr());
+                        sendErrorResponse(resp, "Only ADMIN or DEVELOPER roles can create admin users", HttpServletResponse.SC_FORBIDDEN);
+                        return;
+                    }
+                    
+                    // Validate secret code
+                    String adminSecret = "123456"; // System.getenv("ADMIN_SECRET");
+                    if (!adminSecret.equals(secretCode)) {
+                        LoggerUtil.logSecurity("INVALID_SECRET_CODE", requesterUsername, 
+                            "Invalid secret code for admin creation from IP: " + req.getRemoteAddr());
+                        sendErrorResponse(resp, "Invalid secret code", HttpServletResponse.SC_UNAUTHORIZED);
+                        return;
+                    }
+                    
+                    // Generate OTP and send to admin email
+                    String otpCode = adminOTPService.generateAndSendAdminOTP(
+                        username, email, password, "ADMIN", requesterRole, req.getRemoteAddr()
+                    );
+                    
+                    // Return pending response
+                    Map<String, Object> responseData = new HashMap<>();
+                    responseData.put("status", "pending");
+                    responseData.put("message", "OTP sent to admin email. Please verify to complete registration.");
+                    responseData.put("otpRequired", true);
+                    responseData.put("nextStep", "/api/auth/check-otp");
+                    
+                    resp.setContentType("application/json");
+                    resp.setStatus(HttpServletResponse.SC_ACCEPTED);
+                    objectMapper.writeValue(resp.getWriter(), responseData);
+                    return;
+                } catch (Exception e) {
+                    System.out.println("DEBUG: JWT parsing failed: " + e.getClass().getSimpleName() + " - " + e.getMessage());
+                    LoggerUtil.logError("AuthServlet", "JWT token validation failed: " + e.getMessage(), e);
+                    sendErrorResponse(resp, "Invalid authorization token", HttpServletResponse.SC_UNAUTHORIZED);
+                    return;
+                }
+            }
+            
+            // Handle regular user registration
+            String role = "USER";
+            String adminSecret = "123456"; // System.getenv("ADMIN_SECRET");
             if (adminSecret != null && adminSecret.equals(secretCode)) {
                 role = "ADMIN";
             }
             
-           User newUser = userDao.createUser(username, email, password, role);
+            User newUser = userDao.createUser(username, email, password, role);
             
             // Log successful registration
             LoggerUtil.logInfo("AuthServlet", "New user registered: " + username + " (" + email + ") with role: " + role + " from IP: " + req.getRemoteAddr());
@@ -169,6 +235,61 @@ public class AuthServlet extends HttpServlet {
         resp.setContentType("application/json");
         resp.setStatus(HttpServletResponse.SC_OK);
         objectMapper.writeValue(resp.getWriter(), responseData);
+    }
+    
+    private void handleCheckOTP(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        try {
+            Map<String, String> requestData = objectMapper.readValue(req.getInputStream(), Map.class);
+            String otpCode = requestData.get("otpCode");
+            
+            if (otpCode == null || otpCode.trim().isEmpty()) {
+                sendErrorResponse(resp, "OTP code is required", HttpServletResponse.SC_BAD_REQUEST);
+                return;
+            }
+            
+            // Validate OTP and get pending registration data
+            AdminOTPService.PendingAdminRegistration pendingReg = 
+                adminOTPService.validateAdminOTP(otpCode, req.getRemoteAddr());
+            
+            if (pendingReg == null) {
+                sendErrorResponse(resp, "Invalid or expired OTP", HttpServletResponse.SC_UNAUTHORIZED);
+                return;
+            }
+            
+            // Create the admin user
+            User newUser = userDao.createUser(
+                pendingReg.getUsername(), 
+                pendingReg.getEmail(), 
+                pendingReg.getPassword(), 
+                pendingReg.getRole()
+            );
+            
+            // Log successful admin creation
+            LoggerUtil.logSecurity("ADMIN_USER_CREATED", pendingReg.getRequesterRole(), 
+                "Admin user created: " + newUser.getUsername() + " (" + newUser.getEmail() + ") from IP: " + req.getRemoteAddr());
+            
+            // Return success response
+            Map<String, Object> responseData = new HashMap<>();
+            responseData.put("status", "success");
+            responseData.put("message", "Admin user created successfully");
+            responseData.put("user", Map.of(
+                    "id", newUser.getId(),
+                    "username", newUser.getUsername(),
+                    "email", newUser.getEmail(),
+                    "role", newUser.getRole()
+            ));
+            
+            resp.setContentType("application/json");
+            resp.setStatus(HttpServletResponse.SC_OK);
+            objectMapper.writeValue(resp.getWriter(), responseData);
+            
+        } catch (DataAccessException e) {
+            LoggerUtil.logError("AuthServlet", "OTP validation failed due to data access issue: " + e.getMessage(), e);
+            sendErrorResponse(resp, "OTP validation failed: Database error", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        } catch (Exception e) {
+            LoggerUtil.logError("AuthServlet", "An unexpected error occurred during OTP validation: " + e.getMessage(), e);
+            sendErrorResponse(resp, "OTP validation failed: An unexpected error occurred", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        }
     }
     
     private void sendErrorResponse(HttpServletResponse resp, String message, int statusCode) throws IOException {

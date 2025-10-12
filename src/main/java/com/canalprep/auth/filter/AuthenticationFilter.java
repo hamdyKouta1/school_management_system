@@ -29,6 +29,14 @@ public class AuthenticationFilter implements Filter {
         "/api/protected/otp"
     };
     
+    // Endpoints that don't require authentication
+    private static final String[] PUBLIC_ENDPOINTS = {
+        "/api/auth/login",
+        "/api/auth/register",
+        "/api/auth/check-otp",
+        "/api/auth/logout"
+    };
+    
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         // Initialization code if needed
@@ -45,6 +53,12 @@ public class AuthenticationFilter implements Filter {
         
         // Skip authentication for OPTIONS requests (CORS preflight)
         if ("OPTIONS".equalsIgnoreCase(httpRequest.getMethod())) {
+            chain.doFilter(request, response);
+            return;
+        }
+        
+        // Skip authentication for public endpoints
+        if (isPublicEndpoint(path)) {
             chain.doFilter(request, response);
             return;
         }
@@ -147,6 +161,18 @@ public class AuthenticationFilter implements Filter {
     private boolean isLicenseEndpointAllowed(String path) {
         for (String allowedEndpoint : LICENSE_ALLOWED_ENDPOINTS) {
             if (path.startsWith(allowedEndpoint)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    /**
+     * Check if the requested endpoint is public (doesn't require authentication)
+     */
+    private boolean isPublicEndpoint(String path) {
+        for (String publicEndpoint : PUBLIC_ENDPOINTS) {
+            if (path.equals(publicEndpoint)) {
                 return true;
             }
         }

@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS otps (
     used BOOLEAN NOT NULL DEFAULT FALSE,
     ip_address VARCHAR(45),
     
-    CONSTRAINT chk_otp_operation CHECK (operation IN ('RENEW', 'REMOVE')),
+    CONSTRAINT chk_otp_operation CHECK (operation IN ('RENEW', 'REMOVE', 'ADMIN_CREATION')),
     CONSTRAINT chk_otp_expires CHECK (expires_at > created_at)
 );
 
