@@ -182,3 +182,95 @@
 2025-10-12 20:25:45 [SEVERE] ERROR: [AuthServlet] An unexpected error occurred during registration: ERROR: duplicate key value violates unique constraint "users_email_key"
   Detail: Key (email)=(userhamdy@example.com) already exists.
 2025-10-12 20:25:45 [SEVERE] ERROR: Exception details:
+2025-10-12 22:12:40 [SEVERE] ERROR: [AuthServlet] An unexpected error occurred during login: Cannot construct instance of `java.util.LinkedHashMap` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('myadmin')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1]
+2025-10-12 22:12:40 [SEVERE] ERROR: Exception details:
+2025-10-12 22:13:01 [SEVERE] ERROR: [AuthServlet] An unexpected error occurred during login: Cannot construct instance of `java.util.LinkedHashMap` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('myadmin')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1]
+2025-10-12 22:13:01 [SEVERE] ERROR: Exception details:
+2025-10-16 20:18:59 [SEVERE] ERROR: [AttendanceServlet] Database error in doGet: Error getting all students attendance grouped
+2025-10-16 20:18:59 [SEVERE] ERROR: Exception details:
+2025-10-16 20:22:19 [SEVERE] ERROR: [AttendanceServlet] Database error in doGet: Error getting all students attendance grouped
+2025-10-16 20:22:19 [SEVERE] ERROR: Exception details:
+2025-10-16 20:25:12 [SEVERE] ERROR: [AttendanceServlet] Database error in doGet: Error getting all students attendance grouped
+2025-10-16 20:25:12 [SEVERE] ERROR: Exception details:
+2025-10-17 17:50:10 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT expired at 2025-10-10T12:39:35Z. Current time: 2025-10-17T14:50:10Z, a difference of 612635878 milliseconds.  Allowed clock skew: 0 milliseconds.
+2025-10-17 17:50:10 [SEVERE] ERROR: Exception details:
+2025-10-17 18:09:20 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT expired at 2025-10-10T12:39:35Z. Current time: 2025-10-17T15:09:20Z, a difference of 613785535 milliseconds.  Allowed clock skew: 0 milliseconds.
+2025-10-17 18:09:20 [SEVERE] ERROR: Exception details:
+2025-10-17 18:09:39 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT expired at 2025-10-10T12:39:35Z. Current time: 2025-10-17T15:09:39Z, a difference of 613804218 milliseconds.  Allowed clock skew: 0 milliseconds.
+2025-10-17 18:09:39 [SEVERE] ERROR: Exception details:
+2025-10-17 18:10:03 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT expired at 2025-10-10T12:39:35Z. Current time: 2025-10-17T15:10:03Z, a difference of 613828989 milliseconds.  Allowed clock skew: 0 milliseconds.
+2025-10-17 18:10:03 [SEVERE] ERROR: Exception details:
+2025-10-17 18:10:20 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT expired at 2025-10-10T12:39:35Z. Current time: 2025-10-17T15:10:20Z, a difference of 613845549 milliseconds.  Allowed clock skew: 0 milliseconds.
+2025-10-17 18:10:20 [SEVERE] ERROR: Exception details:
+2025-10-17 18:10:57 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-10-17 18:10:57 [SEVERE] ERROR: Exception details:
+2025-10-17 18:20:09 [SEVERE] ERROR: [OTPDAO] Failed to create OTP
+2025-10-17 18:20:09 [SEVERE] ERROR: Exception details:
+2025-10-17 18:20:09 [SEVERE] ERROR: [UserOTPService] Failed to generate password reset OTP
+2025-10-17 18:20:09 [SEVERE] ERROR: Exception details:
+2025-10-17 18:20:09 [SEVERE] ERROR: [UserServlet] Failed to generate password reset OTP
+2025-10-17 18:20:09 [SEVERE] ERROR: Exception details:
+2025-10-17 18:44:19 [SEVERE] ERROR: [AuthServlet] JWT token validation failed: JWT expired at 2025-10-10T12:39:35Z. Current time: 2025-10-17T15:44:19Z, a difference of 615884305 milliseconds.  Allowed clock skew: 0 milliseconds.
+2025-10-17 18:44:19 [SEVERE] ERROR: Exception details:
+2025-10-17 22:02:15 [SEVERE] ERROR: [PasswordRecoveryService] Failed to send password recovery OTP email for user: testuser
+2025-10-17 22:02:15 [SEVERE] ERROR: Exception details:
+2025-10-17 22:11:13 [SEVERE] ERROR: [PasswordRecoveryService] Failed to send password recovery OTP email for user: hamdy2
+2025-10-17 22:11:13 [SEVERE] ERROR: Exception details:
+2025-10-17 22:12:27 [SEVERE] ERROR: [PasswordRecoveryService] Failed to send password recovery OTP email for user: hamdy2
+2025-10-17 22:12:27 [SEVERE] ERROR: Exception details:
+2025-10-17 22:19:13 [SEVERE] ERROR: [PasswordRecoveryService] Failed to initiate password recovery
+2025-10-17 22:19:13 [SEVERE] ERROR: Exception details:
+2025-10-17 22:19:13 [SEVERE] ERROR: [AuthServlet] Password recovery failed: Failed to initiate password recovery
+2025-10-17 22:19:13 [SEVERE] ERROR: Exception details:
+2025-10-17 22:23:56 [SEVERE] ERROR: [PasswordRecoveryService] Failed to verify OTP and reset password
+2025-10-17 22:23:56 [SEVERE] ERROR: Exception details:
+2025-10-17 22:23:56 [SEVERE] ERROR: [AuthServlet] Password reset verification failed: Failed to verify OTP and reset password
+2025-10-17 22:23:56 [SEVERE] ERROR: Exception details:
+2025-10-17 22:42:03 [SEVERE] ERROR: [PasswordRecoveryService] Failed to send password recovery OTP email for user: hamdy2
+2025-10-17 22:42:03 [SEVERE] ERROR: [PasswordRecoveryService] Failed to send password recovery OTP email for user: testuser
+2025-10-17 22:42:03 [SEVERE] ERROR: Exception details:
+2025-10-17 22:42:03 [SEVERE] ERROR: Exception details:
+2025-10-17 22:42:20 [SEVERE] ERROR: [PasswordRecoveryService] Failed to send password recovery OTP email for user: testuser
+2025-10-17 22:42:20 [SEVERE] ERROR: Exception details:
+2025-10-17 22:43:23 [SEVERE] ERROR: [PasswordRecoveryService] Failed to send password recovery OTP email for user: testuser
+2025-10-17 22:43:23 [SEVERE] ERROR: Exception details:
+2025-10-17 22:43:34 [SEVERE] ERROR: [PasswordRecoveryService] Failed to verify OTP and reset password
+2025-10-17 22:43:34 [SEVERE] ERROR: Exception details:
+2025-10-17 22:43:34 [SEVERE] ERROR: [AuthServlet] Error in handleVerifyResetOTP: Failed to verify OTP and reset password
+2025-10-17 22:43:34 [SEVERE] ERROR: Exception details:
+2025-10-17 22:44:25 [SEVERE] ERROR: [PasswordRecoveryService] Failed to send password recovery OTP email for user: hamdy2
+2025-10-17 22:44:25 [SEVERE] ERROR: Exception details:
+2025-10-17 22:48:44 [SEVERE] ERROR: [PasswordRecoveryService] Failed to send password recovery OTP email for user: testuser. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-427f00ce06bsm817531f8f.45 - gsmtp
+
+2025-10-17 22:48:44 [SEVERE] ERROR: Exception details:
+2025-10-17 22:53:14 [SEVERE] ERROR: [PasswordRecoveryService] Failed to verify OTP and reset password
+2025-10-17 22:53:14 [SEVERE] ERROR: Exception details:
+2025-10-17 22:53:14 [SEVERE] ERROR: [AuthServlet] Error in handleVerifyResetOTP: Failed to verify OTP and reset password
+2025-10-17 22:53:14 [SEVERE] ERROR: Exception details:
+2025-10-17 22:53:17 [SEVERE] ERROR: [PasswordRecoveryService] Failed to verify OTP and reset password
+2025-10-17 22:53:17 [SEVERE] ERROR: Exception details:
+2025-10-17 22:53:17 [SEVERE] ERROR: [AuthServlet] Error in handleVerifyResetOTP: Failed to verify OTP and reset password
+2025-10-17 22:53:17 [SEVERE] ERROR: Exception details:
+2025-10-17 22:54:21 [SEVERE] ERROR: [PasswordRecoveryService] Failed to verify OTP and reset password
+2025-10-17 22:54:21 [SEVERE] ERROR: Exception details:
+2025-10-17 22:54:21 [SEVERE] ERROR: [AuthServlet] Error in handleVerifyResetOTP: Failed to verify OTP and reset password
+2025-10-17 22:54:21 [SEVERE] ERROR: Exception details:
+2025-10-17 23:00:36 [SEVERE] ERROR: [PasswordRecoveryService] Failed to verify OTP and reset password
+2025-10-17 23:00:36 [SEVERE] ERROR: Exception details:
+2025-10-17 23:00:36 [SEVERE] ERROR: [AuthServlet] Error in handleVerifyResetOTP: Failed to verify OTP and reset password
+2025-10-17 23:00:36 [SEVERE] ERROR: Exception details:
+2025-10-17 23:03:46 [SEVERE] ERROR: [PasswordRecoveryService] Failed to verify OTP and reset password
+2025-10-17 23:03:46 [SEVERE] ERROR: Exception details:
+2025-10-17 23:03:46 [SEVERE] ERROR: [AuthServlet] Error in handleVerifyResetOTP: Failed to verify OTP and reset password
+2025-10-17 23:03:46 [SEVERE] ERROR: Exception details:
+2025-10-17 23:05:49 [SEVERE] ERROR: [PasswordRecoveryService] Failed to verify OTP and reset password
+2025-10-17 23:05:49 [SEVERE] ERROR: Exception details:
+2025-10-17 23:05:49 [SEVERE] ERROR: [AuthServlet] Error in handleVerifyResetOTP: Failed to verify OTP and reset password
+2025-10-17 23:05:49 [SEVERE] ERROR: Exception details:
+2025-10-17 23:09:12 [SEVERE] ERROR: [PasswordRecoveryService] Failed to verify OTP and reset password
+2025-10-17 23:09:12 [SEVERE] ERROR: Exception details:
+2025-10-17 23:09:12 [SEVERE] ERROR: [AuthServlet] Error in handleVerifyResetOTP: Failed to verify OTP and reset password
+2025-10-17 23:09:12 [SEVERE] ERROR: Exception details:

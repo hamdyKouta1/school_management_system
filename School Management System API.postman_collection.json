@@ -313,102 +313,6 @@
 			]
 		},
 		{
-			"name": "Attendance",
-			"item": [
-				{
-					"name": "Get All Attendance Records",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							}
-						],
-						"url": "{{base_url}}/api/protected/attendance",
-						"description": "Get all attendance records"
-					},
-					"response": []
-				},
-				{
-					"name": "Get Attendance by ID",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							}
-						],
-						"url": "{{base_url}}/api/protected/attendance/id/1",
-						"description": "Get attendance record by ID"
-					},
-					"response": []
-				},
-				{
-					"name": "Get Attendance by Date",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							}
-						],
-						"url": "{{base_url}}/api/protected/attendance/getByDate/2023-09-25",
-						"description": "Get attendance records by date"
-					},
-					"response": []
-				},
-				{
-					"name": "Create Attendance Record",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"studentId\": 1,\n    \"attendanceDate\": \"2023-09-25\",\n    \"status\": \"Present\",\n    \"remarks\": \"Arrived on time\"\n}"
-						},
-						"url": "{{base_url}}/api/protected/attendance",
-						"description": "Create a new attendance record"
-					},
-					"response": []
-				},
-				{
-					"name": "Update Attendance Record",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"studentId\": 1,\n    \"attendanceDate\": \"2023-09-25\",\n    \"status\": \"Late\",\n    \"remarks\": \"Arrived 15 minutes late\"\n}"
-						},
-						"url": "{{base_url}}/api/protected/attendance/1",
-						"description": "Update an existing attendance record"
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "Qualifications",
 			"item": [
 				{
@@ -635,6 +539,168 @@
 				"response": []
 			}
 			]
+		},
+		{
+			"name": "Attendance",
+			"item": [
+				{
+					"name": "Get All Attendance Records (Protected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response is an array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('array');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/attendance",
+						"description": "Get all attendance records (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Attendance by Date (Unprotected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response is an array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('array');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/attendance/date/2025-01-15",
+						"description": "Get attendance records for a specific date (no authentication required)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student Attendance by ID (Protected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response has student data\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property('student_id');",
+									"    pm.expect(jsonData).to.have.property('attendance_records');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/attendance/student/6",
+						"description": "Get attendance records for a specific student by ID (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student Attendance by Name (Protected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response has student data\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property('student_id');",
+									"    pm.expect(jsonData).to.have.property('attendance_records');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/attendance/student/محمد",
+						"description": "Get attendance records for a specific student by name (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Grouped Attendance (Protected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response is an array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('array');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/attendance/grouped",
+						"description": "Get all students with their attendance records grouped by student (requires authentication)"
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [
@@ -660,7 +726,7 @@
 	"variable": [
 		{
 			"key": "base_url",
-			"value": "http://localhost:8080",
+			"value": "http://localhost:8081",
 			"type": "string"
 		}
 	]

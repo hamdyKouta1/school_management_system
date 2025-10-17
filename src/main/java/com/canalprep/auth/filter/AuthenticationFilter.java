@@ -98,6 +98,9 @@ public class AuthenticationFilter implements Filter {
         try {
             Claims claims = JwtUtil.parseToken(token);
             
+            // Debug logging
+            logger.log(Level.INFO, "Token parsed successfully for user: " + claims.get("username") + ", role: " + claims.get("role") + ", path: " + path);
+            
             // License validation is now handled earlier in the filter
             // Role-based access control for license endpoints
             String userRole = claims.get("role", String.class);
@@ -134,6 +137,9 @@ public class AuthenticationFilter implements Filter {
             
             // Add security headers
             addSecurityHeaders(httpResponse);
+            
+            // Debug logging before passing to servlet
+            logger.log(Level.INFO, "Passing request to servlet for path: " + path + ", user: " + claims.get("username"));
             
             chain.doFilter(request, response);
             

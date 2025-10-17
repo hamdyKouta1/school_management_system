@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The School Management System is a comprehensive web-based application designed to manage student information, attendance records, and related data. This guide will help you understand how to use the system effectively.
+The School Management System is a comprehensive web-based application designed to manage student information and related data. This guide will help you understand how to use the system effectively.
 
 ## Getting Started
 
@@ -29,7 +29,6 @@ The School Management System is a comprehensive web-based application designed t
 The dashboard provides an overview of key statistics and quick access to main functions:
 
 - Total number of students
-- Recent attendance statistics
 - Quick links to common tasks
 
 ## Student Management
@@ -93,30 +92,6 @@ The dashboard provides an overview of key statistics and quick access to main fu
 3. Enter the qualification details in the text area
 4. Click "Save Qualification"
 
-## Attendance Management
-
-### Viewing Attendance Records
-
-1. Click on the "Attendance" tab in the navigation menu
-2. The system will display attendance records for the current date
-3. Use the date picker to view attendance for different dates
-
-### Recording Attendance
-
-1. From the Attendance page, select the date for which you want to record attendance
-2. For each student, select the appropriate attendance status:
-   - Present
-   - Absent
-   - Late
-   - Excused
-3. Click "Save Attendance" to record the attendance
-
-### Editing Attendance Records
-
-1. From the Attendance page, navigate to the date with the attendance record you want to edit
-2. Update the attendance status for the relevant students
-3. Click "Save Attendance" to update the records
-
 ## Reports
 
 ### Generating Student Reports
@@ -124,14 +99,6 @@ The dashboard provides an overview of key statistics and quick access to main fu
 1. Click on the "Reports" tab in the navigation menu
 2. Select "Student Reports" from the dropdown menu
 3. Choose the report criteria (class, date range, etc.)
-4. Click "Generate Report"
-5. The report will be displayed and can be printed or exported
-
-### Generating Attendance Reports
-
-1. Click on the "Reports" tab in the navigation menu
-2. Select "Attendance Reports" from the dropdown menu
-3. Choose the report criteria (student, class, date range, etc.)
 4. Click "Generate Report"
 5. The report will be displayed and can be printed or exported
 
@@ -159,12 +126,6 @@ The dashboard provides an overview of key statistics and quick access to main fu
 - Always verify student information before saving
 - Use consistent formatting for names and addresses
 - Enter phone numbers with the country code
-
-### Attendance Recording
-
-- Record attendance daily for accuracy
-- Update attendance records as soon as possible if changes are needed
-- Use the correct attendance status based on school policy
 
 ### Security
 

@@ -1,0 +1,1963 @@
+{
+	"info": {
+		"_postman_id": "256ff66e-13c7-4f23-a658-9465b558263b",
+		"name": "School Management System API Copy",
+		"description": "API collection for testing School Management System endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24640819"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"if (jsonData.token) {",
+									"    pm.environment.set(\"token\", jsonData.token);",
+									"    console.log(\"Token saved to environment\");",
+									"}",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response has token\", function () {",
+									"    pm.expect(jsonData).to.have.property('token');",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"userhamdy\",\n    \"password\": \"123456789\"\n}"
+						},
+						"url": "{{base_url}}/api/auth/login",
+						"description": "Login to get authentication token"
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiREVWRUxPUEVSIiwidXNlcklkIjoiOCIsImVtYWlsIjoiaGFtZHkyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJoYW1keTIiLCJpYXQiOjE3NjAwOTgxNzUsImV4cCI6MTc2MDA5OTk3NX0.B2SaYRTo6Wg7nMeVAD5kto0e1LXxmPh3EeBqSfrZZ8vhzHkoB87ElDi2rehFdTkNKq61cQrLItKQ6xLN2acjOg"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"userhamdy2\",\n    \"password\": \"1234567899\",\n    \"email\": \"userhamdy2@example.com\",\n    \"role\": \"USER\"\n   \n}"
+						},
+						"url": "{{base_url}}/api/auth/register",
+						"description": "Register a new user"
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/auth/logout",
+						"description": "Logout current user"
+					},
+					"response": []
+				},
+				{
+					"name": "Check-otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otpCode\":\"437790\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/auth/check-otp"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "Get All Students",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/students",
+						"description": "Get all students"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/students/1",
+						"description": "Get student by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Count Students",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/students/count",
+						"description": "Count all students"
+					},
+					"response": []
+				},
+				{
+					"name": "Count Students by Grade",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/students/count/grade/1",
+						"description": "Count students by grade"
+					},
+					"response": []
+				},
+				{
+					"name": "Count Students by Class",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/students/count/class/1",
+						"description": "Count students by class"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiVVNFUiIsInVzZXJJZCI6IjM0IiwiZW1haWwiOiJ1c2VyaGFtZHlAZXhhbXBsZS5jb20iLCJ1c2VybmFtZSI6InVzZXJoYW1keSIsImlhdCI6MTc2MDI5NDE3NSwiZXhwIjoxNzYwMjk1OTc1fQ.lJM52itfm8dNfJIwFOVUA3MMFPCTYi1TSzSXGEROjEs8bxmNm6BDaZHmEdeRQWkS91AJcSZ250vtCLTEq9ZpxA"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"student_name\": \"salm mohamed yasser\",\n  \"nid\": \"5554\",\n  \"nationality\": \"مصري\",\n  \"religion\": \"مسلم\",\n  \"current_address\": \"بورسعيد - الشرق\",\n  \"medical_status\": true,\n  \"date_of_birth\": \"2000-09-04\",\n  \"place_of_birth\": \"بورسعيد\",\n  \"grade\": \"الصف الاول الاعدادي\",\n  \"class\": \"1أ\",\n  \"medical_descriptions\": \"حساسية من الغبار; نظارة طبية\",\n  \"student_phones\": [\"01212958661\",\n                     \"01551122334\"],\n  \"parents_info\": [\n    {\n      \"parent_name\": \"nada mahjoby\" ,\n      \"relationship\": \"أم\",\n      \"parent_nid\": \"00000000000000002\",\n      \"parent_nationality\": \"مصري\",\n      \"parent_job\": \"طبيبة\",\n      \"parent_address\": \"القاهرة - المعادي\",\n      \"parent_social_status\": \"متزوج\",\n      \"parent_phones\": [\"01212121212\", \"0111111111\"]\n    },\n    {\n      \"parent_name\": \"mohamed yasser\",\n      \"relationship\": \"أب\",\n      \"parent_nid\": \"000000000000000002\",\n      \"parent_nationality\": \"مصري\",\n      \"parent_job\": \"مهندس\",\n      \"parent_address\": \"الجيزة - الدقي\",\n      \"parent_social_status\": \"متزوج\",\n      \"parent_phones\": [\"0101010101010\"]\n    }\n  ],\n  \"student_notes\": [\n    {\n      \"note_text\": \"الطالب متفوق في الرياضيات\",\n      \"created_by\": \"معلمة الرياضيات\"\n    },\n      {\n      \"note_text\": \"  شطورة \",\n      \"created_by\": \" تيست\"\n    },\n    {\n      \"note_text\": \"يحتاج إلى متابعة في اللغة الإنجليزية\",\n      \"created_by\": \"معلمة اللغة\"\n    }\n  ]\n}"
+						},
+						"url": "{{base_url}}/api/protected/insertStudent/",
+						"description": "Create a new student"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"student_name\": \"loooy hamdy kouta\",\n  \"nid\": \"7895897895656550\",\n  \"nationality\": \"مصري\",\n  \"religion\": \"مسلم\",\n  \"current_address\": \"القاهرة - المعادي\",\n  \"medical_status\": true,\n  \"date_of_birth\": \"2010-05-15\",\n  \"place_of_birth\": \"القاهرة\",\n  \"grade\": \"الصف الاول الاعدادي\",\n  \"class\": \"1أ\",\n  \"medical_descriptions\": \"حساسية من الغبار; نظارة طبية\",\n  \"student_phones\": [\"01001234567\", \"01011223344\"],\n  \"parents_info\": [\n    {\n      \"parent_name\": \"nancy أحمد\",\n      \"relationship\": \"أم\",\n      \"parent_nid\": \"7777-00000001\",\n      \"parent_nationality\": \"مصري\",\n      \"parent_job\": \"طبيبة\",\n      \"parent_address\": \"القاهرة - المعادي\",\n      \"parent_social_status\": \"متزوج\",\n      \"parent_phones\": [\"54545454\", \"43434343\"]\n    },\n    {\n      \"parent_name\": \"ahmed علي\",\n      \"relationship\": \"أب\",\n      \"parent_nid\": \"1\",\n      \"parent_nationality\": \"مصري\",\n      \"parent_job\": \"مهندس\",\n      \"parent_address\": \"الجيزة - الدقي\",\n      \"parent_social_status\": \"أعزب\",\n      \"parent_phones\": [\"44343434\"]\n    }\n  ],\n  \"student_notes\": [\n    {\n      \"note_text\": \"الطالب متفوق في الرياضيات\",\n      \"created_by\": \"معلمة الرياضيات\"\n    },\n    {\n      \"note_text\": \"يحتاج إلى متابعة في اللغة الإنجليزية\",\n      \"created_by\": \"معلمة اللغة\"\n    }\n  ]\n}"
+						},
+						"url": "{{base_url}}/api/protected/insertStudent/48",
+						"description": "Update an existing student"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/students/49",
+						"description": "Delete a student"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student Notes",
+			"item": [
+				{
+					"name": "Add Student Note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student_id\": 1,\n    \"student_notes\": [\n        {\n            \"note_text\": \"Student performs well in mathematics\",\n            \"created_by\": \"hamdy\"\n        },\n        {\n            \"note_text\": \"Needs improvement in language skills\",\n            \"created_by\": \"hamdy\"\n        }\n    ]\n}"
+						},
+						"url": "{{base_url}}/api/protected/student/note",
+						"description": "Add notes to a student"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student Phone",
+			"item": [
+				{
+					"name": "Add Student Phone",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student_id\": 1,\n    \"student_phones\": [\n        \"012121212120\",\n        \"012124545454\"\n    ]\n}"
+						},
+						"url": "{{base_url}}/api/protected/student/phone",
+						"description": "Add phone numbers to a student"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medical History",
+			"item": [
+				{
+					"name": "Add Medical History",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student_id\": 1,\n    \"description\": \"Asthma\"\n\n}"
+						},
+						"url": "{{base_url}}/api/protected/student/medical",
+						"description": "Add medical history to a student"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Qualifications",
+			"item": [
+				{
+					"name": "Add Qualifications",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student_id\": 1,\n    \"qualifications\": [\n        {\n            \"description\": \"Math Olympiad Winner\"\n        },\n        {\n            \"description\": \"Science Fair Participant\"\n        }\n    ]\n}"
+						},
+						"url": "{{base_url}}/api/protected/addQ",
+						"description": "Add qualifications to a student"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "Get Dashboard Data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/dashboard/countStudents/grade/1",
+						"description": "Get dashboard data"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Count by Class",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/dashboard/countStudents/class/1",
+						"description": "Get dashboard data"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Count by grade",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/dashboard/countStudents/grade/1",
+						"description": "Get dashboard data"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "License",
+			"item": [
+				{
+					"name": "Get Licence Info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/licence",
+						"description": "Get all students"
+					},
+					"response": []
+				},
+				{
+					"name": "Generate OTP - Developer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"operation\":\"RENEW\",\r\n    \"environment\":\"development\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/protected/otp/developer",
+						"description": "Generate OTP for developer operations"
+					},
+					"response": []
+				},
+				{
+					"name": "Generate OTP - Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"operation\":\"REMOVE\",\r\n    \"environment\":\"production\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/protected/otp/admin",
+						"description": "Generate OTP for admin operations"
+					},
+					"response": []
+				},
+				{
+					"name": "Renew License",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp\":\"117794\",\r\n    \"duration\":30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/protected/licence/renew",
+						"description": "Renew license with OTP and duration"
+					},
+					"response": []
+				},
+				{
+					"name": "Remove License",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/protected/licence/remove",
+						"description": "Remove license with OTP"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Management",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/users/",
+						"description": "Get all users (admin/developer only)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/users/8",
+						"description": "Get user by ID (admin/developer only)"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"updated_user\",\n    \"email\": \"updated@example.com\",\n    \"role\": \"USER\"\n}"
+						},
+						"url": "{{base_url}}/api/protected/users/8",
+						"description": "Update user information (admin/developer only)"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/users/9",
+						"description": "Delete user by ID (admin/developer only)"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User by Username",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/users/username/testuser",
+						"description": "Delete user by username (admin/developer only)"
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Password Reset OTP",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"generateOTP\": true\n}"
+						},
+						"url": "{{base_url}}/api/protected/users/8/resetpassword",
+						"description": "Generate OTP for password reset"
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password with OTP",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"otp\": \"123456\",\n    \"newPassword\": \"newPassword123!\"\n}"
+						},
+						"url": "{{base_url}}/api/protected/users/8/resetpassword",
+						"description": "Reset password using OTP and new password"
+					},
+					"response": []
+				},
+				{
+					"name": "Fix OTP Constraint (Temporary)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": "{{base_url}}/api/protected/users/fix-otp-constraint",
+						"description": "Temporary endpoint to fix OTP database constraint"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "School Configuration",
+			"item": [
+				{
+					"name": "Classes",
+					"item": [
+						{
+							"name": "Get All Classes",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response is an array\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.be.an('array');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/class",
+								"description": "Get all classes"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Class by ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has class properties\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('classId');",
+											"    pm.expect(jsonData).to.have.property('className');",
+											"    pm.expect(jsonData).to.have.property('gradeId');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/class/1",
+								"description": "Get class by ID"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Class",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"pm.test(\"Response has created class\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('className');",
+											"    pm.expect(jsonData.className).to.eql('1أ');",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"className\": \"9ق\",\n    \"gradeId\": 1\n}"
+								},
+								"url": "{{base_url}}/api/protected/schoolConfig/class",
+								"description": "Create a new class"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Class",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has updated class\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('className');",
+											"    pm.expect(jsonData.className).to.eql('1ب');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"className\": \"1ب\",\n    \"gradeId\": 1\n}"
+								},
+								"url": "{{base_url}}/api/protected/schoolConfig/class/1",
+								"description": "Update an existing class"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Class",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has success message\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('message');",
+											"    pm.expect(jsonData.message).to.include('deleted successfully');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/class/1",
+								"description": "Delete a class"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Grades",
+					"item": [
+						{
+							"name": "Get All Grades",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response is an array\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.be.an('array');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/grade",
+								"description": "Get all grades"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Grade by ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has grade properties\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('gradeId');",
+											"    pm.expect(jsonData).to.have.property('gradeNameAr');",
+											"    pm.expect(jsonData).to.have.property('gradeNameEn');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/grade/1",
+								"description": "Get grade by ID"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Grade",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"pm.test(\"Response has created grade\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('gradeNameAr');",
+											"    pm.expect(jsonData.gradeNameAr).to.eql('الصف الأول');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"gradeNameAr\": \"الصف الأول\",\n    \"gradeNameEn\": \"First Grade\",\n    \"gradeOrder\": 1\n}"
+								},
+								"url": "{{base_url}}/api/protected/schoolConfig/grade",
+								"description": "Create a new grade"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Grade",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has updated grade\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('gradeNameAr');",
+											"    pm.expect(jsonData.gradeNameAr).to.eql('الصف الثاني');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"gradeNameAr\": \"الصف الثاني\",\n    \"gradeNameEn\": \"Second Grade\",\n    \"gradeOrder\": 2\n}"
+								},
+								"url": "{{base_url}}/api/protected/schoolConfig/grade/1",
+								"description": "Update an existing grade"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Grade",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has success message\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('message');",
+											"    pm.expect(jsonData.message).to.include('deleted successfully');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/grade/1",
+								"description": "Delete a grade"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Nationalities",
+					"item": [
+						{
+							"name": "Get All Nationalities",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response is an array\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.be.an('array');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/nationality",
+								"description": "Get all nationalities"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Nationality by ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has nationality properties\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('nationalityId');",
+											"    pm.expect(jsonData).to.have.property('nationalName');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/nationality/1",
+								"description": "Get nationality by ID"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Nationality",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"pm.test(\"Response has created nationality\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('nationalName');",
+											"    pm.expect(jsonData.nationalName).to.eql('مصري');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nationalName\": \"مصري\"\n}"
+								},
+								"url": "{{base_url}}/api/protected/schoolConfig/nationality",
+								"description": "Create a new nationality"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Nationality",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has updated nationality\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('nationalName');",
+											"    pm.expect(jsonData.nationalName).to.eql('سعودي');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nationalName\": \"سعودي\"\n}"
+								},
+								"url": "{{base_url}}/api/protected/schoolConfig/nationality/1",
+								"description": "Update an existing nationality"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Nationality",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has success message\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('message');",
+											"    pm.expect(jsonData.message).to.include('deleted successfully');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/nationality/1",
+								"description": "Delete a nationality"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Religions",
+					"item": [
+						{
+							"name": "Get All Religions",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response is an array\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.be.an('array');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/religion",
+								"description": "Get all religions"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Religion by ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has religion properties\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('religionId');",
+											"    pm.expect(jsonData).to.have.property('religionName');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/religion/1",
+								"description": "Get religion by ID"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Religion",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"pm.test(\"Response has created religion\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('religionName');",
+											"    pm.expect(jsonData.religionName).to.eql('مسلم');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"religionName\": \"مسلم\"\n}"
+								},
+								"url": "{{base_url}}/api/protected/schoolConfig/religion",
+								"description": "Create a new religion"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Religion",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has updated religion\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('religionName');",
+											"    pm.expect(jsonData.religionName).to.eql('مسيحي');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"religionName\": \"مسيحي\"\n}"
+								},
+								"url": "{{base_url}}/api/protected/schoolConfig/religion/1",
+								"description": "Update an existing religion"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Religion",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has success message\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('message');",
+											"    pm.expect(jsonData.message).to.include('deleted successfully');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/religion/1",
+								"description": "Delete a religion"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Relationship Types",
+					"item": [
+						{
+							"name": "Get All Relationship Types",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response is an array\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.be.an('array');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/relationship",
+								"description": "Get all relationship types"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Relationship Type by ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has relationship type properties\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('typeId');",
+											"    pm.expect(jsonData).to.have.property('typeName');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/relationship/1",
+								"description": "Get relationship type by ID"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Relationship Type",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"pm.test(\"Response has created relationship type\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('typeName');",
+											"    pm.expect(jsonData.typeName).to.eql('أب');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"typeName\": \"أب\"\n}"
+								},
+								"url": "{{base_url}}/api/protected/schoolConfig/relationship",
+								"description": "Create a new relationship type"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Relationship Type",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has updated relationship type\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('typeName');",
+											"    pm.expect(jsonData.typeName).to.eql('أم');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"typeName\": \"أم\"\n}"
+								},
+								"url": "{{base_url}}/api/protected/schoolConfig/relationship/1",
+								"description": "Update an existing relationship type"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Relationship Type",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Response has success message\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData).to.have.property('message');",
+											"    pm.expect(jsonData.message).to.include('deleted successfully');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": "{{base_url}}/api/protected/schoolConfig/relationship/1",
+								"description": "Delete a relationship type"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Attendance",
+			"item": [
+				{
+					"name": "Get All Attendance Records (Protected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response is an array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('array');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/attendance",
+						"description": "Get all attendance records (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Attendance by Date (Unprotected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response is an array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('array');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/attendance/date/2025-01-15",
+						"description": "Get attendance records for a specific date (no authentication required)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student Attendance by ID (Protected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response is an array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('array');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/attendance/student/6",
+						"description": "Get attendance records for a specific student by ID (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student Attendance by Name (Protected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response is an array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('array');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/attendance/student/محمد",
+						"description": "Get attendance records for a specific student by name (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Grouped Attendance (Protected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response is an array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('array');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/attendance/grouped",
+						"description": "Get all students with their attendance records grouped by student (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Attendance Record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"pm.test(\"Response has success message\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property('message');",
+									"    pm.expect(jsonData.message).to.include('created successfully');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student_id\": 1,\n    \"attendance_date\": \"2025-01-15\",\n    \"status\": \"PRESENT\",\n    \"notes\": \"On time\"\n}"
+						},
+						"url": "{{base_url}}/api/attendance",
+						"description": "Create a new attendance record (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Attendance Record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response has success message\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property('message');",
+									"    pm.expect(jsonData.message).to.include('updated successfully');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student_id\": 1,\n    \"attendance_date\": \"2025-01-15\",\n    \"status\": \"ABSENT\",\n    \"notes\": \"Updated status\"\n}"
+						},
+						"url": "{{base_url}}/api/attendance",
+						"description": "Update an existing attendance record (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Attendance Record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response has success message\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property('message');",
+									"    pm.expect(jsonData.message).to.include('deleted successfully');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/attendance?student_id=1&attendance_date=2025-01-15",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"attendance"
+							],
+							"query": [
+								{
+									"key": "student_id",
+									"value": "1"
+								},
+								{
+									"key": "attendance_date",
+									"value": "2025-01-15"
+								}
+							]
+						},
+						"description": "Delete an attendance record by student ID and date (requires authentication)"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8081",
+			"type": "string"
+		}
+	]
+}

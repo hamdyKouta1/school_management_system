@@ -6,6 +6,7 @@ import com.canalprep.auth.dao.UserDAO;
 import com.canalprep.auth.model.User;
 import com.canalprep.auth.utilities.PasswordUtils;
 import com.canalprep.auth.service.AdminOTPService;
+import com.canalprep.service.PasswordRecoveryService;
 import com.canalprep.utilities.LoggerUtil;
 import io.jsonwebtoken.Claims;
 
@@ -46,6 +47,12 @@ public class AuthServlet extends HttpServlet {
                 break;
             case "/logout":
                 handleLogout(req, resp);
+                break;
+            case "/forget_password":
+                handleForgetPassword(req, resp);
+                break;
+            case "/verify_reset_otp":
+                handleVerifyResetOTP(req, resp);
                 break;
             default:
                 resp.sendError(HttpServletResponse.SC_NOT_FOUND, "Endpoint not found");
@@ -290,6 +297,84 @@ public class AuthServlet extends HttpServlet {
             LoggerUtil.logError("AuthServlet", "An unexpected error occurred during OTP validation: " + e.getMessage(), e);
             sendErrorResponse(resp, "OTP validation failed: An unexpected error occurred", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
+    }
+    
+    private void handleForgetPassword(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        try {
+            Map<String, String> requestData = objectMapper.readValue(req.getInputStream(), Map.class);
+            String username = requestData.get("username");
+            String email = requestData.get("email");
+            
+            if (username == null || username.trim().isEmpty() || email == null || email.trim().isEmpty()) {
+                sendErrorResponse(resp, "Username and email are required", HttpServletResponse.SC_BAD_REQUEST);
+                return;
+            }
+            
+            // Verify user exists and email matches
+            User user = userDao.getUserByUsername(username);
+            if (user == null || !user.getEmail().equals(email)) {
+                // Don't reveal if user exists or not for security
+                LoggerUtil.logSecurity("PASSWORD_RESET_ATTEMPT", username, "Password reset attempt for non-existent user or email mismatch from IP: " + req.getRemoteAddr());
+                sendSuccessResponse(resp, "If the username and email match our records, a password reset OTP has been sent.");
+                return;
+            }
+            
+            // Initialize password recovery service and send OTP
+             PasswordRecoveryService recoveryService = new PasswordRecoveryService();
+             String otpResult = recoveryService.initiatePasswordRecovery(username, email, req.getRemoteAddr());
+             
+             if (otpResult != null) {
+                 LoggerUtil.logSecurity("PASSWORD_RESET_OTP_SENT", username, "Password reset OTP sent to: " + email + " from IP: " + req.getRemoteAddr());
+                 sendSuccessResponse(resp, "Password reset OTP has been sent to your email.");
+             } else {
+                 LoggerUtil.logError("AuthServlet", "Failed to send password reset OTP for user: " + username, null);
+                 sendErrorResponse(resp, "Failed to send password reset OTP. Please try again later.", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+             }
+            
+        } catch (Exception e) {
+            LoggerUtil.logError("AuthServlet", "Error in handleForgetPassword: " + e.getMessage(), e);
+            sendErrorResponse(resp, "An error occurred while processing your request", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        }
+    }
+    
+    private void handleVerifyResetOTP(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        Map<String, String> requestData = null;
+        try {
+            requestData = objectMapper.readValue(req.getInputStream(), Map.class);
+            String otpCode = requestData.get("otpCode");
+            String newPassword = requestData.get("newPassword");
+            
+            if (otpCode == null || otpCode.trim().isEmpty() || newPassword == null || newPassword.trim().isEmpty()) {
+                sendErrorResponse(resp, "OTP code and new password are required", HttpServletResponse.SC_BAD_REQUEST);
+                return;
+            }
+            
+            // Verify OTP and reset password
+             PasswordRecoveryService recoveryService = new PasswordRecoveryService();
+             boolean resetSuccessful = recoveryService.verifyOTPAndResetPassword(otpCode, newPassword, req.getRemoteAddr());
+            
+            if (resetSuccessful) {
+                LoggerUtil.logSecurity("PASSWORD_RESET_SUCCESS", "UNKNOWN", "Password reset completed successfully from IP: " + req.getRemoteAddr());
+                sendSuccessResponse(resp, "Password has been reset successfully.");
+            } else {
+                LoggerUtil.logSecurity("PASSWORD_RESET_FAILED", "UNKNOWN", "Invalid or expired OTP for password reset from IP: " + req.getRemoteAddr());
+                sendErrorResponse(resp, "Invalid or expired OTP. Please request a new password reset.", HttpServletResponse.SC_UNAUTHORIZED);
+            }
+            
+        } catch (Exception e) {
+            LoggerUtil.logError("AuthServlet", "Error in handleVerifyResetOTP: " + e.getMessage(), e);
+            sendErrorResponse(resp, "An error occurred while processing your request", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        }
+    }
+    
+    private void sendSuccessResponse(HttpServletResponse resp, String message) throws IOException {
+        Map<String, String> response = new HashMap<>();
+        response.put("status", "success");
+        response.put("message", message);
+        
+        resp.setContentType("application/json");
+        resp.setStatus(HttpServletResponse.SC_OK);
+        objectMapper.writeValue(resp.getWriter(), response);
     }
     
     private void sendErrorResponse(HttpServletResponse resp, String message, int statusCode) throws IOException {

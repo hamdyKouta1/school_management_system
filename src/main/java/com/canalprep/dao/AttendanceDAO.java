@@ -1,181 +1,438 @@
 package com.canalprep.dao;
 
-import com.canalprep.model.Attendance;
-import com.canalprep.staticVariables.DBConst;
+import com.canalprep.model.StudentAttendanceDetails;
+import com.canalprep.exception.DataAccessException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.postgresql.util.PGobject;
 
 import java.sql.*;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
+import java.util.*;
 import java.util.logging.Logger;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.sql.Date;
 
 public class AttendanceDAO {
     private static final Logger logger = Logger.getLogger(AttendanceDAO.class.getName());
-    
-    // SQL Queries
-    private static final String SELECT_ALL = DBConst.DB_ATTENDANCE_SELECT_ALL;//"SELECT * FROM attendance";
-    private static final String SELECT_BY_ID = DBConst.DB_ATTENDANCE_SELECT_BY_ID;//"SELECT * FROM attendance WHERE student_id = ?";
-    private static final String INSERT_ATTENDANCE = DBConst.DB_ATTENDANCE_INSERT_ATTENDANCE;//"INSERT INTO attendance (student_id, attendance_date, status_id,class_id,grade_id,today_date) VALUES (?, ?, ?, ?, ?, ?)";
-    private static final String UPDATE = DBConst.DB_ATTENDANCE_UPDATE;//"UPDATE attendance SET student_id = ?, attendance_date = ?, status_id = ? WHERE attendance_id = ?";
-    private static final String DELETE = DBConst.DB_ATTENDANCE_DELETE;//"DELETE FROM attendance WHERE attendance_id = ?";
-    private static final String SELECT_BY_STUDENT_AND_DATE = DBConst.DB_ATTENDANCE_SELECT_BY_STUDENT_AND_DATE;//"SELECT * FROM attendance WHERE student_id = ? AND attendance_date = ?";
-    private static final String SELECT_BY_DATE_STRING = DBConst.DB_ATTENDANCE_SELECT_BY_DATE_STRING;//"SELECT * FROM attendance WHERE today_date = ?";
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
-    public List<Attendance> getTodayAttendances(Date dayDate){
-        List<Attendance> attendanceList = new ArrayList<>();
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(SELECT_BY_DATE_STRING)) {
-            pstmt.setDate(1, dayDate);
-            try (ResultSet rs = pstmt.executeQuery()) {
-                while (rs.next()) {
-                    attendanceList.add(extractAttendanceFromResultSet(rs));
+    /**
+     * Get student attendance details by student ID with attendance records
+     */
+    public Map<String, Object> getStudentAttendanceById(int studentId) {
+        // Get all attendance records and filter by student ID
+        List<Map<String, Object>> allAttendance = getAllAttendanceWithStudentDetails();
+        
+        Map<String, Object> studentData = null;
+        List<Map<String, Object>> attendanceRecords = new ArrayList<>();
+        
+        for (Map<String, Object> record : allAttendance) {
+            Integer recordStudentId = (Integer) record.get("student_id");
+            if (recordStudentId != null && recordStudentId.equals(studentId)) {
+                // Initialize student data if not done yet
+                if (studentData == null) {
+                    studentData = new HashMap<>();
+                    studentData.put("student_id", record.get("student_id"));
+                    studentData.put("student_name", record.get("student_name"));
+                    studentData.put("current_address", record.get("current_address"));
+                    studentData.put("medical_status", record.get("medical_status"));
+                    studentData.put("grade", record.get("grade"));
+                    studentData.put("class", record.get("class"));
                 }
+                
+                // Add attendance record
+                Map<String, Object> attendanceRecord = new HashMap<>();
+                attendanceRecord.put("attendance_id", record.get("attendance_id"));
+                attendanceRecord.put("attendance_date", record.get("attendance_date"));
+                attendanceRecord.put("status_id", record.get("status_id"));
+                attendanceRecord.put("status_name", record.get("status_name"));
+                attendanceRecord.put("arrival_time", record.get("arrival_time"));
+                attendanceRecords.add(attendanceRecord);
             }
-        } catch (SQLException e) {
-            handleSQLException("Error getting today's attendance records", e);
         }
-        return attendanceList;
-    }
-
-    public List<Attendance> getAllAttendance() {
-        List<Attendance> attendanceList = new ArrayList<>();
         
-        try (Connection conn = DBConnection.getConnection();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(SELECT_ALL)) {
-            
-            while (rs.next()) {
-                attendanceList.add(extractAttendanceFromResultSet(rs));
-            }
-        } catch (SQLException e) {
-            handleSQLException("Error getting all attendance records", e);
+        if (studentData != null) {
+            studentData.put("attendance_records", attendanceRecords);
+            return studentData;
         }
-        return attendanceList;
-    }
-    
-    public List<Attendance> getAttendanceById(int attendanceId) {
-    List<Attendance> attendanceList = new ArrayList<>();
-    
-    try (Connection conn = DBConnection.getConnection();
-         PreparedStatement pstmt = conn.prepareStatement(SELECT_BY_ID)) {
         
-        pstmt.setInt(1, attendanceId);
-        
-        try (ResultSet rs = pstmt.executeQuery()) {
-            while (rs.next()) {
-                Attendance attendance = extractAttendanceFromResultSet(rs);
-                attendanceList.add(attendance);
-            }
-        }
-    } catch (SQLException e) {
-        handleSQLException("Error getting attendance by ID: " + attendanceId, e);
-    }
-    
-    return attendanceList;
-}
-
-    
-    public Attendance getAttendanceByStudentAndDate(int studentId, Date date) {
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(SELECT_BY_STUDENT_AND_DATE)) {
-            
-            pstmt.setInt(1, studentId);
-            pstmt.setDate(2, date);
-            try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) {
-                    return extractAttendanceFromResultSet(rs);
-                }
-            }
-        } catch (SQLException e) {
-            handleSQLException("Error getting attendance for student: " + studentId + " on date: " + date, e);
-        }
         return null;
     }
-    
-    public boolean addAttendance(Attendance attendance) {
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(INSERT_ATTENDANCE, Statement.RETURN_GENERATED_KEYS)) {
-            
 
-            setAttendanceParameters(pstmt, attendance);
-            int affectedRows = pstmt.executeUpdate();
+    /**
+     * Get student attendance details by student name with attendance records
+     */
+    public Map<String, Object> getStudentAttendanceByName(String studentName) {
+        // Get all attendance records and filter by student name
+        List<Map<String, Object>> allAttendance = getAllAttendanceWithStudentDetails();
+        
+        Map<String, Object> studentData = null;
+        List<Map<String, Object>> attendanceRecords = new ArrayList<>();
+        
+        for (Map<String, Object> record : allAttendance) {
+            String recordStudentName = (String) record.get("student_name");
+            if (recordStudentName != null && recordStudentName.toLowerCase().contains(studentName.toLowerCase())) {
+                // Initialize student data if not done yet
+                if (studentData == null) {
+                    studentData = new HashMap<>();
+                    studentData.put("student_id", record.get("student_id"));
+                    studentData.put("student_name", record.get("student_name"));
+                    studentData.put("current_address", record.get("current_address"));
+                    studentData.put("medical_status", record.get("medical_status"));
+                    studentData.put("grade", record.get("grade"));
+                    studentData.put("class", record.get("class"));
+                }
+                
+                // Add attendance record
+                Map<String, Object> attendanceRecord = new HashMap<>();
+                attendanceRecord.put("attendance_id", record.get("attendance_id"));
+                attendanceRecord.put("attendance_date", record.get("attendance_date"));
+                attendanceRecord.put("status_id", record.get("status_id"));
+                attendanceRecord.put("status_name", record.get("status_name"));
+                attendanceRecord.put("arrival_time", record.get("arrival_time"));
+                attendanceRecords.add(attendanceRecord);
+            }
+        }
+        
+        if (studentData != null) {
+            studentData.put("attendance_records", attendanceRecords);
+            return studentData;
+        }
+        
+        return null;
+    }
+
+    /**
+     * Get attendance records by date using get_attendance_with_student_details function
+     */
+    public List<Map<String, Object>> getAttendanceByDate(String date) {
+        String sql = "SELECT * FROM get_attendance_with_student_details() WHERE attendance_date = ?";
+        List<Map<String, Object>> attendanceList = new ArrayList<>();
+        
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
             
-            if (affectedRows > 0) {
-                try (ResultSet generatedKeys = pstmt.getGeneratedKeys()) {
-                    if (generatedKeys.next()) {
-                        attendance.setAttendanceId(generatedKeys.getInt(1));
-                        return true;
-                    }
+            pstmt.setDate(1, java.sql.Date.valueOf(date));
+            
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    attendanceList.add(mapResultSetToAttendanceMap(rs));
                 }
             }
         } catch (SQLException e) {
-            handleSQLException("Error adding attendance", e);
+            throw new DataAccessException("Error getting attendance by date: " + date, e);
         }
-        return false;
-    }
-    
-    public boolean updateAttendance(Attendance attendance) {
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(UPDATE)) {
-            
-            updateAttendanceParameters(pstmt, attendance);
-            pstmt.setInt(4, attendance.getAttendanceId());
-            
-            int affectedRows = pstmt.executeUpdate();
-            return affectedRows > 0;
-        } catch (SQLException e) {
-            handleSQLException("Error updating attendance: " + attendance.getAttendanceId(), e);
-        }
-        return false;
-    }
-    
-    public boolean deleteAttendance(int attendanceId) {
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(DELETE)) {
-            
-            pstmt.setInt(1, attendanceId);
-            int affectedRows = pstmt.executeUpdate();
-            return affectedRows > 0;
-        } catch (SQLException e) {
-            handleSQLException("Error deleting attendance: " + attendanceId, e);
-        }
-        return false;
-    }
-    
-    private Attendance extractAttendanceFromResultSet(ResultSet rs) throws SQLException {
-        Attendance attendance = new Attendance();
-        attendance.setAttendanceId(rs.getInt("attendance_id"));
-        attendance.setStudentId(rs.getInt("student_id"));
-        attendance.setAttendanceDate(rs.getDate("attendance_date"));
-        attendance.setStatusId(rs.getInt("status_id"));
-        attendance.setStdClass(rs.getString("class_id"));
-        attendance.setGradeName(rs.getString("grade_id"));
-        attendance.setTodayDate(rs.getDate("today_date"));
-        
-        return attendance;
-    }
-    
-    private void setAttendanceParameters(PreparedStatement pstmt, Attendance attendance) throws SQLException {
-        pstmt.setInt(1, attendance.getStudentId());
-        pstmt.setDate(2, attendance.getAttendanceDate());
-        pstmt.setInt(3, attendance.getStatusId());
-        pstmt.setString(4, attendance.getStdClass());
-        pstmt.setInt(5, attendance.getGrade());
-        pstmt.setDate(6, java.sql.Date.valueOf(LocalDate.now()));    }
-   
-        
-
-    private void updateAttendanceParameters(PreparedStatement pstmt, Attendance attendance) throws SQLException {
-        pstmt.setInt(1, attendance.getStudentId());
-        pstmt.setDate(2, attendance.getAttendanceDate());
-        pstmt.setInt(3, attendance.getStatusId());
-      
+        return attendanceList;
     }
 
-    private void handleSQLException(String message, SQLException e) {
-        logger.log(Level.SEVERE, message, e);
-        // You could throw a custom application exception here
-        // throw new DataAccessException(message, e);
+    /**
+     * Get all attendance records using get_attendance_with_student_details function
+     */
+    public List<Map<String, Object>> getAllAttendanceWithStudentDetails() {
+        String sql = "SELECT * FROM get_attendance_with_student_details() ORDER BY attendance_date";
+        List<Map<String, Object>> attendanceList = new ArrayList<>();
+        
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery()) {
+            
+            while (rs.next()) {
+                attendanceList.add(mapResultSetToAttendanceMap(rs));
+            }
+        } catch (SQLException e) {
+            throw new DataAccessException("Error getting all attendance records", e);
+        }
+        return attendanceList;
+    }
+
+    /**
+     * Create new attendance record
+     */
+    public boolean createAttendance(Map<String, Object> attendanceData) {
+        String sql = "INSERT INTO attendance (student_id, attendance_date, status_id, arrival_time) VALUES (?, ?, ?, ?)";
+        
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            pstmt.setInt(1, (Integer) attendanceData.get("student_id"));
+            pstmt.setDate(2, java.sql.Date.valueOf((String) attendanceData.get("attendance_date")));
+            pstmt.setInt(3, (Integer) attendanceData.get("status_id"));
+            
+            if (attendanceData.get("arrival_time") != null) {
+                pstmt.setTime(4, Time.valueOf((String) attendanceData.get("arrival_time")));
+            } else {
+                pstmt.setNull(4, Types.TIME);
+            }
+            
+            int rowsAffected = pstmt.executeUpdate();
+            return rowsAffected > 0;
+            
+        } catch (SQLException e) {
+            throw new DataAccessException("Error creating attendance record", e);
+        }
+    }
+
+    /**
+     * Update attendance record by student ID and date
+     */
+    public boolean updateAttendance(Map<String, Object> updateData) {
+        StringBuilder sql = new StringBuilder("UPDATE attendance SET ");
+        List<Object> parameters = new ArrayList<>();
+        
+        // Build dynamic update query
+        boolean first = true;
+        if (updateData.containsKey("status_id")) {
+            if (!first) sql.append(", ");
+            sql.append("status_id = ?");
+            parameters.add(updateData.get("status_id"));
+            first = false;
+        }
+        
+        if (updateData.containsKey("arrival_time")) {
+            if (!first) sql.append(", ");
+            sql.append("arrival_time = ?");
+            parameters.add(updateData.get("arrival_time"));
+            first = false;
+        }
+        
+        if (first) {
+            throw new IllegalArgumentException("No valid fields to update");
+        }
+        
+        sql.append(" WHERE student_id = ? AND attendance_date = ?");
+        parameters.add(updateData.get("student_id"));
+        parameters.add(updateData.get("attendance_date"));
+        
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql.toString())) {
+            
+            for (int i = 0; i < parameters.size(); i++) {
+                Object param = parameters.get(i);
+                if (param instanceof String && (i == parameters.size() - 1 || i == parameters.size() - 2)) {
+                    // Handle date and time parameters
+                    if (i == parameters.size() - 1) {
+                        pstmt.setDate(i + 1, java.sql.Date.valueOf((String) param));
+                    } else if (param.toString().contains(":")) {
+                        pstmt.setTime(i + 1, Time.valueOf((String) param));
+                    } else {
+                        pstmt.setObject(i + 1, param);
+                    }
+                } else {
+                    pstmt.setObject(i + 1, param);
+                }
+            }
+            
+            int rowsAffected = pstmt.executeUpdate();
+            return rowsAffected > 0;
+            
+        } catch (SQLException e) {
+            throw new DataAccessException("Error updating attendance record", e);
+        }
+    }
+
+    /**
+     * Delete attendance record by student ID and date
+     */
+    public boolean deleteAttendance(int studentId, String attendanceDate) {
+        String sql = "DELETE FROM attendance WHERE student_id = ? AND attendance_date = ?";
+        
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            pstmt.setInt(1, studentId);
+            pstmt.setDate(2, java.sql.Date.valueOf(attendanceDate));
+            
+            int rowsAffected = pstmt.executeUpdate();
+            return rowsAffected > 0;
+            
+        } catch (SQLException e) {
+            throw new DataAccessException("Error deleting attendance record", e);
+        }
+    }
+
+    /**
+     * Get all students with their attendance records grouped by student
+     * Returns array of students with all their attendance days, status, and arrival times
+     */
+    public List<Map<String, Object>> getAllStudentsAttendanceGrouped() {
+        // First, get all attendance records using the existing working function
+        List<Map<String, Object>> allAttendance = getAllAttendanceWithStudentDetails();
+        
+        // Group by student
+        Map<Integer, Map<String, Object>> studentsMap = new LinkedHashMap<>();
+        
+        for (Map<String, Object> record : allAttendance) {
+            Integer studentId = (Integer) record.get("student_id");
+            
+            // Get or create student entry
+            Map<String, Object> student = studentsMap.computeIfAbsent(studentId, k -> {
+                Map<String, Object> newStudent = new HashMap<>();
+                newStudent.put("student_id", record.get("student_id"));
+                newStudent.put("student_name", record.get("student_name"));
+                newStudent.put("current_address", record.get("current_address"));
+                newStudent.put("medical_status", record.get("medical_status"));
+                newStudent.put("grade", record.get("grade"));
+                newStudent.put("class", record.get("class"));
+                newStudent.put("attendance_records", new ArrayList<Map<String, Object>>());
+                return newStudent;
+            });
+            
+            // Create attendance record
+            Map<String, Object> attendanceRecord = new HashMap<>();
+            attendanceRecord.put("attendance_id", record.get("attendance_id"));
+            attendanceRecord.put("attendance_date", record.get("attendance_date"));
+            attendanceRecord.put("status_id", record.get("status_id"));
+            attendanceRecord.put("status_name", record.get("status_name"));
+            attendanceRecord.put("arrival_time", record.get("arrival_time"));
+            
+            @SuppressWarnings("unchecked")
+            List<Map<String, Object>> attendanceRecords = (List<Map<String, Object>>) student.get("attendance_records");
+            attendanceRecords.add(attendanceRecord);
+        }
+        
+        return new ArrayList<>(studentsMap.values());
+    }
+
+    /**
+     * Map ResultSet to StudentAttendanceDetails object
+     */
+    private StudentAttendanceDetails mapResultSetToStudentAttendanceDetails(ResultSet rs) throws SQLException {
+        StudentAttendanceDetails details = new StudentAttendanceDetails();
+        
+        details.setStudentId(rs.getInt("student_id"));
+        details.setStudentName(rs.getString("student_name"));
+        details.setCurrentAddress(rs.getString("current_address"));
+        details.setMedicalStatus(rs.getString("medical_status"));
+        details.setGrade(rs.getString("grade"));
+        details.setClassName(rs.getString("class"));
+        
+        // Handle JSON arrays for phones and parents
+        try {
+            PGobject studentPhonesObj = (PGobject) rs.getObject("student_phones");
+            if (studentPhonesObj != null) {
+                JSONArray studentPhonesArray = new JSONArray(studentPhonesObj.getValue());
+                List<String> phonesList = new ArrayList<>();
+                for (int i = 0; i < studentPhonesArray.length(); i++) {
+                    phonesList.add(studentPhonesArray.getString(i));
+                }
+                details.setStudentPhones(phonesList);
+            }
+            
+            PGobject parentsInfoObj = (PGobject) rs.getObject("parents_info");
+            if (parentsInfoObj != null) {
+                JSONArray parentsArray = new JSONArray(parentsInfoObj.getValue());
+                List<StudentAttendanceDetails.ParentInfo> parentsList = new ArrayList<>();
+                
+                for (int i = 0; i < parentsArray.length(); i++) {
+                    JSONObject parentObj = parentsArray.getJSONObject(i);
+                    StudentAttendanceDetails.ParentInfo parent = new StudentAttendanceDetails.ParentInfo();
+                    
+                    parent.setParentId(parentObj.getInt("parent_id"));
+                    parent.setParentName(parentObj.getString("parent_name"));
+                    parent.setRelationship(parentObj.getString("relationship"));
+                    parent.setParentJob(parentObj.getString("parent_job"));
+                    parent.setParentNid(parentObj.getString("parent_nid"));
+                    parent.setParentAddress(parentObj.getString("parent_address"));
+                    parent.setParentNationality(parentObj.getString("parent_nationality"));
+                    parent.setParentSocialStatus(parentObj.getString("parent_social_status"));
+                    parent.setSocialStatusId(parentObj.getInt("parent_social_status_id"));
+                    
+                    // Handle parent phones
+                    if (parentObj.has("parent_phones")) {
+                        JSONArray parentPhonesArray = parentObj.getJSONArray("parent_phones");
+                        List<String> parentPhonesList = new ArrayList<>();
+                        for (int j = 0; j < parentPhonesArray.length(); j++) {
+                            parentPhonesList.add(parentPhonesArray.getString(j));
+                        }
+                        parent.setParentPhones(parentPhonesList);
+                    }
+                    
+                    parentsList.add(parent);
+                }
+                details.setParentsInfo(parentsList);
+            }
+        } catch (Exception e) {
+            logger.warning("Error parsing JSON data: " + e.getMessage());
+        }
+        
+        return details;
+    }
+
+    /**
+     * Map ResultSet to attendance Map for get_attendance_with_student_details results
+     */
+    private Map<String, Object> mapResultSetToAttendanceMap(ResultSet rs) throws SQLException {
+        Map<String, Object> attendanceMap = new HashMap<>();
+        
+        attendanceMap.put("attendance_id", rs.getInt("attendance_id"));
+        attendanceMap.put("attendance_date", rs.getDate("attendance_date").toString());
+        attendanceMap.put("status_id", rs.getInt("status_id"));
+        attendanceMap.put("status_name", rs.getString("status_name"));
+        
+        Time arrivalTime = rs.getTime("arrival_time");
+        if (arrivalTime != null) {
+            attendanceMap.put("arrival_time", arrivalTime.toString());
+        }
+        
+        attendanceMap.put("student_id", rs.getInt("student_id"));
+        attendanceMap.put("student_name", rs.getString("student_name"));
+        attendanceMap.put("current_address", rs.getString("current_address"));
+        attendanceMap.put("medical_status", rs.getString("medical_status"));
+        attendanceMap.put("grade", rs.getString("grade"));
+        attendanceMap.put("class", rs.getString("class"));
+        
+        // Handle JSON arrays
+        try {
+            PGobject studentPhonesObj = (PGobject) rs.getObject("student_phones");
+            if (studentPhonesObj != null) {
+                JSONArray studentPhonesArray = new JSONArray(studentPhonesObj.getValue());
+                List<String> phonesList = new ArrayList<>();
+                for (int i = 0; i < studentPhonesArray.length(); i++) {
+                    phonesList.add(studentPhonesArray.getString(i));
+                }
+                attendanceMap.put("student_phones", phonesList);
+            }
+            
+            PGobject parentsInfoObj = (PGobject) rs.getObject("parents_info");
+            if (parentsInfoObj != null) {
+                JSONArray parentsArray = new JSONArray(parentsInfoObj.getValue());
+                List<Map<String, Object>> parentsList = new ArrayList<>();
+                
+                for (int i = 0; i < parentsArray.length(); i++) {
+                    JSONObject parentObj = parentsArray.getJSONObject(i);
+                    Map<String, Object> parent = new HashMap<>();
+                    
+                    parent.put("parent_id", parentObj.getInt("parent_id"));
+                    parent.put("parent_name", parentObj.getString("parent_name"));
+                    parent.put("relationship", parentObj.getString("relationship"));
+                    parent.put("parent_job", parentObj.getString("parent_job"));
+                    parent.put("parent_nid", parentObj.getString("parent_nid"));
+                    parent.put("parent_address", parentObj.getString("parent_address"));
+                    parent.put("parent_nationality", parentObj.getString("parent_nationality"));
+                    parent.put("parent_social_status", parentObj.getString("parent_social_status"));
+                    parent.put("parent_social_status_id", parentObj.getInt("parent_social_status_id"));
+                    
+                    // Handle parent phones
+                    if (parentObj.has("parent_phones")) {
+                        JSONArray parentPhonesArray = parentObj.getJSONArray("parent_phones");
+                        List<String> parentPhonesList = new ArrayList<>();
+                        for (int j = 0; j < parentPhonesArray.length(); j++) {
+                            parentPhonesList.add(parentPhonesArray.getString(j));
+                        }
+                        parent.put("parent_phones", parentPhonesList);
+                    }
+                    
+                    parentsList.add(parent);
+                }
+                attendanceMap.put("parents_info", parentsList);
+            }
+        } catch (Exception e) {
+            logger.warning("Error parsing JSON data: " + e.getMessage());
+        }
+        
+        return attendanceMap;
     }
 }

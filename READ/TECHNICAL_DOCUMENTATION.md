@@ -66,7 +66,6 @@ The entry point of the application that configures and starts the embedded Jetty
 #### Key DAO Classes:
 
 - **StudentDAO**: Manages student records
-- **AttendanceDAO**: Handles attendance records
 - **MedicalHistoryDAO**: Manages student medical information
 - **AdditionalQualificationDAO**: Handles student qualifications
 - **UserDAO**: Manages user accounts
@@ -97,14 +96,6 @@ The system exposes RESTful API endpoints through various servlet classes:
 - `PUT /api/protected/students/{id}`: Update student information
 - `DELETE /api/protected/students/{id}`: Delete a student
 
-#### Attendance Management Endpoints:
-
-- `GET /api/protected/attendance`: Get all attendance records
-- `GET /api/protected/attendance/id/{id}`: Get attendance by ID
-- `GET /api/protected/attendance/getByDate/{date}`: Get attendance by date
-- `POST /api/protected/attendance`: Create attendance record
-- `PUT /api/protected/attendance/{id}`: Update attendance record
-
 #### Additional Endpoints:
 
 - Student notes, phone numbers, medical history, and qualifications endpoints
@@ -134,15 +125,6 @@ The frontend is built using HTML, CSS (Bootstrap), and JavaScript. Key features 
   - current_address
   - religion_id (FK)
   - medical_status
-
-- **attendance**: Student attendance records
-  - attendance_id (PK)
-  - student_id (FK)
-  - attendance_date
-  - status_id (FK)
-  - class_id
-  - grade_id
-  - today_date
 
 - **users**: Authentication and authorization
   - id (PK)

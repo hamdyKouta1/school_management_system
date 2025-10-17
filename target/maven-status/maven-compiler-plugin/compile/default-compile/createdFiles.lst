@@ -1,17 +1,21 @@
 com\canalprep\utilities\LoggerUtil$CustomFormatter.class
 com\canalprep\dao\AdditionalQualificationDAO.class
+com\canalprep\service\UserOTPService$PendingPasswordReset.class
 com\canalprep\utilities\LoggerUtil.class
 com\canalprep\auth\utilities\PasswordUtils.class
 com\canalprep\license\servlet\LicenseServlet.class
 com\canalprep\model\Student.class
 com\canalprep\dao\StudentDAO$3.class
+com\canalprep\service\UserOTPService$1.class
 com\canalprep\license\service\LicenseService$LicenseStatus.class
 com\canalprep\auth\filter\CsrfFilter.class
 com\canalprep\utilities\LogRotationManager.class
 com\canalprep\dao\SchoolClassDAO.class
 com\canalprep\dao\StudentDAO.class
+com\canalprep\util\UpdateOTPConstraint.class
 com\canalprep\auth\service\AdminOTPService.class
 com\canalprep\license\service\OTPService$1.class
+com\canalprep\model\StudentAttendanceDetails.class
 com\canalprep\servlet\AddStudentPhoneServlet.class
 com\canalprep\model\AdditionalQualification.class
 com\canalprep\main\MainApp.class
@@ -21,6 +25,7 @@ com\canalprep\test\LicenseRoleFilterTest.class
 com\canalprep\license\dao\LicenseDAO.class
 com\canalprep\servlet\InsertFullStudentServlet.class
 com\canalprep\auth\service\AdminOTPService$1.class
+com\canalprep\servlet\UserServlet.class
 com\canalprep\dao\MedicalHistoryDAO.class
 com\canalprep\license\model\License.class
 com\canalprep\license\service\LicenseService.class
@@ -37,6 +42,7 @@ com\canalprep\model\RelationshipType.class
 com\canalprep\model\Nationality.class
 com\canalprep\dao\GradeLevelDAO.class
 com\canalprep\license\dao\OTPDAO.class
+com\canalprep\model\StudentAttendanceDetails$ParentInfo.class
 com\canalprep\servlet\SchoolConfigServlet.class
 com\canalprep\model\GradeLevel.class
 com\canalprep\test\AuthServletTest.class
@@ -46,6 +52,7 @@ com\canalprep\dao\DBConnection.class
 com\canalprep\dao\ReligionDAO.class
 com\canalprep\servlet\AddStudentNoteServlet.class
 com\canalprep\exception\DataAccessException.class
+com\canalprep\service\UserOTPService.class
 com\canalprep\test\RegistrationTest.class
 com\canalprep\servlet\StudentServlet.class
 com\canalprep\auth\model\User.class
@@ -56,7 +63,7 @@ com\canalprep\license\model\OTP.class
 com\canalprep\dao\StudentNotesDAO.class
 com\canalprep\servlet\DashboardServlet.class
 com\canalprep\debug\LicenseDebugger.class
-com\canalprep\model\Attendance.class
+com\canalprep\service\PasswordRecoveryService$1.class
 com\canalprep\dao\StudentDAO$2.class
 com\canalprep\model\SchoolClass.class
 com\canalprep\model\Notes.class
@@ -65,6 +72,8 @@ com\canalprep\auth\servlets\AuthServlet.class
 com\canalprep\utilities\LoggerUtil$AccessLogFormatter.class
 com\canalprep\test\DatabaseUserTest.class
 com\canalprep\license\scheduler\LicenseScheduler.class
+com\canalprep\service\PasswordRecoveryService.class
 com\canalprep\util\DatabaseInitializer.class
 com\canalprep\servlet\AddMedicalHistoryServlet.class
 com\canalprep\model\ParentDetails.class
+com\canalprep\service\PasswordRecoveryService$PendingRecoveryRequest.class

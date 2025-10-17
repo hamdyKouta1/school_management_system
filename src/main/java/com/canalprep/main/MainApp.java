@@ -18,6 +18,7 @@ import com.canalprep.servlet.DashboardServlet;
 import com.canalprep.servlet.InsertFullStudentServlet;
 import com.canalprep.servlet.SchoolConfigServlet;
 import com.canalprep.servlet.StudentServlet;
+import com.canalprep.servlet.UserServlet;
 import com.canalprep.utilities.LoggerUtil;
 import jakarta.servlet.DispatcherType;
 import org.eclipse.jetty.server.Server;
@@ -93,12 +94,16 @@ public class MainApp {
         context.addServlet(new ServletHolder(new StudentServlet()), "/api/protected/students/*");
         context.addServlet(new ServletHolder(new AddStudentNoteServlet()), "/api/protected/student/note/*");
         context.addServlet(new ServletHolder(new AddStudentPhoneServlet()), "/api/protected/student/phone/*");
-        context.addServlet(new ServletHolder(new AttendanceServlet()), "/api/protected/attendance/*");
+
         context.addServlet(new ServletHolder(new AddMedicalHistoryServlet()), "/api/protected/student/medical/*");
         context.addServlet(new ServletHolder(new InsertFullStudentServlet()), "/api/protected/insertStudent/*");
         context.addServlet(new ServletHolder(new DashboardServlet()), "/api/protected/dashboard/*");
         context.addServlet(new ServletHolder(new AddQualificationsServlet()), "/api/protected/addQ/*");
         context.addServlet(new ServletHolder(new SchoolConfigServlet()), "/api/protected/schoolConfig/*");
+        
+        // Attendance servlet - mixed protected/unprotected endpoints
+        context.addServlet(new ServletHolder(new AttendanceServlet()), "/api/attendance/*");
+        context.addServlet(new ServletHolder(new AttendanceServlet()), "/api/protected/attendance/*");
         
         // License management servlets
         context.addServlet(new ServletHolder(new LicenseServlet()), "/api/protected/licence");
@@ -107,6 +112,9 @@ public class MainApp {
         
         // Standalone OTP servlets
         context.addServlet(new ServletHolder(new StandaloneOTPServlet()), "/api/protected/otp/*");
+        
+        // User management servlet
+        context.addServlet(new ServletHolder(new UserServlet()), "/api/protected/users/*");
         
         // Pure backend API - no default servlet needed
         

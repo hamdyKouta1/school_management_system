@@ -271,8 +271,6 @@ class SchoolAPIAxios {
 - `POST /api/protected/students` - Create new student
 - `PUT /api/protected/students/{id}` - Update student
 - `DELETE /api/protected/students/{id}` - Delete student
-- `GET /api/protected/attendance` - Get attendance records
-- `POST /api/protected/attendance` - Create attendance record
 - And more...
 
 ## User Account Setup
