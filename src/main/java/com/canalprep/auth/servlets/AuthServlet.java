@@ -148,12 +148,12 @@ public class AuthServlet extends HttpServlet {
                 }
                 
                 String token = authHeader.substring(7);
-                System.out.println("DEBUG: Received token: " + token.substring(0, Math.min(50, token.length())) + "...");
+    
                 try {
                     Claims claims = JwtUtil.parseToken(token);
                     String requesterRole = claims.get("role", String.class);
                     String requesterUsername = claims.get("username", String.class);
-                    System.out.println("DEBUG: Token parsed successfully, role: " + requesterRole);
+    
                     
                     // Only ADMIN or DEVELOPER can create admin users
                     if (!"ADMIN".equals(requesterRole) && !"DEVELOPER".equals(requesterRole)) {
@@ -189,7 +189,7 @@ public class AuthServlet extends HttpServlet {
                     objectMapper.writeValue(resp.getWriter(), responseData);
                     return;
                 } catch (Exception e) {
-                    System.out.println("DEBUG: JWT parsing failed: " + e.getClass().getSimpleName() + " - " + e.getMessage());
+        
                     LoggerUtil.logError("AuthServlet", "JWT token validation failed: " + e.getMessage(), e);
                     sendErrorResponse(resp, "Invalid authorization token", HttpServletResponse.SC_UNAUTHORIZED);
                     return;

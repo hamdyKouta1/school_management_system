@@ -7624,3 +7624,364 @@ io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period
 2025-10-17 23:03:05 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
 2025-10-17 23:05:07 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
 2025-10-17 23:08:05 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-20 22:21:38 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-20 22:25:45 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token expired for user: null
+2025-10-20 22:26:07 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: userhamdy, role: USER, path: /api/protected/users/
+2025-10-20 22:26:07 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/, user: userhamdy
+2025-10-20 22:27:09 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: hamdy2, role: DEVELOPER, path: /api/protected/users/
+2025-10-20 22:27:09 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/, user: hamdy2
+2025-10-20 22:51:10 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/
+2025-10-20 22:51:10 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/, user: myadmin
+2025-10-20 22:58:44 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-20 22:59:04 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/
+2025-10-20 22:59:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/, user: myadmin
+2025-10-20 22:59:17 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token expired for user: null
+2025-10-20 22:59:52 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: hamdy2, role: DEVELOPER, path: /api/protected/users/
+2025-10-20 22:59:52 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/, user: hamdy2
+2025-10-20 23:02:26 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/
+2025-10-20 23:02:26 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/, user: myadmin
+2025-10-20 23:15:37 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/8
+2025-10-20 23:15:37 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/8, user: myadmin
+2025-10-20 23:17:30 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/8
+2025-10-20 23:17:30 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/8, user: myadmin
+2025-10-20 23:18:00 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/252
+2025-10-20 23:18:00 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/252, user: myadmin
+2025-10-20 23:21:46 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token expired for user: null
+2025-10-20 23:22:00 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/2
+2025-10-20 23:22:00 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/2, user: myadmin
+2025-10-20 23:22:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/8
+2025-10-20 23:22:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/8, user: myadmin
+2025-10-20 23:22:28 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/252
+2025-10-20 23:22:28 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/252, user: myadmin
+2025-10-20 23:22:47 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/8/resetpassword
+2025-10-20 23:22:47 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/8/resetpassword, user: myadmin
+2025-10-20 23:24:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/8/resetpassword
+2025-10-20 23:24:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/8/resetpassword, user: myadmin
+2025-10-20 23:46:25 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token expired for user: null
+2025-10-23 14:43:49 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:43:49 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:43:49 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:43:49 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:43:51 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:43:51 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:43:51 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:43:51 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:43:55 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:43:55 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:44:29 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/undefined/resetpassword
+2025-10-23 14:44:29 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/undefined/resetpassword, user: myadmin
+2025-10-23 14:50:05 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token expired for user: null
+2025-10-23 14:52:19 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/28/resetpassword
+2025-10-23 14:52:19 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/28/resetpassword, user: myadmin
+2025-10-23 14:53:53 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token expired for user: null
+2025-10-23 14:54:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/28
+2025-10-23 14:54:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/28, user: myadmin
+2025-10-23 14:54:58 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:54:58 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:54:58 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 14:54:58 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 14:54:58 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 14:54:58 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 14:54:59 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:54:59 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:54:59 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 14:54:59 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 14:54:59 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 14:54:59 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 14:55:07 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:55:07 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:55:07 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:55:07 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:55:07 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/attendance/date/2025-10-23
+2025-10-23 14:55:07 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/attendance/date/2025-10-23, user: myadmin
+2025-10-23 14:55:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:55:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:55:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:55:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:55:09 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:55:09 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:55:12 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 14:55:12 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 14:55:12 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:55:12 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:55:12 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 14:55:12 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 14:55:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 14:55:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 14:55:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 14:55:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:55:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 14:55:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:55:33 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:55:33 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:55:34 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:55:34 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:55:34 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/attendance/date/2025-10-23
+2025-10-23 14:55:34 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/attendance/date/2025-10-23, user: myadmin
+2025-10-23 14:55:34 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:55:34 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:55:34 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:55:34 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:55:35 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:55:35 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:56:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/28/resetpassword
+2025-10-23 14:56:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/28/resetpassword, user: myadmin
+2025-10-23 14:57:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:57:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:57:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:57:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:57:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/attendance/date/2025-10-23
+2025-10-23 14:57:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/attendance/date/2025-10-23, user: myadmin
+2025-10-23 14:57:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:57:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:57:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:57:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:57:15 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:57:15 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:57:27 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/undefined/resetpassword
+2025-10-23 14:57:27 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/undefined/resetpassword, user: myadmin
+2025-10-23 14:58:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/28/resetpassword
+2025-10-23 14:58:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/28/resetpassword, user: myadmin
+2025-10-23 14:58:51 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:58:51 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:58:51 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 14:58:51 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 14:58:51 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 14:58:51 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 14:58:52 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 14:58:52 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 14:58:52 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 14:58:52 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 14:58:52 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:58:52 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:59:04 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:59:04 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:59:04 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:59:04 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:59:04 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/attendance/date/2025-10-23
+2025-10-23 14:59:04 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/attendance/date/2025-10-23, user: myadmin
+2025-10-23 14:59:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:59:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:59:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:59:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:59:06 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 14:59:06 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 14:59:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 14:59:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 14:59:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:59:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 14:59:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 14:59:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 14:59:09 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 14:59:09 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 14:59:10 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 14:59:10 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 14:59:10 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 14:59:10 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:16:15 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 15:16:15 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 15:16:15 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:16:15 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:16:15 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/attendance/date/2025-10-23
+2025-10-23 15:16:15 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/attendance/date/2025-10-23, user: myadmin
+2025-10-23 15:16:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 15:16:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 15:16:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:16:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:16:17 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 15:16:17 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 15:16:27 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:16:27 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:16:27 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 15:16:27 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 15:16:27 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/attendance/date/2025-10-23
+2025-10-23 15:16:27 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/attendance/date/2025-10-23, user: myadmin
+2025-10-23 15:16:27 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:16:27 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:16:28 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 15:16:28 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 15:16:29 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 15:16:29 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 15:16:32 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 15:16:32 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 15:16:32 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:16:32 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:16:32 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 15:16:32 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 15:16:32 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 15:16:32 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 15:16:33 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:16:33 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:16:33 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 15:16:33 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 15:18:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 15:18:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 15:18:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/attendance/date/2025-10-23
+2025-10-23 15:18:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/attendance/date/2025-10-23, user: myadmin
+2025-10-23 15:18:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:18:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:18:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 15:18:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 15:18:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 15:18:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 15:18:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 15:18:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 15:18:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:18:16 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:18:17 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 15:18:17 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 15:18:17 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 15:18:17 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 15:18:17 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:18:17 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:20:31 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 15:20:31 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 15:20:31 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:20:31 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:20:31 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/attendance/date/2025-10-23
+2025-10-23 15:20:31 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/attendance/date/2025-10-23, user: myadmin
+2025-10-23 15:20:32 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 15:20:32 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 15:20:32 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:20:32 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:20:33 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 15:20:33 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 15:20:34 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 15:20:34 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 15:20:34 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:20:34 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:20:34 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 15:20:34 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 15:20:35 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 15:20:35 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 15:20:35 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:20:35 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:20:35 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 15:20:35 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 15:21:22 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 15:21:22 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 15:21:22 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:21:22 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:21:23 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/attendance/date/2025-10-23
+2025-10-23 15:21:23 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/attendance/date/2025-10-23, user: myadmin
+2025-10-23 15:21:26 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 15:21:26 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 15:21:26 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:21:26 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:21:26 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 15:21:26 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 15:21:26 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 15:21:26 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 15:21:27 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:21:27 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:21:28 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/dashboard/countStudents
+2025-10-23 15:21:28 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: myadmin
+2025-10-23 15:21:28 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/grade
+2025-10-23 15:21:28 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: myadmin
+2025-10-23 15:21:28 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users
+2025-10-23 15:21:28 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: myadmin
+2025-10-23 15:21:28 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/schoolConfig/class
+2025-10-23 15:21:28 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: myadmin
+2025-10-23 15:22:06 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 15:22:06 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 15:22:06 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/dashboard/countStudents
+2025-10-23 15:22:06 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: developer
+2025-10-23 15:22:07 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/attendance/date/2025-10-23
+2025-10-23 15:22:07 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/attendance/date/2025-10-23, user: developer
+2025-10-23 15:22:07 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 15:22:07 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 15:22:07 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/dashboard/countStudents
+2025-10-23 15:22:07 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: developer
+2025-10-23 15:22:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/dashboard/countStudents
+2025-10-23 15:22:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: developer
+2025-10-23 15:22:12 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 15:22:12 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 15:22:12 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/users
+2025-10-23 15:22:12 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: developer
+2025-10-23 15:22:12 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/grade
+2025-10-23 15:22:12 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: developer
+2025-10-23 15:22:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 15:22:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 15:22:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/users
+2025-10-23 15:22:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: developer
+2025-10-23 15:22:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/grade
+2025-10-23 15:22:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: developer
+2025-10-23 15:26:00 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 15:26:00 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 15:26:00 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/grade
+2025-10-23 15:26:00 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/users
+2025-10-23 15:26:00 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: developer
+2025-10-23 15:26:00 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: developer
+2025-10-23 15:26:12 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/dashboard/countStudents
+2025-10-23 15:26:12 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: developer
+2025-10-23 15:26:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 15:26:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 15:26:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/attendance/date/2025-10-23
+2025-10-23 15:26:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/attendance/date/2025-10-23, user: developer
+2025-10-23 15:26:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/dashboard/countStudents
+2025-10-23 15:26:13 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: developer
+2025-10-23 15:26:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 15:26:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 15:26:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/dashboard/countStudents
+2025-10-23 15:26:14 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: developer
+2025-10-23 15:26:18 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 15:26:18 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 15:26:18 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/grade
+2025-10-23 15:26:18 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: developer
+2025-10-23 15:26:18 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/users
+2025-10-23 15:26:18 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: developer
+2025-10-23 15:26:19 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/users
+2025-10-23 15:26:19 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: developer
+2025-10-23 15:26:19 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/grade
+2025-10-23 15:26:19 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: developer
+2025-10-23 15:26:19 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 15:26:19 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 15:41:50 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/dashboard/countStudents
+2025-10-23 15:41:50 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: developer
+2025-10-23 15:41:50 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 15:41:50 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 15:41:50 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/attendance/date/2025-10-23
+2025-10-23 15:41:50 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/attendance/date/2025-10-23, user: developer
+2025-10-23 15:41:51 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/dashboard/countStudents
+2025-10-23 15:41:51 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: developer
+2025-10-23 15:41:51 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 15:41:51 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 15:41:52 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/dashboard/countStudents
+2025-10-23 15:41:52 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: developer
+2025-10-23 16:16:39 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-23 16:18:16 [WARNING] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token expired for user: null
+2025-10-23 16:18:42 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: myadmin, role: ADMIN, path: /api/protected/users/28
+2025-10-23 16:18:42 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users/28, user: myadmin
+2025-10-23 16:35:57 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/dashboard/countStudents
+2025-10-23 16:35:57 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: developer
+2025-10-23 16:35:57 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 16:35:57 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/attendance/date/2025-10-23
+2025-10-23 16:35:57 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/attendance/date/2025-10-23, user: developer
+2025-10-23 16:35:57 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 16:36:01 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 16:36:01 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 16:36:04 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/students
+2025-10-23 16:36:04 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/students, user: developer
+2025-10-23 16:36:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/dashboard/countStudents
+2025-10-23 16:36:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/dashboard/countStudents, user: developer
+2025-10-23 16:36:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/users
+2025-10-23 16:36:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/users, user: developer
+2025-10-23 16:36:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/grade
+2025-10-23 16:36:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/grade, user: developer
+2025-10-23 16:36:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 16:36:05 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 16:36:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/schoolConfig/class
+2025-10-23 16:36:08 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/schoolConfig/class, user: developer
+2025-10-23 16:54:26 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-23 16:59:59 [SEVERE] com.canalprep.dao.AttendanceDAO getStudentsWithoutAttendanceCount: Error getting students without attendance count: ERROR: column s.id does not exist
+  Hint: Perhaps you meant to reference the column "s.nid".
+  Position: 68
+2025-10-23 17:04:50 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-23 17:05:59 [SEVERE] com.canalprep.dao.AttendanceDAO markAbsentStudentsForToday: Error marking absent students for today: ERROR: column "status" of relation "attendance" does not exist
+  Position: 54
+2025-10-23 17:09:43 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-23 17:10:59 [SEVERE] com.canalprep.dao.AttendanceDAO markAbsentStudentsForToday: Error marking absent students for today: ERROR: column s.id does not exist
+  Hint: Perhaps you meant to reference the column "s.nid".
+  Position: 144
+2025-10-23 17:12:32 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-10-23 17:14:00 [INFO] com.canalprep.dao.AttendanceDAO markAbsentStudentsForToday: Marked 28 students as absent for today

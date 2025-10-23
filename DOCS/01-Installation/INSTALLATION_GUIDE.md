@@ -126,6 +126,16 @@ The application uses the following hardcoded database configuration (as defined 
   - Should be a strong, random string of at least 32 characters
   - Example: `8f7a9d6e2c4b1a3f5e7d9c8b6a3f5e2d1c4b7a9e6d3c8f5a2e7d9c4b6a3f5e2d`
 
+#### Email Configuration (for Password Recovery)
+
+- `EMAIL_HOST`: SMTP server hostname (e.g., `smtp.gmail.com`)
+- `EMAIL_PORT`: SMTP server port (e.g., `587` for TLS)
+- `EMAIL_USERNAME`: Email account username
+- `EMAIL_PASSWORD`: Email account password or app-specific password
+- `EMAIL_FROM`: Sender email address for system notifications
+
+**Note**: For Gmail, you may need to use an app-specific password instead of your regular password.
+
 #### Server Configuration
 
 The application runs on **port 8081** and binds to all network interfaces (0.0.0.0:8081) as configured in `MainApp.java`. The server configuration includes:
@@ -146,6 +156,11 @@ The application runs on **port 8081** and binds to all network interfaces (0.0.0
    setx DB_USER "postgres" /M
    setx DB_PASSWORD "admin" /M
    setx JWT_SECRET "your_secret_key" /M
+   setx EMAIL_HOST "smtp.gmail.com" /M
+   setx EMAIL_PORT "587" /M
+   setx EMAIL_USERNAME "your_email@gmail.com" /M
+   setx EMAIL_PASSWORD "your_app_password" /M
+   setx EMAIL_FROM "noreply@yourschool.com" /M
    ```
 
 #### macOS/Linux
@@ -157,6 +172,11 @@ The application runs on **port 8081** and binds to all network interfaces (0.0.0
    export DB_USER="postgres"
    export DB_PASSWORD="admin"
    export JWT_SECRET="your_secret_key"
+   export EMAIL_HOST="smtp.gmail.com"
+   export EMAIL_PORT="587"
+   export EMAIL_USERNAME="your_email@gmail.com"
+   export EMAIL_PASSWORD="your_app_password"
+   export EMAIL_FROM="noreply@yourschool.com"
    ```
 3. Save the file and reload it:
    ```

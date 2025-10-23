@@ -17,7 +17,7 @@ import org.json.JSONObject;
 public class InsertFullStudentServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("I'm Hereere");
+
         try (BufferedReader reader = request.getReader()) {
             // Efficiently read entire request body
             String requestBody = reader.lines().collect(Collectors.joining());

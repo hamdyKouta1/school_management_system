@@ -60,7 +60,7 @@ public class LoggerUtil {
             logInfo("LoggerUtil", "Logging system initialized successfully with log rotation");
             
         } catch (Exception e) {
-            System.err.println("Failed to initialize logging system: " + e.getMessage());
+
             e.printStackTrace();
         }
     }

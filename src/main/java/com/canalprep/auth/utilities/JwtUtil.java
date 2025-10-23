@@ -18,7 +18,7 @@ public class JwtUtil {
         if (secret == null || secret.isEmpty()) {
             // For development/testing, use a fixed key if not provided
             // In production, this should be a critical error or a pre-configured key
-            System.err.println("WARNING: JWT_SECRET environment variable not set. Using fixed development key. THIS IS INSECURE FOR PRODUCTION.");
+
             secret = "development-jwt-secret-key-for-testing-only-not-for-production-use";
         }
         // Use a fixed key derived from the environment variable

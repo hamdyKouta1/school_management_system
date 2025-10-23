@@ -24,9 +24,7 @@ public class AddMedicalHistoryServlet extends HttpServlet {
                 .collect(Collectors.joining()));
             
             student.setStudentId(json.getInt("student_id"));
-            System.out.println(json);
             student.setMedicalDescriptions(json.getString("description"));
-            System.out.println(json.getString("description"));
             
             boolean success = new MedicalHistoryDAO().addMedicalHistory(student.getStudentId(), student.getMedicalDescriptions());
             

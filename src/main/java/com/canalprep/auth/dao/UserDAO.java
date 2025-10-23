@@ -19,7 +19,7 @@ public class UserDAO {
     private static final String UPDATE_LAST_LOGIN = DBConst.DB_UPDATE_LAST_LOGIN;
     
     // Additional SQL queries for user management
-    private static final String SELECT_ALL_USERS = "SELECT id, username, email, role, last_login FROM users ORDER BY id";
+    private static final String SELECT_ALL_USERS = "SELECT id, username, email, role, created_at, last_login FROM users ORDER BY id";
     private static final String SELECT_USER_BY_ID = "SELECT * FROM users WHERE id = ?";
     private static final String UPDATE_USER = "UPDATE users SET username = ?, email = ?, role = ? WHERE id = ?";
     private static final String DELETE_USER_BY_ID = "DELETE FROM users WHERE id = ?";
@@ -149,6 +149,7 @@ public class UserDAO {
                 user.setUsername(resultSet.getString("username"));
                 user.setEmail(resultSet.getString("email"));
                 user.setRole(resultSet.getString("role"));
+                user.setCreatedAt(resultSet.getTimestamp("created_at"));
                 user.setLastLogin(resultSet.getTimestamp("last_login"));
                 users.add(user);
             }

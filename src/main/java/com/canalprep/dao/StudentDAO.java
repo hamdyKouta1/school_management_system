@@ -308,23 +308,7 @@ public class StudentDAO {
         try (Connection conn = DBConnection.getConnection();
                 CallableStatement cstmt = conn.prepareCall(sql)) {
 
-            // Debugging: Print all values
-            System.out.println("=== Parameters ===");
-            System.out.println("studentName: " + student.getStudentName());
-            System.out.println("nid: " + student.getNid());
-            System.out.println("nationality: " + student.getNationalityName());
-            System.out.println("religion: " + student.getReligionName());
-            System.out.println("currentAddress: " + student.getCurrentAddress());
-            System.out.println("medicalStatus: " + student.isMedicalStatus());
-            System.out.println("dateOfBirth: " + student.getDateOfBirth());
-            System.out.println("placeOfBirth: " + student.getPlaceOfBirth());
-            System.out.println("grade: " + student.getGradeName());
-            System.out.println("className: " + student.getClassName());
-            System.out.println("medicalDescriptions: " + student.getMedicalDescriptions());
-            System.out.println("studentPhones: " + student.getStudentPhones());
-            System.out.println("parentsInfo: " + student.getParentsInfo());
-            System.out.println("studentNotes: " + student.getStudentNotes());
-            System.out.println("==================");
+
 
             // Register output parameter
             cstmt.registerOutParameter(1, Types.INTEGER);
@@ -412,14 +396,14 @@ public class StudentDAO {
             // Execute and return
             cstmt.execute();
             int studentId = cstmt.getInt(1);
-            System.out.println("Inserted student ID: " + studentId);
+
             return studentId;
         } catch (SQLException e) {
-            System.err.println("SQL Error: " + e.getMessage());
+
             logger.log(Level.SEVERE, "Error counting all students", e);
             throw e;
         } catch (Exception e) {
-            System.err.println("General Error: " + e.getMessage());
+
             logger.log(Level.SEVERE, "Error counting all students", e);
             throw new SQLException("Failed to insert student", e);
         }
@@ -432,11 +416,7 @@ public class StudentDAO {
         try (Connection conn = DBConnection.getConnection();
                 CallableStatement cstmt = conn.prepareCall(sql)) {
 
-            // Debugging output
-            System.out.println("=== Update Parameters ===");
-            System.out.println("studentId: " + student.getStudentId());
-            System.out.println("studentName: " + student.getStudentName());
-            // ... [other parameters] ...
+
 
             // Register output parameter
             cstmt.registerOutParameter(1, Types.BOOLEAN);
@@ -496,7 +476,7 @@ public class StudentDAO {
             cstmt.execute();
             return cstmt.getBoolean(1);
         } catch (Exception e) {
-            System.err.println("Update error: " + e.getMessage());
+
             throw new SQLException("Failed to update student", e);
         }
     }

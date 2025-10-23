@@ -32,6 +32,7 @@ E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\sr
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\license\servlet\LicenseServlet.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\model\AdditionalQualification.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\servlet\SchoolConfigServlet.java
+E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\scheduler\AttendanceScheduler.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\dao\SchoolClassDAO.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\test\DatabaseUserTest.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\model\RelationshipType.java
@@ -52,6 +53,7 @@ E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\sr
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\license\model\License.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\test\RegistrationTest.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\license\model\OTP.java
+E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\service\AttendanceService.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\main\MainApp.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\test\AuthServletTest.java
 E:\ITI\school_25-9\School_Management_System_modified\School_Management_System\src\main\java\com\canalprep\dao\StudentDAO.java

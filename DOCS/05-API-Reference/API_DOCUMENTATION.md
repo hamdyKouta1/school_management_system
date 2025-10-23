@@ -114,6 +114,60 @@ Authorization: Bearer <your_jwt_token>
 - 201 Created: User created successfully
 - 400 Bad Request: Invalid input or username/email already exists
 
+#### Forget Password
+
+**Endpoint:** `POST /api/auth/forget_password`
+
+**Description:** Initiates password recovery by sending an OTP to the user's email
+
+**Request Body:**
+```json
+{
+  "username": "your_username"
+}
+```
+
+**Response:**
+```json
+{
+  "status": "success",
+  "message": "Password reset OTP sent to your email"
+}
+```
+
+**Status Codes:**
+- 200 OK: OTP sent successfully
+- 400 Bad Request: Invalid username or user not found
+- 500 Internal Server Error: Failed to send email
+
+#### Verify Reset OTP
+
+**Endpoint:** `POST /api/auth/verify_reset_otp`
+
+**Description:** Verifies the OTP and resets the user's password
+
+**Request Body:**
+```json
+{
+  "username": "your_username",
+  "otp": "123456",
+  "newPassword": "new_secure_password"
+}
+```
+
+**Response:**
+```json
+{
+  "status": "success",
+  "message": "Password reset successfully"
+}
+```
+
+**Status Codes:**
+- 200 OK: Password reset successfully
+- 400 Bad Request: Invalid OTP, expired OTP, or invalid request data
+- 500 Internal Server Error: Failed to update password
+
 ### Student Management
 
 #### Get All Students

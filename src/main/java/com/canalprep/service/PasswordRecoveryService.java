@@ -224,7 +224,7 @@ public class PasswordRecoveryService {
             
         } catch (Exception e) {
             LoggerUtil.logError("PasswordRecoveryService", "Failed to send password recovery OTP email for user: " + username + ". Error: " + e.getMessage(), e);
-            System.out.println("Email sending failed for user " + username + ": " + e.getMessage());
+
             e.printStackTrace();
             // Don't throw exception here - we still want the OTP to be valid even if email fails
         }

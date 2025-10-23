@@ -42,8 +42,7 @@ public class PasswordUtils {
     // Verify password
     public static boolean verifyPassword(String password, String salt, String storedHash) {
         String computedHash = hashPassword(password, salt);
-        System.out.println("i'am: new comp     "+computedHash);
-        System.out.println("at function        "+computedHash.equals(storedHash));
+
         return computedHash.equals(storedHash);
     }
 }

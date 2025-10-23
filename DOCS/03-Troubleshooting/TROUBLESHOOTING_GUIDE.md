@@ -394,6 +394,38 @@ This troubleshooting guide provides solutions for common issues that may arise w
    - **Cause**: Token has exceeded its expiration time
    - **Solution**: Obtain a new token by logging in again
 
+### Password Recovery Issues
+
+1. **"Password recovery email not received"**
+   - **Cause**: Email configuration is incorrect or email service is down
+   - **Solution**: 
+     - Verify EMAIL_HOST, EMAIL_PORT, EMAIL_USERNAME, EMAIL_PASSWORD environment variables
+     - Check email service provider settings (Gmail requires app-specific passwords)
+     - Verify EMAIL_FROM address is valid
+     - Check spam/junk folder
+
+2. **"OTP has expired"**
+   - **Cause**: More than 15 minutes have passed since OTP generation
+   - **Solution**: Request a new password reset to generate a fresh OTP
+
+3. **"Invalid OTP provided"**
+   - **Cause**: Incorrect OTP entered or OTP has been used already
+   - **Solution**: 
+     - Double-check the 6-digit code from the email
+     - Ensure OTP hasn't expired (15-minute limit)
+     - Request a new OTP if needed
+
+4. **"User not found for password recovery"**
+   - **Cause**: Username doesn't exist in the system
+   - **Solution**: Verify the correct username is being used
+
+5. **"Email sending failed"**
+   - **Cause**: SMTP configuration issues or network problems
+   - **Solution**: 
+     - Check email server connectivity
+     - Verify SMTP credentials and settings
+     - Check application logs for detailed error messages
+
 ### Application Errors
 
 1. **"java.lang.ClassNotFoundException: org.postgresql.Driver"**

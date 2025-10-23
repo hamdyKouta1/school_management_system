@@ -1,3 +1,4 @@
+com\canalprep\service\AttendanceService.class
 com\canalprep\utilities\LoggerUtil$CustomFormatter.class
 com\canalprep\dao\AdditionalQualificationDAO.class
 com\canalprep\service\UserOTPService$PendingPasswordReset.class
@@ -29,7 +30,9 @@ com\canalprep\servlet\UserServlet.class
 com\canalprep\dao\MedicalHistoryDAO.class
 com\canalprep\license\model\License.class
 com\canalprep\license\service\LicenseService.class
+com\canalprep\service\AttendanceService$AttendanceUpdateResult.class
 com\canalprep\staticVariables\DBConst.class
+com\canalprep\service\AttendanceService$AttendanceStatistics.class
 com\canalprep\auth\dao\UserDAO.class
 com\canalprep\dao\NationalityDAO.class
 com\canalprep\dao\StudentDAO$1.class
@@ -42,6 +45,7 @@ com\canalprep\model\RelationshipType.class
 com\canalprep\model\Nationality.class
 com\canalprep\dao\GradeLevelDAO.class
 com\canalprep\license\dao\OTPDAO.class
+com\canalprep\scheduler\AttendanceScheduler.class
 com\canalprep\model\StudentAttendanceDetails$ParentInfo.class
 com\canalprep\servlet\SchoolConfigServlet.class
 com\canalprep\model\GradeLevel.class

@@ -172,8 +172,19 @@ Security features include:
 
 - Password hashing using BCrypt
 - Role-based access control (USER and ADMIN roles)
+- Password recovery with OTP (One-Time Password) verification
 - CORS configuration for frontend access
 - Security headers to prevent common web vulnerabilities
+
+### Password Recovery
+
+The system includes a secure password recovery mechanism:
+
+- Users can request a password reset using their username
+- A 6-digit OTP is generated and sent via email
+- OTPs expire after 15 minutes for security
+- Users must provide the OTP and new password to complete the reset
+- All password recovery attempts are logged for security monitoring
 
 ## Debugging
 

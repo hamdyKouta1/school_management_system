@@ -54,13 +54,13 @@ public class DatabaseInitializer {
                 }
                 
                 logger.info("License schema initialization completed");
-                System.out.println("✅ License schema initialized successfully");
+    
                 
             }
             
         } catch (Exception e) {
             logger.severe("Failed to initialize license schema: " + e.getMessage());
-            System.err.println("❌ Failed to initialize license schema: " + e.getMessage());
+
             e.printStackTrace();
         }
     }

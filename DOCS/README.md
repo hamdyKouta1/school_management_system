@@ -48,6 +48,7 @@ API documentation, requests, and responses
 - **Server**: Runs on port 8081, binds to all interfaces (0.0.0.0:8081)
 - **Database**: PostgreSQL on localhost:5432, database `school_management_system`
 - **Authentication**: JWT-based with role-based access control (USER, ADMIN, DEVELOPER)
+- **Password Recovery**: OTP-based password reset with email verification (15-minute expiry)
 - **License System**: Active with OTP-based renewal and management
 - **CORS**: Enabled for frontend integration
 

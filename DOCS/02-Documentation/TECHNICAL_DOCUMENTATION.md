@@ -49,10 +49,11 @@ The entry point of the application that configures and starts the embedded Jetty
 
 #### Components:
 
-- **AuthServlet**: Handles login, registration, and logout
+- **AuthServlet**: Handles login, registration, logout, and password recovery
 - **AuthenticationFilter**: Validates JWT tokens for protected endpoints
 - **JwtUtil**: Generates and validates JWT tokens
 - **PasswordUtils**: Handles password hashing and verification
+- **PasswordRecoveryService**: Manages password recovery flow with OTP generation and email sending
 - **UserDAO**: Manages user data in the database
 
 #### Authentication Flow:
@@ -95,6 +96,8 @@ The system exposes RESTful API endpoints through various servlet classes:
 - `POST /api/auth/login`: Authenticate user and get JWT token
 - `POST /api/auth/register`: Register a new user
 - `POST /api/auth/logout`: Invalidate the current session
+- `POST /api/auth/forget_password`: Initiate password recovery by sending OTP to email
+- `POST /api/auth/verify_reset_otp`: Verify OTP and reset user password
 
 #### Student Management Endpoints:
 

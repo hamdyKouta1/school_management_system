@@ -36,13 +36,11 @@ public class AddStudentNoteServlet extends HttpServlet {
                 JSONObject noteObj = notArray.getJSONObject(i);
                 Notes newNote = new Notes();
                 newNote.setNoteText(noteObj.getString("note_text"));
-                System.out.println(noteObj.getString("note_text"));
                 newNote.setCreatedBy(noteObj.getString("created_by"));
-                System.out.println(noteObj.getString("created_by")); // Make sure this matches
                 notesList.add(newNote);
             }
 
-            System.out.println(notesList);
+
             student.setStudentNotes(notesList);
 
             boolean success = false;

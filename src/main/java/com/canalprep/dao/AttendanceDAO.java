@@ -435,4 +435,67 @@ public class AttendanceDAO {
         
         return attendanceMap;
     }
+    
+    /**
+     * Mark students as absent for today if they don't have attendance records
+     * This method implements the automated daily attendance update logic
+     * @return number of students marked as absent
+     */
+    public int markAbsentStudentsForToday() {
+        String sql = "INSERT INTO attendance (student_id, attendance_date, status_id) " +
+                    "SELECT s.student_id, CURRENT_DATE, 2 " +
+                    "FROM students s " +
+                    "LEFT JOIN attendance a " +
+                    "ON s.student_id = a.student_id AND a.attendance_date = CURRENT_DATE " +
+                    "WHERE a.student_id IS NULL";
+        
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            int rowsAffected = pstmt.executeUpdate();
+            
+            if (rowsAffected > 0) {
+                logger.info(String.format("Marked %d students as absent for today", rowsAffected));
+            } else {
+                logger.info("No students needed to be marked as absent for today");
+            }
+            
+            return rowsAffected;
+            
+        } catch (SQLException e) {
+            logger.severe("Error marking absent students for today: " + e.getMessage());
+            throw new DataAccessException("Error marking absent students for today", e);
+        }
+    }
+    
+    /**
+     * Get count of students without attendance records for a specific date
+     * Useful for testing and verification purposes
+     * @param date the date to check (format: YYYY-MM-DD)
+     * @return number of students without attendance records for the given date
+     */
+    public int getStudentsWithoutAttendanceCount(String date) {
+        String sql = "SELECT COUNT(*) as count " +
+                    "FROM students s " +
+                    "LEFT JOIN attendance a " +
+                    "ON s.student_id = a.student_id AND a.attendance_date = ? " +
+                    "WHERE a.student_id IS NULL";
+        
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            pstmt.setDate(1, java.sql.Date.valueOf(date));
+            
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getInt("count");
+                }
+                return 0;
+            }
+            
+        } catch (SQLException e) {
+            logger.severe("Error getting students without attendance count: " + e.getMessage());
+            throw new DataAccessException("Error getting students without attendance count", e);
+        }
+    }
 }

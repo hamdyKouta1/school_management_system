@@ -93,7 +93,7 @@ public class AdminOTPService {
             
             // Generate 6-digit OTP
             String otpCode = generateOTPCode();
-            System.out.println("DEBUG: Generated OTP for admin creation: " + otpCode);
+
             
             // Store pending registration
             PendingAdminRegistration pendingReg = new PendingAdminRegistration(

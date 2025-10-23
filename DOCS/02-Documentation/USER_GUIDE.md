@@ -24,6 +24,20 @@ The School Management System is a comprehensive web-based application designed t
 2. Click the "Login" button
 3. If your credentials are correct, you will be redirected to the dashboard
 
+### Password Recovery
+
+If you forget your password, you can reset it using the following steps:
+
+1. On the login screen, click the "Forgot Password?" link (if available)
+2. Enter your username in the password recovery form
+3. Click "Send Reset Code"
+4. Check your email for a 6-digit OTP (One-Time Password)
+5. Enter the OTP and your new password in the verification form
+6. Click "Reset Password"
+7. Your password will be updated and you can log in with the new password
+
+**Note**: The OTP expires after 15 minutes for security purposes. If it expires, you'll need to request a new one.
+
 ## Dashboard
 
 The dashboard provides an overview of key statistics and quick access to main functions:

@@ -424,3 +424,58 @@
 2025-10-17 23:10:36 [SECURITY] EVENT: PASSWORD_RESET_OTP_SENT | USER: hamdy2 | DETAILS: Password reset OTP sent to: hamdyhkouta@gmail.com from IP: [0:0:0:0:0:0:0:1]
 2025-10-17 23:11:00 [SECURITY] EVENT: PASSWORD_RECOVERY_SUCCESS | USER: hamdy2 | DETAILS: Password recovery successful for user: hamdy2 from IP: [0:0:0:0:0:0:0:1]
 2025-10-17 23:11:00 [SECURITY] EVENT: PASSWORD_RESET_SUCCESS | USER: UNKNOWN | DETAILS: Password reset completed successfully from IP: [0:0:0:0:0:0:0:1]
+2025-10-20 22:25:58 [SECURITY] EVENT: LOGIN_SUCCESS | USER: userhamdy | DETAILS: Successful login (ID: 34) from IP: [0:0:0:0:0:0:0:1]
+2025-10-20 22:26:07 [SECURITY] EVENT: USER_MANAGEMENT_ACCESS_DENIED | USER: userhamdy | DETAILS: Unauthorized user management access attempt by role: USER
+2025-10-20 22:26:47 [SECURITY] EVENT: PASSWORD_RECOVERY_OTP_GENERATED | USER: hamdy2 | DETAILS: Password recovery OTP generated for user: hamdy2 from IP: [0:0:0:0:0:0:0:1]
+2025-10-20 22:26:47 [SECURITY] EVENT: PASSWORD_RESET_OTP_SENT | USER: hamdy2 | DETAILS: Password reset OTP sent to: hamdyhkouta@gmail.com from IP: [0:0:0:0:0:0:0:1]
+2025-10-20 22:27:00 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-20 22:50:23 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-20 22:59:26 [SECURITY] EVENT: LOGIN_SUCCESS | USER: hamdy2 | DETAILS: Successful login (ID: 8) from IP: [0:0:0:0:0:0:0:1]
+2025-10-20 23:17:30 [SECURITY] EVENT: USER_UPDATED | USER: myadmin | DETAILS: User 8 updated by: myadmin
+2025-10-20 23:21:54 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-20 23:22:05 [SECURITY] EVENT: USER_UPDATED | USER: myadmin | DETAILS: User 8 updated by: myadmin
+2025-10-20 23:22:47 [SECURITY] EVENT: PASSWORD_RESET_OTP_VALIDATION_FAILED | USER: system | DETAILS: Invalid password reset OTP attempt: 123456 from IP: [0:0:0:0:0:0:0:1]
+2025-10-20 23:24:11 [SECURITY] EVENT: PASSWORD_RESET_OTP_GENERATED | USER: ADMIN | DETAILS: Password reset OTP generated for user: updated_user by: ADMIN from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:41:10 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 24
+2025-10-23 14:41:11 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 24
+2025-10-23 14:41:11 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 24
+2025-10-23 14:41:11 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 24
+2025-10-23 14:41:11 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 24
+2025-10-23 14:41:12 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 24
+2025-10-23 14:43:42 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:50:15 [SECURITY] EVENT: LOGIN_FAILED | USER: hamdy2 | DETAILS: Failed login attempt from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:50:19 [SECURITY] EVENT: LOGIN_FAILED | USER: hamdy2 | DETAILS: Failed login attempt from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:50:28 [SECURITY] EVENT: PASSWORD_RESET_ATTEMPT | USER: hamdy2 | DETAILS: Password reset attempt for non-existent user or email mismatch from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:50:55 [SECURITY] EVENT: PASSWORD_RESET_ATTEMPT | USER: hamdy2 | DETAILS: Password reset attempt for non-existent user or email mismatch from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:51:00 [SECURITY] EVENT: LOGIN_FAILED | USER: hamdy2 | DETAILS: Failed login attempt from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:51:14 [SECURITY] EVENT: PASSWORD_RESET_ATTEMPT | USER: hamdy2 | DETAILS: Password reset attempt for non-existent user or email mismatch from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:51:40 [SECURITY] EVENT: LOGIN_FAILED | USER: hamdy2 | DETAILS: Failed login attempt from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:51:49 [SECURITY] EVENT: PASSWORD_RESET_ATTEMPT | USER: hamdy2 | DETAILS: Password reset attempt for non-existent user or email mismatch from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:52:36 [SECURITY] EVENT: PASSWORD_RESET_OTP_GENERATED | USER: ADMIN | DETAILS: Password reset OTP generated for user: myadmin by: ADMIN from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:54:01 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:55:06 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:55:33 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:56:28 [SECURITY] EVENT: PASSWORD_RESET_OTP_GENERATED | USER: ADMIN | DETAILS: Password reset OTP generated for user: myadmin by: ADMIN from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:57:12 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:57:27 [SECURITY] EVENT: PASSWORD_RECOVERY_OTP_GENERATED | USER: developer | DETAILS: Password recovery OTP generated for user: developer from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:57:27 [SECURITY] EVENT: PASSWORD_RESET_OTP_SENT | USER: developer | DETAILS: Password reset OTP sent to: hamdyhkouta@gmail.com from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:58:27 [SECURITY] EVENT: PASSWORD_RECOVERY_SUCCESS | USER: developer | DETAILS: Password recovery successful for user: developer from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:58:27 [SECURITY] EVENT: PASSWORD_RESET_SUCCESS | USER: UNKNOWN | DETAILS: Password reset completed successfully from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:58:32 [SECURITY] EVENT: PASSWORD_RESET_OTP_GENERATED | USER: ADMIN | DETAILS: Password reset OTP generated for user: myadmin by: ADMIN from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:58:40 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 14:59:03 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 15:16:15 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 15:16:26 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 15:20:30 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 15:21:21 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 15:22:06 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 15:26:12 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 15:41:49 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 16:18:23 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 16:35:54 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 16:59:59 [SECURITY] EVENT: AUTOMATED_ATTENDANCE_UPDATE_FAILED | USER: SYSTEM | DETAILS: Automated attendance update failed: Failed to perform daily attendance update: Error getting students without attendance count
+2025-10-23 17:05:59 [SECURITY] EVENT: AUTOMATED_ATTENDANCE_UPDATE_FAILED | USER: SYSTEM | DETAILS: Automated attendance update failed: Failed to perform daily attendance update: Error marking absent students for today
+2025-10-23 17:10:56 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 17:10:59 [SECURITY] EVENT: AUTOMATED_ATTENDANCE_UPDATE_FAILED | USER: SYSTEM | DETAILS: Automated attendance update failed: Failed to perform daily attendance update: Error marking absent students for today
+2025-10-23 17:11:06 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-23 17:14:00 [SECURITY] EVENT: AUTOMATED_ATTENDANCE_UPDATE_SUCCESS | USER: SYSTEM | DETAILS: Automated attendance update completed. 28 students marked absent for 2025-10-23

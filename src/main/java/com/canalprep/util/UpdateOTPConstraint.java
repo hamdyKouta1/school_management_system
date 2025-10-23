@@ -8,9 +8,9 @@ public class UpdateOTPConstraint {
     public static void main(String[] args) {
         try {
             updateOTPConstraint();
-            System.out.println("✅ OTP constraint updated successfully!");
+
         } catch (Exception e) {
-            System.err.println("❌ Failed to update OTP constraint: " + e.getMessage());
+
             e.printStackTrace();
         }
     }
@@ -25,7 +25,7 @@ public class UpdateOTPConstraint {
              Statement stmt = conn.createStatement()) {
             
             for (String sql : sqlStatements) {
-                System.out.println("Executing: " + sql);
+    
                 stmt.execute(sql);
             }
         }

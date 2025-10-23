@@ -5,6 +5,7 @@ import com.canalprep.auth.servlets.AuthServlet;
 import com.canalprep.dao.DBConnection;
 import com.canalprep.license.scheduler.LicenseScheduler;
 import com.canalprep.license.servlet.LicenseServlet;
+import com.canalprep.scheduler.AttendanceScheduler;
 import com.canalprep.otp.servlet.StandaloneOTPServlet;
 import com.canalprep.license.service.LicenseService;
 import com.canalprep.license.model.License;
@@ -33,6 +34,8 @@ import java.util.logging.LogManager;
 import java.io.InputStream;
 
 public class MainApp {
+    private static AttendanceScheduler attendanceScheduler;
+    
     public static void main(String[] args) throws Exception {
         // Initialize logging system first
         initializeLogging();
@@ -133,12 +136,22 @@ public class MainApp {
                     LoggerUtil.logError("MainApp", "Error stopping license scheduler", e);
                 }
                 
+                // Stop attendance scheduler
+                try {
+                    if (attendanceScheduler != null) {
+                        attendanceScheduler.stop();
+                        LoggerUtil.logInfo("MainApp", "Attendance scheduler stopped");
+                    }
+                } catch (Exception e) {
+                    LoggerUtil.logError("MainApp", "Error stopping attendance scheduler", e);
+                }
+                
                 LoggerUtil.shutdown();
                 if (server != null) {
                     server.stop();
                 }
             } catch (Exception e) {
-                System.err.println("Error during shutdown: " + e.getMessage());
+    
             }
         }));
         
@@ -153,15 +166,21 @@ public class MainApp {
             LoggerUtil.logError("MainApp", "Failed to start license scheduler", e);
         }
         
+        // Start attendance scheduler after server is running
+        try {
+            attendanceScheduler = new AttendanceScheduler();
+            attendanceScheduler.start();
+            LoggerUtil.logInfo("MainApp", "Attendance scheduler started successfully - daily attendance updates at 12:00 PM");
+        } catch (Exception e) {
+            LoggerUtil.logError("MainApp", "Failed to start attendance scheduler", e);
+        }
+        
         LoggerUtil.logInfo("MainApp", "Backend API Server started on port " + port);
         LoggerUtil.logInfo("MainApp", "API Base URL: http://localhost:" + port + "/api");
         LoggerUtil.logInfo("MainApp", "Server endpoints registered successfully");
         LoggerUtil.logInfo("MainApp", "Log rotation is active - logs will be automatically rotated when they exceed 10MB");
         
         // Also log to console for immediate feedback
-        System.out.println("✅ Backend API Server started on port " + port);
-        System.out.println("📁 Logs are being written to: " + LoggerUtil.getLogDirectory());
-        System.out.println("🔄 Log rotation is active - check logs/archive for rotated files");
        
         server.join();
     }
@@ -170,10 +189,10 @@ public class MainApp {
         try (Connection conn = DBConnection.getConnection()) {
             LoggerUtil.logInfo("MainApp", "Database connection successful!");
             LoggerUtil.logDatabase("CONNECTION_TEST", "ALL", "Database connectivity verified");
-            System.out.println("✅ Database connection successful!");
+
         } catch (Exception e) {
             LoggerUtil.logError("MainApp", "Database connection failed!", e);
-            System.err.println("❌ Database connection failed!");
+
             e.printStackTrace();
             System.exit(1);
         }
@@ -195,7 +214,7 @@ public class MainApp {
             LoggerUtil.initialize();
             
         } catch (Exception e) {
-            System.err.println("Warning: Could not initialize logging configuration: " + e.getMessage());
+
             // Continue without custom logging configuration
             LoggerUtil.initialize();
         }
