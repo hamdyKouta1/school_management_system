@@ -1,11 +1,17 @@
 {
 	"info": {
-		"_postman_id": "30aa0c17-ac42-4285-a0de-1c681416af96",
+		"_postman_id": "da6d5cd7-24b3-4fe6-8d45-f12615eff2b4",
 		"name": "School Management System API Copy",
 		"description": "API collection for testing School Management System endpoints",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "24640819"
 	},
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8081"
+		}
+	],
 	"item": [
 		{
 			"name": "Authentication",
@@ -17,17 +23,20 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"var jsonData = JSON.parse(responseBody);",
-									"if (jsonData.token) {",
-									"    pm.environment.set(\"token\", jsonData.token);",
-									"    console.log(\"Token saved to environment\");",
-									"}",
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"pm.test(\"Response has token\", function () {",
-									"    pm.expect(jsonData).to.have.property('token');",
-									"});"
+										"let jsonData;",
+										"try { jsonData = pm.response.json(); } catch (e) { jsonData = {}; }",
+										"if (jsonData && jsonData.token) {",
+										"    try { pm.environment.set('token', jsonData.token); } catch (e) {}",
+										"    pm.collectionVariables.set('token', jsonData.token);",
+										"    pm.globals.set('token', jsonData.token);",
+										"    console.log('Token saved to env, collection, globals');",
+										"}",
+										"pm.test('Status code is 200', function () {",
+										"    pm.response.to.have.status(200);",
+										"});",
+										"pm.test('Response has token', function () {",
+										"    pm.expect(jsonData).to.have.property('token');",
+										"});"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -44,7 +53,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"userhamdy\",\n    \"password\": \"123456789\"\n}"
+							"raw": "{\n    \"username\": \"developer\",\n    \"password\": \"123456789\"\n}"
 						},
 						"url": "{{base_url}}/api/auth/login",
 						"description": "Login to get authentication token"
@@ -69,7 +78,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"userhamdy2\",\n    \"password\": \"1234567899\",\n    \"email\": \"userhamdy2@example.com\",\n    \"role\": \"USER\"\n   \n}"
+							"raw": "{\n    \"username\": \"userhamdy2\",\n    \"password\": \"1234567899\",\n    \"email\": \"userhamdy2@example.com\",\n    \"role\": \"USER\"//,\n //\"secretCode\":\"123456\"\n}"
 						},
 						"url": "{{base_url}}/api/auth/register",
 						"description": "Register a new user"
@@ -106,6 +115,54 @@
 							}
 						},
 						"url": "{{base_url}}/api/auth/check-otp"
+					},
+					"response": []
+				},
+				{
+					"name": "Forget Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"hamdy2\",\n    \"email\": \"hamdyhkouta@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/auth/forget_password",
+						"description": "Initiate password recovery by sending OTP to user's email"
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Reset OTP",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"otpCode\": \"306194\",\n    \"newPassword\": \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/auth/verify_reset_otp",
+						"description": "Verify OTP and reset password"
 					},
 					"response": []
 				}
@@ -255,7 +312,52 @@
 						"description": "Delete a student"
 					},
 					"response": []
-				}
+				},
+				{
+					"name": "Download Student Template",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/bulk-action/student-batch/",
+						"description": "Download Excel template for bulk student import"
+					},
+					"response": []
+				},
+				{
+						"name": "Bulk Import Students",
+						"request": {
+							"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "Excel file (.xlsx) containing student data. In Postman, click Select Files to attach the local .xlsx.",
+									"type": "file",
+									"src": "student_batch_template.xlsx"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/protected/bulk-action/student-batch/",
+						"description": "Upload Excel file to import multiple students at once"
+						},
+						"response": []
+					}
 			]
 		},
 		{
@@ -547,6 +649,159 @@
 						},
 						"url": "{{base_url}}/api/protected/licence/remove",
 						"description": "Remove license with OTP"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Management",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/users/",
+						"description": "Get all users (admin/developer only)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/users/8",
+						"description": "Get user by ID (admin/developer only)"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"updated_user\",\n    \"email\": \"updated@example.com\",\n    \"role\": \"USER\"\n}"
+						},
+						"url": "{{base_url}}/api/protected/users/8",
+						"description": "Update user information (admin/developer only)"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/users/9",
+						"description": "Delete user by ID (admin/developer only)"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User by Username",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/users/username/testuser",
+						"description": "Delete user by username (admin/developer only)"
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Password Reset OTP",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"generateOTP\": true\n}"
+						},
+						"url": "{{base_url}}/api/protected/users/8/resetpassword",
+						"description": "Generate OTP for password reset"
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password with OTP",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"otp\": \"123456\",\n    \"newPassword\": \"newPassword123!\"\n}"
+						},
+						"url": "{{base_url}}/api/protected/users/8/resetpassword",
+						"description": "Reset password using OTP and new password"
+					},
+					"response": []
+				},
+				{
+					"name": "Fix OTP Constraint (Temporary)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": "{{base_url}}/api/protected/users/fix-otp-constraint",
+						"description": "Temporary endpoint to fix OTP database constraint"
 					},
 					"response": []
 				}
@@ -1484,6 +1739,300 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Attendance",
+			"item": [
+				{
+					"name": "Get All Attendance Records (Protected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response is an array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('array');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/attendance",
+						"description": "Get all attendance records (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Attendance by Date (Unprotected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response is an array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('array');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/attendance/date/2025-01-15",
+						"description": "Get attendance records for a specific date (no authentication required)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student Attendance by ID (Protected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response is an array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('array');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/attendance/student/6",
+						"description": "Get attendance records for a specific student by ID (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student Attendance by Name (Protected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response is an array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('array');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/attendance/student/محمد",
+						"description": "Get attendance records for a specific student by name (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Grouped Attendance (Protected)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response is an array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('array');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/attendance/grouped",
+						"description": "Get all students with their attendance records grouped by student (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Attendance Record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"pm.test(\"Response has success message\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property('message');",
+									"    pm.expect(jsonData.message).to.include('created successfully');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student_id\": 1,\n    \"attendance_date\": \"2025-01-15\",\n    \"status\": \"PRESENT\",\n    \"notes\": \"On time\"\n}"
+						},
+						"url": "{{base_url}}/api/attendance",
+						"description": "Create a new attendance record (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Attendance Record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response has success message\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property('message');",
+									"    pm.expect(jsonData.message).to.include('updated successfully');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student_id\": 1,\n    \"attendance_date\": \"2025-01-15\",\n    \"status\": \"ABSENT\",\n    \"notes\": \"Updated status\"\n}"
+						},
+						"url": "{{base_url}}/api/attendance",
+						"description": "Update an existing attendance record (requires authentication)"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Attendance Record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response has success message\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property('message');",
+									"    pm.expect(jsonData.message).to.include('deleted successfully');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/attendance?student_id=1&attendance_date=2025-01-15",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"attendance"
+							],
+							"query": [
+								{
+									"key": "student_id",
+									"value": "1"
+								},
+								{
+									"key": "attendance_date",
+									"value": "2025-01-15"
+								}
+							]
+						},
+						"description": "Delete an attendance record by student ID and date (requires authentication)"
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [
@@ -1509,7 +2058,7 @@
 	"variable": [
 		{
 			"key": "base_url",
-			"value": "http://localhost:8080",
+			"value": "http://localhost:8081",
 			"type": "string"
 		}
 	]

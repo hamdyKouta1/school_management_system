@@ -283,3 +283,11 @@
 2025-10-23 17:10:59 [SEVERE] ERROR: [AttendanceService] Failed to perform daily attendance update: Error marking absent students for today
 2025-10-23 17:10:59 [SEVERE] ERROR: Exception details:
 2025-10-23 17:10:59 [SEVERE] ERROR: [AttendanceScheduler] Daily attendance update failed: Failed to perform daily attendance update: Error marking absent students for today
+2025-10-28 22:49:01 [SEVERE] ERROR: [UserServlet] Error in doPut
+2025-10-28 22:49:01 [SEVERE] ERROR: Exception details:
+2025-10-28 22:49:06 [SEVERE] ERROR: [UserServlet] Error in doPut
+2025-10-28 22:49:06 [SEVERE] ERROR: Exception details:
+2025-10-28 22:49:17 [SEVERE] ERROR: [UserServlet] Error in doPut
+2025-10-28 22:49:17 [SEVERE] ERROR: Exception details:
+2025-10-28 22:50:05 [SEVERE] ERROR: [UserServlet] Error in doPut
+2025-10-28 22:50:05 [SEVERE] ERROR: Exception details:

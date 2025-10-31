@@ -38,6 +38,7 @@ com\canalprep\dao\NationalityDAO.class
 com\canalprep\dao\StudentDAO$1.class
 com\canalprep\model\Religion.class
 com\canalprep\otp\servlet\StandaloneOTPServlet.class
+com\canalprep\servlet\BulkStudentBatchServlet.class
 com\canalprep\dao\RelationshipTypeDAO.class
 com\canalprep\servlet\AddQualificationsServlet.class
 com\canalprep\license\service\OTPService.class

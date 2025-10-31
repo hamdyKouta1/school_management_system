@@ -479,3 +479,46 @@
 2025-10-23 17:10:59 [SECURITY] EVENT: AUTOMATED_ATTENDANCE_UPDATE_FAILED | USER: SYSTEM | DETAILS: Automated attendance update failed: Failed to perform daily attendance update: Error marking absent students for today
 2025-10-23 17:11:06 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
 2025-10-23 17:14:00 [SECURITY] EVENT: AUTOMATED_ATTENDANCE_UPDATE_SUCCESS | USER: SYSTEM | DETAILS: Automated attendance update completed. 28 students marked absent for 2025-10-23
+2025-10-25 15:25:01 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 15:52:57 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 16:10:22 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 16:41:29 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 16:41:59 [SECURITY] EVENT: AUTOMATED_ATTENDANCE_UPDATE_SUCCESS | USER: SYSTEM | DETAILS: Automated attendance update completed. 28 students marked absent for 2025-10-25
+2025-10-25 16:44:33 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 16:53:41 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 16:54:27 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 16:59:11 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 17:00:20 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 17:00:54 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 17:02:34 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 17:17:05 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 17:17:38 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 17:40:32 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 17:40:47 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 17:41:18 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 17:45:53 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 17:46:53 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-25 19:15:35 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-10-28 20:56:29 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 19
+2025-10-28 20:56:29 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 19
+2025-10-28 20:56:29 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 19
+2025-10-28 20:56:29 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 19
+2025-10-28 20:56:29 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 19
+2025-10-28 20:56:30 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 19
+2025-10-28 22:37:10 [SECURITY] EVENT: LOGIN_SUCCESS | USER: userhamdy | DETAILS: Successful login (ID: 34) from IP: [0:0:0:0:0:0:0:1]
+2025-10-28 22:40:16 [SECURITY] EVENT: USER_MANAGEMENT_ACCESS_DENIED | USER: userhamdy | DETAILS: Unauthorized user management access attempt by role: USER
+2025-10-28 22:40:33 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-28 22:42:40 [SECURITY] EVENT: USER_UPDATED | USER: myadmin | DETAILS: User 8 updated by: myadmin
+2025-10-28 22:43:55 [SECURITY] EVENT: PASSWORD_RESET_OTP_GENERATED | USER: ADMIN | DETAILS: Password reset OTP generated for user: updated_user by: ADMIN from IP: [0:0:0:0:0:0:0:1]
+2025-10-28 22:45:02 [SECURITY] EVENT: PASSWORD_RESET_OTP_VALIDATION_FAILED | USER: system | DETAILS: Invalid password reset OTP attempt: 123456 from IP: [0:0:0:0:0:0:0:1]
+2025-10-28 22:47:56 [SECURITY] EVENT: USER_UPDATED | USER: myadmin | DETAILS: User 8 updated by: myadmin
+2025-10-28 22:50:27 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-28 23:02:08 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-28 23:02:23 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-28 23:02:29 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-28 23:02:55 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-28 23:03:32 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-28 23:31:41 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-28 23:53:43 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-10-28 23:59:12 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 19
+2025-10-28 23:59:12 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 19

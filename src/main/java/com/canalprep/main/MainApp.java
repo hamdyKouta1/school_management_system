@@ -21,7 +21,9 @@ import com.canalprep.servlet.SchoolConfigServlet;
 import com.canalprep.servlet.StudentServlet;
 import com.canalprep.servlet.UserServlet;
 import com.canalprep.utilities.LoggerUtil;
+import com.canalprep.servlet.BulkStudentBatchServlet;
 import jakarta.servlet.DispatcherType;
+import jakarta.servlet.MultipartConfigElement;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.servlet.FilterHolder;
@@ -100,6 +102,10 @@ public class MainApp {
 
         context.addServlet(new ServletHolder(new AddMedicalHistoryServlet()), "/api/protected/student/medical/*");
         context.addServlet(new ServletHolder(new InsertFullStudentServlet()), "/api/protected/insertStudent/*");
+        // Configure multipart for BulkStudentBatchServlet explicitly (Jetty requires holder registration)
+        ServletHolder bulkHolder = new ServletHolder(new BulkStudentBatchServlet());
+        context.addServlet(bulkHolder, "/api/protected/bulk-action/student-batch/*");
+        bulkHolder.getRegistration().setMultipartConfig(new MultipartConfigElement(System.getProperty("java.io.tmpdir"), 50 * 1024 * 1024, 50 * 1024 * 1024, 0));
         context.addServlet(new ServletHolder(new DashboardServlet()), "/api/protected/dashboard/*");
         context.addServlet(new ServletHolder(new AddQualificationsServlet()), "/api/protected/addQ/*");
         context.addServlet(new ServletHolder(new SchoolConfigServlet()), "/api/protected/schoolConfig/*");
@@ -191,10 +197,7 @@ public class MainApp {
             LoggerUtil.logDatabase("CONNECTION_TEST", "ALL", "Database connectivity verified");
 
         } catch (Exception e) {
-            LoggerUtil.logError("MainApp", "Database connection failed!", e);
-
-            e.printStackTrace();
-            System.exit(1);
+            LoggerUtil.logError("MainApp", "Database connection failed! Continuing startup in degraded mode.", e);
         }
     }
     

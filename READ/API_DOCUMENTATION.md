@@ -558,3 +558,64 @@ A Postman collection is available for testing the API. Import the following file
 ---
 
 This API documentation provides comprehensive information about the available endpoints, request/response formats, and authentication requirements for the School Management System API. For additional assistance, please contact the system administrator or development team.
+
+### Bulk Student Batch
+
+**Endpoint:** `GET /api/protected/bulk-action/student-batch`
+
+**Description:** Downloads an Excel (.xlsx) template for bulk student insertion. The first row contains headers; an example row is included.
+
+**Authentication Required:** Yes
+
+**Template Columns:**
+- student_name
+- nid
+- nationality
+- religion
+- current_address
+- medical_status (boolean)
+- date_of_birth (YYYY-MM-DD)
+- place_of_birth
+- grade
+- class
+- medical_descriptions
+- student_phones (comma-separated)
+- parents_info (JSON array string)
+- student_notes (JSON array string)
+
+---
+
+**Endpoint:** `POST /api/protected/bulk-action/student-batch`
+
+**Description:** Accepts an Excel (.xlsx) file adhering to the template. Each row represents one student to insert using the same rules as the Full Student endpoint.
+
+**Authentication Required:** Yes
+
+**Request:** multipart/form-data with form field `file` containing the `.xlsx` file.
+
+**Response:**
+```json
+{
+  "success_count": 10,
+  "error_count": 2,
+  "results": [
+    {"row": 1, "status": "inserted", "student_id": 101},
+    {"row": 2, "status": "error", "message": "Missing required field 'student_name' in row 2"}
+  ]
+}
+```
+
+**Validation Rules:**
+- Headers must exactly match the template; download via GET to avoid mismatch.
+- Required fields: student_name, nid, nationality, religion, current_address, medical_status.
+- `student_phones`: comma-separated values.
+- `parents_info` and `student_notes`: valid JSON array strings.
+- Dates formatted as `YYYY-MM-DD`.
+
+**Notes:**
+- This endpoint internally validates and constructs the same JSON as `/api/protected/insertStudent` using existing `StudentJsonBuilder` and persists via `StudentDAO.insertFullStudent`.
+- 201 Created: Student created successfully
+- 400 Bad Request: Invalid input
+- 401 Unauthorized: Invalid or missing token
+- 404 Not Found: Student not found
+- 500 Internal Server Error: Server error

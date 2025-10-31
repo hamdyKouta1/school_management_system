@@ -21,7 +21,7 @@ public class AttendanceScheduler {
     private static final Logger logger = Logger.getLogger(AttendanceScheduler.class.getName());
     private final ScheduledExecutorService scheduler;
     private final AttendanceService attendanceService;
-    private static final LocalTime DAILY_RUN_TIME = LocalTime.of(11, 00); // 4:30 PM
+    private static final LocalTime DAILY_RUN_TIME = LocalTime.of(16, 42); // 4:30 PM
     
     public AttendanceScheduler() {
         this.scheduler = Executors.newScheduledThreadPool(1);
