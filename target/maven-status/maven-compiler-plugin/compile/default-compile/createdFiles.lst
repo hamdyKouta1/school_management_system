@@ -23,6 +23,7 @@ com\canalprep\dao\StudentDAO$1.class
 com\canalprep\model\Religion.class
 com\canalprep\otp\servlet\StandaloneOTPServlet.class
 com\canalprep\servlet\BulkStudentBatchServlet.class
+com\canalprep\auth\utilities\JwtUtil$TokenValidationResult.class
 com\canalprep\model\StudentAttendanceDetails$ParentInfo.class
 com\canalprep\model\GradeLevel.class
 com\canalprep\test\AuthServletTest.class

@@ -8907,3 +8907,6 @@ io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period
 2025-11-01 16:03:28 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/students, user: developer
 2025-11-01 16:03:35 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Token parsed successfully for user: developer, role: DEVELOPER, path: /api/protected/students/qrcodes
 2025-11-01 16:03:35 [INFO] com.canalprep.auth.filter.AuthenticationFilter doFilter: Passing request to servlet for path: /api/protected/students/qrcodes, user: developer
+2025-11-01 16:18:53 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-11-01 16:18:53 [INFO] com.canalprep.config.ConfigLoader loadExternalSecureConfig: Loaded secure configuration from: ./config/secure.properties
+2025-11-01 16:18:53 [INFO] com.canalprep.config.ConfigLoader initialize: Configuration loaded successfully. Environment: default

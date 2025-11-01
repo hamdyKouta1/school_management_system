@@ -4068,3 +4068,22 @@
 2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: الصف الثاني الاعدادي/2ب/علياء علي.png
 2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] ZIP file sent successfully
 2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Temporary directory cleaned up: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590
+2025-11-01 16:18:53 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-01 16:18:53 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-01 16:18:53 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-01 16:18:53 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-01 16:18:54 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-11-01 16:18:54 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-01 16:18:54 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-01 16:18:54 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-01 16:18:54 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 27665 seconds
+2025-11-01 16:18:54 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-01 16:18:54 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler...
+2025-11-01 16:18:54 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 1385 seconds at 4:30 PM
+2025-11-01 16:18:54 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-01 16:18:54 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-01 16:18:54 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-01 16:18:54 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-01 16:18:54 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-01 16:18:54 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-01 16:18:54 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully

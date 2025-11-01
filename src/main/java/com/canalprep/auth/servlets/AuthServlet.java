@@ -56,6 +56,9 @@ public class AuthServlet extends HttpServlet {
             case "/verify_reset_otp":
                 handleVerifyResetOTP(req, resp);
                 break;
+            case "/validate":
+                handleTokenValidation(req, resp);
+                break;
             default:
                 resp.sendError(HttpServletResponse.SC_NOT_FOUND, "Endpoint not found");
         }
@@ -366,6 +369,65 @@ public class AuthServlet extends HttpServlet {
         } catch (Exception e) {
             LoggerUtil.logError("AuthServlet", "Error in handleVerifyResetOTP: " + e.getMessage(), e);
             sendErrorResponse(resp, "An error occurred while processing your request", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        }
+    }
+    
+    private void handleTokenValidation(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        try {
+            // Extract token from Authorization header
+            String authHeader = req.getHeader("Authorization");
+            if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+                LoggerUtil.logSecurity("TOKEN_VALIDATION_FAILED", "UNKNOWN", "Missing or invalid Authorization header from IP: " + req.getRemoteAddr());
+                sendErrorResponse(resp, "Authorization header is required", HttpServletResponse.SC_UNAUTHORIZED);
+                return;
+            }
+            
+            String token = authHeader.substring(7); // Remove "Bearer " prefix
+            
+            // Validate token using JwtUtil
+            JwtUtil.TokenValidationResult validationResult = JwtUtil.validateToken(token);
+            
+            if (!validationResult.isValid()) {
+                LoggerUtil.logSecurity("TOKEN_VALIDATION_FAILED", "UNKNOWN", "Invalid token validation: " + validationResult.getErrorMessage() + " from IP: " + req.getRemoteAddr());
+                sendErrorResponse(resp, validationResult.getErrorMessage(), HttpServletResponse.SC_UNAUTHORIZED);
+                return;
+            }
+            
+            Claims claims = validationResult.getClaims();
+            String userId = claims.getSubject();
+            String username = claims.get("username", String.class);
+            
+            // Verify user still exists in database
+            UserDAO userDao = new UserDAO();
+            User user = userDao.getUserById(Integer.parseInt(userId));
+            if (user == null) {
+                LoggerUtil.logSecurity("TOKEN_VALIDATION_FAILED", username, "Token validation failed - user not found (ID: " + userId + ") from IP: " + req.getRemoteAddr());
+                sendErrorResponse(resp, "User not found", HttpServletResponse.SC_UNAUTHORIZED);
+                return;
+            }
+            
+            // Log successful validation
+            LoggerUtil.logSecurity("TOKEN_VALIDATION_SUCCESS", username, "Token validation successful (ID: " + userId + ") from IP: " + req.getRemoteAddr());
+            
+            // Return success response with user info
+            Map<String, Object> responseData = new HashMap<>();
+            responseData.put("status", "success");
+            responseData.put("message", "Token is valid");
+            responseData.put("user", Map.of(
+                "id", user.getId(),
+                "username", user.getUsername(),
+                "email", user.getEmail(),
+                "role", user.getRole()
+            ));
+            
+            resp.setContentType("application/json");
+            resp.setStatus(HttpServletResponse.SC_OK);
+            objectMapper.writeValue(resp.getWriter(), responseData);
+            
+        } catch (Exception e) {
+            LoggerUtil.logError("AuthServlet", "Error in handleTokenValidation: " + e.getMessage(), e);
+            LoggerUtil.logSecurity("TOKEN_VALIDATION_ERROR", "UNKNOWN", "Token validation error: " + e.getMessage() + " from IP: " + req.getRemoteAddr());
+            sendErrorResponse(resp, "An error occurred while validating the token", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
     }
     

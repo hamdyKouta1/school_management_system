@@ -178,6 +178,65 @@
 						"description": "Verify OTP and reset password"
 					},
 					"response": []
+				},
+				{
+					"name": "Validate Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Test for successful response",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"// Parse response and validate token validation",
+									"try {",
+									"    var jsonData = pm.response.json();",
+									"    ",
+									"    pm.test(\"Token validation successful\", function () {",
+									"        pm.expect(jsonData).to.have.property('message');",
+									"        pm.expect(jsonData.message).to.equal('Token is valid');",
+									"    });",
+									"    ",
+									"    pm.test(\"Response has user info\", function () {",
+									"        pm.expect(jsonData).to.have.property('user');",
+									"        pm.expect(jsonData.user).to.have.property('username');",
+									"        pm.expect(jsonData.user).to.have.property('role');",
+									"        pm.expect(jsonData.user).to.have.property('id');",
+									"    });",
+									"    ",
+									"    console.log(\"✅ Token validation successful for user:\", jsonData.user.username);",
+									"    ",
+									"} catch (e) {",
+									"    console.log(\"❌ Error parsing response:\", e);",
+									"    pm.test(\"Response is valid JSON\", function () {",
+									"        pm.expect.fail(\"Response is not valid JSON: \" + e.message);",
+									"    });",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/auth/validate",
+						"description": "Validate JWT token and return user information"
+					},
+					"response": []
 				}
 			]
 		},

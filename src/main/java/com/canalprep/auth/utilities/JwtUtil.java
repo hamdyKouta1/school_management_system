@@ -2,7 +2,12 @@ package com.canalprep.auth.utilities;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.JwtException;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.MalformedJwtException;
+import io.jsonwebtoken.UnsupportedJwtException;
 import io.jsonwebtoken.security.Keys;
+import io.jsonwebtoken.security.SignatureException;
 import javax.crypto.SecretKey;
 import java.util.Date;
 import java.util.HashMap;
@@ -38,6 +43,7 @@ public class JwtUtil {
 
         return Jwts.builder()
                 .setClaims(claims)
+                .setSubject(userId) // Set the subject to userId for proper validation
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
                 .signWith(SECRET_KEY)
@@ -50,5 +56,86 @@ public class JwtUtil {
                 .build()
                 .parseClaimsJws(token)
                 .getBody();
+    }
+    
+    /**
+     * Validates a JWT token and returns detailed validation result
+     * @param token The JWT token to validate
+     * @return TokenValidationResult containing validation status and details
+     */
+    public static TokenValidationResult validateToken(String token) {
+        try {
+            if (token == null || token.trim().isEmpty()) {
+                return new TokenValidationResult(false, "Token is null or empty", null);
+            }
+            
+            Claims claims = Jwts.parserBuilder()
+                    .setSigningKey(SECRET_KEY)
+                    .build()
+                    .parseClaimsJws(token)
+                    .getBody();
+            
+            // Check if token is expired
+            Date expiration = claims.getExpiration();
+            if (expiration != null && expiration.before(new Date())) {
+                return new TokenValidationResult(false, "Token has expired", null);
+            }
+            
+            // Validate required claims
+            String userId = claims.getSubject();
+            String username = claims.get("username", String.class);
+            
+            if (userId == null || userId.trim().isEmpty()) {
+                return new TokenValidationResult(false, "Token missing user ID", null);
+            }
+            
+            if (username == null || username.trim().isEmpty()) {
+                return new TokenValidationResult(false, "Token missing username", null);
+            }
+            
+            return new TokenValidationResult(true, "Token is valid", claims);
+            
+        } catch (ExpiredJwtException e) {
+            return new TokenValidationResult(false, "Token has expired", null);
+        } catch (MalformedJwtException e) {
+            return new TokenValidationResult(false, "Token is malformed", null);
+        } catch (SignatureException e) {
+            return new TokenValidationResult(false, "Token signature is invalid", null);
+        } catch (UnsupportedJwtException e) {
+            return new TokenValidationResult(false, "Token is unsupported", null);
+        } catch (IllegalArgumentException e) {
+            return new TokenValidationResult(false, "Token is invalid", null);
+        } catch (JwtException e) {
+            return new TokenValidationResult(false, "Token validation failed: " + e.getMessage(), null);
+        } catch (Exception e) {
+            return new TokenValidationResult(false, "Unexpected error during token validation", null);
+        }
+    }
+    
+    /**
+     * Result class for token validation operations
+     */
+    public static class TokenValidationResult {
+        private final boolean valid;
+        private final String errorMessage;
+        private final Claims claims;
+        
+        public TokenValidationResult(boolean valid, String errorMessage, Claims claims) {
+            this.valid = valid;
+            this.errorMessage = errorMessage;
+            this.claims = claims;
+        }
+        
+        public boolean isValid() {
+            return valid;
+        }
+        
+        public String getErrorMessage() {
+            return errorMessage;
+        }
+        
+        public Claims getClaims() {
+            return claims;
+        }
     }
 }
