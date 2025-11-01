@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "256ff66e-13c7-4f23-a658-9465b558263b",
+		"_postman_id": "c1caf96f-40c8-4a63-8b3a-d24f19dce988",
 		"name": "School Management System API Copy",
 		"description": "API collection for testing School Management System endpoints",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
@@ -16,19 +16,41 @@
 						{
 							"listen": "test",
 							"script": {
-								"exec": [
-									"var jsonData = JSON.parse(responseBody);",
-									"if (jsonData.token) {",
-									"    pm.environment.set(\"token\", jsonData.token);",
-									"    console.log(\"Token saved to environment\");",
-									"}",
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"pm.test(\"Response has token\", function () {",
-									"    pm.expect(jsonData).to.have.property('token');",
-									"});"
-								],
+						"exec": [
+							"// Test for successful response",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// Parse response and handle token",
+							"try {",
+							"    var jsonData = pm.response.json();",
+							"    ",
+							"    pm.test(\"Response has token\", function () {",
+							"        pm.expect(jsonData).to.have.property('token');",
+							"        pm.expect(jsonData.token).to.not.be.empty;",
+							"    });",
+							"    ",
+							"    // Save token to environment variables for automatic use",
+							"    if (jsonData.token) {",
+							"        pm.environment.set(\"token\", jsonData.token);",
+							"        console.log(\"✅ Token saved to environment variables:\", jsonData.token.substring(0, 20) + \"...\");",
+							"    } else {",
+							"        console.log(\"❌ No token found in response\");",
+							"    }",
+							"    ",
+							"    // Additional response validation",
+							"    pm.test(\"Response has user info\", function () {",
+							"        pm.expect(jsonData).to.have.property('user');",
+							"    });",
+							"    ",
+							"} catch (e) {",
+							"    console.log(\"❌ Error parsing response:\", e);",
+							"    pm.test(\"Response is valid JSON\", function () {",
+							"        pm.expect.fail(\"Response is not valid JSON: \" + e.message);",
+							"    });",
+							"}"
+						],
 								"type": "text/javascript",
 								"packages": {}
 							}
@@ -44,7 +66,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"userhamdy\",\n    \"password\": \"123456789\"\n}"
+							"raw": "{\n    \"username\": \"developer\",\n    \"password\": \"123456789\"\n}"
 						},
 						"url": "{{base_url}}/api/auth/login",
 						"description": "Login to get authentication token"
@@ -57,7 +79,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiREVWRUxPUEVSIiwidXNlcklkIjoiOCIsImVtYWlsIjoiaGFtZHkyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJoYW1keTIiLCJpYXQiOjE3NjAwOTgxNzUsImV4cCI6MTc2MDA5OTk3NX0.B2SaYRTo6Wg7nMeVAD5kto0e1LXxmPh3EeBqSfrZZ8vhzHkoB87ElDi2rehFdTkNKq61cQrLItKQ6xLN2acjOg"
+								"token": "{{token}}"
 							}
 						},
 						"method": "POST",
@@ -69,7 +91,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"userhamdy2\",\n    \"password\": \"1234567899\",\n    \"email\": \"userhamdy2@example.com\",\n    \"role\": \"USER\"\n   \n}"
+							"raw": "{\n    \"username\": \"userhamdy2\",\n    \"password\": \"1234567899\",\n    \"email\": \"userhamdy2@example.com\",\n    \"role\": \"USER\"//,\n //\"secretCode\":\"123456\"\n}"
 						},
 						"url": "{{base_url}}/api/auth/register",
 						"description": "Register a new user"
@@ -108,6 +130,54 @@
 						"url": "{{base_url}}/api/auth/check-otp"
 					},
 					"response": []
+				},
+				{
+					"name": "Forget Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"hamdy2\",\n    \"email\": \"hamdyhkouta@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/auth/forget_password",
+						"description": "Initiate password recovery by sending OTP to user's email"
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Reset OTP",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"otpCode\": \"306194\",\n    \"newPassword\": \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/auth/verify_reset_otp",
+						"description": "Verify OTP and reset password"
+					},
+					"response": []
 				}
 			]
 		},
@@ -116,6 +186,24 @@
 			"item": [
 				{
 					"name": "Get All Students",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Debug: Check if token is available",
+									"const token = pm.collectionVariables.get('token');",
+									"if (token) {",
+									"    console.log('✅ Token is available:', token.substring(0, 20) + '...');",
+									"} else {",
+									"    console.log('❌ No token found. Please run the Login request first.');",
+									"    console.log('💡 Make sure to run the Login request to get a valid token.');",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [
@@ -195,15 +283,11 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiVVNFUiIsInVzZXJJZCI6IjM0IiwiZW1haWwiOiJ1c2VyaGFtZHlAZXhhbXBsZS5jb20iLCJ1c2VybmFtZSI6InVzZXJoYW1keSIsImlhdCI6MTc2MDI5NDE3NSwiZXhwIjoxNzYwMjk1OTc1fQ.lJM52itfm8dNfJIwFOVUA3MMFPCTYi1TSzSXGEROjEs8bxmNm6BDaZHmEdeRQWkS91AJcSZ250vtCLTEq9ZpxA"
+								"token": "{{token}}"
 							}
 						},
 						"method": "POST",
 						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							},
 							{
 								"key": "Content-Type",
 								"value": "application/json"
@@ -253,6 +337,92 @@
 						],
 						"url": "{{base_url}}/api/protected/students/49",
 						"description": "Delete a student"
+					},
+					"response": []
+				},
+				{
+					"name": "Download Student Template",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/bulk-action/student-batch/",
+						"description": "Download Excel template for bulk student import"
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk Import Students",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "Excel file (.xlsx) containing student data. In Postman, click Select Files to attach the local .xlsx.",
+									"type": "file",
+									"src": "student_batch_template.xlsx"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/protected/bulk-action/student-batch/",
+						"description": "Upload Excel file to import multiple students at once"
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Student QR Codes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response is a ZIP file\", function () {",
+									"    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/zip');",
+									"});",
+									"",
+									"pm.test(\"Content-Disposition header is set\", function () {",
+									"    pm.expect(pm.response.headers.get('Content-Disposition')).to.include('attachment');",
+									"    pm.expect(pm.response.headers.get('Content-Disposition')).to.include('student_qrcodes.zip');",
+									"});",
+									"",
+									"console.log('✅ QR codes ZIP file downloaded successfully');",
+								"console.log('📁 ZIP contains hierarchical structure: Grade/Class/Student.png');",
+								"console.log('📋 Students are organized by grade and class for easy navigation');"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": "{{base_url}}/api/protected/students/qrcodes",
+						"description": "Generate and download QR codes for all students as ZIP file with hierarchical structure (Grade/Class/Student.png) - ADMIN/DEVELOPER only"
 					},
 					"response": []
 				}

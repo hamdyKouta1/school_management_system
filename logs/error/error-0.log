@@ -291,3 +291,11 @@
 2025-10-28 22:49:17 [SEVERE] ERROR: Exception details:
 2025-10-28 22:50:05 [SEVERE] ERROR: [UserServlet] Error in doPut
 2025-10-28 22:50:05 [SEVERE] ERROR: Exception details:
+2025-11-01 15:36:40 [SEVERE] ERROR: [MainApp] Database connection failed! Continuing startup in degraded mode.
+2025-11-01 15:36:40 [SEVERE] ERROR: Exception details:
+2025-11-01 15:36:40 [SEVERE] ERROR: [MainApp] Failed to validate license during startup: Error getting database connection
+2025-11-01 15:36:40 [SEVERE] ERROR: Exception details:
+2025-11-01 15:36:40 [SEVERE] ERROR: [MainApp] Database connection failed! Continuing startup in degraded mode.
+2025-11-01 15:36:40 [SEVERE] ERROR: Exception details:
+2025-11-01 15:36:41 [SEVERE] ERROR: [LicenseScheduler] Failed to perform OTP cleanup
+2025-11-01 15:36:41 [SEVERE] ERROR: Exception details:

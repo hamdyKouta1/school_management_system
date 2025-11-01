@@ -4,6 +4,7 @@ import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import com.canalprep.config.ConfigLoader;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -12,7 +13,7 @@ import java.util.logging.Logger;
 public class CsrfFilter implements Filter {
 
     private static final Logger logger = Logger.getLogger(CsrfFilter.class.getName());
-    private static final String ALLOWED_ORIGIN = "*";//"http://localhost:5173";//System.getenv("ALLOWED_ORIGIN"); // e.g., "http://localhost:3000"
+    private static final String ALLOWED_ORIGIN = ConfigLoader.getString("security.csrf.allowed_origin", "*");
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -33,7 +34,7 @@ public class CsrfFilter implements Filter {
             // For simplicity, we'll check Origin header. For production, more robust checks are needed.
             // This assumes a single allowed origin for the frontend.
             if (ALLOWED_ORIGIN == null || ALLOWED_ORIGIN.isEmpty()) {
-                logger.log(Level.WARNING, "ALLOWED_ORIGIN environment variable is not set. CSRF protection may be incomplete.");
+                logger.log(Level.WARNING, "security.csrf.allowed_origin configuration is not set. CSRF protection may be incomplete.");
                 // For development, might allow if not set, but in production, this should be an error.
             } else if (origin == null || !origin.equals(ALLOWED_ORIGIN)) {
                 logger.log(Level.WARNING, "CSRF attack detected: Invalid Origin header. Origin: " + origin);

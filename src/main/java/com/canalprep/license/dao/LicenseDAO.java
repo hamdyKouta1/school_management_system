@@ -5,7 +5,6 @@ import com.canalprep.dao.DBConnection;
 import com.canalprep.utilities.LoggerUtil;
 
 import java.sql.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 

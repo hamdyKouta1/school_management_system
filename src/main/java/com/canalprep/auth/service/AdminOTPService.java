@@ -4,6 +4,7 @@ import com.canalprep.license.model.OTP;
 import com.canalprep.license.dao.OTPDAO;
 import com.canalprep.utilities.LoggerUtil;
 import com.canalprep.exception.DataAccessException;
+import com.canalprep.config.ConfigLoader;
 
 import java.security.SecureRandom;
 import java.sql.SQLException;
@@ -15,11 +16,11 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class AdminOTPService {
-    private static final String ADMIN_EMAIL = "hamdyhkouta@gmail.com";
-    private static final String SMTP_HOST = "smtp.gmail.com";
-    private static final String SMTP_PORT = "587";
-    private static final String EMAIL_USERNAME = "canalprepschool@gmail.com";
-    private static final String EMAIL_PASSWORD = "eebb hamx ycyp pvui";
+    private static final String ADMIN_EMAIL = ConfigLoader.getString("admin.email", "hamdyhkouta@gmail.com");
+    private static final String SMTP_HOST = ConfigLoader.getString("email.host", "smtp.gmail.com");
+    private static final String SMTP_PORT = ConfigLoader.getString("email.port", "587");
+    private static final String EMAIL_USERNAME = ConfigLoader.getString("email.from_address", "canalprepschool@gmail.com");
+    private static final String EMAIL_PASSWORD = ConfigLoader.getString("email.password");
     private static final String OPERATION_ADMIN_CREATION = "ADMIN_CREATION";
     
     private final OTPDAO otpDAO;

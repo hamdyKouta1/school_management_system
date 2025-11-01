@@ -2,8 +2,6 @@ package com.canalprep.dao;
 
 import com.canalprep.model.StudentAttendanceDetails;
 import com.canalprep.exception.DataAccessException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.postgresql.util.PGobject;
@@ -13,11 +11,9 @@ import java.util.*;
 import java.util.logging.Logger;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.sql.Date;
 
 public class AttendanceDAO {
     private static final Logger logger = Logger.getLogger(AttendanceDAO.class.getName());
-    private static final ObjectMapper objectMapper = new ObjectMapper();
 
     /**
      * Get student attendance details by student ID with attendance records

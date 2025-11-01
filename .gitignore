@@ -1,4 +1,41 @@
 target/
 license.dat
 
+# Security: Exclude sensitive configuration files
+config/secure.properties
+secure.properties
+*.secret
+*.key
+.env
+.env.local
+.env.production
+
+# Logs may contain sensitive information
+logs/
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Maven generated files
+dependency-reduced-pom.xml
+
+# Duplicate/test files
+*Copy*
+*copy*
+before_*
+test-*-complete.*
+test-*-simple.*
+
 

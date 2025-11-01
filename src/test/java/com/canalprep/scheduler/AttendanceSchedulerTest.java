@@ -1,8 +1,8 @@
 package com.canalprep.scheduler;
 
-import com.canalprep.service.AttendanceService;
+
 import java.time.LocalTime;
-import java.time.LocalDateTime;
+
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.Duration;

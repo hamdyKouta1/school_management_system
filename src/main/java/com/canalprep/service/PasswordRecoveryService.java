@@ -4,9 +4,9 @@ import com.canalprep.license.model.OTP;
 import com.canalprep.license.dao.OTPDAO;
 import com.canalprep.auth.dao.UserDAO;
 import com.canalprep.auth.model.User;
-import com.canalprep.auth.utilities.PasswordUtils;
 import com.canalprep.exception.DataAccessException;
 import com.canalprep.utilities.LoggerUtil;
+import com.canalprep.config.ConfigLoader;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -183,16 +183,16 @@ public class PasswordRecoveryService {
      */
     private void sendPasswordRecoveryOTPEmail(String otpCode, String username, String email, String ipAddress) {
         try {
-            // Email configuration
+            // Email configuration - using ConfigLoader for secure credential management
             Properties props = new Properties();
-            props.put("mail.smtp.auth", "true");
-            props.put("mail.smtp.starttls.enable", "true");
-            props.put("mail.smtp.host", "smtp.gmail.com");
-            props.put("mail.smtp.port", "587");
+            props.put("mail.smtp.auth", ConfigLoader.getString("email.auth.enable", "true"));
+            props.put("mail.smtp.starttls.enable", ConfigLoader.getString("email.tls.enable", "true"));
+            props.put("mail.smtp.host", ConfigLoader.getString("email.host", "smtp.gmail.com"));
+            props.put("mail.smtp.port", ConfigLoader.getString("email.port", "587"));
             
-            // Use hardcoded credentials (same as OTPService)
-            String emailUsername = "canalprepschool@gmail.com";
-            String emailPassword = "eebb hamx ycyp pvui";
+            // Use ConfigLoader for secure credential management
+            String emailUsername = ConfigLoader.getString("email.from_address", "canalprepschool@gmail.com");
+            String emailPassword = ConfigLoader.getString("email.password");
             
             Session session = Session.getInstance(props, new Authenticator() {
                 @Override

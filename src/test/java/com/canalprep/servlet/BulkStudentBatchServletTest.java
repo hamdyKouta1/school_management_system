@@ -34,7 +34,7 @@ public class BulkStudentBatchServletTest {
                 Cell cell = header.createCell(i);
                 cell.setCellValue(TEMPLATE_COLUMNS[i]);
             }
-            boolean valid = (boolean) invokePrivate(servlet, "validateHeader", new Class[]{Row.class}, header);
+            boolean valid = (boolean) invokePrivate(servlet, "validateHeader", new Class<?>[]{Row.class}, header);
             assertTrue(valid);
         }
     }
@@ -49,7 +49,7 @@ public class BulkStudentBatchServletTest {
                 Cell cell = header.createCell(i);
                 cell.setCellValue("wrong_" + i);
             }
-            boolean valid = (boolean) invokePrivate(servlet, "validateHeader", new Class[]{Row.class}, header);
+            boolean valid = (boolean) invokePrivate(servlet, "validateHeader", new Class<?>[]{Row.class}, header);
             assertFalse(valid);
         }
     }
@@ -68,7 +68,7 @@ public class BulkStudentBatchServletTest {
         json.put("class", "Class A");
 
         // Should not throw
-        invokePrivate(servlet, "validateRequired", new Class[]{JSONObject.class, int.class}, json, 1);
+        invokePrivate(servlet, "validateRequired", new Class<?>[]{JSONObject.class, int.class}, json, 1);
     }
 
     @Test
@@ -84,7 +84,7 @@ public class BulkStudentBatchServletTest {
         json.put("grade", "Grade 1");
         // Missing class
         try {
-            invokePrivate(servlet, "validateRequired", new Class[]{JSONObject.class, int.class}, json, 2);
+            invokePrivate(servlet, "validateRequired", new Class<?>[]{JSONObject.class, int.class}, json, 2);
             fail("Expected IllegalArgumentException for missing class");
         } catch (Exception e) {
             assertTrue(e.getCause() instanceof IllegalArgumentException);
@@ -116,7 +116,7 @@ public class BulkStudentBatchServletTest {
             row.createCell(12).setCellValue("[{\"parent_name\":\"Jane Doe\",\"relationship\":\"Mother\",\"parent_nid\":\"00000000000000001\",\"parent_nationality\":\"Egyptian\",\"parent_job\":\"Teacher\",\"parent_address\":\"123 Main St\",\"parent_social_status\":\"Married\",\"parent_phones\":[\"01234567891\"]}]");
             row.createCell(13).setCellValue("[{\"note_text\":\"Good student\",\"created_by\":\"Teacher\"}]");
 
-            JSONObject json = (JSONObject) invokePrivate(servlet, "buildJsonFromRow", new Class[]{Row.class}, row);
+            JSONObject json = (JSONObject) invokePrivate(servlet, "buildJsonFromRow", new Class<?>[]{Row.class}, row);
 
             assertEquals("John Doe", json.getString("student_name"));
             assertTrue(json.getBoolean("medical_status"));
@@ -144,7 +144,7 @@ public class BulkStudentBatchServletTest {
             dateCell.setCellValue(new java.util.Date(1262304000000L)); // 2010-01-01 UTC
             dateCell.setCellStyle(dateStyle);
 
-            String dateStr = (String) invokePrivate(servlet, "getCellString", new Class[]{Cell.class}, dateCell);
+            String dateStr = (String) invokePrivate(servlet, "getCellString", new Class<?>[]{Cell.class}, dateCell);
             assertEquals("2010-01-01", dateStr);
         }
     }

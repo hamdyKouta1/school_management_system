@@ -5,19 +5,18 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import com.canalprep.exception.DataAccessException;
 
 import com.canalprep.staticVariables.DBConst;
+import com.canalprep.config.ConfigLoader;
+import com.canalprep.exception.DataAccessException;
 
 public class DBConnection {
     private static final Logger logger = Logger.getLogger(DBConnection.class.getName());
-    // private static final String JDBC_URL = System.getenv("DB_URL");
-    // private static final String USERNAME = System.getenv("DB_USER");
-    // private static final String PASSWORD = System.getenv("DB_PASSWORD");
     
-    private static final String JDBC_URL = "jdbc:postgresql://localhost:5432/canal_prep_school_clone";
-    private static final String USERNAME = "postgres";
-    private static final String PASSWORD = "123";
+    // Load database configuration from application.properties with environment overrides
+    private static final String JDBC_URL = ConfigLoader.getString("db.url", "jdbc:postgresql://localhost:5432/canal_prep_school_clone");
+    private static final String USERNAME = ConfigLoader.getString("db.username", "postgres");
+    private static final String PASSWORD = ConfigLoader.getString("db.password", "123");
 
     
     static {

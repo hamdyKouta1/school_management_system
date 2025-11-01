@@ -4,20 +4,19 @@ import com.canalprep.license.model.OTP;
 import com.canalprep.license.dao.OTPDAO;
 import com.canalprep.utilities.LoggerUtil;
 import com.canalprep.exception.DataAccessException;
-
+import com.canalprep.config.ConfigLoader;
 import java.security.SecureRandom;
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 import java.util.Properties;
 import javax.mail.*;
 import javax.mail.internet.*;
 
 public class OTPService {
     private static final String DEVELOPER_EMAIL = "hamdyhkouta@gmail.com";
-    private static final String SMTP_HOST = "smtp.gmail.com";
-    private static final String SMTP_PORT = "587";
-    private static final String EMAIL_USERNAME = "canalprepschool@gmail.com";//System.getenv("EMAIL_USERNAME");
-    private static final String EMAIL_PASSWORD = "eebb hamx ycyp pvui";//System.getenv("EMAIL_PASSWORD");
+    private static final String SMTP_HOST = ConfigLoader.getString("email.host", "smtp.gmail.com");
+    private static final String SMTP_PORT = ConfigLoader.getString("email.port", "587");
+    private static final String EMAIL_USERNAME = ConfigLoader.getString("email.from_address", "canalprepschool@gmail.com");
+    private static final String EMAIL_PASSWORD = ConfigLoader.getString("email.password");
     
     private final OTPDAO otpDAO;
     private final SecureRandom random;

@@ -1,6 +1,4 @@
 package com.canalprep.scheduler;
-
-import com.canalprep.dao.AttendanceDAO;
 import com.canalprep.service.AttendanceService;
 import com.canalprep.utilities.LoggerUtil;
 import java.util.concurrent.Executors;

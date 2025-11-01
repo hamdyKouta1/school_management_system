@@ -1,10 +1,9 @@
 package com.canalprep.model;
 
-import java.sql.Date;
-import java.sql.Time;
+
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 

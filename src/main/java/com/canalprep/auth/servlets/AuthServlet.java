@@ -2,12 +2,14 @@ package com.canalprep.auth.servlets;
 
 import com.canalprep.auth.utilities.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.canalprep.auth.dao.UserDAO;
 import com.canalprep.auth.model.User;
 import com.canalprep.auth.utilities.PasswordUtils;
 import com.canalprep.auth.service.AdminOTPService;
 import com.canalprep.service.PasswordRecoveryService;
 import com.canalprep.utilities.LoggerUtil;
+import com.canalprep.config.ConfigLoader;
 import io.jsonwebtoken.Claims;
 
 import jakarta.servlet.ServletException;
@@ -61,7 +63,7 @@ public class AuthServlet extends HttpServlet {
     
     private void handleLogin(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         try {
-            Map<String, String> requestData = objectMapper.readValue(req.getInputStream(), Map.class);
+            Map<String, String> requestData = objectMapper.readValue(req.getInputStream(), new TypeReference<Map<String, String>>() {});
             String username = requestData.get("username");
             String password = requestData.get("password");
             
@@ -119,7 +121,7 @@ public class AuthServlet extends HttpServlet {
     
     private void handleRegister(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         try {
-            Map<String, String> requestData = objectMapper.readValue(req.getInputStream(), Map.class);
+            Map<String, String> requestData = objectMapper.readValue(req.getInputStream(), new TypeReference<Map<String, String>>() {});
             String username = requestData.get("username");
             String email = requestData.get("email");
             String password = requestData.get("password");
@@ -164,7 +166,7 @@ public class AuthServlet extends HttpServlet {
                     }
                     
                     // Validate secret code
-                    String adminSecret = "123456"; // System.getenv("ADMIN_SECRET");
+                    String adminSecret = ConfigLoader.getString("admin.secret_code", "123456");
                     if (!adminSecret.equals(secretCode)) {
                         LoggerUtil.logSecurity("INVALID_SECRET_CODE", requesterUsername, 
                             "Invalid secret code for admin creation from IP: " + req.getRemoteAddr());
@@ -198,7 +200,7 @@ public class AuthServlet extends HttpServlet {
             
             // Handle regular user registration
             String role = "USER";
-            String adminSecret = "123456"; // System.getenv("ADMIN_SECRET");
+            String adminSecret = ConfigLoader.getString("admin.secret_code", "123456");
             if (adminSecret != null && adminSecret.equals(secretCode)) {
                 role = "ADMIN";
             }
@@ -246,7 +248,7 @@ public class AuthServlet extends HttpServlet {
     
     private void handleCheckOTP(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         try {
-            Map<String, String> requestData = objectMapper.readValue(req.getInputStream(), Map.class);
+            Map<String, String> requestData = objectMapper.readValue(req.getInputStream(), new TypeReference<Map<String, String>>() {});
             String otpCode = requestData.get("otpCode");
             
             if (otpCode == null || otpCode.trim().isEmpty()) {
@@ -301,7 +303,7 @@ public class AuthServlet extends HttpServlet {
     
     private void handleForgetPassword(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         try {
-            Map<String, String> requestData = objectMapper.readValue(req.getInputStream(), Map.class);
+            Map<String, String> requestData = objectMapper.readValue(req.getInputStream(), new TypeReference<Map<String, String>>() {});
             String username = requestData.get("username");
             String email = requestData.get("email");
             
@@ -340,7 +342,7 @@ public class AuthServlet extends HttpServlet {
     private void handleVerifyResetOTP(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Map<String, String> requestData = null;
         try {
-            requestData = objectMapper.readValue(req.getInputStream(), Map.class);
+            requestData = objectMapper.readValue(req.getInputStream(), new TypeReference<Map<String, String>>() {});
             String otpCode = requestData.get("otpCode");
             String newPassword = requestData.get("newPassword");
             

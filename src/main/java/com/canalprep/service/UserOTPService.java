@@ -6,6 +6,7 @@ import com.canalprep.auth.dao.UserDAO;
 import com.canalprep.auth.model.User;
 import com.canalprep.exception.DataAccessException;
 import com.canalprep.utilities.LoggerUtil;
+import com.canalprep.config.ConfigLoader;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -194,15 +195,15 @@ public class UserOTPService {
     private void sendPasswordResetOTPEmail(String otpCode, String username, String email, 
                                          String requestedByRole, String ipAddress) throws MessagingException {
         
-        // Email configuration - using same credentials as OTPService
-        String EMAIL_USERNAME = "canalprepschool@gmail.com";
-        String EMAIL_PASSWORD = "eebb hamx ycyp pvui";
+        // Email configuration - using ConfigLoader for secure credential management
+        String EMAIL_USERNAME = ConfigLoader.getString("email.from_address", "canalprepschool@gmail.com");
+        String EMAIL_PASSWORD = ConfigLoader.getString("email.password");
         
         Properties props = new Properties();
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.host", "smtp.gmail.com");
-        props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.auth", ConfigLoader.getString("email.auth.enable", "true"));
+        props.put("mail.smtp.starttls.enable", ConfigLoader.getString("email.tls.enable", "true"));
+        props.put("mail.smtp.host", ConfigLoader.getString("email.host", "smtp.gmail.com"));
+        props.put("mail.smtp.port", ConfigLoader.getString("email.port", "587"));
         
         Session session = Session.getInstance(props, new Authenticator() {
             @Override

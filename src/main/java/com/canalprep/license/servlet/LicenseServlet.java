@@ -5,7 +5,6 @@ import com.canalprep.license.service.LicenseService;
 import com.canalprep.license.service.OTPService;
 import com.canalprep.auth.model.User;
 import com.canalprep.utilities.LoggerUtil;
-import com.canalprep.auth.utilities.JwtUtil;
 import com.canalprep.exception.DataAccessException;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;

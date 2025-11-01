@@ -1,7 +1,7 @@
 package com.canalprep.servlet;
 
 import com.canalprep.dao.AttendanceDAO;
-import com.canalprep.model.StudentAttendanceDetails;
+
 import com.canalprep.exception.DataAccessException;
 import com.canalprep.utilities.LoggerUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -9,8 +9,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import com.canalprep.auth.utilities.JwtUtil;
-import io.jsonwebtoken.Claims;
+
 
 import java.io.IOException;
 import java.io.PrintWriter;

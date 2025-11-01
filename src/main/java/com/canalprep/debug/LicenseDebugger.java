@@ -3,10 +3,8 @@ package com.canalprep.debug;
 import com.canalprep.license.service.LicenseService;
 import com.canalprep.license.model.License;
 import com.canalprep.exception.DataAccessException;
-import com.canalprep.utilities.LoggerUtil;
-
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+
 
 public class LicenseDebugger {
     

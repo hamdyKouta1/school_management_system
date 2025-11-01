@@ -22,6 +22,8 @@ import com.canalprep.servlet.StudentServlet;
 import com.canalprep.servlet.UserServlet;
 import com.canalprep.utilities.LoggerUtil;
 import com.canalprep.servlet.BulkStudentBatchServlet;
+import com.canalprep.servlet.StudentQRCodeServlet;
+import com.canalprep.config.ConfigLoader;
 import jakarta.servlet.DispatcherType;
 import jakarta.servlet.MultipartConfigElement;
 import org.eclipse.jetty.server.Server;
@@ -64,15 +66,18 @@ public class MainApp {
             LoggerUtil.logInfo("MainApp", "Continuing startup in license-restricted mode due to validation error.");
         }
         
-        int port = 8081;
+        // Load server configuration from properties
+        int port = ConfigLoader.getInt("server.port", 8081);
         if (args.length > 0) {
             port = Integer.parseInt(args[0]);
         }
- testDatabaseConnection();
+        String bindAddress = ConfigLoader.getString("server.bind_address", "0.0.0.0");
+        
+        testDatabaseConnection();
         Server server = new Server();
         ServerConnector connector = new ServerConnector(server);
         connector.setPort(port);
-        connector.setHost("0.0.0.0");  // Bind to all network interfaces
+        connector.setHost(bindAddress);  // Bind to configured network interfaces
         server.addConnector(connector);
         
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
@@ -80,12 +85,16 @@ public class MainApp {
         
         // Pure backend API server - no static resources
         
-        // Add CORS filter for frontend access
+        // Add CORS filter for frontend access with configurable settings
         FilterHolder corsFilter = new FilterHolder(CrossOriginFilter.class);
-        corsFilter.setInitParameter(CrossOriginFilter.ALLOWED_ORIGINS_PARAM, "*");
-        corsFilter.setInitParameter(CrossOriginFilter.ALLOWED_METHODS_PARAM, "GET,POST,PUT,DELETE,OPTIONS");
-        corsFilter.setInitParameter(CrossOriginFilter.ALLOWED_HEADERS_PARAM, "Content-Type,Authorization,X-Requested-With,Content-Length,Accept,Origin,ngrok-skip-browser-warning");
-        corsFilter.setInitParameter(CrossOriginFilter.ALLOW_CREDENTIALS_PARAM, "true");
+        corsFilter.setInitParameter(CrossOriginFilter.ALLOWED_ORIGINS_PARAM, 
+            ConfigLoader.getString("cors.allowed_origins", "*"));
+        corsFilter.setInitParameter(CrossOriginFilter.ALLOWED_METHODS_PARAM, 
+            ConfigLoader.getString("cors.allowed_methods", "GET,POST,PUT,DELETE,OPTIONS"));
+        corsFilter.setInitParameter(CrossOriginFilter.ALLOWED_HEADERS_PARAM, 
+            ConfigLoader.getString("cors.allowed_headers", "Content-Type,Authorization,X-Requested-With,Content-Length,Accept,Origin,ngrok-skip-browser-warning"));
+        corsFilter.setInitParameter(CrossOriginFilter.ALLOW_CREDENTIALS_PARAM, 
+            String.valueOf(ConfigLoader.getBoolean("cors.allow_credentials", true)));
         context.addFilter(corsFilter, "/*", EnumSet.of(DispatcherType.REQUEST));
         
         // Add Authentication Filter
@@ -109,6 +118,9 @@ public class MainApp {
         context.addServlet(new ServletHolder(new DashboardServlet()), "/api/protected/dashboard/*");
         context.addServlet(new ServletHolder(new AddQualificationsServlet()), "/api/protected/addQ/*");
         context.addServlet(new ServletHolder(new SchoolConfigServlet()), "/api/protected/schoolConfig/*");
+        
+        // Student QR Code generation servlet (ADMIN/DEVELOPER only)
+        context.addServlet(new ServletHolder(new StudentQRCodeServlet()), "/api/protected/students/qrcodes");
         
         // Attendance servlet - mixed protected/unprotected endpoints
         context.addServlet(new ServletHolder(new AttendanceServlet()), "/api/attendance/*");

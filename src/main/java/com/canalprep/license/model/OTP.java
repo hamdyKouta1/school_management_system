@@ -1,6 +1,4 @@
 package com.canalprep.license.model;
-
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 public class OTP {

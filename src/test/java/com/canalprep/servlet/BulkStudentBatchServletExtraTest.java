@@ -2,7 +2,7 @@ package com.canalprep.servlet;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.json.JSONObject;
+
 import org.junit.Test;
 
 import java.lang.reflect.Method;
@@ -35,7 +35,7 @@ public class BulkStudentBatchServletExtraTest {
             Row row = sheet.createRow(1);
             row.createCell(12).setCellValue("not a json array");
             try {
-                invokePrivate(servlet, "buildJsonFromRow", new Class[]{Row.class}, row);
+                invokePrivate(servlet, "buildJsonFromRow", new Class<?>[]{Row.class}, row);
                 fail("Expected IllegalArgumentException for invalid parents_info JSON");
             } catch (Exception e) {
                 assertTrue(e.getCause() instanceof IllegalArgumentException);
@@ -55,7 +55,7 @@ public class BulkStudentBatchServletExtraTest {
             Row row = sheet.createRow(1);
             row.createCell(13).setCellValue("not a json array");
             try {
-                invokePrivate(servlet, "buildJsonFromRow", new Class[]{Row.class}, row);
+                invokePrivate(servlet, "buildJsonFromRow", new Class<?>[]{Row.class}, row);
                 fail("Expected IllegalArgumentException for invalid student_notes JSON");
             } catch (Exception e) {
                 assertTrue(e.getCause() instanceof IllegalArgumentException);
@@ -72,7 +72,7 @@ public class BulkStudentBatchServletExtraTest {
             Cell numCell = row.createCell(0);
             // Large numeric value to ensure no scientific notation
             numCell.setCellValue(1234567890123d);
-            String val = (String) invokePrivate(servlet, "getCellString", new Class[]{Cell.class}, numCell);
+            String val = (String) invokePrivate(servlet, "getCellString", new Class<?>[]{Cell.class}, numCell);
             assertEquals("1234567890123", val);
         }
     }

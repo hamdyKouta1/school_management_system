@@ -3667,3 +3667,404 @@
 2025-10-31 14:14:18 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler stopped
 2025-10-31 14:14:18 [INFO] APPLICATION: [MainApp] Attendance scheduler stopped
 2025-10-31 14:14:18 [INFO] APPLICATION: [LoggerUtil] LoggerUtil shutdown completed
+2025-10-31 14:33:03 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-31 14:33:03 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-31 14:33:04 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-31 14:33:04 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-31 14:33:04 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-10-31 14:33:04 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-31 14:33:04 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-31 14:33:05 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-31 14:33:05 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 34014 seconds
+2025-10-31 14:33:05 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-31 14:33:05 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler...
+2025-10-31 14:33:05 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 7734 seconds at 4:30 PM
+2025-10-31 14:33:05 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-10-31 14:33:05 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-31 14:33:05 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-31 14:33:05 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-31 14:33:05 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-31 14:33:05 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-31 14:33:05 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-31 14:40:22 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-31 14:40:22 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-31 14:40:23 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-31 14:40:23 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-31 14:40:23 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-10-31 14:40:23 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-31 14:40:23 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-31 14:40:24 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-31 14:40:24 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 33575 seconds
+2025-10-31 14:40:24 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-31 14:40:24 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler...
+2025-10-31 14:40:24 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 7295 seconds at 4:30 PM
+2025-10-31 14:40:24 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-10-31 14:40:24 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-31 14:40:24 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-31 14:40:24 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-31 14:40:24 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-31 14:40:24 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-31 14:40:24 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-31 14:42:43 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-31 14:42:43 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-31 14:42:44 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-31 14:42:44 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-31 14:42:44 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-10-31 14:42:44 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-31 14:42:44 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-31 14:42:45 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-31 14:42:45 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 33434 seconds
+2025-10-31 14:42:45 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-31 14:42:45 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler...
+2025-10-31 14:42:45 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 7154 seconds at 4:30 PM
+2025-10-31 14:42:45 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-10-31 14:42:45 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-31 14:42:45 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-31 14:42:45 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-31 14:42:45 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-31 14:42:45 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-31 14:42:45 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-31 15:09:32 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-10-31 15:09:32 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-10-31 15:09:32 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-31 15:09:32 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-31 15:09:33 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-10-31 15:09:33 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-10-31 15:09:33 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-10-31 15:09:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-31 15:09:33 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 31826 seconds
+2025-10-31 15:09:33 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-10-31 15:09:33 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler...
+2025-10-31 15:09:33 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 5546 seconds at 4:30 PM
+2025-10-31 15:09:33 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-10-31 15:09:33 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-10-31 15:09:33 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-10-31 15:09:33 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-10-31 15:09:33 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-10-31 15:09:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-31 15:09:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-31 16:09:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-31 16:09:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-31 16:09:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-10-31 16:41:59 [INFO] APPLICATION: [AttendanceScheduler] Starting automated daily attendance update job...
+2025-10-31 16:41:59 [INFO] APPLICATION: [AttendanceService] Starting automated daily attendance update
+2025-10-31 16:42:00 [INFO] APPLICATION: [AttendanceService] Successfully marked 29 students as absent for 2025-10-31
+2025-10-31 16:42:00 [INFO] APPLICATION: [AttendanceScheduler] Daily attendance update completed successfully. Successfully marked 29 students as absent for 2025-10-31
+2025-10-31 16:42:00 [INFO] APPLICATION: DB_OPERATION: ATTENDANCE_AUTO_UPDATE | TABLE: SYSTEM | DETAILS: Automated attendance marking: 29 students affected
+2025-10-31 17:09:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-10-31 17:09:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-10-31 17:09:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-01 15:36:39 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-01 15:36:39 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-01 15:36:40 [SEVERE] APPLICATION: [MainApp] Database connection failed! Continuing startup in degraded mode.
+2025-11-01 15:36:40 [SEVERE] APPLICATION: [MainApp] Failed to validate license during startup: Error getting database connection
+2025-11-01 15:36:40 [INFO] APPLICATION: [MainApp] Continuing startup in license-restricted mode due to validation error.
+2025-11-01 15:36:40 [SEVERE] APPLICATION: [MainApp] Database connection failed! Continuing startup in degraded mode.
+2025-11-01 15:36:41 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-01 15:36:41 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 30198 seconds
+2025-11-01 15:36:41 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-01 15:36:41 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler...
+2025-11-01 15:36:41 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 3918 seconds at 4:30 PM
+2025-11-01 15:36:41 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-01 15:36:41 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-01 15:36:41 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-01 15:36:41 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-01 15:36:41 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-01 15:36:41 [SEVERE] APPLICATION: [LicenseScheduler] Failed to perform OTP cleanup
+2025-11-01 15:38:22 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-01 15:38:22 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-01 15:38:23 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-01 15:38:23 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-01 15:38:23 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-11-01 15:38:23 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-01 15:38:23 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-01 15:38:23 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-01 15:38:24 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 30096 seconds
+2025-11-01 15:38:24 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-01 15:38:24 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler...
+2025-11-01 15:38:24 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 3815 seconds at 4:30 PM
+2025-11-01 15:38:24 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-01 15:38:24 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-01 15:38:24 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-01 15:38:24 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-01 15:38:24 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-01 15:38:24 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-01 15:38:24 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-01 15:40:19 [INFO] APPLICATION: [StudentQRCodeServlet] Generating QR codes for 29 students
+2025-11-01 15:40:19 [INFO] APPLICATION: [StudentQRCodeServlet] Created temporary directory: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051
+2025-11-01 15:40:19 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ????? ????????
+2025-11-01 15:40:19 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ??? ????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\???? ??? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ????? ????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\????? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\???? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ????? ?????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\????? ?????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\???? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\???? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\???? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\???? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\???? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: hamdy ????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\hamdy ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: loooy hamdy kouta
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: hamdy ????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\hamdy ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: hamdy ????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\hamdy ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: loooy hamdy kouta
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: loooy hamdy kouta
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ????? ???
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ????? ????????\1?\????? ???.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ?????? ????????
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/3?
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ?????? ????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ?????? ????????\3?\?????? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/9?
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ????? ????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ?????? ????????\9?\????? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/3?
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ??????
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ?????? ????????\3?\???? ??????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ?????? ????????
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/2?
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ????? ???
+2025-11-01 15:40:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051\???? ?????? ????????\2?\????? ???.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] QR code generation completed. Success: 29, Errors: 0
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/hamdy ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/loooy hamdy kouta.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/salm mohamed yasser.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ?????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ???.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ??? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/3?/?????? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/3?/???? ??????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/9?/????? ????.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/2?/????? ???.png
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] ZIP file sent successfully
+2025-11-01 15:40:20 [INFO] APPLICATION: [StudentQRCodeServlet] Temporary directory cleaned up: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_523942528209399051
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Generating QR codes for 29 students
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Created temporary directory: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ????? ????????
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ??? ????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\???? ??? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\????? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\???? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ?????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\????? ?????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\???? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\???? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\???? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\???? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\???? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: hamdy ????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\hamdy ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: loooy hamdy kouta
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: hamdy ????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\hamdy ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: hamdy ????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\hamdy ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: loooy hamdy kouta
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: loooy hamdy kouta
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ???
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ????? ????????\1?\????? ???.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ?????? ????????
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/3?
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ?????? ????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ?????? ????????\3?\?????? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/9?
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ?????? ????????\9?\????? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/3?
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ??????
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ?????? ????????\3?\???? ??????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ?????? ????????
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/2?
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ???
+2025-11-01 15:40:27 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471\???? ?????? ????????\2?\????? ???.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] QR code generation completed. Success: 29, Errors: 0
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/hamdy ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/loooy hamdy kouta.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/salm mohamed yasser.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ?????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ???.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ??? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/3?/?????? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/3?/???? ??????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/9?/????? ????.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/2?/????? ???.png
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] ZIP file sent successfully
+2025-11-01 15:40:27 [INFO] APPLICATION: [StudentQRCodeServlet] Temporary directory cleaned up: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_11040140228383932471
+2025-11-01 16:00:05 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-01 16:00:05 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-01 16:00:06 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-01 16:00:06 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-01 16:00:06 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-11-01 16:00:06 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-01 16:00:06 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-01 16:00:07 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-01 16:00:07 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 28792 seconds
+2025-11-01 16:00:07 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-01 16:00:07 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler...
+2025-11-01 16:00:07 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 2512 seconds at 4:30 PM
+2025-11-01 16:00:07 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-01 16:00:07 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-01 16:00:07 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-01 16:00:07 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-01 16:00:07 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-01 16:00:07 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-01 16:00:07 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-01 16:03:28 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-11-01 16:03:35 [INFO] APPLICATION: [StudentQRCodeServlet] Generating QR codes for 29 students
+2025-11-01 16:03:35 [INFO] APPLICATION: [StudentQRCodeServlet] Created temporary directory: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590
+2025-11-01 16:03:35 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: الصف الاول الاعدادي
+2025-11-01 16:03:35 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: الصف الاول الاعدادي/1ج
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: محمد علي كلاي
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1ج\محمد علي كلاي.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: الياس جلاص
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1ج\الياس جلاص.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: الصف الاول الاعدادي/1أ
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: محمد أحمد
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\محمد أحمد.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: مصطفى الأغا
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\مصطفى الأغا.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: سارة محمد
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\سارة محمد.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: سارة محمد
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\سارة محمد.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: سارة محمد
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\سارة محمد.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: سارة محمد
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\سارة محمد.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: سارة محمد
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\سارة محمد.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: hamdy محمد
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\hamdy محمد.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: loooy hamdy kouta
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\loooy hamdy kouta.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: hamdy محمد
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\hamdy محمد.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: hamdy محمد
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\hamdy محمد.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\salm mohamed yasser.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\salm mohamed yasser.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\salm mohamed yasser.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\salm mohamed yasser.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\salm mohamed yasser.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: loooy hamdy kouta
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\loooy hamdy kouta.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: loooy hamdy kouta
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\loooy hamdy kouta.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\salm mohamed yasser.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\salm mohamed yasser.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\salm mohamed yasser.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1أ\salm mohamed yasser.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: الصف الاول الاعدادي/1ب
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: علياء علي
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الاول الاعدادي\1ب\علياء علي.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: الصف الثالث الاعدادي
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: الصف الثالث الاعدادي/3أ
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ليونيل ميسي
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الثالث الاعدادي\3أ\ليونيل ميسي.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: الصف الثالث الاعدادي/9ق
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: فاطمة محمد
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الثالث الاعدادي\9ق\فاطمة محمد.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: الصف الثالث الاعدادي/3ج
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ميان العلقه
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الثالث الاعدادي\3ج\ميان العلقه.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: الصف الثاني الاعدادي
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: الصف الثاني الاعدادي/2ب
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: علياء علي
+2025-11-01 16:03:36 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590\الصف الثاني الاعدادي\2ب\علياء علي.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] QR code generation completed. Success: 29, Errors: 0
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: الصف الاول الاعدادي/1أ/hamdy محمد.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: الصف الاول الاعدادي/1أ/loooy hamdy kouta.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: الصف الاول الاعدادي/1أ/salm mohamed yasser.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: الصف الاول الاعدادي/1أ/سارة محمد.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: الصف الاول الاعدادي/1أ/محمد أحمد.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: الصف الاول الاعدادي/1أ/مصطفى الأغا.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: الصف الاول الاعدادي/1ب/علياء علي.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: الصف الاول الاعدادي/1ج/الياس جلاص.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: الصف الاول الاعدادي/1ج/محمد علي كلاي.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: الصف الثالث الاعدادي/3أ/ليونيل ميسي.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: الصف الثالث الاعدادي/3ج/ميان العلقه.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: الصف الثالث الاعدادي/9ق/فاطمة محمد.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: الصف الثاني الاعدادي/2ب/علياء علي.png
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] ZIP file sent successfully
+2025-11-01 16:03:36 [INFO] APPLICATION: [StudentQRCodeServlet] Temporary directory cleaned up: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16408250593878589590
