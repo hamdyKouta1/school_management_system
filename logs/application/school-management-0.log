@@ -8910,3 +8910,9 @@ io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period
 2025-11-01 16:18:53 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
 2025-11-01 16:18:53 [INFO] com.canalprep.config.ConfigLoader loadExternalSecureConfig: Loaded secure configuration from: ./config/secure.properties
 2025-11-01 16:18:53 [INFO] com.canalprep.config.ConfigLoader initialize: Configuration loaded successfully. Environment: default
+2025-11-01 16:51:38 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-11-01 16:51:38 [INFO] com.canalprep.config.ConfigLoader loadExternalSecureConfig: No external secure configuration file found. Using internal configuration only.
+2025-11-01 16:51:38 [INFO] com.canalprep.config.ConfigLoader initialize: Configuration loaded successfully. Environment: default
+2025-11-01 17:01:11 [INFO] com.canalprep.utilities.LogRotationManager initialize: Log rotation manager initialized
+2025-11-01 17:01:11 [INFO] com.canalprep.config.ConfigLoader loadExternalSecureConfig: No external secure configuration file found. Using internal configuration only.
+2025-11-01 17:01:11 [INFO] com.canalprep.config.ConfigLoader initialize: Configuration loaded successfully. Environment: default
