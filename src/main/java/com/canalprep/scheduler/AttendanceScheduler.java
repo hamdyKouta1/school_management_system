@@ -1,6 +1,7 @@
 package com.canalprep.scheduler;
 import com.canalprep.service.AttendanceService;
 import com.canalprep.utilities.LoggerUtil;
+import com.canalprep.config.ConfigLoader;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -13,17 +14,27 @@ import java.util.logging.Logger;
 
 /**
  * Scheduler for automated attendance management
- * Runs daily at 4:30 PM to mark absent students
+ * Runs daily at configurable time to mark absent students
  */
 public class AttendanceScheduler {
     private static final Logger logger = Logger.getLogger(AttendanceScheduler.class.getName());
     private final ScheduledExecutorService scheduler;
     private final AttendanceService attendanceService;
-    private static final LocalTime DAILY_RUN_TIME = LocalTime.of(16, 42); // 4:30 PM
+    private final LocalTime dailyRunTime;
+    private final boolean schedulerEnabled;
     
     public AttendanceScheduler() {
         this.scheduler = Executors.newScheduledThreadPool(1);
         this.attendanceService = new AttendanceService();
+        
+        // Load configuration settings
+        this.schedulerEnabled = ConfigLoader.getBoolean("attendance.schedule.enabled", true);
+        String timeConfig = ConfigLoader.getString("attendance.schedule.time", "16:30");
+        this.dailyRunTime = parseTimeConfig(timeConfig);
+        
+        LoggerUtil.logInfo("AttendanceScheduler", 
+            String.format("Attendance scheduler initialized - Enabled: %s, Daily run time: %s", 
+                schedulerEnabled, dailyRunTime));
     }
     
     /**
@@ -32,18 +43,53 @@ public class AttendanceScheduler {
     public AttendanceScheduler(AttendanceService attendanceService) {
         this.scheduler = Executors.newScheduledThreadPool(1);
         this.attendanceService = attendanceService;
+        
+        // Load configuration settings
+        this.schedulerEnabled = ConfigLoader.getBoolean("attendance.schedule.enabled", true);
+        String timeConfig = ConfigLoader.getString("attendance.schedule.time", "16:30");
+        this.dailyRunTime = parseTimeConfig(timeConfig);
+        
+        LoggerUtil.logInfo("AttendanceScheduler", 
+            String.format("Attendance scheduler initialized with injected service - Enabled: %s, Daily run time: %s", 
+                schedulerEnabled, dailyRunTime));
+    }
+    
+    /**
+     * Parse time configuration string (HH:mm format) to LocalTime
+     */
+    private LocalTime parseTimeConfig(String timeConfig) {
+        try {
+            String[] parts = timeConfig.split(":");
+            if (parts.length != 2) {
+                throw new IllegalArgumentException("Invalid time format: " + timeConfig);
+            }
+            int hour = Integer.parseInt(parts[0]);
+            int minute = Integer.parseInt(parts[1]);
+            return LocalTime.of(hour, minute);
+        } catch (Exception e) {
+            LoggerUtil.logWarning("AttendanceScheduler", 
+                String.format("Invalid time configuration '%s', using default 16:30. Error: %s", 
+                    timeConfig, e.getMessage()));
+            return LocalTime.of(16, 30); // Default fallback
+        }
     }
     
     /**
      * Start the attendance scheduler
      */
     public void start() {
-        LoggerUtil.logInfo("AttendanceScheduler", "Starting attendance scheduler...");
+        if (!schedulerEnabled) {
+            LoggerUtil.logInfo("AttendanceScheduler", "Attendance scheduler is disabled in configuration");
+            return;
+        }
         
-        // Calculate initial delay until next 4:30 PM
+        LoggerUtil.logInfo("AttendanceScheduler", 
+            String.format("Starting attendance scheduler to run daily at %s...", dailyRunTime));
+        
+        // Calculate initial delay until next configured time
         long initialDelay = calculateInitialDelay();
         
-        // Schedule the task to run daily at 4:30 PM
+        // Schedule the task to run daily at configured time
         scheduler.scheduleAtFixedRate(
             this::runDailyAttendanceUpdate,
             initialDelay,
@@ -52,7 +98,7 @@ public class AttendanceScheduler {
         );
         
         LoggerUtil.logInfo("AttendanceScheduler", 
-            String.format("Attendance scheduler started. Next run in %d seconds at 4:30 PM", initialDelay));
+            String.format("Attendance scheduler started. Next run in %d seconds at %s", initialDelay, dailyRunTime));
     }
     
     /**
@@ -73,13 +119,13 @@ public class AttendanceScheduler {
     }
     
     /**
-     * Calculate the initial delay until the next 4:30 PM
+     * Calculate the initial delay until the next configured run time
      */
     private long calculateInitialDelay() {
         ZonedDateTime now = ZonedDateTime.now(ZoneId.systemDefault());
-        ZonedDateTime nextRun = now.with(DAILY_RUN_TIME);
+        ZonedDateTime nextRun = now.with(dailyRunTime);
         
-        // If it's already past 4:30 PM today, schedule for tomorrow
+        // If it's already past the configured time today, schedule for tomorrow
         if (now.compareTo(nextRun) > 0) {
             nextRun = nextRun.plusDays(1);
         }
@@ -160,6 +206,20 @@ public class AttendanceScheduler {
      * Check if scheduler is running
      */
     public boolean isRunning() {
-        return !scheduler.isShutdown();
+        return !scheduler.isShutdown() && !scheduler.isTerminated();
+    }
+    
+    /**
+     * Get the configured daily run time
+     */
+    public LocalTime getDailyRunTime() {
+        return dailyRunTime;
+    }
+    
+    /**
+     * Check if scheduler is enabled in configuration
+     */
+    public boolean isSchedulerEnabled() {
+        return schedulerEnabled;
     }
 }

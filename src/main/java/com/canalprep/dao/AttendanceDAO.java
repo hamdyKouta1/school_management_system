@@ -207,18 +207,34 @@ public class AttendanceDAO {
             
             for (int i = 0; i < parameters.size(); i++) {
                 Object param = parameters.get(i);
-                if (param instanceof String && (i == parameters.size() - 1 || i == parameters.size() - 2)) {
-                    // Handle date and time parameters
-                    if (i == parameters.size() - 1) {
-                        pstmt.setDate(i + 1, java.sql.Date.valueOf((String) param));
-                    } else if (param.toString().contains(":")) {
-                        pstmt.setTime(i + 1, Time.valueOf((String) param));
-                    } else {
-                        pstmt.setObject(i + 1, param);
-                    }
-                } else {
-                    pstmt.setObject(i + 1, param);
+
+                // Robustly bind parameters based on their expected types
+                if (param == null) {
+                    pstmt.setObject(i + 1, null);
+                    continue;
                 }
+
+                if (param instanceof Integer) {
+                    pstmt.setInt(i + 1, (Integer) param);
+                    continue;
+                }
+
+                if (param instanceof String) {
+                    String str = (String) param;
+                    // Match ISO date: YYYY-MM-DD
+                    if (str.matches("\\d{4}-\\d{2}-\\d{2}")) {
+                        pstmt.setDate(i + 1, java.sql.Date.valueOf(str));
+                        continue;
+                    }
+                    // Match time: HH:MM:SS
+                    if (str.matches("\\d{2}:\\d{2}:\\d{2}")) {
+                        pstmt.setTime(i + 1, Time.valueOf(str));
+                        continue;
+                    }
+                }
+
+                // Fallback for other types
+                pstmt.setObject(i + 1, param);
             }
             
             int rowsAffected = pstmt.executeUpdate();
@@ -305,50 +321,85 @@ public class AttendanceDAO {
         details.setGrade(rs.getString("grade"));
         details.setClassName(rs.getString("class"));
         
-        // Handle JSON arrays for phones and parents
         try {
-            PGobject studentPhonesObj = (PGobject) rs.getObject("student_phones");
+            Object studentPhonesObj = rs.getObject("student_phones");
             if (studentPhonesObj != null) {
-                JSONArray studentPhonesArray = new JSONArray(studentPhonesObj.getValue());
                 List<String> phonesList = new ArrayList<>();
-                for (int i = 0; i < studentPhonesArray.length(); i++) {
-                    phonesList.add(studentPhonesArray.getString(i));
-                }
-                details.setStudentPhones(phonesList);
-            }
-            
-            PGobject parentsInfoObj = (PGobject) rs.getObject("parents_info");
-            if (parentsInfoObj != null) {
-                JSONArray parentsArray = new JSONArray(parentsInfoObj.getValue());
-                List<StudentAttendanceDetails.ParentInfo> parentsList = new ArrayList<>();
-                
-                for (int i = 0; i < parentsArray.length(); i++) {
-                    JSONObject parentObj = parentsArray.getJSONObject(i);
-                    StudentAttendanceDetails.ParentInfo parent = new StudentAttendanceDetails.ParentInfo();
-                    
-                    parent.setParentId(parentObj.getInt("parent_id"));
-                    parent.setParentName(parentObj.getString("parent_name"));
-                    parent.setRelationship(parentObj.getString("relationship"));
-                    parent.setParentJob(parentObj.getString("parent_job"));
-                    parent.setParentNid(parentObj.getString("parent_nid"));
-                    parent.setParentAddress(parentObj.getString("parent_address"));
-                    parent.setParentNationality(parentObj.getString("parent_nationality"));
-                    parent.setParentSocialStatus(parentObj.getString("parent_social_status"));
-                    parent.setSocialStatusId(parentObj.getInt("parent_social_status_id"));
-                    
-                    // Handle parent phones
-                    if (parentObj.has("parent_phones")) {
-                        JSONArray parentPhonesArray = parentObj.getJSONArray("parent_phones");
-                        List<String> parentPhonesList = new ArrayList<>();
-                        for (int j = 0; j < parentPhonesArray.length(); j++) {
-                            parentPhonesList.add(parentPhonesArray.getString(j));
-                        }
-                        parent.setParentPhones(parentPhonesList);
+                if (studentPhonesObj instanceof java.sql.Array) {
+                    Object[] arr = (Object[]) ((java.sql.Array) studentPhonesObj).getArray();
+                    for (Object o : arr) {
+                        phonesList.add(String.valueOf(o));
                     }
-                    
-                    parentsList.add(parent);
+                } else if (studentPhonesObj instanceof PGobject) {
+                    JSONArray studentPhonesArray = new JSONArray(((PGobject) studentPhonesObj).getValue());
+                    for (int i = 0; i < studentPhonesArray.length(); i++) {
+                        phonesList.add(studentPhonesArray.getString(i));
+                    }
                 }
-                details.setParentsInfo(parentsList);
+                if (!phonesList.isEmpty()) {
+                    details.setStudentPhones(phonesList);
+                }
+            }
+
+            Object parentsInfoObj = rs.getObject("parents_info");
+            if (parentsInfoObj != null) {
+                List<StudentAttendanceDetails.ParentInfo> parentsList = new ArrayList<>();
+                if (parentsInfoObj instanceof PGobject) {
+                    JSONArray parentsArray = new JSONArray(((PGobject) parentsInfoObj).getValue());
+                    for (int i = 0; i < parentsArray.length(); i++) {
+                        JSONObject parentObj = parentsArray.getJSONObject(i);
+                        StudentAttendanceDetails.ParentInfo parent = new StudentAttendanceDetails.ParentInfo();
+                        parent.setParentId(parentObj.getInt("parent_id"));
+                        parent.setParentName(parentObj.getString("parent_name"));
+                        parent.setRelationship(parentObj.getString("relationship"));
+                        parent.setParentJob(parentObj.getString("parent_job"));
+                        parent.setParentNid(parentObj.getString("parent_nid"));
+                        parent.setParentAddress(parentObj.getString("parent_address"));
+                        parent.setParentNationality(parentObj.getString("parent_nationality"));
+                        parent.setParentSocialStatus(parentObj.getString("parent_social_status"));
+                        parent.setSocialStatusId(parentObj.getInt("parent_social_status_id"));
+                        if (parentObj.has("parent_phones")) {
+                            JSONArray parentPhonesArray = parentObj.getJSONArray("parent_phones");
+                            List<String> parentPhonesList = new ArrayList<>();
+                            for (int j = 0; j < parentPhonesArray.length(); j++) {
+                                parentPhonesList.add(parentPhonesArray.getString(j));
+                            }
+                            parent.setParentPhones(parentPhonesList);
+                        }
+                        parentsList.add(parent);
+                    }
+                } else if (parentsInfoObj instanceof java.sql.Array) {
+                    Object[] arr = (Object[]) ((java.sql.Array) parentsInfoObj).getArray();
+                    for (Object o : arr) {
+                        String json = String.valueOf(o);
+                        try {
+                            JSONObject parentObj = new JSONObject(json);
+                            StudentAttendanceDetails.ParentInfo parent = new StudentAttendanceDetails.ParentInfo();
+                            parent.setParentId(parentObj.optInt("parent_id"));
+                            parent.setParentName(parentObj.optString("parent_name", null));
+                            parent.setRelationship(parentObj.optString("relationship", null));
+                            parent.setParentJob(parentObj.optString("parent_job", null));
+                            parent.setParentNid(parentObj.optString("parent_nid", null));
+                            parent.setParentAddress(parentObj.optString("parent_address", null));
+                            parent.setParentNationality(parentObj.optString("parent_nationality", null));
+                            parent.setParentSocialStatus(parentObj.optString("parent_social_status", null));
+                            parent.setSocialStatusId(parentObj.optInt("parent_social_status_id"));
+                            if (parentObj.has("parent_phones")) {
+                                JSONArray parentPhonesArray = parentObj.getJSONArray("parent_phones");
+                                List<String> parentPhonesList = new ArrayList<>();
+                                for (int j = 0; j < parentPhonesArray.length(); j++) {
+                                    parentPhonesList.add(parentPhonesArray.getString(j));
+                                }
+                                parent.setParentPhones(parentPhonesList);
+                            }
+                            parentsList.add(parent);
+                        } catch (Exception ignore) {
+                        }
+                    }
+                }
+                if (!parentsList.isEmpty()) {
+                    details.setParentsInfo(parentsList);
+                }
             }
         } catch (Exception e) {
             logger.warning("Error parsing JSON data: " + e.getMessage());
@@ -380,50 +431,85 @@ public class AttendanceDAO {
         attendanceMap.put("grade", rs.getString("grade"));
         attendanceMap.put("class", rs.getString("class"));
         
-        // Handle JSON arrays
         try {
-            PGobject studentPhonesObj = (PGobject) rs.getObject("student_phones");
+            Object studentPhonesObj = rs.getObject("student_phones");
             if (studentPhonesObj != null) {
-                JSONArray studentPhonesArray = new JSONArray(studentPhonesObj.getValue());
                 List<String> phonesList = new ArrayList<>();
-                for (int i = 0; i < studentPhonesArray.length(); i++) {
-                    phonesList.add(studentPhonesArray.getString(i));
-                }
-                attendanceMap.put("student_phones", phonesList);
-            }
-            
-            PGobject parentsInfoObj = (PGobject) rs.getObject("parents_info");
-            if (parentsInfoObj != null) {
-                JSONArray parentsArray = new JSONArray(parentsInfoObj.getValue());
-                List<Map<String, Object>> parentsList = new ArrayList<>();
-                
-                for (int i = 0; i < parentsArray.length(); i++) {
-                    JSONObject parentObj = parentsArray.getJSONObject(i);
-                    Map<String, Object> parent = new HashMap<>();
-                    
-                    parent.put("parent_id", parentObj.getInt("parent_id"));
-                    parent.put("parent_name", parentObj.getString("parent_name"));
-                    parent.put("relationship", parentObj.getString("relationship"));
-                    parent.put("parent_job", parentObj.getString("parent_job"));
-                    parent.put("parent_nid", parentObj.getString("parent_nid"));
-                    parent.put("parent_address", parentObj.getString("parent_address"));
-                    parent.put("parent_nationality", parentObj.getString("parent_nationality"));
-                    parent.put("parent_social_status", parentObj.getString("parent_social_status"));
-                    parent.put("parent_social_status_id", parentObj.getInt("parent_social_status_id"));
-                    
-                    // Handle parent phones
-                    if (parentObj.has("parent_phones")) {
-                        JSONArray parentPhonesArray = parentObj.getJSONArray("parent_phones");
-                        List<String> parentPhonesList = new ArrayList<>();
-                        for (int j = 0; j < parentPhonesArray.length(); j++) {
-                            parentPhonesList.add(parentPhonesArray.getString(j));
-                        }
-                        parent.put("parent_phones", parentPhonesList);
+                if (studentPhonesObj instanceof java.sql.Array) {
+                    Object[] arr = (Object[]) ((java.sql.Array) studentPhonesObj).getArray();
+                    for (Object o : arr) {
+                        phonesList.add(String.valueOf(o));
                     }
-                    
-                    parentsList.add(parent);
+                } else if (studentPhonesObj instanceof PGobject) {
+                    JSONArray studentPhonesArray = new JSONArray(((PGobject) studentPhonesObj).getValue());
+                    for (int i = 0; i < studentPhonesArray.length(); i++) {
+                        phonesList.add(studentPhonesArray.getString(i));
+                    }
                 }
-                attendanceMap.put("parents_info", parentsList);
+                if (!phonesList.isEmpty()) {
+                    attendanceMap.put("student_phones", phonesList);
+                }
+            }
+
+            Object parentsInfoObj = rs.getObject("parents_info");
+            if (parentsInfoObj != null) {
+                List<Map<String, Object>> parentsList = new ArrayList<>();
+                if (parentsInfoObj instanceof PGobject) {
+                    JSONArray parentsArray = new JSONArray(((PGobject) parentsInfoObj).getValue());
+                    for (int i = 0; i < parentsArray.length(); i++) {
+                        JSONObject parentObj = parentsArray.getJSONObject(i);
+                        Map<String, Object> parent = new HashMap<>();
+                        parent.put("parent_id", parentObj.optInt("parent_id"));
+                        parent.put("parent_name", parentObj.optString("parent_name", null));
+                        parent.put("relationship", parentObj.optString("relationship", null));
+                        parent.put("parent_job", parentObj.optString("parent_job", null));
+                        parent.put("parent_nid", parentObj.optString("parent_nid", null));
+                        parent.put("parent_address", parentObj.optString("parent_address", null));
+                        parent.put("parent_nationality", parentObj.optString("parent_nationality", null));
+                        parent.put("parent_social_status", parentObj.optString("parent_social_status", null));
+                        parent.put("parent_social_status_id", parentObj.optInt("parent_social_status_id"));
+                        if (parentObj.has("parent_phones")) {
+                            JSONArray parentPhonesArray = parentObj.getJSONArray("parent_phones");
+                            List<String> parentPhonesList = new ArrayList<>();
+                            for (int j = 0; j < parentPhonesArray.length(); j++) {
+                                parentPhonesList.add(parentPhonesArray.getString(j));
+                            }
+                            parent.put("parent_phones", parentPhonesList);
+                        }
+                        parentsList.add(parent);
+                    }
+                } else if (parentsInfoObj instanceof java.sql.Array) {
+                    Object[] arr = (Object[]) ((java.sql.Array) parentsInfoObj).getArray();
+                    for (Object o : arr) {
+                        String json = String.valueOf(o);
+                        try {
+                            JSONObject parentObj = new JSONObject(json);
+                            Map<String, Object> parent = new HashMap<>();
+                            parent.put("parent_id", parentObj.optInt("parent_id"));
+                            parent.put("parent_name", parentObj.optString("parent_name", null));
+                            parent.put("relationship", parentObj.optString("relationship", null));
+                            parent.put("parent_job", parentObj.optString("parent_job", null));
+                            parent.put("parent_nid", parentObj.optString("parent_nid", null));
+                            parent.put("parent_address", parentObj.optString("parent_address", null));
+                            parent.put("parent_nationality", parentObj.optString("parent_nationality", null));
+                            parent.put("parent_social_status", parentObj.optString("parent_social_status", null));
+                            parent.put("parent_social_status_id", parentObj.optInt("parent_social_status_id"));
+                            if (parentObj.has("parent_phones")) {
+                                JSONArray parentPhonesArray = parentObj.getJSONArray("parent_phones");
+                                List<String> parentPhonesList = new ArrayList<>();
+                                for (int j = 0; j < parentPhonesArray.length(); j++) {
+                                    parentPhonesList.add(parentPhonesArray.getString(j));
+                                }
+                                parent.put("parent_phones", parentPhonesList);
+                            }
+                            parentsList.add(parent);
+                        } catch (Exception ignore) {
+                        }
+                    }
+                }
+                if (!parentsList.isEmpty()) {
+                    attendanceMap.put("parents_info", parentsList);
+                }
             }
         } catch (Exception e) {
             logger.warning("Error parsing JSON data: " + e.getMessage());

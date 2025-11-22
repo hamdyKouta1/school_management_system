@@ -4,11 +4,13 @@ import com.canalprep.auth.utilities.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.canalprep.auth.dao.UserDAO;
+import com.canalprep.auth.dao.RefreshTokenDAO;
 import com.canalprep.auth.model.User;
 import com.canalprep.auth.utilities.PasswordUtils;
 import com.canalprep.auth.service.AdminOTPService;
 import com.canalprep.service.PasswordRecoveryService;
 import com.canalprep.utilities.LoggerUtil;
+import com.canalprep.utilities.RateLimiter;
 import com.canalprep.config.ConfigLoader;
 import io.jsonwebtoken.Claims;
 
@@ -25,6 +27,7 @@ import com.canalprep.exception.DataAccessException;
 @WebServlet("/api/auth/*")
 public class AuthServlet extends HttpServlet {
     private final UserDAO userDao = new UserDAO();
+    private final RefreshTokenDAO refreshTokenDao = new RefreshTokenDAO();
     private final AdminOTPService adminOTPService = new AdminOTPService();
     private final ObjectMapper objectMapper = new ObjectMapper();
     
@@ -46,6 +49,9 @@ public class AuthServlet extends HttpServlet {
                 break;
             case "/check-otp":
                 handleCheckOTP(req, resp);
+                break;
+            case "/refresh":
+                handleRefreshToken(req, resp);
                 break;
             case "/logout":
                 handleLogout(req, resp);
@@ -97,11 +103,29 @@ public class AuthServlet extends HttpServlet {
                 user.getRole()
             );
             
-            // Prepare response with token
+            // Generate refresh token and persist (for session continuity)
+            String deviceId = requestData.getOrDefault("deviceId", "");
+            String refreshToken = JwtUtil.generateRefreshToken(
+                String.valueOf(user.getId()),
+                user.getUsername(),
+                deviceId
+            );
+            Claims refreshClaims = JwtUtil.parseToken(refreshToken);
+            String refreshJti = refreshClaims.getId();
+            long refreshExpMillis = refreshClaims.getExpiration() != null ? refreshClaims.getExpiration().getTime() : System.currentTimeMillis();
+            try {
+                refreshTokenDao.saveRefreshToken(refreshJti, user.getId(), refreshJti, refreshExpMillis,
+                        req.getRemoteAddr(), req.getHeader("User-Agent"), deviceId);
+            } catch (Exception e) {
+                LoggerUtil.logWarning("AuthServlet", "Failed to persist refresh token for user: " + user.getUsername());
+            }
+
+            // Prepare response with tokens
             Map<String, Object> responseData = new HashMap<>();
             responseData.put("status", "success");
             responseData.put("message", "Login successful");
             responseData.put("token", token);
+            responseData.put("refreshToken", refreshToken);
             responseData.put("user", Map.of(
                     "id", user.getId(),
                     "username", user.getUsername(),
@@ -119,6 +143,133 @@ public class AuthServlet extends HttpServlet {
         } catch (Exception e) {
             LoggerUtil.logError("AuthServlet", "An unexpected error occurred during login: " + e.getMessage(), e);
             sendErrorResponse(resp, "Login failed: An unexpected error occurred", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    private boolean isHttpsRequest(HttpServletRequest req) {
+        if (req.isSecure()) return true;
+        String xfProto = req.getHeader("X-Forwarded-Proto");
+        return xfProto != null && xfProto.equalsIgnoreCase("https");
+    }
+
+    private void handleRefreshToken(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        try {
+            // Rate limiting per IP
+            int maxReq = ConfigLoader.getInt("rate.refresh.max_requests", 10);
+            long windowMs = ConfigLoader.getLong("rate.refresh.window_ms", 5 * 60 * 1000);
+            String ip = req.getRemoteAddr();
+            String rlKey = "refresh:" + ip;
+            if (!RateLimiter.checkAndConsume(rlKey, maxReq, windowMs)) {
+                LoggerUtil.logSecurity("REFRESH_RATE_LIMITED", "UNKNOWN", "Too many refresh requests from IP: " + ip);
+                resp.setStatus(429);
+                objectMapper.writeValue(resp.getWriter(), Map.of(
+                        "status", "error",
+                        "message", "Too many requests"
+                ));
+                return;
+            }
+
+            boolean enforceHttps = ConfigLoader.getBoolean("security.enforce_https", false);
+            if (enforceHttps && !isHttpsRequest(req)) {
+                LoggerUtil.logSecurity("REFRESH_HTTP_BLOCKED", "UNKNOWN", "HTTPS required for token refresh from IP: " + ip);
+                sendErrorResponse(resp, "HTTPS is required for this endpoint", HttpServletResponse.SC_BAD_REQUEST);
+                return;
+            }
+
+            Map<String, Object> requestData = objectMapper.readValue(req.getInputStream(), new TypeReference<Map<String, Object>>() {});
+            Object rtObj = requestData.get("refreshToken");
+            if (rtObj == null) {
+                sendErrorResponse(resp, "Refresh token is required", HttpServletResponse.SC_BAD_REQUEST);
+                return;
+            }
+            String refreshToken = rtObj.toString();
+
+            // Optional verification data
+            Map<String, Object> verification = null;
+            if (requestData.get("verification") instanceof Map) {
+                verification = (Map<String, Object>) requestData.get("verification");
+            }
+            String deviceId = verification != null && verification.get("deviceId") != null ? verification.get("deviceId").toString() : null;
+            String userAgent = req.getHeader("User-Agent");
+
+            // Validate refresh token
+            JwtUtil.TokenValidationResult validation = JwtUtil.validateRefreshToken(refreshToken);
+            if (!validation.isValid()) {
+                LoggerUtil.logSecurity("REFRESH_TOKEN_INVALID", "UNKNOWN", "Invalid refresh token: " + validation.getErrorMessage() + " from IP: " + ip);
+                sendErrorResponse(resp, validation.getErrorMessage(), HttpServletResponse.SC_UNAUTHORIZED);
+                return;
+            }
+
+            Claims claims = validation.getClaims();
+            String userIdStr = claims.getSubject();
+            String username = claims.get("username", String.class);
+            String jti = claims.getId();
+            String claimDeviceId = claims.get("deviceId", String.class);
+
+            // Check DAO status
+            RefreshTokenDAO.TokenStatus status = refreshTokenDao.getTokenStatus(jti);
+            if (status != RefreshTokenDAO.TokenStatus.VALID) {
+                LoggerUtil.logSecurity("REFRESH_TOKEN_REJECTED", username != null ? username : "UNKNOWN",
+                        "Refresh rejected due to status: " + status + " from IP: " + ip);
+                String msg;
+                switch (status) {
+                    case EXPIRED:
+                        msg = "Refresh token has expired";
+                        break;
+                    case REVOKED:
+                        msg = "Refresh token is revoked";
+                        break;
+                    case NOT_FOUND:
+                        msg = "Refresh token not found";
+                        break;
+                    default:
+                        msg = "Invalid refresh token";
+                        break;
+                }
+                sendErrorResponse(resp, msg, HttpServletResponse.SC_UNAUTHORIZED);
+                return;
+            }
+
+            // Optional security verification
+            if (deviceId != null && claimDeviceId != null && !deviceId.equals(claimDeviceId)) {
+                LoggerUtil.logSecurity("REFRESH_SECURITY_MISMATCH", username != null ? username : "UNKNOWN",
+                        "Device verification mismatch from IP: " + ip);
+                sendErrorResponse(resp, "Security verification failed", HttpServletResponse.SC_FORBIDDEN);
+                return;
+            }
+
+            // Generate new refresh token and revoke the old one
+            String newRefreshToken = JwtUtil.generateRefreshToken(userIdStr, username, claimDeviceId);
+            Claims newClaims = JwtUtil.parseToken(newRefreshToken);
+            String newJti = newClaims.getId();
+            long newExpMillis = newClaims.getExpiration() != null ? newClaims.getExpiration().getTime() : System.currentTimeMillis();
+            try {
+                refreshTokenDao.revokeByJti(jti);
+            } catch (Exception e) {
+                LoggerUtil.logWarning("AuthServlet", "Failed to revoke old refresh token jti=" + jti);
+            }
+            try {
+                int userId = Integer.parseInt(userIdStr);
+                refreshTokenDao.saveRefreshToken(newJti, userId, newJti, newExpMillis, ip, userAgent, claimDeviceId);
+            } catch (Exception e) {
+                LoggerUtil.logWarning("AuthServlet", "Failed to persist new refresh token for userId=" + userIdStr);
+            }
+
+            LoggerUtil.logSecurity("REFRESH_TOKEN_SUCCESS", username != null ? username : "UNKNOWN",
+                    "Refresh token rotated successfully from IP: " + ip);
+
+            Map<String, Object> respBody = new HashMap<>();
+            respBody.put("status", "success");
+            respBody.put("message", "Refresh token issued");
+            respBody.put("refreshToken", newRefreshToken);
+            respBody.put("expiresAt", newExpMillis);
+
+            resp.setContentType("application/json");
+            resp.setStatus(HttpServletResponse.SC_OK);
+            objectMapper.writeValue(resp.getWriter(), respBody);
+        } catch (Exception e) {
+            LoggerUtil.logError("AuthServlet", "Error in handleRefreshToken: " + e.getMessage(), e);
+            sendErrorResponse(resp, "An error occurred while refreshing the token", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
     }
     
@@ -169,7 +320,14 @@ public class AuthServlet extends HttpServlet {
                     }
                     
                     // Validate secret code
-                    String adminSecret = ConfigLoader.getString("admin.secret_code", "123456");
+                    // if (secretCode == null) {
+                    //     LoggerUtil.logSecurity("MISSING_SECRET_CODE", requesterUsername, 
+                    //         "Missing secret code for admin creation from IP: " + req.getRemoteAddr());
+                    //     sendErrorResponse(resp, "Secret code required for admin creation", HttpServletResponse.SC_BAD_REQUEST);
+                    //     return;
+                    // }
+                    
+                    String adminSecret = ConfigLoader.getString("admin.secret_code");
                     if (!adminSecret.equals(secretCode)) {
                         LoggerUtil.logSecurity("INVALID_SECRET_CODE", requesterUsername, 
                             "Invalid secret code for admin creation from IP: " + req.getRemoteAddr());

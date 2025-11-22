@@ -4129,3 +4129,1529 @@
 2025-11-01 17:02:06 [SEVERE] APPLICATION: [PasswordRecoveryService] Failed to send password recovery OTP email for user: developer. Error: failed to connect, no password specified?
 2025-11-01 17:03:12 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 36
 2025-11-01 17:03:18 [SEVERE] APPLICATION: [PasswordRecoveryService] Failed to send password recovery OTP email for user: developer. Error: failed to connect, no password specified?
+2025-11-01 17:10:49 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-01 17:10:49 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-01 17:10:51 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-01 17:10:51 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-01 17:10:51 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-11-01 17:10:51 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-01 17:10:51 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-01 17:10:52 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 24547 seconds
+2025-11-01 17:10:52 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-01 17:10:52 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler...
+2025-11-01 17:10:52 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 84667 seconds at 4:30 PM
+2025-11-01 17:10:52 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-01 17:10:52 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-01 17:10:52 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-01 17:10:52 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-01 17:10:52 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-01 17:10:52 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-01 17:10:52 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-01 17:10:52 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-01 17:12:16 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 37
+2025-11-01 17:13:03 [INFO] APPLICATION: [PasswordRecoveryService] Password recovery OTP email sent successfully for user: developer
+2025-11-03 21:38:11 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-03 21:38:11 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-03 21:38:12 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-03 21:38:12 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-03 21:38:13 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-11-03 21:38:13 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-03 21:38:13 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-03 21:38:13 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-03 21:38:13 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 8506 seconds
+2025-11-03 21:38:13 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-03 21:38:13 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler initialized - Enabled: true, Daily run time: 16:30
+2025-11-03 21:38:13 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler to run daily at 16:30...
+2025-11-03 21:38:13 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 67906 seconds at 16:30
+2025-11-03 21:38:13 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-03 21:38:13 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-03 21:38:13 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-03 21:38:13 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-03 21:38:13 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-03 21:38:14 [INFO] APPLICATION: [OTPDAO] Deleted 3 expired OTPs
+2025-11-03 21:38:14 [INFO] APPLICATION: [OTPService] Cleaned up 3 expired OTPs
+2025-11-03 21:38:14 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-03 21:39:55 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-03 21:39:55 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-03 21:39:55 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-03 21:39:55 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-03 21:39:56 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-11-03 21:39:56 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-03 21:39:56 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-03 21:39:57 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-03 21:39:57 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 8402 seconds
+2025-11-03 21:39:57 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-03 21:39:57 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler initialized - Enabled: true, Daily run time: 16:30
+2025-11-03 21:39:57 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler to run daily at 16:30...
+2025-11-03 21:39:57 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 67802 seconds at 16:30
+2025-11-03 21:39:57 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-03 21:39:57 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-03 21:39:57 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-03 21:39:57 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-03 21:39:57 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-03 21:39:57 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-03 21:39:57 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-03 21:43:18 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-03 21:43:18 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-03 21:43:19 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-03 21:43:19 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-03 21:43:19 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-11-03 21:43:20 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-03 21:43:20 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-03 21:43:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-03 21:43:20 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 8199 seconds
+2025-11-03 21:43:20 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-03 21:43:20 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler initialized - Enabled: true, Daily run time: 21:45
+2025-11-03 21:43:20 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler to run daily at 21:45...
+2025-11-03 21:43:20 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 99 seconds at 21:45
+2025-11-03 21:43:20 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-03 21:43:20 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-03 21:43:20 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-03 21:43:20 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-03 21:43:20 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-03 21:43:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-03 21:43:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-03 21:44:59 [INFO] APPLICATION: [AttendanceScheduler] Starting automated daily attendance update job...
+2025-11-03 21:44:59 [INFO] APPLICATION: [AttendanceService] Starting automated daily attendance update
+2025-11-03 21:45:00 [INFO] APPLICATION: [AttendanceService] Successfully marked 29 students as absent for 2025-11-03
+2025-11-03 21:45:00 [INFO] APPLICATION: [AttendanceScheduler] Daily attendance update completed successfully. Successfully marked 29 students as absent for 2025-11-03
+2025-11-03 21:45:00 [INFO] APPLICATION: DB_OPERATION: ATTENDANCE_AUTO_UPDATE | TABLE: SYSTEM | DETAILS: Automated attendance marking: 29 students affected
+2025-11-03 22:43:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-03 22:43:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-03 22:43:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:15:19 [INFO] APPLICATION: [UserServlet] doGet called for path: /
+2025-11-06 15:15:19 [INFO] APPLICATION: [UserServlet] Attributes - userId: 29, username: developer, role: DEVELOPER
+2025-11-06 15:15:19 [INFO] APPLICATION: [UserServlet] All users retrieved by: developer
+2025-11-06 15:16:59 [INFO] APPLICATION: [UserServlet] doGet called for path: /1
+2025-11-06 15:16:59 [INFO] APPLICATION: [UserServlet] Attributes - userId: 29, username: developer, role: DEVELOPER
+2025-11-06 15:16:59 [INFO] APPLICATION: [UserServlet] User 1 retrieved by: developer
+2025-11-06 15:19:11 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 38
+2025-11-06 15:19:25 [INFO] APPLICATION: [PasswordRecoveryService] Password recovery OTP email sent successfully for user: IbTest
+2025-11-06 15:21:00 [INFO] APPLICATION: [OTPDAO] OTP marked as used with ID: 38
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-11-06 15:29:31 [INFO] APPLICATION: [OTPDAO] Deleted 1 expired OTPs
+2025-11-06 15:29:31 [INFO] APPLICATION: [OTPService] Cleaned up 1 expired OTPs
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:31 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:31 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseDAO] License updated successfully with ID: 18
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseService] Daily license check completed. Remaining days: 10, Status: ACTIVE
+2025-11-06 15:29:31 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully. Status: ACTIVE, Valid: true, Remaining Days: 10
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-11-06 15:29:31 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:31 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:31 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseDAO] License updated successfully with ID: 18
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseService] Daily license check completed. Remaining days: 10, Status: ACTIVE
+2025-11-06 15:29:31 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:31 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully. Status: ACTIVE, Valid: true, Remaining Days: 10
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-11-06 15:29:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseDAO] License updated successfully with ID: 18
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseService] Daily license check completed. Remaining days: 10, Status: ACTIVE
+2025-11-06 15:29:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully. Status: ACTIVE, Valid: true, Remaining Days: 10
+2025-11-06 15:29:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:32 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:32 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:34 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:34 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:29:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:29:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:31:19 [INFO] APPLICATION: [StudentQRCodeServlet] Generating QR codes for 29 students
+2025-11-06 15:31:19 [INFO] APPLICATION: [StudentQRCodeServlet] Created temporary directory: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515
+2025-11-06 15:31:19 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ????? ????????
+2025-11-06 15:31:19 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ??? ????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\???? ??? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ????? ????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\????? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ????? ?????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\????? ?????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: hamdy ????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\hamdy ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: loooy hamdy kouta
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: hamdy ????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\hamdy ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: hamdy ????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\hamdy ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: loooy hamdy kouta
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: loooy hamdy kouta
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: salm mohamed yasser
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ????? ???
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ????? ????????\1?\????? ???.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ?????? ????????
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/3?
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ?????? ????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ?????? ????????\3?\?????? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/9?
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ????? ????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ?????? ????????\9?\????? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/3?
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ???? ??????
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ?????? ????????\3?\???? ??????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ?????? ????????
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/2?
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code generated and cached for student: ????? ???
+2025-11-06 15:31:20 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515\???? ?????? ????????\2?\????? ???.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] QR code generation completed. Success: 29, Errors: 0
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/hamdy ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/loooy hamdy kouta.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/salm mohamed yasser.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ?????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ???.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ??? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/3?/?????? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/3?/???? ??????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/9?/????? ????.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/2?/????? ???.png
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] ZIP file sent successfully
+2025-11-06 15:31:20 [INFO] APPLICATION: [StudentQRCodeServlet] Temporary directory cleaned up: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_15376185761118992515
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Generating QR codes for 29 students
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Created temporary directory: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ????? ????????
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ??? ????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\???? ??? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\????? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ?????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\????? ?????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: hamdy ????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\hamdy ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: loooy hamdy kouta
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: hamdy ????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\hamdy ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: hamdy ????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\hamdy ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: loooy hamdy kouta
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: loooy hamdy kouta
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ???
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ????? ????????\1?\????? ???.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ?????? ????????
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/3?
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ?????? ????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ?????? ????????\3?\?????? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/9?
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ?????? ????????\9?\????? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/3?
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ??????
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ?????? ????????\3?\???? ??????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ?????? ????????
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/2?
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ???
+2025-11-06 15:31:23 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470\???? ?????? ????????\2?\????? ???.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] QR code generation completed. Success: 29, Errors: 0
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/hamdy ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/loooy hamdy kouta.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/salm mohamed yasser.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ?????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ???.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ??? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/3?/?????? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/3?/???? ??????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/9?/????? ????.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/2?/????? ???.png
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] ZIP file sent successfully
+2025-11-06 15:31:23 [INFO] APPLICATION: [StudentQRCodeServlet] Temporary directory cleaned up: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_16604512641634211470
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Generating QR codes for 29 students
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Created temporary directory: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ????? ????????
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ??? ????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\???? ??? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\????? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ?????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\????? ?????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\???? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: hamdy ????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\hamdy ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: loooy hamdy kouta
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: hamdy ????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\hamdy ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: hamdy ????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\hamdy ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: loooy hamdy kouta
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: loooy hamdy kouta
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\loooy hamdy kouta.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: salm mohamed yasser
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\salm mohamed yasser.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ????? ????????/1?
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ???
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ????? ????????\1?\????? ???.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ?????? ????????
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/3?
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ?????? ????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ?????? ????????\3?\?????? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/9?
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ?????? ????????\9?\????? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/3?
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ???? ??????
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ?????? ????????\3?\???? ??????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Created grade directory: ???? ?????? ????????
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Created class directory: ???? ?????? ????????/2?
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code retrieved from cache for student: ????? ???
+2025-11-06 15:31:29 [INFO] APPLICATION: [QRCodeService] QR code file saved: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157\???? ?????? ????????\2?\????? ???.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] QR code generation completed. Success: 29, Errors: 0
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/hamdy ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/loooy hamdy kouta.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/salm mohamed yasser.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ?????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ???.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/????? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ????? ????????/1?/???? ??? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/3?/?????? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/3?/???? ??????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/9?/????? ????.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Added to ZIP: ???? ?????? ????????/2?/????? ???.png
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] ZIP file sent successfully
+2025-11-06 15:31:29 [INFO] APPLICATION: [StudentQRCodeServlet] Temporary directory cleaned up: C:\Users\hamdy\AppData\Local\Temp\student_qrcodes_12927372998120246157
+2025-11-06 15:42:59 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 15:42:59 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 15:42:59 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 15:50:50 [INFO] APPLICATION: [AttendanceServlet] Retrieved all attendance records
+2025-11-06 15:52:22 [SEVERE] APPLICATION: [AttendanceServlet] Unexpected error in doPost: null
+2025-11-06 15:53:00 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 15:54:14 [SEVERE] APPLICATION: [AttendanceServlet] Unexpected error in doPost: null
+2025-11-06 16:05:05 [SEVERE] APPLICATION: [AttendanceServlet] Unexpected error in doPost: Error at index 4 in: "2023-10-05T14"
+2025-11-06 16:06:02 [SEVERE] APPLICATION: [AttendanceServlet] Unexpected error in doPost: Error at index 4 in: "2023-10-05T14"
+2025-11-06 16:06:41 [INFO] APPLICATION: [AttendanceServlet] Created new attendance record
+2025-11-06 16:07:43 [SEVERE] APPLICATION: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:08:51 [SEVERE] APPLICATION: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:09:02 [SEVERE] APPLICATION: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:11:12 [SEVERE] APPLICATION: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:13:05 [SEVERE] APPLICATION: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:14:30 [SEVERE] APPLICATION: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:14:34 [SEVERE] APPLICATION: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:15:05 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for date: 2025-11-25
+2025-11-06 16:15:15 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for student ID: 6
+2025-11-06 16:15:39 [INFO] APPLICATION: [AttendanceServlet] Retrieved grouped attendance for all students
+2025-11-06 16:16:08 [SEVERE] APPLICATION: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:22:52 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for date: 2025-11-06
+2025-11-06 16:23:02 [INFO] APPLICATION: [AttendanceServlet] Created new attendance record
+2025-11-06 16:23:39 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for date: 2025-11-06
+2025-11-06 16:26:59 [INFO] APPLICATION: [MainApp] Server shutdown initiated
+2025-11-06 16:26:59 [INFO] APPLICATION: [LicenseScheduler] License scheduler stopped successfully
+2025-11-06 16:26:59 [INFO] APPLICATION: [MainApp] License scheduler stopped
+2025-11-06 16:26:59 [INFO] APPLICATION: [AttendanceScheduler] Stopping attendance scheduler...
+2025-11-06 16:26:59 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler stopped
+2025-11-06 16:26:59 [INFO] APPLICATION: [MainApp] Attendance scheduler stopped
+2025-11-06 16:26:59 [INFO] APPLICATION: [LoggerUtil] LoggerUtil shutdown completed
+2025-11-06 16:27:07 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-06 16:27:07 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-06 16:27:08 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-06 16:27:08 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-06 16:27:08 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-11-06 16:27:08 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-06 16:27:08 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-06 16:27:08 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 16:27:08 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 27171 seconds
+2025-11-06 16:27:08 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-06 16:27:08 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler initialized - Enabled: true, Daily run time: 21:45
+2025-11-06 16:27:08 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler to run daily at 21:45...
+2025-11-06 16:27:08 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 19071 seconds at 21:45
+2025-11-06 16:27:08 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-06 16:27:08 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-06 16:27:09 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-06 16:27:09 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-06 16:27:09 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-06 16:27:09 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 16:27:09 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 16:32:47 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for date: 2025-11-06
+2025-11-06 16:33:04 [SEVERE] APPLICATION: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:33:24 [SEVERE] APPLICATION: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:36:52 [SEVERE] APPLICATION: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:37:20 [SEVERE] APPLICATION: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:50:46 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-06 16:50:46 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-06 16:50:47 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-06 16:50:47 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-06 16:50:47 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-11-06 16:50:47 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-06 16:50:47 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-06 16:50:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 16:50:48 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 25751 seconds
+2025-11-06 16:50:48 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-06 16:50:48 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler initialized - Enabled: true, Daily run time: 21:45
+2025-11-06 16:50:48 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler to run daily at 21:45...
+2025-11-06 16:50:48 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 17651 seconds at 21:45
+2025-11-06 16:50:48 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-06 16:50:48 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8083
+2025-11-06 16:50:48 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8083/api
+2025-11-06 16:50:48 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-06 16:50:48 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-06 16:50:48 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 16:50:48 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 16:52:25 [INFO] APPLICATION: [AttendanceServlet] Updated attendance record
+2025-11-06 16:52:45 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for student ID: 6
+2025-11-06 16:57:14 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-06 16:57:14 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-06 16:57:15 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-06 16:57:15 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-06 16:57:15 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-11-06 16:57:15 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-06 16:57:15 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-06 16:57:16 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 16:57:16 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 25363 seconds
+2025-11-06 16:57:16 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-06 16:57:16 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler initialized - Enabled: true, Daily run time: 21:45
+2025-11-06 16:57:16 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler to run daily at 21:45...
+2025-11-06 16:57:16 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 17263 seconds at 21:45
+2025-11-06 16:57:16 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-06 16:57:16 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-06 16:57:16 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-06 16:57:16 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-06 16:57:16 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-06 16:57:16 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 16:57:16 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 16:57:39 [INFO] APPLICATION: [AttendanceServlet] Updated attendance record
+2025-11-06 16:58:29 [INFO] APPLICATION: [MainApp] Server shutdown initiated
+2025-11-06 16:58:29 [INFO] APPLICATION: [LicenseScheduler] License scheduler stopped successfully
+2025-11-06 16:58:29 [INFO] APPLICATION: [MainApp] License scheduler stopped
+2025-11-06 16:58:29 [INFO] APPLICATION: [AttendanceScheduler] Stopping attendance scheduler...
+2025-11-06 16:58:29 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler stopped
+2025-11-06 16:58:29 [INFO] APPLICATION: [MainApp] Attendance scheduler stopped
+2025-11-06 16:58:32 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-06 16:58:32 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-06 16:58:32 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-06 16:58:32 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-06 16:58:33 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-11-06 16:58:33 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-06 16:58:33 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-06 16:58:33 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 16:58:33 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 25286 seconds
+2025-11-06 16:58:33 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-06 16:58:33 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler initialized - Enabled: true, Daily run time: 17:00
+2025-11-06 16:58:33 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler to run daily at 17:00...
+2025-11-06 16:58:33 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 86 seconds at 17:00
+2025-11-06 16:58:33 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-06 16:58:33 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-06 16:58:33 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-06 16:58:33 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-06 16:58:33 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-06 16:58:33 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 16:58:33 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 16:59:59 [INFO] APPLICATION: [AttendanceScheduler] Starting automated daily attendance update job...
+2025-11-06 16:59:59 [INFO] APPLICATION: [AttendanceService] Starting automated daily attendance update
+2025-11-06 17:00:00 [INFO] APPLICATION: [AttendanceService] Successfully marked 28 students as absent for 2025-11-06
+2025-11-06 17:00:00 [INFO] APPLICATION: [AttendanceScheduler] Daily attendance update completed successfully. Successfully marked 28 students as absent for 2025-11-06
+2025-11-06 17:00:00 [INFO] APPLICATION: DB_OPERATION: ATTENDANCE_AUTO_UPDATE | TABLE: SYSTEM | DETAILS: Automated attendance marking: 28 students affected
+2025-11-06 17:00:23 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for date: 2025-11-06
+2025-11-06 17:11:22 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-06 17:11:22 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-06 17:11:23 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-06 17:11:23 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-06 17:11:23 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-11-06 17:11:23 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-06 17:11:23 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-06 17:11:24 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 17:11:24 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 24515 seconds
+2025-11-06 17:11:24 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-06 17:11:24 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler initialized - Enabled: true, Daily run time: 17:00
+2025-11-06 17:11:24 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler to run daily at 17:00...
+2025-11-06 17:11:24 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 85715 seconds at 17:00
+2025-11-06 17:11:24 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-06 17:11:24 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-06 17:11:24 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-06 17:11:24 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-06 17:11:24 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-06 17:11:24 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 17:11:24 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 17:11:28 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for date: 2025-11-06
+2025-11-06 17:22:26 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-06 17:22:26 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-06 17:22:27 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-06 17:22:27 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-06 17:22:27 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-11-16
+2025-11-06 17:22:27 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-06 17:22:27 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-06 17:22:28 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 17:22:28 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 23851 seconds
+2025-11-06 17:22:28 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-06 17:22:28 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler initialized - Enabled: true, Daily run time: 17:00
+2025-11-06 17:22:28 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler to run daily at 17:00...
+2025-11-06 17:22:28 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 85051 seconds at 17:00
+2025-11-06 17:22:28 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-06 17:22:28 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-06 17:22:28 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-06 17:22:28 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-06 17:22:28 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-06 17:22:28 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 17:22:28 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 17:22:37 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for student name: ????
+2025-11-06 17:34:11 [INFO] APPLICATION: [LicenseServlet] License information retrieved successfully
+2025-11-06 17:34:35 [INFO] APPLICATION: [LicenseServlet] License information retrieved successfully
+2025-11-06 17:38:59 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 39
+2025-11-06 17:39:13 [INFO] APPLICATION: [AdminOTPService] Admin OTP email sent successfully for user: helloketty
+2025-11-06 17:39:51 [INFO] APPLICATION: [OTPDAO] OTP marked as used with ID: 39
+2025-11-06 18:22:28 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 18:22:28 [INFO] APPLICATION: [OTPDAO] Deleted 1 expired OTPs
+2025-11-06 18:22:28 [INFO] APPLICATION: [OTPService] Cleaned up 1 expired OTPs
+2025-11-06 18:22:28 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 19:07:32 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for date: 2025-11-06
+2025-11-06 19:11:55 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for date: 2025-11-06
+2025-11-06 19:22:28 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 19:22:28 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-06 19:22:28 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 20:06:25 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for date: 2025-11-06
+2025-11-06 20:07:27 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:07:28 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:07:41 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for date: 2025-11-06
+2025-11-06 20:08:25 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 40
+2025-11-06 20:08:39 [INFO] APPLICATION: [UserOTPService] Password reset OTP email sent successfully for user: IbTest
+2025-11-06 20:22:28 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-06 20:22:28 [INFO] APPLICATION: [OTPDAO] Deleted 1 expired OTPs
+2025-11-06 20:22:28 [INFO] APPLICATION: [OTPService] Cleaned up 1 expired OTPs
+2025-11-06 20:22:28 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-06 20:24:34 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for date: 2025-11-06
+2025-11-06 20:25:29 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 41
+2025-11-06 20:25:43 [INFO] APPLICATION: [UserOTPService] Password reset OTP email sent successfully for user: IbTest
+2025-11-06 20:30:25 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for date: 2025-11-06
+2025-11-06 20:31:47 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 42
+2025-11-06 20:32:02 [INFO] APPLICATION: [UserOTPService] Password reset OTP email sent successfully for user: IbTest
+2025-11-06 20:37:20 [INFO] APPLICATION: [AttendanceServlet] Retrieved attendance for date: 2025-11-06
+2025-11-06 20:37:45 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 43
+2025-11-06 20:37:59 [INFO] APPLICATION: [UserOTPService] Password reset OTP email sent successfully for user: IbTest
+2025-11-09 11:06:46 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:46 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-11-09 11:06:46 [INFO] APPLICATION: [OTPDAO] Deleted 3 expired OTPs
+2025-11-09 11:06:46 [INFO] APPLICATION: [OTPService] Cleaned up 3 expired OTPs
+2025-11-09 11:06:46 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:48 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:48 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseDAO] License updated successfully with ID: 18
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseService] Daily license check completed. Remaining days: 7, Status: EXPIRING_SOON
+2025-11-09 11:06:48 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully. Status: NO_LICENSE, Valid: false, Remaining Days: 0
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-11-09 11:06:48 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:48 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseService] No active license found during daily check
+2025-11-09 11:06:48 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully. Status: NO_LICENSE, Valid: false, Remaining Days: 0
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-11-09 11:06:48 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:48 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseService] No active license found during daily check
+2025-11-09 11:06:48 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully. Status: NO_LICENSE, Valid: false, Remaining Days: 0
+2025-11-09 11:06:48 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:48 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:48 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:48 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:49 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:49 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:50 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:50 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:51 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:51 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:51 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:51 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:51 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:51 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:51 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:51 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:51 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:51 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:51 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:51 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:51 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:06:51 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:06:51 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 11:21:26 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 11:21:26 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 11:21:26 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 13:10:07 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 13:10:07 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 13:10:07 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 13:20:59 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 13:20:59 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 13:20:59 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 14:20:59 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 14:20:59 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 14:20:59 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 15:20:59 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 15:20:59 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 15:20:59 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 19:11:29 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 19:11:29 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 19:11:29 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 19:11:29 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 19:11:29 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 19:11:29 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 19:11:29 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 19:11:29 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 19:11:29 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-09 19:20:26 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-09 19:20:26 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-09 19:20:26 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:05 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:05 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-11-10 10:40:05 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:05 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:05 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:05 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:05 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:05 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:05 [INFO] APPLICATION: [LicenseService] No active license found during daily check
+2025-11-10 10:40:05 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:05 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:05 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:05 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully. Status: NO_LICENSE, Valid: false, Remaining Days: 0
+2025-11-10 10:40:06 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:06 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:06 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:06 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:06 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:06 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:06 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:06 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:06 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:06 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:06 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 10:40:06 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 10:40:06 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 10:40:07 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 11:19:53 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 11:19:53 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 11:19:53 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 12:19:53 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 12:19:53 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 12:19:53 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 13:22:57 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 13:22:57 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 13:22:57 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 14:19:53 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 14:19:53 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 14:19:53 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-10 15:19:53 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-10 15:19:53 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-10 15:19:53 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-11-11 13:47:43 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:43 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseService] No active license found during daily check
+2025-11-11 13:47:43 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully. Status: NO_LICENSE, Valid: false, Remaining Days: 0
+2025-11-11 13:47:43 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:43 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:43 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:43 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:43 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:43 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:43 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:43 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:43 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:44 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:44 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:44 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:44 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:44 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:44 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:44 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:44 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:44 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:44 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 13:47:44 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 13:47:44 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-11 14:19:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-11 14:19:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-11 14:19:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-11-13 15:51:19 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:19 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseService] No active license found during daily check
+2025-11-13 15:51:19 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully. Status: NO_LICENSE, Valid: false, Remaining Days: 0
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-11-13 15:51:19 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:19 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:19 [INFO] APPLICATION: [LicenseService] No active license found during daily check
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully. Status: NO_LICENSE, Valid: false, Remaining Days: 0
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:20 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:20 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:21 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:21 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:22 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:22 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:22 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:22 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:22 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:22 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:22 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 15:51:22 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 15:51:22 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-13 16:18:10 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-13 16:18:11 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-13 16:18:11 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:24 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-11-15 16:55:24 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:24 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:24 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:24 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:24 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:24 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:24 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:24 [INFO] APPLICATION: [LicenseService] No active license found during daily check
+2025-11-15 16:55:24 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:24 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:24 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:24 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully. Status: NO_LICENSE, Valid: false, Remaining Days: 0
+2025-11-15 16:55:24 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-11-15 16:55:24 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:24 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:24 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:25 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseService] No active license found during daily check
+2025-11-15 16:55:25 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully. Status: NO_LICENSE, Valid: false, Remaining Days: 0
+2025-11-15 16:55:25 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:25 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:25 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:25 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:25 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:25 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:25 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:25 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:25 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:25 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:25 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:25 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:26 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:26 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:26 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:26 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:26 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:26 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:26 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:26 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:26 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:26 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:26 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:27 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:27 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:27 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:27 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:27 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:27 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:27 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:27 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:27 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:27 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:27 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:27 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:27 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:28 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:28 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:28 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:28 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:28 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:28 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:28 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:28 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 16:55:28 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 16:55:28 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 17:17:04 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 17:17:04 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 17:17:04 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-15 18:17:04 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-15 18:17:05 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-15 18:17:05 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-16 20:32:10 [INFO] APPLICATION: [MainApp] Server shutdown initiated
+2025-11-16 20:32:10 [INFO] APPLICATION: [LicenseScheduler] License scheduler stopped successfully
+2025-11-16 20:32:10 [INFO] APPLICATION: [MainApp] License scheduler stopped
+2025-11-16 20:32:10 [INFO] APPLICATION: [AttendanceScheduler] Stopping attendance scheduler...
+2025-11-16 20:32:10 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler stopped
+2025-11-16 20:32:10 [INFO] APPLICATION: [MainApp] Attendance scheduler stopped
+2025-11-16 20:32:10 [INFO] APPLICATION: [LoggerUtil] LoggerUtil shutdown completed
+2025-11-16 20:32:42 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-16 20:32:42 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-16 20:32:43 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-16 20:32:43 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-16 20:32:43 [INFO] APPLICATION: [MainApp] System starting in license-restricted mode. Please renew license to access all features.
+2025-11-16 20:32:43 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-16 20:32:43 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-16 20:32:45 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-16 20:32:45 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 12434 seconds
+2025-11-16 20:32:45 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-16 20:32:45 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler initialized - Enabled: true, Daily run time: 17:00
+2025-11-16 20:32:45 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler to run daily at 17:00...
+2025-11-16 20:32:45 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 73634 seconds at 17:00
+2025-11-16 20:32:45 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-16 20:32:45 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-16 20:32:45 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-16 20:32:45 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-16 20:32:45 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-16 20:32:45 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-16 20:32:45 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-16 21:03:32 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-16 21:03:32 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-16 21:03:33 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-16 21:03:33 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-16 21:03:34 [INFO] APPLICATION: [MainApp] System starting in license-restricted mode. Please renew license to access all features.
+2025-11-16 21:03:34 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-16 21:03:34 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-16 21:03:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-16 21:03:35 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 10584 seconds
+2025-11-16 21:03:35 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-16 21:03:35 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler initialized - Enabled: true, Daily run time: 17:00
+2025-11-16 21:03:35 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler to run daily at 17:00...
+2025-11-16 21:03:35 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 71784 seconds at 17:00
+2025-11-16 21:03:35 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-16 21:03:35 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-16 21:03:35 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-16 21:03:35 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-16 21:03:35 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-16 21:03:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-16 21:03:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-16 21:34:48 [INFO] APPLICATION: [OTPDAO] OTP created successfully with ID: 44
+2025-11-16 21:35:01 [INFO] APPLICATION: [OTPService] OTP email sent successfully for operation: RENEW
+2025-11-16 21:35:25 [INFO] APPLICATION: [OTPDAO] OTP marked as used with ID: 44
+2025-11-16 21:35:25 [INFO] APPLICATION: [LicenseDAO] Deactivated 0 licenses
+2025-11-16 21:35:25 [INFO] APPLICATION: [LicenseDAO] License created successfully with ID: 19
+2025-11-16 21:35:33 [INFO] APPLICATION: [StudentServlet] Fetching all students from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 22:03:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-16 22:03:35 [INFO] APPLICATION: [OTPDAO] Deleted 1 expired OTPs
+2025-11-16 22:03:35 [INFO] APPLICATION: [OTPService] Cleaned up 1 expired OTPs
+2025-11-16 22:03:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-16 23:03:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-16 23:03:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-16 23:03:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-16 23:59:59 [INFO] APPLICATION: [LicenseScheduler] Starting daily license check
+2025-11-16 23:59:59 [INFO] APPLICATION: [LicenseDAO] License updated successfully with ID: 19
+2025-11-16 23:59:59 [INFO] APPLICATION: [LicenseService] Daily license check completed. Remaining days: 30, Status: ACTIVE
+2025-11-16 23:59:59 [INFO] APPLICATION: [LicenseScheduler] Daily license check completed successfully. Status: ACTIVE, Valid: true, Remaining Days: 0
+2025-11-17 00:03:35 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-17 00:03:35 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-17 00:03:35 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully
+2025-11-18 17:55:56 [INFO] APPLICATION: [LoggerUtil] Logging system initialized successfully with log rotation
+2025-11-18 17:55:56 [INFO] APPLICATION: [MainApp] Starting School Management System...
+2025-11-18 17:55:57 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-18 17:55:57 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-18 17:55:57 [INFO] APPLICATION: [MainApp] License validation successful. License expires on: 2025-12-16
+2025-11-18 17:55:57 [INFO] APPLICATION: [MainApp] Database connection successful!
+2025-11-18 17:55:57 [INFO] APPLICATION: DB_OPERATION: CONNECTION_TEST | TABLE: ALL | DETAILS: Database connectivity verified
+2025-11-18 17:55:58 [INFO] APPLICATION: [LicenseScheduler] Starting OTP cleanup
+2025-11-18 17:55:58 [INFO] APPLICATION: [LicenseScheduler] License scheduler started. Daily check will run in 21841 seconds
+2025-11-18 17:55:58 [INFO] APPLICATION: [MainApp] License scheduler started successfully
+2025-11-18 17:55:58 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler initialized - Enabled: true, Daily run time: 17:00
+2025-11-18 17:55:58 [INFO] APPLICATION: [AttendanceScheduler] Starting attendance scheduler to run daily at 17:00...
+2025-11-18 17:55:58 [INFO] APPLICATION: [AttendanceScheduler] Attendance scheduler started. Next run in 83041 seconds at 17:00
+2025-11-18 17:55:58 [INFO] APPLICATION: [MainApp] Attendance scheduler started successfully - daily attendance updates at 12:00 PM
+2025-11-18 17:55:58 [INFO] APPLICATION: [MainApp] Backend API Server started on port 8081
+2025-11-18 17:55:58 [INFO] APPLICATION: [MainApp] API Base URL: http://localhost:8081/api
+2025-11-18 17:55:58 [INFO] APPLICATION: [MainApp] Server endpoints registered successfully
+2025-11-18 17:55:58 [INFO] APPLICATION: [MainApp] Log rotation is active - logs will be automatically rotated when they exceed 10MB
+2025-11-18 17:55:58 [INFO] APPLICATION: [OTPDAO] Deleted 0 expired OTPs
+2025-11-18 17:55:58 [INFO] APPLICATION: [LicenseScheduler] OTP cleanup completed successfully

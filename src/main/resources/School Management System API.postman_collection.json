@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c1caf96f-40c8-4a63-8b3a-d24f19dce988",
+		"_postman_id": "4f5891a3-f204-4680-959e-bf51d78a1ac7",
 		"name": "School Management System API Copy",
 		"description": "API collection for testing School Management System endpoints",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
@@ -16,41 +16,49 @@
 						{
 							"listen": "test",
 							"script": {
-						"exec": [
-							"// Test for successful response",
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"",
-							"// Parse response and handle token",
-							"try {",
-							"    var jsonData = pm.response.json();",
-							"    ",
-							"    pm.test(\"Response has token\", function () {",
-							"        pm.expect(jsonData).to.have.property('token');",
-							"        pm.expect(jsonData.token).to.not.be.empty;",
-							"    });",
-							"    ",
-							"    // Save token to environment variables for automatic use",
-							"    if (jsonData.token) {",
-							"        pm.environment.set(\"token\", jsonData.token);",
-							"        console.log(\"✅ Token saved to environment variables:\", jsonData.token.substring(0, 20) + \"...\");",
-							"    } else {",
-							"        console.log(\"❌ No token found in response\");",
-							"    }",
-							"    ",
-							"    // Additional response validation",
-							"    pm.test(\"Response has user info\", function () {",
-							"        pm.expect(jsonData).to.have.property('user');",
-							"    });",
-							"    ",
-							"} catch (e) {",
-							"    console.log(\"❌ Error parsing response:\", e);",
-							"    pm.test(\"Response is valid JSON\", function () {",
-							"        pm.expect.fail(\"Response is not valid JSON: \" + e.message);",
-							"    });",
-							"}"
-						],
+								"exec": [
+									"// Test for successful response",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+					"// Parse response and handle token",
+					"try {",
+					"    var jsonData = pm.response.json();",
+					"    ",
+					"    pm.test(\"Response has token\", function () {",
+					"        pm.expect(jsonData).to.have.property('token');",
+					"        pm.expect(jsonData.token).to.not.be.empty;",
+					"    });",
+					"    ",
+					"    // Save token to environment variables for automatic use",
+					"    if (jsonData.token) {",
+					"        pm.environment.set(\"token\", jsonData.token);",
+					"        console.log(\"✅ Token saved to environment variables:\", jsonData.token.substring(0, 20) + \"...\");",
+					"    } else {",
+					"        console.log(\"❌ No token found in response\");",
+					"    }",
+					"    ",
+					"    // Save refreshToken for refresh request",
+					"    if (jsonData.refreshToken) {",
+					"        pm.environment.set(\"refreshToken\", jsonData.refreshToken);",
+					"        console.log(\"✅ Refresh token saved to environment variables:\", jsonData.refreshToken.substring(0, 20) + \"...\");",
+					"    } else {",
+					"        console.log(\"ℹ️ No refreshToken found in response\");",
+					"    }",
+					"    ",
+					"    // Additional response validation",
+					"    pm.test(\"Response has user info\", function () {",
+					"        pm.expect(jsonData).to.have.property('user');",
+					"    });",
+					"    ",
+					"} catch (e) {",
+					"    console.log(\"❌ Error parsing response:\", e);",
+					"    pm.test(\"Response is valid JSON\", function () {",
+					"        pm.expect.fail(\"Response is not valid JSON: \" + e.message);",
+					"    });",
+					"}"
+								],
 								"type": "text/javascript",
 								"packages": {}
 							}
@@ -235,6 +243,69 @@
 						],
 						"url": "{{base_url}}/api/auth/validate",
 						"description": "Validate JWT token and return user information"
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"try {",
+									"    var jsonData = pm.response.json();",
+									"    ",
+									"    // Save new access token if provided",
+									"    if (jsonData.token) {",
+									"        pm.environment.set(\"token\", jsonData.token);",
+									"        console.log(\"✅ New access token saved:\", jsonData.token.substring(0, 20) + \"...\");",
+									"    } else {",
+									"        console.log(\"ℹ️ No access token in refresh response\");",
+									"    }",
+									"    ",
+									"    // Save rotated refresh token if provided",
+									"    if (jsonData.refreshToken) {",
+									"        pm.environment.set(\"refreshToken\", jsonData.refreshToken);",
+									"        console.log(\"✅ Rotated refresh token saved:\", jsonData.refreshToken.substring(0, 20) + \"...\");",
+									"    } else {",
+									"        console.log(\"ℹ️ No refreshToken in refresh response\");",
+									"    }",
+									"",
+									"    pm.test(\"Response contains message\", function () {",
+									"        pm.expect(jsonData).to.have.property('message');",
+									"    });",
+									"",
+									"} catch (e) {",
+									"    console.log(\"❌ Error parsing response:\", e);",
+									"    pm.test(\"Response is valid JSON\", function () {",
+									"        pm.expect.fail(\"Response is not valid JSON: \" + e.message);",
+									"    });",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refreshToken\": \"{{refreshToken}}\"\n}"
+						},
+						"url": "{{base_url}}/api/auth/refresh",
+						"description": "Exchange refresh token for new tokens (rotation enforced)"
 					},
 					"response": []
 				}
@@ -465,8 +536,8 @@
 									"});",
 									"",
 									"console.log('✅ QR codes ZIP file downloaded successfully');",
-								"console.log('📁 ZIP contains hierarchical structure: Grade/Class/Student.png');",
-								"console.log('📋 Students are organized by grade and class for easy navigation');"
+									"console.log('📁 ZIP contains hierarchical structure: Grade/Class/Student.png');",
+									"console.log('📋 Students are organized by grade and class for easy navigation');"
 								],
 								"type": "text/javascript"
 							}
@@ -2041,7 +2112,8 @@
 									"    pm.expect(jsonData.message).to.include('created successfully');",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -2059,9 +2131,9 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"student_id\": 1,\n    \"attendance_date\": \"2025-01-15\",\n    \"status\": \"PRESENT\",\n    \"notes\": \"On time\"\n}"
+							"raw": "{\n    \"student_id\": 6,\n     \"attendance_date\": \"2023-09-25\",\n    \"status_id\":1,\n    \"arrival_time\":\"2023-10-05T14:30:00\"\n    \n    \n    }\n\t\t\t\t\t"
 						},
-						"url": "{{base_url}}/api/attendance",
+						"url": "{{base_url}}/api/protected/attendance",
 						"description": "Create a new attendance record (requires authentication)"
 					},
 					"response": []

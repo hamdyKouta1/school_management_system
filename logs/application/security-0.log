@@ -544,3 +544,146 @@
 2025-11-01 17:02:06 [SECURITY] EVENT: PASSWORD_RESET_OTP_SENT | USER: developer | DETAILS: Password reset OTP sent to: hamdyhkouta@gmail.com from IP: [0:0:0:0:0:0:0:1]
 2025-11-01 17:03:18 [SECURITY] EVENT: PASSWORD_RECOVERY_OTP_GENERATED | USER: developer | DETAILS: Password recovery OTP generated for user: developer from IP: [0:0:0:0:0:0:0:1]
 2025-11-01 17:03:18 [SECURITY] EVENT: PASSWORD_RESET_OTP_SENT | USER: developer | DETAILS: Password reset OTP sent to: hamdyhkouta@gmail.com from IP: [0:0:0:0:0:0:0:1]
+2025-11-01 17:13:03 [SECURITY] EVENT: PASSWORD_RECOVERY_OTP_GENERATED | USER: developer | DETAILS: Password recovery OTP generated for user: developer from IP: [0:0:0:0:0:0:0:1]
+2025-11-01 17:13:03 [SECURITY] EVENT: PASSWORD_RESET_OTP_SENT | USER: developer | DETAILS: Password reset OTP sent to: hamdyhkouta@gmail.com from IP: [0:0:0:0:0:0:0:1]
+2025-11-01 17:16:16 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-11-03 21:45:00 [SECURITY] EVENT: AUTOMATED_ATTENDANCE_UPDATE_SUCCESS | USER: SYSTEM | DETAILS: Automated attendance update completed. 29 students marked absent for 2025-11-03
+2025-11-06 15:14:06 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 15:14:16 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: developer | DETAILS: Token validation successful (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 15:16:45 [SECURITY] EVENT: USER_UPDATED | USER: developer | DETAILS: User 1 updated by: developer
+2025-11-06 15:18:24 [SECURITY] EVENT: LOGIN_FAILED | USER: IbTest | DETAILS: Failed login attempt from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 15:19:25 [SECURITY] EVENT: PASSWORD_RECOVERY_OTP_GENERATED | USER: IbTest | DETAILS: Password recovery OTP generated for user: IbTest from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 15:19:25 [SECURITY] EVENT: PASSWORD_RESET_OTP_SENT | USER: IbTest | DETAILS: Password reset OTP sent to: ibrahiimyehia@gmail.com from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 15:21:00 [SECURITY] EVENT: PASSWORD_RECOVERY_SUCCESS | USER: IbTest | DETAILS: Password recovery successful for user: IbTest from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 15:21:00 [SECURITY] EVENT: PASSWORD_RESET_SUCCESS | USER: UNKNOWN | DETAILS: Password reset completed successfully from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 15:21:22 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 15:21:25 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 15:24:22 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 15:24:23 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 15:29:31 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 10
+2025-11-06 15:29:31 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 10
+2025-11-06 15:29:31 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 10
+2025-11-06 15:29:32 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 10
+2025-11-06 15:29:32 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 10
+2025-11-06 15:29:32 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 10
+2025-11-06 15:31:19 [SECURITY] EVENT: QR_CODE_GENERATION_REQUEST | USER: DEVELOPER | DETAILS: QR code generation requested by DEVELOPER from IP: 105.34.251.138
+2025-11-06 15:31:20 [SECURITY] EVENT: QR_CODE_GENERATION_SUCCESS | USER: DEVELOPER | DETAILS: Successfully generated QR codes for 29 students
+2025-11-06 15:31:22 [SECURITY] EVENT: QR_CODE_GENERATION_REQUEST | USER: DEVELOPER | DETAILS: QR code generation requested by DEVELOPER from IP: 105.34.251.138
+2025-11-06 15:31:23 [SECURITY] EVENT: QR_CODE_GENERATION_SUCCESS | USER: DEVELOPER | DETAILS: Successfully generated QR codes for 29 students
+2025-11-06 15:31:29 [SECURITY] EVENT: QR_CODE_GENERATION_REQUEST | USER: DEVELOPER | DETAILS: QR code generation requested by DEVELOPER from IP: 105.34.251.138
+2025-11-06 15:31:29 [SECURITY] EVENT: QR_CODE_GENERATION_SUCCESS | USER: DEVELOPER | DETAILS: Successfully generated QR codes for 29 students
+2025-11-06 15:48:25 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 15:58:17 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 15:58:20 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:03:13 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:03:16 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:03:44 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:03:52 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:04:16 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:04:17 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:04:57 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:06:41 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:09:05 [SECURITY] EVENT: LOGIN_SUCCESS | USER: myadmin | DETAILS: Successful login (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:09:07 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: myadmin | DETAILS: Token validation successful (ID: 28) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:09:46 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:09:48 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:16:28 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:16:29 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:16:44 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:16:45 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:16:58 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:16:59 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:22:09 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:22:11 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:23:13 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:23:15 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:27:45 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:27:48 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:32:56 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:33:55 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:51:09 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:57:33 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:59:02 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:59:03 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:59:37 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 16:59:37 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 17:00:00 [SECURITY] EVENT: AUTOMATED_ATTENDANCE_UPDATE_SUCCESS | USER: SYSTEM | DETAILS: Automated attendance update completed. 28 students marked absent for 2025-11-06
+2025-11-06 17:09:06 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 17:09:06 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 17:13:54 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 17:13:55 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 17:22:46 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 17:23:29 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 17:23:29 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 17:39:13 [SECURITY] EVENT: ADMIN_OTP_GENERATED | USER: DEVELOPER | DETAILS: OTP generated for admin creation: helloketty (ADMIN) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 17:39:51 [SECURITY] EVENT: ADMIN_OTP_VALIDATION_SUCCESS | USER: system | DETAILS: Admin OTP validated successfully for user: helloketty from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 17:39:52 [SECURITY] EVENT: ADMIN_USER_CREATED | USER: DEVELOPER | DETAILS: Admin user created: helloketty (helllo@example.com) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 17:55:57 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 17:55:58 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 19:07:31 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 19:11:53 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:06:05 [SECURITY] EVENT: TOKEN_VALIDATION_FAILED | USER: UNKNOWN | DETAILS: Invalid token validation: Token has expired from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:06:05 [SECURITY] EVENT: TOKEN_VALIDATION_FAILED | USER: UNKNOWN | DETAILS: Invalid token validation: Token has expired from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:06:24 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:08:39 [SECURITY] EVENT: PASSWORD_RESET_OTP_GENERATED | USER: USER | DETAILS: Password reset OTP generated for user: IbTest by: USER from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:09:20 [SECURITY] EVENT: PASSWORD_RESET_ACCESS_DENIED | USER: IbTest | DETAILS: Unauthorized password reset attempt for user 651358 by: IbTest
+2025-11-06 20:09:39 [SECURITY] EVENT: PASSWORD_RESET_ACCESS_DENIED | USER: IbTest | DETAILS: Unauthorized password reset attempt for user 651358 by: IbTest
+2025-11-06 20:24:27 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:24:27 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:24:33 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:25:43 [SECURITY] EVENT: PASSWORD_RESET_OTP_GENERATED | USER: USER | DETAILS: Password reset OTP generated for user: IbTest by: USER from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:25:57 [SECURITY] EVENT: PASSWORD_RESET_ACCESS_DENIED | USER: IbTest | DETAILS: Unauthorized password reset attempt for user 745379 by: IbTest
+2025-11-06 20:30:24 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:32:02 [SECURITY] EVENT: PASSWORD_RESET_OTP_GENERATED | USER: USER | DETAILS: Password reset OTP generated for user: IbTest by: USER from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:32:17 [SECURITY] EVENT: PASSWORD_RESET_ACCESS_DENIED | USER: IbTest | DETAILS: Unauthorized password reset attempt for user 547367 by: IbTest
+2025-11-06 20:37:13 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:37:14 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:37:19 [SECURITY] EVENT: LOGIN_SUCCESS | USER: IbTest | DETAILS: Successful login (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:37:59 [SECURITY] EVENT: PASSWORD_RESET_OTP_GENERATED | USER: USER | DETAILS: Password reset OTP generated for user: IbTest by: USER from IP: [0:0:0:0:0:0:0:1]
+2025-11-06 20:38:16 [SECURITY] EVENT: PASSWORD_RESET_ACCESS_DENIED | USER: IbTest | DETAILS: Unauthorized password reset attempt for user 499204 by: IbTest
+2025-11-06 20:38:39 [SECURITY] EVENT: TOKEN_VALIDATION_SUCCESS | USER: IbTest | DETAILS: Token validation successful (ID: 1) from IP: [0:0:0:0:0:0:0:1]
+2025-11-09 11:06:46 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: EXPIRING_SOON, valid: true, remaining days: 7
+2025-11-09 11:06:48 [SECURITY] EVENT: LICENSE_EXPIRING_SOON | USER: system | DETAILS: License expiring in 7 days: LIC-F05B4ED0FA3C4A58
+2025-11-09 11:06:48 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-09 11:06:48 [SECURITY] EVENT: LICENSE_STATUS_CHANGED_DAILY_CHECK | USER: system | DETAILS: License status changed during daily check: EXPIRING_SOON -> NO_LICENSE, Valid: true -> false
+2025-11-09 11:06:48 [SECURITY] EVENT: ENDPOINTS_RESTRICTED_DAILY_CHECK | USER: system | DETAILS: Endpoints restricted to license-only access due to license expiration during daily check
+2025-11-09 11:06:48 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-09 11:06:48 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-09 11:06:48 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-09 11:06:48 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-10 10:40:05 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-10 10:40:05 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-11 13:47:43 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-11 13:47:43 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-13 15:51:19 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-13 15:51:19 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-13 15:51:19 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-13 15:51:20 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-15 16:55:24 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-15 16:55:24 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-15 16:55:25 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-15 16:55:25 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: No license found - endpoints restricted
+2025-11-16 20:32:43 [SECURITY] EVENT: LICENSE_STARTUP_WARNING | USER: system | DETAILS: Starting system with invalid/expired license. Only license management endpoints will be accessible.
+2025-11-16 21:03:34 [SECURITY] EVENT: LICENSE_STARTUP_WARNING | USER: system | DETAILS: Starting system with invalid/expired license. Only license management endpoints will be accessible.
+2025-11-16 21:04:01 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:04:16 [SECURITY] EVENT: REFRESH_TOKEN_INVALID | USER: UNKNOWN | DETAILS: Invalid refresh token: Token signature is invalid from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:04:32 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:04:33 [SECURITY] EVENT: REFRESH_TOKEN_SUCCESS | USER: developer | DETAILS: Refresh token rotated successfully from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:04:44 [SECURITY] EVENT: REFRESH_TOKEN_REJECTED | USER: developer | DETAILS: Refresh rejected due to status: REVOKED from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:04:58 [SECURITY] EVENT: REFRESH_TOKEN_REJECTED | USER: developer | DETAILS: Refresh rejected due to status: REVOKED from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:05:13 [SECURITY] EVENT: REFRESH_TOKEN_REJECTED | USER: developer | DETAILS: Refresh rejected due to status: REVOKED from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:27:12 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:27:22 [SECURITY] EVENT: REFRESH_TOKEN_INVALID | USER: UNKNOWN | DETAILS: Invalid refresh token: Token is malformed from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:27:29 [SECURITY] EVENT: REFRESH_TOKEN_INVALID | USER: UNKNOWN | DETAILS: Invalid refresh token: Token is malformed from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:27:31 [SECURITY] EVENT: REFRESH_TOKEN_INVALID | USER: UNKNOWN | DETAILS: Invalid refresh token: Token is malformed from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:28:07 [SECURITY] EVENT: REFRESH_TOKEN_INVALID | USER: UNKNOWN | DETAILS: Invalid refresh token: Token is malformed from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:31:53 [SECURITY] EVENT: LOGIN_SUCCESS | USER: developer | DETAILS: Successful login (ID: 29) from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:31:59 [SECURITY] EVENT: REFRESH_TOKEN_SUCCESS | USER: developer | DETAILS: Refresh token rotated successfully from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:35:01 [SECURITY] EVENT: OTP_GENERATED | USER: system | DETAILS: OTP generated for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:35:01 [SECURITY] EVENT: DEVELOPER_OTP_GENERATED | USER: developer | DETAILS: Developer OTP generated for operation: RENEW
+2025-11-16 21:35:25 [SECURITY] EVENT: OTP_VALIDATION_SUCCESS | USER: system | DETAILS: OTP validated successfully for operation: RENEW from IP: [0:0:0:0:0:0:0:1]
+2025-11-16 21:35:25 [SECURITY] EVENT: LICENSE_RENEWED | USER: developer | DETAILS: License renewed for 30 days, start date: 2025-11-16, end date: 2025-12-16, license key: LIC-7763A0A65827419D
+2025-11-16 21:35:25 [SECURITY] EVENT: ENDPOINTS_REENABLED | USER: developer | DETAILS: All system endpoints re-enabled after successful license renewal
+2025-11-16 21:35:25 [SECURITY] EVENT: LICENSE_RENEWED | USER: developer | DETAILS: License renewed successfully for 30 days
+2025-11-16 23:59:59 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 0
+2025-11-16 23:59:59 [SECURITY] EVENT: LICENSE_STATUS_CHECK | USER: system | DETAILS: License status: ACTIVE, valid: true, remaining days: 0

@@ -303,3 +303,35 @@
 2025-11-01 17:02:06 [SEVERE] ERROR: Exception details:
 2025-11-01 17:03:18 [SEVERE] ERROR: [PasswordRecoveryService] Failed to send password recovery OTP email for user: developer. Error: failed to connect, no password specified?
 2025-11-01 17:03:18 [SEVERE] ERROR: Exception details:
+2025-11-06 15:52:22 [SEVERE] ERROR: [AttendanceServlet] Unexpected error in doPost: null
+2025-11-06 15:52:23 [SEVERE] ERROR: Exception details:
+2025-11-06 15:54:14 [SEVERE] ERROR: [AttendanceServlet] Unexpected error in doPost: null
+2025-11-06 15:54:14 [SEVERE] ERROR: Exception details:
+2025-11-06 16:05:05 [SEVERE] ERROR: [AttendanceServlet] Unexpected error in doPost: Error at index 4 in: "2023-10-05T14"
+2025-11-06 16:05:05 [SEVERE] ERROR: Exception details:
+2025-11-06 16:06:02 [SEVERE] ERROR: [AttendanceServlet] Unexpected error in doPost: Error at index 4 in: "2023-10-05T14"
+2025-11-06 16:06:02 [SEVERE] ERROR: Exception details:
+2025-11-06 16:07:43 [SEVERE] ERROR: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:07:43 [SEVERE] ERROR: Exception details:
+2025-11-06 16:08:51 [SEVERE] ERROR: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:08:51 [SEVERE] ERROR: Exception details:
+2025-11-06 16:09:02 [SEVERE] ERROR: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:09:02 [SEVERE] ERROR: Exception details:
+2025-11-06 16:11:12 [SEVERE] ERROR: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:11:12 [SEVERE] ERROR: Exception details:
+2025-11-06 16:13:05 [SEVERE] ERROR: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:13:05 [SEVERE] ERROR: Exception details:
+2025-11-06 16:14:30 [SEVERE] ERROR: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:14:30 [SEVERE] ERROR: Exception details:
+2025-11-06 16:14:34 [SEVERE] ERROR: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:14:34 [SEVERE] ERROR: Exception details:
+2025-11-06 16:16:08 [SEVERE] ERROR: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:16:08 [SEVERE] ERROR: Exception details:
+2025-11-06 16:33:04 [SEVERE] ERROR: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:33:04 [SEVERE] ERROR: Exception details:
+2025-11-06 16:33:24 [SEVERE] ERROR: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:33:24 [SEVERE] ERROR: Exception details:
+2025-11-06 16:36:52 [SEVERE] ERROR: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:36:52 [SEVERE] ERROR: Exception details:
+2025-11-06 16:37:20 [SEVERE] ERROR: [AttendanceServlet] Database error in doPut: Error updating attendance record
+2025-11-06 16:37:20 [SEVERE] ERROR: Exception details:

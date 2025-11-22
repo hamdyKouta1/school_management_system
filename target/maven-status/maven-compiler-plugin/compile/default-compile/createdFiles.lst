@@ -8,13 +8,16 @@ com\canalprep\service\UserOTPService$1.class
 com\canalprep\license\service\LicenseService$LicenseStatus.class
 com\canalprep\service\QRCodeService.class
 com\canalprep\dao\SchoolClassDAO.class
+com\canalprep\utilities\RateLimiter.class
 com\canalprep\dao\StudentDAO.class
 com\canalprep\auth\servlets\AuthServlet$4.class
 com\canalprep\auth\service\AdminOTPService.class
+com\canalprep\auth\servlets\AuthServlet$7.class
 com\canalprep\servlet\AddStudentPhoneServlet.class
 com\canalprep\model\AdditionalQualification.class
 com\canalprep\servlet\AttendanceServlet.class
 com\canalprep\auth\servlets\AuthServlet$1.class
+com\canalprep\auth\dao\RefreshTokenDAO.class
 com\canalprep\auth\service\AdminOTPService$1.class
 com\canalprep\servlet\UserServlet.class
 com\canalprep\staticVariables\DBConst.class
@@ -23,6 +26,7 @@ com\canalprep\dao\StudentDAO$1.class
 com\canalprep\model\Religion.class
 com\canalprep\otp\servlet\StandaloneOTPServlet.class
 com\canalprep\servlet\BulkStudentBatchServlet.class
+com\canalprep\auth\dao\RefreshTokenDAO$TokenStatus.class
 com\canalprep\auth\utilities\JwtUtil$TokenValidationResult.class
 com\canalprep\model\StudentAttendanceDetails$ParentInfo.class
 com\canalprep\model\GradeLevel.class
@@ -43,7 +47,9 @@ com\canalprep\auth\servlets\AuthServlet.class
 com\canalprep\utilities\LoggerUtil$AccessLogFormatter.class
 com\canalprep\test\DatabaseUserTest.class
 com\canalprep\util\DatabaseInitializer.class
+com\canalprep\auth\servlets\AuthServlet$6.class
 com\canalprep\servlet\AddMedicalHistoryServlet.class
+com\canalprep\utilities\RateLimiter$Window.class
 com\canalprep\service\PasswordRecoveryService$PendingRecoveryRequest.class
 com\canalprep\service\AttendanceService.class
 com\canalprep\dao\AdditionalQualificationDAO.class
